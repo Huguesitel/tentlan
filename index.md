@@ -10,7 +10,7 @@
       var myWindow
 function myFunction() {
   myWindow = window.open("https://fr18.tentlan.com/worldmap/684/422");
-      alert (myWindow.name)
+      alert (myWindow.name + ' ok')
 }
 </script>
 
