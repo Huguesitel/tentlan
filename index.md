@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <body>
 
@@ -10,7 +10,7 @@
       var myWindow
 function myFunction() {
   myWindow = window.open("https://fr18.tentlan.com/worldmap/684/422");
-      alert (myWindow.document.title)
+      alert (myWindow.name)
 }
 </script>
 
