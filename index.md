@@ -12,7 +12,7 @@ function myFunction() {
   myWindow = window.open("https://fr18.tentlan.com/worldmap/684/422");
       alert (myWindow.document.URL + ' ok')
 }
-function myFunction() {
+function myFunction2() {
  
       alert (myWindow.document.URL + ' ok' + myWindow)
 }     
