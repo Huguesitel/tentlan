@@ -8,8 +8,8 @@
 
 <script>
 function myFunction() {
-  var myWindow = window.open("", "", "width=200,height=100");
-  alert("ok")
+  var myWindow = window.open("https://fr18.tentlan.com/", "", );
+  alert(myWindow)
 }
 </script>
 
