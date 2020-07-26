@@ -14,7 +14,7 @@ function myFunction() {
 }
 function myFunction2() {
  
-      alert (myWindow.document.URL + ' ok' + myWindow)
+      alert (myWindow.document.URL + ' Info' + myWindow)
 }     
 </script>
 
