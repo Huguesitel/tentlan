@@ -9,8 +9,12 @@
 <script>
       var myWindow
 function myFunction() {
-  myWindow = window.open("https://fr18.tentlan.com/worldmap/684/422");
-      alert (myWindow.document.URL + ' ok')
+    var response = UrlFetchApp.fetch("http://www.google.com/");
+ Logger.log(response.getContentText());   
+      
+      
+//  myWindow = window.open("https://fr18.tentlan.com/worldmap/684/422");
+      alert (response.getContentText())
 }
 function myFunction2() {
  
