@@ -1,5 +1,5 @@
 >>> import urllib                                       1
->>> sock = urllib.urlopen("http://diveintopython.org/") 2
+>>> sock = urllib.urlopen("https://fr18.tentlan.com/worldmap/686/423") 2
 >>> htmlSource = sock.read()                            3
 >>> sock.close()                                        4
 >>> print htmlSource                                    5
