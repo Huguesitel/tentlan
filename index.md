@@ -10,7 +10,7 @@
       var myWindow
 function myFunction() {
     var response = UrlFetchApp.fetch("http://www.google.com/");
- Logger.log(response.getContentText());   
+// Logger.log(response.getContentText());   
       
       
 //  myWindow = window.open("https://fr18.tentlan.com/worldmap/684/422");
