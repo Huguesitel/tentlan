@@ -30,7 +30,7 @@
 
 <p>Click the button to open a new browser window.</p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="MouseSignZorro()">ROBOT</button>
 <button onclick="myFunction2()">Indo</button>
 <script>
 import java.awt.AWTException;
