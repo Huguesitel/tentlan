@@ -33,56 +33,20 @@
 <button onclick="MouseSignZorro()">ROBOT</button>
 <button onclick="myFunction2()">Indo</button>
 <script>
-import java.awt.AWTException;
-import java.awt.Robot;
+import  java.awt.Robot;
+ java -classpath "." Mouse
+
+public class Mouse{
  
-/**
- * Déplacer le curseur de la souris sur l'écran
- * http://www.fobec.com/java/969/deplacer-curseur-ecran-avec-awt-robot.html
- * Axel 2010
- */
-public class MouseSignZorro {
- 
-    public MouseSignZorro() throws AWTException {
-        Robot robot = new Robot();
-        /**
-         * Fixer le delai entre chaque mouvement à 500 ms
-         */
-        robot.setAutoDelay(50);
-        /**
-         * Appeler OnIdle après le déplacement de la souris
-         */
-        robot.setAutoWaitForIdle(false);
- 
-        /**
-         * Barre du haut
-         */
-        for (int i = 0; i < 20; i++) {
-            robot.mouseMove(300+(20*i), 400);
-        }
-        /**
-         * Diagonale
-         */
-        for (int i = 0; i < 20; i++) {
-            robot.mouseMove(700-(20*i), 400+(20*i));
-        }
-        /**
-         * Barre du bas
-         */
-        for (int i = 0; i < 20; i++) {
-            robot.mouseMove(300+(20*i), 800);
-        }
- 
-        /**
-         * Quitter l'application
-         */
-        System.exit(0);
-    }
- 
-    public static void main(String[] args) throws AWTException {
-        MouseSignZorro mouseCatchMe = new MouseSignZorro();
-    }
-}  
+public static void main(String arg[]){
+  try{
+         Robot objMouse = new Robot();
+         objMouse.mouseMove(50,50);
+   }
+ catch (Exception e){
+          System.out.println("Le probleme est le suivant :"+e.getMessage());
+   }
+ }
   
   
   
