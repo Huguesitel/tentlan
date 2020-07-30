@@ -30,102 +30,21 @@
 
 <p>Click the button to open a new browser window.</p>
 
-<button onclick="MouseSignZorro()">ROBOT</button>
-<button onclick="myFunction2()">Indo</button>
+<p>Click the button to open a new window, and assure that the new window GETS focus (send the new window to the front).</p>
+
+<button onclick="myFunction()">Try it</button>
+
 <script>
-// Java program to demonstrate working of Robot 
-// class. This program is for Windoes. It opens 
-// notepad and types a message. 
-import java.awt.AWTException; 
-import java.awt.Robot; 
-import java.awt.event.KeyEvent; 
-import java.io.*; 
-
-public class robo 
-{ 
-	public static void main(String[] args) throws IOException, 
-						AWTException, InterruptedException 
-	{ 
-		String command = "notepad.exe"; 
-		Runtime run = Runtime.getRuntime(); 
-		run.exec(command); 
-		try { 
-			Thread.sleep(2000); 
-		} 
-		catch (InterruptedException e) 
-		{ 
-			// TODO Auto-generated catch block 
-			e.printStackTrace(); 
-		} 
-
-		// Create an instance of Robot class 
-		Robot robot = new Robot(); 
-
-		// Press keys using robot. A gap of 
-		// of 500 mili seconds is added after 
-		// every key press 
-		robot.keyPress(KeyEvent.VK_H); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_E); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_L); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_L); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_O); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_SPACE); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_F); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_R); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_O); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_M); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_SPACE); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_G); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_E); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_E); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_K); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_S); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_F); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_O); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_R); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_G); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_E); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_E); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_K); 
-		Thread.sleep(500); 
-		robot.keyPress(KeyEvent.VK_S); 
-	} 
-} 
-
-  
-  
-  
-
 function myFunction() {
-    var response = UrlFetchApp.fetch("http://www.google.com/");
-// Logger.log(response.getContentText());   
-      
-      
-//  myWindow = window.open("https://fr18.tentlan.com/worldmap/684/422");
-      alert (response)
+  var myWindow = window.open("https://fr18.tentlan.com/worldmap/683/424", "", "width=500,height=500,top=100,top=100");
+//  myWindow.document.write("<p>A new window!</p>");
+  myWindow.moveTo(200, 200);                                  // Moves the new   
+  myWindow.focus(); 
+myWindow.location.replace("https://www.w3schools.com");
+//myWindow.location.replace("view-source:https://www.w3schools.com");
+//  alert(myWindow.document.name)
 }
+</script>
 function myFunction2() {
  
       alert (' Info' )
