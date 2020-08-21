@@ -2,9 +2,9 @@
 <html>
 <body>
 
-<p>Click the button  </p>
+<p>Click the button 222  </p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction2()">Try it</button>
 
 <script>
 function myFunction() {
