@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>Click the button 2 !!!  </p>
+<p>Click the button 2   </p>
 
 <button onclick="myFunction2()">Try it</button>
 
@@ -11,6 +11,7 @@
 function myFunction2() {
  
       alert(' Info' )
+      f_clientWidth()
 }  
 function f_clientWidth() {
 	return f_filterResults (
