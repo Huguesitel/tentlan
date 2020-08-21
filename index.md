@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>Click the button 2   </p>
+<p>Click the button 2...   </p>
 
 <button onclick="myFunction2()">Try it</button>
 
@@ -16,8 +16,8 @@ function myFunction2() {
     doc = document,
     docElem = doc.documentElement,
     body = doc.getElementsByTagName('body')[0],
-    x = win.innerWidth || docElem.Width || body.Width,
-    y = win.innerHeight|| docElem.Height|| body.Height;
+    x = win.innerWidth || docElem.Width || body.clientWidth,
+    y = win.innerHeight|| docElem.Height|| body.clientHeight;
     x1 = body.Width,
     y1 = body.Height;
     
