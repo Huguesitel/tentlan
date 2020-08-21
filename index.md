@@ -12,6 +12,12 @@ function myFunction2() {
  
       alert(' Info' )
 }  
+function f_clientWidth() {
+	return f_filterResults (
+		window.innerWidth ? window.innerWidth : 0,
+		document.documentElement ? document.documentElement.clientWidth : 0,
+		document.body ? document.body.clientWidth : 0
+	);
 function f_filterResults(n_win, n_docel, n_body) {
 	var n_result = n_win ? n_win : 0;
 	if (n_docel && (!n_result || (n_result > n_docel)))
