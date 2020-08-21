@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>Click the button to open a new browser window.</p>
+<p>Click the button  </p>
 
 <button onclick="myFunction()">Try it</button>
 
