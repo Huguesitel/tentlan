@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>Click the button 222   </p>
+<p>Click the button 2   </p>
 
 <button onclick="myFunction2()">Try it</button>
 
@@ -18,7 +18,10 @@ function myFunction2() {
     body = doc.getElementsByTagName('body')[0],
     x = win.innerWidth || docElem.Width || body.Width,
     y = win.innerHeight|| docElem.Height|| body.Height;
-alert(x + ' × ' + y);     
+    x1 = body.Width,
+    y1 = body.Height;
+    
+alert(x1 + ' × ' + y1);     
   
 var pixelRatio = (function(){var ratio=1;if(window.screen.systemXDPI!==undefined&&window.screen.logicalXDPI!==undefined&&window.screen.systemXDPI>window.screen.logicalXDPI){ratio=window.screen.systemXDPI/window.screen.logicalXDPI;}
 				else if(window.devicePixelRatio!==undefined){ratio=window.devicePixelRatio;}
