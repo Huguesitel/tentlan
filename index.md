@@ -11,7 +11,7 @@
 function myFunction2() {
  
       alert(' Info' )
-      f_clientWidth()
+      
 }  
 function f_clientWidth() {
 	return f_filterResults (
