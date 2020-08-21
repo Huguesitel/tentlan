@@ -8,10 +8,12 @@
 
 <script>
 function myFunction() {
+	alert (' Info ' )
   function f_clientWidth()
   alert (f_filterResults)
   }
 function f_clientWidth() {
+	alert (' Info largeur' )
 	return f_filterResults (
 		window.innerWidth ? window.innerWidth : 0,
 		document.documentElement ? document.documentElement.clientWidth : 0,
