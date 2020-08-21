@@ -16,8 +16,8 @@ function myFunction2() {
     doc = document,
     docElem = doc.documentElement,
     body = doc.getElementsByTagName('body')[0],
-    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
-    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+    x = win.innerWidth || docElem.Width || body.Width,
+    y = win.innerHeight|| docElem.Height|| body.Height;
 alert(x + ' × ' + y);     
   
 var pixelRatio = (function(){var ratio=1;if(window.screen.systemXDPI!==undefined&&window.screen.logicalXDPI!==undefined&&window.screen.systemXDPI>window.screen.logicalXDPI){ratio=window.screen.systemXDPI/window.screen.logicalXDPI;}
