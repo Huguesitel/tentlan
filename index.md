@@ -12,6 +12,13 @@ function myFunction2() {
  
       alert(' Info' )
       
+ var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName('body')[0],
+    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+alert(x + ' × ' + y);     
   
 var pixelRatio = (function(){var ratio=1;if(window.screen.systemXDPI!==undefined&&window.screen.logicalXDPI!==undefined&&window.screen.systemXDPI>window.screen.logicalXDPI){ratio=window.screen.systemXDPI/window.screen.logicalXDPI;}
 				else if(window.devicePixelRatio!==undefined){ratio=window.devicePixelRatio;}
