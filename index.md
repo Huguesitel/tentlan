@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>Click the button 2...   </p>
+<a href="https://huguesitel.github.io/tentlan/Pages/Page2.html">Visiter Page2</a>
 
 <button onclick="myFunction2()">Try it</button>
 
