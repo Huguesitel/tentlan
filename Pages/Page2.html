@@ -1,9 +1,68 @@
 <html>
-<style>  
+<style> 
+  .tooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+}
+
+.tooltip .left {
+    min-width:200px; 
+    top:50%;
+    right:100%;
+    margin-right:20px;
+    transform:translate(0, -50%);
+    padding:10px 20px;
+    color:#FFFFFF;
+    background-color:#CC0000;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px #888888;
+    visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.tooltip:hover .left {
+    visibility:visible; opacity:1;
+}
+
+.tooltip .left i {
+    position:absolute;
+    top:50%;
+    left:100%;
+    margin-top:-12px;
+    width:12px;
+    height:24px;
+    overflow:hidden;
+}
+
+.tooltip .left i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:0;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-45deg);
+    background-color:#CC0000;
+    box-shadow:0 1px 8px #888888;
+}
 </style> 
   
 <body>
-       <center> <img align="center" src="Image/moissoneuseConduite.png" ></center> 
+ <div class="btn btn-primary tooltip"><center> <img align="center" src="Image/moissoneuseConduite.png" ></center> 
+    <div class="left">
+        <h3>TAIO</h3>
+        <p>Dolor sit amet, consectetur adipiscing elit.</p>
+        <i></i>
+    </div>
+</div> 
+  
+       
       <img style="float:right" align="right" display="inline;" src="Image/startcharacter_a3.png" >
  <center> 
       <font size="12">
