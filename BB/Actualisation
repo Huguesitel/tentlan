@@ -1,0 +1,560 @@
+
+<html>  
+<head>  
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+body {
+  font-family: verdana;
+  font-size: 16px;
+}
+.textarea {
+  font-family: verdana;
+  font-size: 14px;
+}
+.exemple {
+  table-layout: fixed;
+  width: 350px;
+}
+.helpButton {
+  font-family: verdana;
+  font-size: 12px;
+  text-align : center;
+    background-color: #DCA331;
+    Color:white;
+    font-weight: bold;
+    padding: 3px 3px;
+    border-radius: 10px;
+    cursor: pointer; 
+    //cursor: url("https://media.istockphoto.com/vectors/computer-mouse-click-cursor-hand-touch-in-drawing-icon-vector-id1132046622"), pointer;
+    box-shadow: 0 8px 16px 0 grey;
+    text-decoration: none;
+    height: 40px;
+    width: 90px;
+    margin-top: 0vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-30%); /* tiré de la moitié de sa propre hauteur */
+}
+.helpButton1 {
+  font-family: verdana;
+  font-size: 12px;
+  text-align : center;
+    background-color: #d10000;
+    Color:white;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer; 
+    box-shadow: 0 8px 16px 0 grey;
+    text-decoration: none;
+    height: 40px; 
+    width: 90px;
+    margin-top: 2vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-30%); /* tiré de la moitié de sa propre hauteur */
+}
+.helpButton2 {
+  font-family: verdana;
+  font-size: 12px;
+  text-align : center;
+    background-color: #950000;
+    Color:white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer; 
+    box-shadow: 0 8px 16px 0 grey;
+    text-decoration: none;
+    height: 40px;  
+    margin-top: 2vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-30%); /* tiré de la moitié de sa propre hauteur */
+}
+.hideDontTakeUpSpace
+        {
+            display:none;
+        }
+table,
+td {
+    border: 1px solid #333;
+    height: 50px;
+    cursor: none;
+}
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+.active-amber-textarea.md-form label.active {
+  color: #ffa000;
+}
+.amber-textarea textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ffa000;
+  box-shadow: 0 1px 0 0 #ffa000;
+}
+.amber-textarea.md-form .prefix.active {
+  color: #ffa000;
+}
+.active-amber-textarea.md-form textarea.md-textarea:focus:not([readonly])+label {
+  color: #ffa000;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+
+
+<script type="text/javascript">  
+this.scrollbars(0)
+
+
+
+
+function JouerSon() {
+var sound = document.getElementById("MonSon");
+sound.play();}
+function JouerSon2() {
+var sound = document.getElementById("MonSon2");
+sound.play();}
+function JouerSon3() {
+var sound = document.getElementById("MonSon3");
+sound.play();
+setTimeout("test()",900);
+}
+function JouerSon4() {
+var sound = document.getElementById("MonSon4");
+sound.play();}
+
+function Finir(){  
+google.script.run.appendData3()
+google.script.host.close()
+}
+function Debuter(XX){  
+
+alert(XX); 
+}
+
+
+function msg(Numero){  
+ //alert("ppppppppppp");  
+ JouerSon()
+         var Cible = "Z" +Numero
+        // document.getElementById("message5").value = Cible           
+         var PosiX =document.getElementById(Cible).value 
+         var PosiY =document.getElementById(Cible + 'b').value 
+         //document.getElementById(Cible).style.backgroundColor = '#D1FF33'
+         //document.getElementById(Cible + 'b').style.backgroundColor = '#D1FF33'
+         document.getElementById('C' + Numero).style.backgroundColor = '#D1FF33'
+         //document.getElementById("message5").value = 'https://fr18.tentlan.com/worldmap/'+PosiX-20+'/'+ PosiY-20
+         window.open('https://fr18.tentlan.com/worldmap/'+PosiX+'/'+ PosiY)
+        // fen.keys [F9]
+ //        alert(PosiX);  
+ }  
+
+ function test(){  // ******************************************************************
+    JouerSon2()
+    var NbBB2 = parseInt(document.getElementById("nomLabel").innerText)
+    
+    
+    var selection = document.getElementById("message").value;
+    if(selection.length < 60){ 
+        document.getElementById("message").value = 'Aucune donnée collée !'
+        //document.getElementById("Pref1").className ='fas fa-fas fa-skull-crossbones' style='font-size:48px;color:red'
+        // <i id="Pref1" class='fas fa-fas fa-skull-crossbones' style='font-size:48px;color:red'></i>
+        JouerSon4()
+    return
+    }
+    
+    var position = selection.indexOf("initialNPCData")
+    var position2 = selection.indexOf("currentUserID")
+    var texte2 = selection.substr(position+17, position2-position-20)
+     document.getElementById("message2").value = texte2 
+    var texte3 = document.getElementById("message3").value
+    var position2 = 2
+    var MaxXX = 0
+    var MaxYY = 0
+    
+    var position3 = texte2.indexOf("}}",position+16)+1
+    var position4 = texte2.indexOf("}}",position3+1)+1
+    var position5 = texte2.indexOf("}}",position4+1)+1      
+            for (i = 1; i < 300; i++) { // ****************************************boucle 300 BB potentiel *************************************************
+
+              var Posi1 = texte2.indexOf('"',10)
+              var Posi2 = texte2.indexOf('},',position2+1)
+              var Posi3 = texte2.indexOf("tier",Posi1+1) +6         
+              var Posi4 = texte2.indexOf("}}",Posi3 )     
+                        if(Posi4 - Posi3 <20 ){   
+                                              var texte2 = "{" + texte2.substr(Posi4+3, 9000)
+                                              document.getElementById("message").value = texte2
+                                              var Posi1 = texte2.indexOf('"',10)
+                                              var Posi2 = texte2.indexOf('},',position2+1)
+                                              
+                                              var Posi3 = texte2.indexOf("tier",Posi1+1) +6
+                      
+                                              }
+                            var NiveayBB = texte2.substr(Posi3, 1)
+var RechBB =document.getElementById("NivBB").value 
+                            if(NiveayBB=== RechBB ){
+                                    var texte3 = texte2.substr(0, 10) + texte2.substr(Posi1, Posi2-Posi1)
+                                    
+                                    
+                                    var texte3 = texte3.replace('":{"cityName":"', '|');
+                                    var texte3 = texte3.replace('","tier":', '|');
+                                    var texte3 = texte3.replace('":"', '|');
+                                    var texte3 = texte3.replace('":"', '|');
+                                    var texte3 = texte3.replace('{"', '|');
+                                    var texte3 = texte3.replace('":', '|');
+                                   //document.getElementById("message3").value =  texte3 + "<<"
+
+                                    var Posit1 = texte3.indexOf('|',0)
+                                    var Posit2 = texte3.indexOf('|',Posit1 +1)
+                                    var Zone = texte3.substr(Posit1+1, Posit2-Posit1-1)
+                                    
+                                    var CodeX = Zone.slice(  3 );
+                                    var CodeY = Zone.slice(0, -( 3 ) );  
+                                    //document.getElementById("message3").value =  texte3+"  >>>" +  CodeX + "|" + CodeY
+                                    var CodeXX = parseInt(CodeX);
+                                    var CodeYY = parseInt(CodeY);
+                                    //document.getElementById("message3").value =  texte3+"  >>>entier "+ CodeXX + "|" + CodeYY
+
+                                    var Posit3 = texte3.indexOf('|',Posit2 )
+                                    var Posit4 = texte3.indexOf('|',Posit3 +1)
+                                    var CodeXY = texte3.substr(Posit3+1, Posit4-Posit3)
+                                    var CodeXXYY = parseInt(CodeXY);
+                                    //document.getElementById("message3").value =  texte3+"  >>>crypto >"+ CodeXY + "|" + CodeXXYY
+                                    
+                                    var DeviaX = (CodeXXYY - (Math.trunc(CodeXXYY/20)*20)) +1 
+                                    var DeviaY = Math.trunc(CodeXXYY/20) +1 
+                                    
+                                    if(CodeXX > MaxXX ){ var MaxXX = CodeXX }
+                                    if(CodeYY > MaxYY ){ var MaxYY = CodeYY }                                    
+                                    
+                                    var CodeXX = CodeXX + DeviaX
+                                    var CodeYY = CodeYY + DeviaY
+                                    
+
+                                    //document.getElementById("message3").value =  texte3+"  >>> "+ CodeXX + "|" + DeviaX + "|" + DeviaY
+                                    
+                                    
+                                    var Posit5 = texte3.indexOf('|',Posit4 )
+                                    var Posit6 = texte3.indexOf('|',Posit5 +1)
+                                    var KPO = texte3.substr(Posit5+1, Posit6-Posit5-1) 
+                                    
+                                     var TestFoublon = document.getElementById("message3").value
+                                     var Doublon = TestFoublon.indexOf(KPO,0 )
+
+                                    if(Doublon ===-1 ){ //pas de doublon *****************************
+                                        var texte3 = "|"+ CodeXX + "|" + CodeYY + "|" + KPO + "|" +  Zone
+                                        var NbBB2 = NbBB2 + 1
+                                       google.script.run.appendData(NbBB2+401,KPO,CodeXX,CodeYY,Zone )  
+                                        
+                                        document.getElementById("nomLabel").innerText=NbBB2
+                                        document.getElementById("message3").value = document.getElementById("message3").value + texte3 
+                                    }
+                                    //else {  // foublon !!!!
+                                        //document.getElementById("message").value = 'Collage non pris en compte car déjà présent ou données incorectes' 
+                                         // JouerSon4()
+                                     //     }
+                                  }
+             // heneraztion des sous zones **********************************
+             
+                                
+             document.getElementById("message").value = texte2                         
+              var texte2 = texte2.substr(0, Posi1) + texte2.substr(Posi2+2, 9000)
+              document.getElementById("message2").value =  texte2
+            
+           } 
+  //*************************************************************************************************************************
+var Mat1 =  MaxYY +""+ MaxXX +"," +  (MaxYY-20) +""+ MaxXX +"," + (MaxYY-40) +""+ MaxXX +"," +   MaxYY +""+ (MaxXX-20) +"," +    MaxYY +""+ (MaxXX-40) +"," + (MaxYY-20) +""+ (MaxXX-20) +"," +  (MaxYY-20) +""+ (MaxXX-40) +"," +  (MaxYY-40) +""+ (MaxXX-20) +"," +     (MaxYY-40) +""+ (MaxXX-40)  +","
+if(MaxXX/40 > Math.round(MaxXX/40) ){ var MaxXX = (MaxXX-20) }
+if(MaxYY/40 > Math.round(MaxYY/40) ){ var MaxYY = (MaxYY-20) }
+var Mat1 = Mat1 + MaxYY +""+ MaxXX +"," +  (MaxYY-20) +""+ MaxXX +"," + (MaxYY-40) +""+ MaxXX +"," +   MaxYY +""+ (MaxXX-20) +"," +    MaxYY +""+ (MaxXX-40) +"," + (MaxYY-20) +""+ (MaxXX-20) +"," +  (MaxYY-20) +""+ (MaxXX-40) +"," +  (MaxYY-40) +""+ (MaxXX-20) +"," +     (MaxYY-40) +""+ (MaxXX-40)  +","
+
+
+
+//document.getElementById("message4").value = document.getElementById("message3") + "|[" + document.getElementById("message5")+"]"
+              var texte5 = document.getElementById("message5").value 
+             document.getElementById("message5").value = document.getElementById("message5").value + Mat1      
+             var texte5 = document.getElementById("message5").value 
+             google.script.run.appendData2(texte5 )  
+             var texte3 = document.getElementById("message3").value 
+             document.getElementById("message4").value = texte3 + "|[" + texte5 +"]"
+//var Data = document.getElementById("message4").value
+//google.script.run.appendData3()
+// var copyText = document.getElementById("message4");
+  /* Select the text field */
+//  copyText.select();
+//alert(Data)
+  /* Copy the text inside the text field */
+//  document.execCommand("copy");          
+            
+           
+ }       
+function Zoner(){  
+
+  if (document.getElementById("male").checked ===true ){
+  var ZXXX = 500
+  var ZYYY = 520
+
+       document.getElementById("Z7").value = ZXXX
+       document.getElementById("Z7b").value = ZYYY
+       document.getElementById("Z8").value = ZXXX+60
+       document.getElementById("Z8b").value = ZYYY
+       document.getElementById("Z9").value = ZXXX+120
+       document.getElementById("Z9b").value = ZYYY       
+       
+       document.getElementById("Z10").value = ZXXX
+       document.getElementById("Z10b").value = ZYYY+60
+       document.getElementById("Z11").value = ZXXX+60
+       document.getElementById("Z11b").value = ZYYY+60
+       document.getElementById("Z12").value = ZXXX+120
+       document.getElementById("Z12b").value = ZYYY +60
+
+       document.getElementById("Z13").value = ZXXX
+       document.getElementById("Z13b").value = ZYYY+120
+       document.getElementById("Z14").value = ZXXX+60
+       document.getElementById("Z14b").value = ZYYY+120
+       document.getElementById("Z15").value = ZXXX+120
+       document.getElementById("Z15b").value = ZYYY+120 
+
+  }
+  if (document.getElementById("female").checked ===true ){
+  var ZXXX = 520
+  var ZYYY = 340
+
+       document.getElementById("Z7").value = ZXXX
+       document.getElementById("Z7b").value = ZYYY
+       document.getElementById("Z8").value = ZXXX+60
+       document.getElementById("Z8b").value = ZYYY
+       document.getElementById("Z9").value = ZXXX+120
+       document.getElementById("Z9b").value = ZYYY       
+       
+       document.getElementById("Z10").value = ZXXX
+       document.getElementById("Z10b").value = ZYYY+60
+       document.getElementById("Z11").value = ZXXX+60
+       document.getElementById("Z11b").value = ZYYY+60
+       document.getElementById("Z12").value = ZXXX+120
+       document.getElementById("Z12b").value = ZYYY +60
+
+       document.getElementById("Z13").value = ZXXX
+       document.getElementById("Z13b").value = ZYYY+120
+       document.getElementById("Z14").value = ZXXX+60
+       document.getElementById("Z14b").value = ZYYY+120
+       document.getElementById("Z15").value = ZXXX+120
+       document.getElementById("Z15b").value = ZYYY+120 
+  
+  }
+}
+
+
+</script>  
+</head>  
+<body >
+<audio  id="MonSon" src="https://lasonotheque.org/UPLOAD/wav/1735.wav"></audio>
+<audio  id="MonSon2" src="https://lasonotheque.org/UPLOAD/wav/1621.wav"></audio>
+<audio  id="MonSon3" src="https://lasonotheque.org/UPLOAD/wav/1220.wav"></audio>
+<audio  id="MonSon4" src="https://lasonotheque.org/UPLOAD/wav/1685.wav"></audio>
+1/ Accèder aux zones grace aux boutons -------- Zones :  
+  <input type="radio" id="male" name="gender" value="male" checked onclick=Zoner()>
+  <label for="male">Z1</label>
+  <input type="radio" id="female" name="gender" value="female" onclick=Zoner()>
+  <label for="female">Z2</label><br>
+<table className="exemple"align="center" >
+  <tr>
+    <td id="C7">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(7)  id="B7">
+    Zone<br>Nord-Ouest
+    </button>
+          <br /><input type="text" id="Z7" name="Z11"  value=500 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z7b" name="Z11b" value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+    
+    <td id="C8">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(8) id="B8">
+    Zone<br>Nord
+    </button>
+          <br /><input type="text" id="Z8" name="Z11"  value=560 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z8b" name="Z11b" value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+   
+    <td id="C9">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(9) id="B9">
+    Zone<br>Nord-Est
+    </button>
+          <br /><input type="text" id="Z9" name="Z11"  value=620 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z9b" name="Z11b" value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td> 
+   
+    <td id="C1"> <div className="helpButton1" > <p style="text-align: center;"> 
+    <button class="helpButton1" onclick=msg(1)>
+    Annexe 1
+    </button>
+          <br /><input type="text" id="Z1" name="Z11"  value=680 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z1b" name="Z11b" value=420 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+   
+    <td id="C2">  <div className="helpButton1" > <p style="text-align: center;"> 
+    <button class="helpButton1" onclick=msg(2)>
+    Annexe 2
+    </button>
+          <br /><input type="text" id="Z2" name="Z11"  value=680 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z2b" name="Z11b" value=360 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>      
+  
+  </tr>
+  <tr> 
+        <td id="C10">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(10) name="B10">
+    Zone<br>Ouest
+    </button>
+          <br /><input type="text" id="Z10" name="Z10"  value=500 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z10b" name="Z10b" value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>
+    
+    <td id="C11">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(11) name="B11">
+    Zone 1<br>Centre
+    </button>
+          <br /><input type="text" id="Z11" name="Z11"  value=560 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z11b" name="Z11b" value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>
+    <td id="C12">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(12) name="B12">
+    Zone<br>Est
+    </button>
+          <br /><input type="text" id="Z12" name="Z11"  value=620 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z12b" name="Z11b" value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>
+
+        <td id="C3">  <div className="helpButton1" > <p style="text-align: center;"> 
+    <button class="helpButton1" onclick=msg(3)>
+    Annexe 3
+    </button>
+          <br /><input type="text" id="Z3" name="Z11"  value=740 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z3b" name="Z11b" value=400 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+    
+    <td id="C4">  <div className="helpButton1" > <p style="text-align: center;"> 
+    <button class="helpButton1" onclick=msg(4)>
+    Annexe 4
+    </button>
+          <br /><input type="text" id="Z4" name="Z11"  value=740 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z4b" name="Z11b" value=460 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td> 
+    
+    
+  </tr>
+  <tr> 
+    <td id="C13">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(13) name="B13">
+    Zone<br>Sud-Ouest
+    </button>
+          <br /><input type="text" id="Z13" name="Z11"  value=500 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z13b" name="Z11b" value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>
+    <td id="C14">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(14) name="B14">
+    Zone<br>Sud
+    </button>
+          <br /><input type="text" id="Z14" name="Z11"  value=560 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z14b" name="Z11b" value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>
+    <td id="C15">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(15) name="B15">
+    Zone<br>Sud-Est
+    </button>
+          <br /><input type="text" id="Z15" name="Z11"  value=620 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z15b" name="Z11b" value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>
+<td id="C5">  <div className="helpButton1" > <p style="text-align: center;"> 
+    <button class="helpButton1" onclick=msg(5)>
+    Annexe 5
+    </button>
+          <br /><input type="text" id="Z5" name="Z11"  value=360 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z5b" name="Z11b" value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+    
+    <td id="C6">  <div className="helpButton1" > <p style="text-align: center;"> 
+    <button class="helpButton1" onclick=msg(6)>
+    Annexe 6
+    </button>
+          <br /><input type="text" id="Z6" name="Z11"  value=360 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z6b" name="Z11b" value=700 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td> 
+         
+         </tr>
+
+   
+</table>
+2/ Copier le code source (CTRL+U CTRL+A CTRL+C)
+<br />  
+3/ Coller le code source ci-dessous                   Niveau BB recherché
+<input type="text" id="NivBB" name="NivBB"  value=9 required  minlength="1" maxlength="1" size="3" style="width:20px;height:10px;font-size:14px;align:center">
+<br />  
+<div class="form-group shadow-textarea">
+    
+    <i id="Pref1" class="material-icons" style="font-size:48px;color:green">format_paint</i>
+    <textarea  class="form-control" onClick="this.select();" onPaste="JouerSon3()"; name="message" id="message" style="width: 440px; height: 20px;;font-size:22px;align:center"   >
+    
+    </textarea>
+</div>
+<div align="center">
+<label id="nomLabel">0</label>
+<label id="nomLabel2"> BB trouvé(s)</label>
+  <div class="tooltip">
+  <a href="https://zupimages.net/viewer.php?id=20/25/gv76.gif"><img src="https://zupimages.net/up/20/25/gv76.gif" alt="" /></a>
+  <span class="tooltiptext">Pffff...c est encore loin?</span>
+  </div>
+</div> 
+
+    <button class="helpButton2" onclick=Finir()  name="B7" align="center">
+    Utiliser ce bouton pour sortir de ce formulaire - aucun collage n'est nécessaire.
+    
+    </button>
+          
+
+
+    <textarea    name="message2" id="message2" style="width: 100%; height: 1px;" >
+    </textarea>
+
+    <textarea    name="message3" id="message3" style="width: 100%; height: 1px;" >
+    </textarea>    
+
+    <textarea    name="message4" id="message4" style="width: 100%; height: 1px;" >
+    </textarea>
+  <br />
+    <textarea    name="message5" id="message5" style="width: 100%; height: 1px;" >
+    </textarea>   
+</body>  
+</html>
+
