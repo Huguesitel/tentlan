@@ -74,7 +74,7 @@ body {
 table,
 td {
     border: 1px solid #333;
-    height: 50px;
+    height: 80px;
     cursor: none;
 }
 .shadow-textarea textarea.form-control::placeholder {
@@ -384,11 +384,13 @@ function Zoner(){
 <audio  id="MonSon2" src="https://lasonotheque.org/UPLOAD/wav/1621.wav"></audio>
 <audio  id="MonSon3" src="https://lasonotheque.org/UPLOAD/wav/1220.wav"></audio>
 <audio  id="MonSon4" src="https://lasonotheque.org/UPLOAD/wav/1685.wav"></audio>
+<p style="text-align: center;">   
 1/ Accèder aux zones grace aux boutons -------- Zones :  
   <input type="radio" id="male" name="gender" value="male" checked onclick=Zoner()>
   <label for="male">Z1</label>
   <input type="radio" id="female" name="gender" value="female" onclick=Zoner()>
   <label for="female">Z2</label><br>
+  <br>
 <table className="exemple"align="center" >
   <tr>
     <td id="C7">  <div className="helpButton" > <p style="text-align: center;"> 
@@ -431,6 +433,30 @@ function Zoner(){
           <input type="text" id="Z2b" name="Z11b" value=360 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
     </div>  </td>      
   
+   <td id="C7b">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(7)  id="B7b">
+    Zone<br>Nord-Ouest
+    </button>
+          <br /><input type="text" id="Z7b" name="Z11b"  value=500 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z7bb" name="Z11b" value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+    
+    <td id="C8b">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(8) id="B8b">
+    Zone<br>Nord
+    </button>
+          <br /><input type="text" id="Z8b" name="Z11b"  value=560 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z8bb" name="Z11b" value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+   
+    <td id="C9b">  <div className="helpButton" > <p style="text-align: center;"> 
+    <button class="helpButton" onclick=msg(9) id="B9b">
+    Zone<br>Nord-Est
+    </button>
+          <br /><input type="text" id="Z9b" name="Z11b"  value=620 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z9bb" name="Z11b" value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+    </div>  </td>  
+    
   </tr>
   <tr> 
         <td id="C10">  <div className="helpButton" > <p style="text-align: center;"> 
@@ -515,7 +541,7 @@ function Zoner(){
          </tr>
 
    
-</table>
+</table><br>
 2/ Copier le code source (CTRL+U CTRL+A CTRL+C)
 <br />  
 3/ Coller le code source ci-dessous                   Niveau BB recherché
