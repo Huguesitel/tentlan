@@ -130,7 +130,184 @@ td {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+.bnr{
+    margin-left: 0px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    color: red;
+    display: inline;
+    }
+.bnb{
+    margin-left: 0px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    color: blue;
+    display: inline; 
+    }   
+.bnn{
+    margin-left: 0px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    display: inline; 
+    }    
+.nnn{
+    margin-left: 0px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    display: inline; 
+    }     
+.nnb{
+    margin-left: 0px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: normal;
+    color: blue;
+    display: inline; 
+    }     
+.nnr{
+    margin-left: 0px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: normal;
+    color: red;
+    display: inline; 
+    }    
+.hide{display: none;}
+    ul {
+		padding: 3;
+        margin: 1px 1px;
+        list-style: none;
+        display: inline; 
+    }
+    ul li {
+        margin: 0px;
+        display: inline-block;
+    }
+    ul li a {
+        margin-left: 0px;
+        padding: 5px;
+        display: inline-block;      
+        border: 0px solid #f2f2f2;
+    }
+    ul li a img {
+        margin-left: 0px;
+        width: 40px;
+        height: 90%;
+        display: inline-block;
+    }
+    ul li a:hover img {
+        margin-left: 0px;
+        transform: scale(1.12);
+        display: inline-block;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  //border-bottom: 1px dotted black;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: #990000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  top: 120%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}  
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}    
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip2 .tooltiptext2 {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  top: 120%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}  
+.tooltip2:hover .tooltiptext {
+  visibility: visible;
+} 
+
+.select {
+    display: inline;
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.0;
+    padding: .6em 1.4em .5em .8em;
+    //width: 50px;
+   // max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+} 
+
+.textarea{  
+text-align: justify;
+  text-justify: inter-word;
+  text-indent: 10%;
+  width: 100%;
+  //height: 150px;
+  padding: 0px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  //  position: absolute;
+ //left: -2px;
+}
+.Pied{
+    position: fixed;
+    top: 95%;
+    left: 60%;
+}
 </style>
 
 
@@ -347,31 +524,30 @@ function Zoner(){
        document.getElementById("Z15").value = ZXXX+120
        document.getElementById("Z15b").value = ZYYY+120 
 
-  }
-  if (document.getElementById("female").checked ===true ){
+
   var ZXXX = 520
   var ZYYY = 340
 
-       document.getElementById("Z7").value = ZXXX
-       document.getElementById("Z7b").value = ZYYY
-       document.getElementById("Z8").value = ZXXX+60
-       document.getElementById("Z8b").value = ZYYY
-       document.getElementById("Z9").value = ZXXX+120
-       document.getElementById("Z9b").value = ZYYY       
+       document.getElementById("Z7b").value = ZXXX
+       document.getElementById("Z7bb").value = ZYYY
+       document.getElementById("Z8b").value = ZXXX+60
+       document.getElementById("Z8bb").value = ZYYY
+       document.getElementById("Z9b").value = ZXXX+120
+       document.getElementById("Z9bb").value = ZYYY       
        
-       document.getElementById("Z10").value = ZXXX
-       document.getElementById("Z10b").value = ZYYY+60
-       document.getElementById("Z11").value = ZXXX+60
-       document.getElementById("Z11b").value = ZYYY+60
-       document.getElementById("Z12").value = ZXXX+120
-       document.getElementById("Z12b").value = ZYYY +60
+       document.getElementById("Z10b").value = ZXXX
+       document.getElementById("Z10bb").value = ZYYY+60
+       document.getElementById("Z11b").value = ZXXX+60
+       document.getElementById("Z11bb").value = ZYYY+60
+       document.getElementById("Z12b").value = ZXXX+120
+       document.getElementById("Z12bb").value = ZYYY +60
 
-       document.getElementById("Z13").value = ZXXX
-       document.getElementById("Z13b").value = ZYYY+120
-       document.getElementById("Z14").value = ZXXX+60
-       document.getElementById("Z14b").value = ZYYY+120
-       document.getElementById("Z15").value = ZXXX+120
-       document.getElementById("Z15b").value = ZYYY+120 
+       document.getElementById("Z13b").value = ZXXX
+       document.getElementById("Z13bb").value = ZYYY+120
+       document.getElementById("Z14b").value = ZXXX+60
+       document.getElementById("Z14bb").value = ZYYY+120
+       document.getElementById("Z15b").value = ZXXX+120
+       document.getElementById("Z15bb").value = ZYYY+120 
   
   }
 }
