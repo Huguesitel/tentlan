@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+.bnr{
+    margin-left: 0px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    color: red;
+    display: inline;
+    }
+.bnb{
+    margin-left: 0px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    color: blue;
+    display: inline; 
+    }   
+.bnn{
+    margin-left: 0px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    display: inline; 
+    }    
+.nnn{
+    margin-left: 0px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    display: inline; 
+    }     
+.nnb{
+    margin-left: 0px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: normal;
+    color: blue;
+    display: inline; 
+    }     
+.nnr{
+    margin-left: 0px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: normal;
+    color: red;
+    display: inline; 
+    }    
+.hide{display: none;}
+    ul {
+		padding: 3;
+        margin: 1px 1px;
+        list-style: none;
+        display: inline; 
+    }
+    ul li {
+        margin: 0px;
+        display: inline-block;
+    }
+    ul li a {
+        margin-left: 0px;
+        padding: 5px;
+        display: inline-block;      
+        border: 0px solid #f2f2f2;
+    }
+    ul li a img {
+        margin-left: 0px;
+        width: 40px;
+        height: 90%;
+        display: inline-block;
+    }
+    ul li a:hover img {
+        margin-left: 0px;
+        transform: scale(1.12);
+        display: inline-block;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  //border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: #990000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  top: 120%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}  
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}    
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip2 .tooltiptext2 {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  top: 120%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}  
+.tooltip2:hover .tooltiptext {
+  visibility: visible;
+} 
+
+.select {
+    display: inline;
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.0;
+    padding: .6em 1.4em .5em .8em;
+    //width: 50px;
+   // max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+} 
+
+.textarea{  
+text-align: justify;
+  text-justify: inter-word;
+  text-indent: 10%;
+  width: 100%;
+  //height: 150px;
+  padding: 0px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  //  position: absolute;
+ //left: -2px;
+}
+.Pied{
+    position: fixed;
+    top: 95%;
+    left: 60%;
+}
+
+</style>
+<script>
+var Contenu = []
+var Passage = true
+function JouerSon() {
+var sound = document.getElementById("MonSon");
+sound.play();}
+function JouerSon2() {
+var sound = document.getElementById("MonSon2");
+sound.play();}
+function JouerSon3() {
+var sound = document.getElementById("MonSon3");
+sound.play();
+setTimeout("test()",900);
+}
+function JouerSon4() {
+var sound = document.getElementById("MonSon4");
+sound.play();}
+
+
+function miseEnAttente()
+{
+ setTimeout(fonctionAExecuter, 8000); //On attend 5 secondes avant d'exécuter la fonction
+}
+function fonctionAExecuter(){
+    google.script.run.withSuccessHandler(onSuccess2)  // PYB    désactivé *****************************************
+                  .EnvoyerPub();
+           
+OuvrirDebut()
+}
+function onSuccess2(Panneau) {
+   //var today = new Date();
+   //var ZoneTexte = document.getElementById('textarea');
+   document.getElementById('Pub').textContent = Panneau
+  //ZoneTexte.value =  Panneau + "ok   " + today
+  miseEnAttente()
+  //OuvrirDebut()
+}
+function QuelRubrique()  {
+
+  document.getElementById("p2").innerHTML  =  Contenu[document.getElementById("selectNumber").selectedIndex] // textContent
+ 
+   
+}
+
+
+function OuvrirDebut() {
+               // if (Contenu.length <3 ){
+
+               var Rubrik = document.getElementById("p1").innerHTML;
+               var Rubrik2 = document.getElementById("p2").innerHTML;
+               var array1 = Rubrik.split("|")
+ 
+                var dropdown =document.getElementById("selectNumber");
+              var Posi0 = 1
+              for ( i = 1; i<18;i++){
+                 dropdown[dropdown.length] = new Option(array1[i], array1[i])              
+                 var Posi1 = Rubrik2.indexOf('|',Posi0)
+                 var Posi2 = Rubrik2.indexOf('|',(Posi1+1))
+                 var texte = Rubrik2.substr(Posi0, Posi1-Posi0-1)
+                 var texte2 = Rubrik2.substr(Posi1+1, Posi2-Posi1-1)               
+                 Contenu[i] = texte2
+                 Posi0=Posi1+1
+               }
+               document.getElementById("p1").innerHTML =""
+                document.getElementById("p2").innerHTML =""
+               
+                
+}
+
+function winOpen()  {
+//  var myWindow = window.open("", "Aide SMGO", "toolbar=0 width=700,height=500 top=50 left=50 location=0 menubar=0 toolbar=0" );
+//alert( document.getElementById( "p2").style.); 
+//  myWindow.document.write(document.getElementById( "p2").innerHTML);
+ google.script.run.ENIGMER();
+}
+
+
+
+
+</script>
+
+
+
+</head>
+<body marginwidth="5" marginheight="0" topmargin="0" leftmargin="5" onload="fonctionAExecuter()">
+<audio  id="MonSon" src="https://lasonotheque.org/UPLOAD/wav/1735.wav"></audio>
+<audio  id="MonSon2" src="https://lasonotheque.org/UPLOAD/wav/1621.wav"></audio>
+<audio  id="MonSon3" src="https://lasonotheque.org/UPLOAD/wav/1220.wav"></audio>
+<audio  id="MonSon4" src="https://lasonotheque.org/UPLOAD/wav/1685.wav"></audio>
+<ul>
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Aller sur la feuille VILLE</span>
+<a href="https://docs.google.com/spreadsheets/d/1d6lD1tqA1cGGg7LIYpDtB7EVUWUJ_7fukavoLfoauu0/edit?usp=sharing"target="_blank"> 
+<img src="https://us.123rf.com/450wm/nataliiavolyk/nataliiavolyk1903/nataliiavolyk190300012/119542177-maya-pyramid-icon-isolated-on-white-background.jpg?ver=6" onclick=JouerSon() width="140" height="50%">
+
+</a>
+</div>
+</li>
+
+
+
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Aller sur la feuille ARMEES</span>
+<a href="https://docs.google.com/spreadsheets/d/11sjstBY1pYZtu0J52uX9V-ux2CUW3vZf3PZmotbbR_Y/edit?usp=sharing"target="_blank"> 
+<img src="https://nsa40.casimages.com/img/2020/07/10/mini_200710080645932979.png" onclick=JouerSon() width="50" height="50%">
+</a>
+</div>
+</li>
+
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Aller sur la feuille PROGRESSION</span>
+<a href="https://docs.google.com/spreadsheets/d/1jxkClpZ2Zuz5_qm32ZcBpeJTJz82IcCst6clYwQaMOY/edit?usp=sharing"target="_blank"> 
+<img src="https://nsa40.casimages.com/img/2020/07/10/mini_200710074744739289.png" onclick=JouerSon() width="40" height="50%">
+</a>
+</div>
+</li>
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Enigme du moment</span>
+ 
+<img src="http://gifs-animes.hollosite.com/gifs_animes/des_5.gif" onclick=winOpen() width="40" height="50%">
+
+</div>
+</li>
+</ul>
+
+
+
+<FONT face="Verdana" size="5pt">
+
+    <form name="FormMarque" resize="none">
+<a href="https://docs.google.com/spreadsheets/d/11VYZnBVO773SFimBn4clxCJW244kFOFfRJxPQ9uMdMM/edit?usp=sharing"target="_blank"> 
+<img src="https://zupimages.net/up/20/28/2d5m.gif" onclick=JouerSon() width="15" height="50%" >
+</a>    
+            <select id="selectNumber" display="inline" name="ListeMarque" style="width:250px" resize= "none" onchange="QuelRubrique()" >
+                <option SELECTED>Sélectionnez une rubtique</option>
+            </select>
+    </form>
+</FONT>
+<DIV id="ZTxt" href="_blank" target="_blank" data-content-id="#thepop" name="textarea" rows="1" cols="35" width="105" resize= "none"  class="textarea" style="cursor:help" >
+</DIV>
+
+
+  <div class="tooltip2">
+  <img src="https://zupimages.net/up/20/25/gv76.gif" bottom= "0" class="Pied" alt="" />
+  <span class="tooltiptext2">Pffff...c est encore loin?</span>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
