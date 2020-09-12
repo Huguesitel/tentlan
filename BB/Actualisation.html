@@ -314,7 +314,51 @@ text-align: justify;
 
 <script type="text/javascript">  
 this.scrollbars(0)
-Zoner()
+package filedemo; 
+	import java.io.BufferedWriter; 
+	import java.io.FileWriter; 
+	import java.io.IOException; 
+	import java.io.PrintWriter; 
+	/** * How to append data to a file in Java using FileReader. * * @author java67 */ 
+	public class FileAppendDemo{ public static void main(String args[]) throws IOException { 
+		// We have a file names.txt which already contain 
+		// two names, now we need to append couple of 
+		// more names onto it. 
+		// here is how it looks like now 
+		// names.txt // James // Hobert 
+		// In order to append text to a file, you need to open 
+		// file into append mode, you do it by using 
+		// FileReader and passing append = true 
+		FileWriter fw = null; 
+		BufferedWriter bw = null; 
+		PrintWriter pw = null; 
+		try { fw = new FileWriter("names.txt", true); 
+		     bw = new BufferedWriter(fw); 
+		     pw = new PrintWriter(bw); 
+		     pw.println("Shane"); 
+		     pw.println("Root"); 
+		     pw.println("Ben"); 
+		     System.out.println("Data Successfully appended into file"); 
+		     pw.flush(); } 
+		finally { try { 
+			pw.close(); 
+			bw.close(); 
+			fw.close(); } 
+			 catch (IOException io) {
+				 // can't do anything } 
+			 } } 
+				 // in Java 7 you can do it easily using try-with-resource 
+		// statement as shown below 
+		try (FileWriter f = new FileWriter("names.txt", true); 
+		BufferedWriter b = new BufferedWriter(f); 
+		PrintWriter p = new PrintWriter(b);) { 
+			p.println("appending text into file"); 
+			p.println("Gaura"); p.println("Bori"); } 
+		catch (IOException i) { 
+			i.printStackTrace(); } 
+	} }
+
+
 
 
 
@@ -683,23 +727,23 @@ ZONE 1          1/ Accèder aux zones grace aux boutons        ZONE 2
     <button class="helpButton" onclick=msg(23) name="B10b">
     Zone<br>Ouest
     </button>
-          <br /><input type="text" id="Z23" name="Z10b"  value=500 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
-          <input type="text" id="Z23b" name="Z10bb" value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
+          <br /><input type="text" id="Z23" name="Z10b"  value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px">
+          <input type="text" id="Z23b" name="Z10bb" value=400 required  minlength="3" maxlength="3" size="3" style="width:40px;height:10px;font-size:14px"></p> 
     </div>  </td>
     
     <td id="C24">  <div className="helpButton" > <p style="text-align: center;"> 
     <button class="helpButton" onclick=msg(24) name="B11b">
     Zone 1<br>Centre
     </button>
-          <br /><input type="text" id="Z24" name="Z11b"  value=560 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
-          <input type="text" id="Z124b" name="Z11bb" value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
+          <br /><input type="text" id="Z24" name="Z11b"  value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
+          <input type="text" id="Z124b" name="Z11bb" value=400 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
     </div>  </td>
     <td id="C25">  <div className="helpButton" > <p style="text-align: center;"> 
     <button class="helpButton" onclick=msg(25) name="B12">
     Zone<br>Est
     </button>
-          <br /><input type="text" id="Z25" name="Z12b"  value=620 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
-          <input type="text" id="Z25b" name="Z12bb" value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
+          <br /><input type="text" id="Z25" name="Z12b"  value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
+          <input type="text" id="Z25b" name="Z12bb" value=400 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
     </div>  </td> 
   </tr>
   <tr> 
@@ -743,22 +787,22 @@ ZONE 1          1/ Accèder aux zones grace aux boutons        ZONE 2
     <button class="helpButton" onclick=msg(26) name="B13">
     Zone<br>Sud-Ouest
     </button>
-          <br /><input type="text" id="Z26" name="Z11"  value=500 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
-          <input type="text" id="Z26b" name="Z11b" value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
+          <br /><input type="text" id="Z26" name="Z11"  value=520 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
+          <input type="text" id="Z26b" name="Z11b" value=460 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
     </div>  </td>
     <td id="C27">  <div className="helpButton" > <p style="text-align: center;"> 
     <button class="helpButton" onclick=msg(27) name="B14">
     Zone<br>Sud
     </button>
-          <br /><input type="text" id="Z27" name="Z11"  value=560 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
-          <input type="text" id="Z27b" name="Z11b" value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
+          <br /><input type="text" id="Z27" name="Z11"  value=580 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
+          <input type="text" id="Z27b" name="Z11b" value=460 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
     </div>  </td>
     <td id="C28">  <div className="helpButton" > <p style="text-align: center;"> 
     <button class="helpButton" onclick=msg(28) name="B15">
     Zone<br>Sud-Est
     </button>
-          <br /><input type="text" id="Z28" name="Z11"  value=620 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
-          <input type="text" id="Z28b" name="Z11b" value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
+          <br /><input type="text" id="Z28" name="Z11"  value=640 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px">
+          <input type="text" id="Z28b" name="Z11b" value=460 required  minlength="3" maxlength="3" size="3" style="width:40px;height:20px;font-size:14px"></p> 
     </div>  </td>        
          </tr>
 
