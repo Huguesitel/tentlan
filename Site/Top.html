@@ -85,8 +85,14 @@
 }    
    
   </style>  
-  
-  
+<script>
+
+function openRequestedPopup() {
+var windowObjectReference;
+var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,status=no,height=700,width=500";
+  windowObjectReference = window.open("https://huguesitel.github.io/tentlan/Site/Enigme1.html", "CNN_WindowName", strWindowFeatures);
+}
+</script>  
   
 <head>
 <body>
@@ -129,7 +135,7 @@
 <div class="tooltip">
   <span class="tooltiptext">Enigme du moment</span>
  <a>
-<img src="http://gifs-animes.hollosite.com/gifs_animes/des_5.gif" onclick=winOpen() width="60" height="50%">
+<img src="http://gifs-animes.hollosite.com/gifs_animes/des_5.gif" onclick=openRequestedPopup()  width="60" height="50%">
 </a>
 </div>
 </li>
