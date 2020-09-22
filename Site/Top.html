@@ -1,8 +1,147 @@
 <!DOCTYPE html>
 <html>
+ <style>
+.hide{display: none;}
+    ul {
+		padding: 3;
+        margin: 1px 1px;
+        list-style: none;
+        display: inline; 
+    }
+    ul li {
+        margin: 0px;
+        display: inline-block;
+    }
+    ul li a {
+        margin-left: 0px;
+        padding: 5px;
+        display: inline-block;      
+        border: 0px solid #f2f2f2;
+    }
+    ul li a img {
+        margin-left: 0px;
+        width: 40px;
+        height: 90%;
+        display: inline-block;
+    }
+    ul li a:hover img {
+        margin-left: 0px;
+        transform: scale(1.12);
+        display: inline-block;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  //border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: #990000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  top: 120%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}  
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}    
+
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip2 .tooltiptext2 {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  top: 120%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}  
+.tooltip2:hover .tooltiptext {
+  visibility: visible;
+}    
+   
+  </style>  
+  
+  
+  
 <head>
 <body>
-Top
+<audio  id="MonSon" src="https://lasonotheque.org/UPLOAD/wav/1735.wav"></audio>
+<audio  id="MonSon2" src="https://lasonotheque.org/UPLOAD/wav/1621.wav"></audio>
+<audio  id="MonSon3" src="https://lasonotheque.org/UPLOAD/wav/1220.wav"></audio>
+<audio  id="MonSon4" src="https://lasonotheque.org/UPLOAD/wav/1685.wav"></audio>
+<ul>
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Aller sur la feuille VILLE</span>
+<a href="https://docs.google.com/spreadsheets/d/1d6lD1tqA1cGGg7LIYpDtB7EVUWUJ_7fukavoLfoauu0/edit?usp=sharing"target="_blank"> 
+<img src="https://us.123rf.com/450wm/nataliiavolyk/nataliiavolyk1903/nataliiavolyk190300012/119542177-maya-pyramid-icon-isolated-on-white-background.jpg?ver=6" onclick=JouerSon() width="140" height="50%">
+
+</a>
+</div>
+</li>
+
+
+
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Aller sur la feuille ARMEES</span>
+<a href="https://docs.google.com/spreadsheets/d/11sjstBY1pYZtu0J52uX9V-ux2CUW3vZf3PZmotbbR_Y/edit?usp=sharing"target="_blank"> 
+<img src="https://nsa40.casimages.com/img/2020/07/10/mini_200710080645932979.png" onclick=JouerSon() width="50" height="50%">
+</a>
+</div>
+</li>
+
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Aller sur la feuille PROGRESSION</span>
+<a href="https://docs.google.com/spreadsheets/d/1jxkClpZ2Zuz5_qm32ZcBpeJTJz82IcCst6clYwQaMOY/edit?usp=sharing"target="_blank"> 
+<img src="https://nsa40.casimages.com/img/2020/07/10/mini_200710074744739289.png" onclick=JouerSon() width="40" height="50%">
+</a>
+</div>
+</li>
+<li>
+<div class="tooltip">
+  <span class="tooltiptext">Enigme du moment</span>
+ 
+<img src="http://gifs-animes.hollosite.com/gifs_animes/des_5.gif" onclick=winOpen() width="40" height="50%">
+
+</div>
+</li>
+</ul>
+
+
+
+<FONT face="Verdana" size="5pt">
+
+    <form name="FormMarque" resize="none">
+<a href="https://docs.google.com/spreadsheets/d/11VYZnBVO773SFimBn4clxCJW244kFOFfRJxPQ9uMdMM/edit?usp=sharing"target="_blank"> 
+<img src="https://zupimages.net/up/20/28/2d5m.gif" onclick=JouerSon() width="15" height="50%" >
+</a> 
 </body>
 </head>
 </html>
