@@ -89,9 +89,11 @@ font: 15px Verdana, sans-serif;
   
 
 <script>
-alert(obtenirParametre("nom"));	
+//alert(obtenirParametre("nom"));	
+	document.getElementById('Blabla').value =obtenirParametre("nom")
 function obtenirParametre (sVar) {
   return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+
 }
 
 
@@ -172,14 +174,13 @@ var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,statu
 <li>
 <div class="tooltip"   width="15%" height="550"     scrolling="no"   frameBorder="0"
  style="float:right" align="right" display="inline;"       >
-<span class="tooltiptext">Blabla à venir</span>
+<span class="tooltiptext" id="Blabla" >Blabla à venir</span>
+	
  <img class="Droite" style="float:right" align="right" display="inline;" src="Image/startcharacter_a3.png" >
   
 </div>
 	</li>
 	</ul>  	
-<h3 id="r-912648" data-claire-element-id="30935660">Envoyer des paramètres dans l'URL</h3>	
-	<p id="r-2173751" data-claire-element-id="30897203">En introduction, je vous disais que l'URL permettait de transmettre des informations. Comment est-ce que ça fonctionne, exactement ?</p>
 	
 	
 <iframe id="inlineCentre"
