@@ -83,9 +83,63 @@
 .tooltip2:hover .tooltiptext {
   visibility: visible;
 }    
-   
-  </style>  
+<style> 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  //border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 50%;
+  left: 50%;
+  //margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  //top: 50%;
+  //left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} 
+</style> 
+  
+
 <script>
+myFunction2() {
+ //*<div class="tooltip">
+// <span class="tooltiptext2">Moi Toutentek ! Grand conducteur de la MUM ! Je suis aveugle mais j'ai une bonne mémoire !</span>    */   
+}
+</script>   
+
 
 function openRequestedPopup() {
 var windowObjectReference;
@@ -145,14 +199,23 @@ var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,statu
 <li>
 <div class="tooltip">
 <span class="tooltiptext">Aide</span>
-   
-<a href="https://docs.google.com/spreadsheets/d/11VYZnBVO773SFimBn4clxCJW244kFOFfRJxPQ9uMdMM/edit?usp=sharing"target="_blank"> 
-<img src="https://zupimages.net/up/20/28/2d5m.gif" onclick=JouerSon() width="50" height="60" >
-</a> 
+
+		<a href="https://docs.google.com/spreadsheets/d/11VYZnBVO773SFimBn4clxCJW244kFOFfRJxPQ9uMdMM/edit?usp=sharing"target="_blank"> 
+		<img src="https://zupimages.net/up/20/28/2d5m.gif" onclick=JouerSon() width="50" height="60" >
+		</a> 
 	</div>
-</li>
-</ul>    
-		</center>    
+	</li>
+	</ul>    
+</center>  
+	
+
+<div class="tooltip">
+
+ <img class="Droite" style="float:right" align="right" display="inline;" src="Image/startcharacter_a3.png" >
+  <span class="tooltiptext">Blabla à venir</span>
+</div>
+	
+	
 </body>
 </head>
 </html>
