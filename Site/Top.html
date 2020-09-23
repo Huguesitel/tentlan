@@ -89,12 +89,9 @@ font: 15px Verdana, sans-serif;
   
 
 <script>
-myFunction2() {
- //*<div class="tooltip">
-// <span class="tooltiptext2">Moi Toutentek ! Grand conducteur de la MUM ! Je suis aveugle mais j'ai une bonne mémoire !</span>    */   
-}
 
 function openRequestedPopup() {
+	alert ("OK")
 var windowObjectReference;
 var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,status=no,height=700,width=700,minimizable=no,fullscreen=no" ;
   windowObjectReference = window.open("https://huguesitel.github.io/tentlan/Site/Enigme1.html", "CNN_WindowName", strWindowFeatures);
@@ -141,7 +138,7 @@ var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,statu
 </div>
 </li>
 <li>
-<div class="tooltip">
+<div class="tooltip" onclick=openRequestedPopup()>
   <span class="tooltiptext">Enigme du moment</span>
  <a>
 <img src="http://gifs-animes.hollosite.com/gifs_animes/des_5.gif" onclick=openRequestedPopup()  width="60" height="50%">
