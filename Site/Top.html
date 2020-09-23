@@ -89,11 +89,11 @@ font: 15px Verdana, sans-serif;
   
 
 <script>
-alert("Hello" + obtenirParametre("nom") + "!");
+//alert("Hello" + obtenirParametre("nom") + "!");
 
- var Namer = document.getElementById("Blabla").textContent  ///innerText	
+ var Namer = document.getElementById("Blabla2").InnerText  ///innerText	
 alert(Namer)
-	document.getElementById('Blabla').innerText =obtenirParametre("nom")
+	document.getElementById('Blabla2').innerText =obtenirParametre("nom")
 function obtenirParametre (sVar) {
   return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 
@@ -168,6 +168,7 @@ var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,statu
 	</li>
 	</ul>  
 </div>	
+<h2 id="Blabla2">Bonjour</h2>
 </center>  
 	
 
