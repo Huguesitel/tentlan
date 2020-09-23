@@ -99,10 +99,12 @@ function obtenirParametre (sVar) {
   return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 
 }
-function ChangerFrame(){
+function ChangerFrameFlash(){
   document.getElementById("inlineCentre").src="https://huguesitel.github.io/tentlan/BB/Actualisation.html" ;
  }
-
+function ChangerFrameAide(){
+  document.getElementById("inlineCentre").src="https://huguesitel.github.io/tentlan/Site/Aide.html" ;
+ }
 function openRequestedPopup() {
 var windowObjectReference;
 var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,status=no,height=700,width=700,minimizable=no,fullscreen=no" ;
@@ -165,20 +167,19 @@ var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,statu
 	<li>
 		<div class="tooltip" display="inline;">
 		<span class="tooltiptext" display="inline;">Aide</span>
-
-			<a href="https://docs.google.com/spreadsheets/d/11VYZnBVO773SFimBn4clxCJW244kFOFfRJxPQ9uMdMM/edit?usp=sharing"target="_blank"> 
-			<img style="float:right" src="https://zupimages.net/up/20/28/2d5m.gif" onclick=JouerSon() width="50" height="50" >
-			</a> 
-
+			<a>
+			<img style="float:right" src="https://zupimages.net/up/20/28/2d5m.gif" onclick=ChangerFrameAide() width="50" height="50" >
+			</a>
 		</div>
 			
 	</li>
 	<li>
 		<div class="tooltip" display="inline;">
-		<span class="tooltiptext" display="inline;">Actualisation Flash</span>
+			<a>
+			<span class="tooltiptext" display="inline;">Actualisation Flash</span>
 
-			<img style="float:right" src="Image/hotloge3.gif" onclick=ChangerFrame() width="50" height="50" >
-			 
+			<img style="float:right" src="Image/hotloge3.gif" onclick=ChangerFrameFlash() width="50" height="50" >
+			 </a>
 
 		</div>
 			
