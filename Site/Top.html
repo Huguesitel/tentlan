@@ -89,6 +89,11 @@ font: 15px Verdana, sans-serif;
   
 
 <script>
+alert(obtenirParametre("nom"));	
+function obtenirParametre (sVar) {
+  return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+}
+
 
 function openRequestedPopup() {
 var windowObjectReference;
