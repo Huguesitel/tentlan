@@ -89,7 +89,8 @@ font: 15px Verdana, sans-serif;
   
 
 <script>
-//alert(obtenirParametre("nom"));	
+alert(obtenirParametre("nom"));	
+alert(	document.getElementById('Blabla').innerText)
 	document.getElementById('Blabla').innerText =obtenirParametre("nom")
 function obtenirParametre (sVar) {
   return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
