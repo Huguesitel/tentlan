@@ -99,7 +99,9 @@ function obtenirParametre (sVar) {
   return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 
 }
-
+function ChangerFrame(){
+  document.getElementById("inlineCentre").src="https://huguesitel.github.io/tentlan/BB/Actualisation.html" ;
+ }
 
 function openRequestedPopup() {
 var windowObjectReference;
@@ -175,9 +177,8 @@ var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,statu
 		<div class="tooltip" display="inline;">
 		<span class="tooltiptext" display="inline;">Actualisation Flash</span>
 
-			<a href="https://docs.google.com/spreadsheets/d/11VYZnBVO773SFimBn4clxCJW244kFOFfRJxPQ9uMdMM/edit?usp=sharing"target="_blank"> 
-			<img style="float:right" src="Image/hotloge.gif" onclick=JouerSon() width="50" height="50" >
-			</a> 
+			<img style="float:right" src="Image/hotloge.gif" onclick=ChangerFrame() width="50" height="50" >
+			 
 
 		</div>
 			
