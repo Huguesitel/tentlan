@@ -24,13 +24,7 @@
           xhr.send(null); // La requête est prête, on envoie tout !
       }();
 	
-//	DefaultTableModel model = new DefaultTableModel();
-//        model.addColumn("Pseudo");
-//        model.addColumn("X");
-//        model.addColumn("Y");
-//        JTable table = new JTable(model);
-//  DefaultTableModel model = (DefaultTableModel) table.getModel();
-//  model.addRow(new Object[]{"Column 1", "Column 2", "Column 3","Column 4","Column 5"});	
+	
     function addRow(tableID) {
 
         var table = document.getElementById(tableID);
@@ -52,7 +46,7 @@
         element2.type = "text";
         element2.name = "txtbox[]";
         cell3.appendChild(element2);
-
+	    
         var cell4 = row.insertCell(3);
         var element3 = document.createElement("input");
         element3.type = "text";
@@ -115,11 +109,13 @@ Test
 
 <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
 
-<TABLE id="dataTable" width="350px" border="1">
+<TABLE id="dataTable" width="750px" border="1">
     <TR>
         <TD><INPUT type="checkbox" name="chk"/></TD>
         <TD> 1 </TD>
-        <TD> <INPUT type="text" /> </TD>
+        <TD> <INPUT type="text" /> Pseudo</TD>
+	<TD> <INPUT type="text" /> X </TD>
+	<TD> <INPUT type="text" /> Y </TD>    
     </TR>
 </TABLE>
 
