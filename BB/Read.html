@@ -22,7 +22,8 @@ table, td {
 	
 window.onload = function loadFile() 
 
-loadFile() {         
+loadFile() {        
+	alert ("Début")
           var xhr = new XMLHttpRequest();
  
           // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
@@ -40,6 +41,7 @@ loadFile() {
 		  	};
 		  xhr.send(null); // La requête est prête, on envoie tout !
 	      };
+	alert ("Fin")
      	}	
 
 	       // final String SEPARATEUR = ",";
