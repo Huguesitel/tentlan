@@ -50,9 +50,9 @@ font: 15px Verdana, sans-serif;
   position: absolute;
   z-index: 1;
 
-  top: 50%;
-  left: 110%;
-  margin-right: 20px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  top: 10%;
+  left: 105%;
+  margin-right: 10px; /* Use half of the width (120/2 = 60), to center the tooltip */
 }  
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -99,8 +99,9 @@ window.onload = function(){
 // htmlContent = "Some <span class="foo">sample</span> text."
 
 textContent = node.textContent;
-//var textContent2 = 
-    document.getElementById('Blabla').textContent="Hello " + obtenirParametre("nom") + " !" ;
+var textContent2 ="Moi, Toutentek je déclare <br>" 
+textContent2 +="Hello " + obtenirParametre("nom") + " !" 
+    document.getElementById('Blabla').textContent= textContent2;
 //alert (textContent2)	
 // textContent = "Some sample text."
 	//document.getElementById('BLA').node.textContent ="Hello"
