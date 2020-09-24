@@ -3,6 +3,7 @@
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+	text-align: center;
 }
 </style>
                      
@@ -44,12 +45,13 @@ table, th, td {
         cell1.appendChild(element1);
 
         var cell2 = row.insertCell(1);
-        cell2.innerHTML = rowCount + 1;
+        cell2.innerHTML = rowCount ;
 
         var cell3 = row.insertCell(2);
         var element2 = document.createElement("input");
         element2.type = "text";
         element2.name = "txtbox[]";
+	element2.style="width: 100%";
         cell3.appendChild(element2);
 	    
         var cell4 = row.insertCell(3);
@@ -114,7 +116,7 @@ Test
 
 <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
 
-<TABLE id="dataTable" style="width:90%" border="1">
+<TABLE id="dataTable" style="width:80%" border="1">
 	<colgroup>
 	       <col span="1" style="width: 10%;">
 	       <col span="1" style="width: 10%;">		
