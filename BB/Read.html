@@ -11,12 +11,6 @@
                     <span id="reminderContentText">
                      
 <script>
-	DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("Pseudo");
-        model.addColumn("X");
-        model.addColumn("Y");
-        JTable table = new JTable(model);
-	
 	
       document.onload = function loadFile() {
          
@@ -38,7 +32,12 @@
           };
           xhr.send(null); // La requête est prête, on envoie tout !
       }();
-
+	
+	DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Pseudo");
+        model.addColumn("X");
+        model.addColumn("Y");
+        JTable table = new JTable(model);
   DefaultTableModel model = (DefaultTableModel) table.getModel();
   model.addRow(new Object[]{"Column 1", "Column 2", "Column 3","Column 4","Column 5"});	
 	
