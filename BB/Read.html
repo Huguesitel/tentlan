@@ -20,26 +20,27 @@ table, td {
                      
 <script>
 	
-      document.onload = function loadFile() {
-         
+window.onload = function loadFile() 
+
+loadFile() {         
           var xhr = new XMLHttpRequest();
  
           // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
           xhr.open("GET", "Joueurs.txt", true);
            
-          xhr.onreadystatechange = function() { // On gère ici une requête asynchrone
-           
-          var montant = xhr.responseText;
+		  xhr.onreadystatechange = function() { // On gère ici une requête asynchrone
 
- 
-              if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 0) { // Si le fichier est chargé sans erreur
- 
-                  document.getElementById("reminderContentText").innerHTML = montant; // Et on affiche !
- 
-          };
-          xhr.send(null); // La requête est prête, on envoie tout !
-      };
-     }	
+		  var montant = xhr.responseText;
+
+
+		      if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 0) { // Si le fichier est chargé sans erreur
+
+			  document.getElementById("reminderContentText").innerHTML = montant; // Et on affiche !
+
+		  	};
+		  xhr.send(null); // La requête est prête, on envoie tout !
+	      };
+     	}	
 
 	       // final String SEPARATEUR = ",";
  
