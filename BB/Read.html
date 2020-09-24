@@ -36,13 +36,13 @@ table, td {
  
                   document.getElementById("reminderContentText").innerHTML = montant; // Et on affiche !
  
-	        final String SEPARATEUR = ",";
+	       // final String SEPARATEUR = ",";
  
-	        String mots[] = montant.split(SEPARATEUR);
+	       // String mots[] = montant.split(SEPARATEUR);
  
-        	for (int i = 0; i < mots.length; i++) {
-document.getElementById("reminderContentText").innerHTML = document.getElementById("reminderContentText").innerHTML + mots[i]; 
-              }
+        	//for (int i = 0; i < mots.length; i++) {
+//document.getElementById("reminderContentText").innerHTML = document.getElementById("reminderContentText").innerHTML + mots[i]; 
+             // }
           };
           xhr.send(null); // La requête est prête, on envoie tout !
       }();
