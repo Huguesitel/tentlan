@@ -92,7 +92,17 @@ font: 15px Verdana, sans-serif;
 <script>
 window.onload = function(){ 
 		//alert("Hello" + obtenirParametre("nom") + "!");
-	alert(document.getElementById("BLA").InnerText)
+	//alert(document.getElementById("BLA").InnerText)
+	var node = document.getElementById('BLA'),
+
+//htmlContent = node.innerHTML,
+// htmlContent = "Some <span class="foo">sample</span> text."
+
+textContent = node.textContent;
+alert (textContent)	
+// textContent = "Some sample text."
+	
+	
 }
 	
 //alert("Hello" + obtenirParametre("nom") + "!");
