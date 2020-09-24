@@ -1,5 +1,10 @@
 <html>  
-
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
                      
 <script>
 	
@@ -109,13 +114,14 @@ Test
 
 <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
 
-<TABLE id="dataTable" width="750px" border="1">
+<TABLE id="dataTable" style="width:90%" border="1">
     <TR>
         <TD><INPUT type="checkbox" name="chk"/></TD>
         <TD> 1 </TD>
-        <TD> <INPUT type="text" /> Pseudo</TD>
-	<TD> <INPUT type="text" /> X </TD>
-	<TD> <INPUT type="text" /> Y </TD>    
+	     	<th>Pseudo</th>
+    		<th>X</th>
+    		<th>Y</th>   
+
     </TR>
 </TABLE>
 
