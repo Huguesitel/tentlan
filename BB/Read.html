@@ -1,46 +1,44 @@
 <html>  
-<head>  
-<script>
-
-// Java program to illustrate reading data from file 
-// using nio.File 
-import java.util.*; 
-import java.nio.charset.StandardCharsets; 
-import java.nio.file.*; 
-import java.io.*; 
-public class ReadFileIntoList 
-{ 
-public static List<String> readFileInList(String fileName) 
-{ 
-
-	List<String> lines = Collections.emptyList(); 
-	try
-	{ 
-	lines = 
-	Files.readAllLines(Paths.get(fileName), StandardCharsets.UTF_8); 
-	} 
-
-	catch (IOException e) 
-	{ 
-
-	// do something 
-	e.printStackTrace(); 
-	} 
-	return lines; 
-} 
-public static void main(String[] args) 
-{ 
-	List l = readFileInList("names.txt"); 
-
-	Iterator<String> itr = l.iterator(); 
-	while (itr.hasNext()) 
-	System.out.println(itr.next()); 
-} 
-	alert(itr)
-} 
-</script>
-</head>
 <body marginwidth="5" marginheight="0" topmargin="0" leftmargin="5" onload="fonctionAExecuter()">
+	   
+      <div id="reminderContainer">
+            <div id="reminderHeader">
+                <span>Reminder:</span>
+            </div>
+ 
+            <div id="reminderContent">
+                <div="reminderContentText">
+                    <span id="reminderContentText">
+                     
+<script>
+      document.onload = function loadFile() {
+         
+          var xhr = new XMLHttpRequest();
+ 
+          // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
+          xhr.open("GET", "names.txt", true);
+           
+          xhr.onreadystatechange = function() { // On gère ici une requête asynchrone
+           
+          var montant = xhr.responseText;
+
+ 
+              if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 0) { // Si le fichier est chargé sans erreur
+ 
+                  document.getElementById("reminderContentText").innerHTML = montant; // Et on affiche !
+ 
+              }
+          };
+          xhr.send(null); // La requête est prête, on envoie tout !
+      }();
+ 
+</script>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
 Test
 	<object data="names.txt"> </object>
 </body>
