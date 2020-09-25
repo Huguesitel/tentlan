@@ -138,7 +138,7 @@ function Init(){
 	data = document.getElementById("reminderContentText").innerHTML	
 	alert(data)
 	alert(data.indexOf(","))
-	var res = data.split(",");
+	var res = data.split("[,|/n]");
 	//mots = data.split(",");             //data.split("[, /n]+");
 	//String[] mots = data.split(",");
  	//		for (int i = 0; i < mots.length; i++) {
@@ -146,8 +146,10 @@ function Init(){
 	//		}
 	//alert(mots[2])
 	var x = document.getElementById("dataTable").rows[0].cells;
-	x[0].innerHTML = res[1];
-	
+		x[2].innerHTML = res[1];
+	x[2].innerHTML = res[0];
+	x[3].innerHTML = res[1];
+	x[4].innerHTML = res[2];
 }
 	
 </script>
