@@ -28,8 +28,13 @@ xhr.onload = function () {
 	// Process our return data
 	if (xhr.status >= 200 && xhr.status < 300) {
 		// Runs when the request is successful
-		console.log(xhr.responseText);
-		document.getElementById("reminderContentText").innerHTML = xhr.responseText; // Et on affiche !
+		//console.log(xhr.responseText);
+		//console.log(JSON.parse(xhr.responseText));
+		var data = JSON.parse(xhr.responseText);
+
+			// Get the first item
+			//var firstPost = data[0];
+		document.getElementById("reminderContentText").innerHTML = data[0];//xhr.responseText; // Et on affiche !
 	} else {
 		// Runs when it's not
 		console.log(xhr.responseText);
