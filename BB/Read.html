@@ -29,7 +29,7 @@ xhr.onload = function () {
 	// Process our return data
 	if (xhr.status >= 200 && xhr.status < 300) {
 		// Runs when the request is successful
-		//console.log(xhr.responseText);
+		console.log(xhr.responseText);
 		//console.log(JSON.parse(xhr.responseText));
 		//var data = xhr.responseText
 
@@ -37,10 +37,7 @@ xhr.onload = function () {
 			//var firstPost = data[0];
  		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
 		 
-		//String mots[] = data.split("[, /n]+");
- 		//	for (int i = 0; i < mots.length; i++) {
-		//	    System.out.println(mots[i]);
-		//	}
+
 		
 		
 		
@@ -57,11 +54,14 @@ xhr.onload = function () {
 // The second argument is the endpoint URL
 xhr.open('GET', 'Joueurs.txt');
 xhr.send();
-	alert( xhr.responseText)
+	
 
 	
     function addRow(tableID) {
-
+		//String mots[] = data.split("[, /n]+");
+ 		//	for (int i = 0; i < mots.length; i++) {
+		//	    System.out.println(mots[i]);
+		//	}
         var table = document.getElementById(tableID);
 
         var rowCount = table.rows.length;
