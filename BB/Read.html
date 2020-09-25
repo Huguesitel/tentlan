@@ -135,8 +135,8 @@ function addRow(tableID) {
             alert(e);
         }
     }
-window.onload = init();	
-function init(){
+//window.onload = init();	
+function Init(){
 	alert(document.getElementById("reminderContentText").innerHTML)
 }
 	
@@ -159,7 +159,9 @@ function init(){
 	
 <INPUT type="button" class="helpButton" value="Ajouter un joueur" onclick="addRow('dataTable')" />
 
- <INPUT type="button" class="helpButton" value="Supprimer les joueurs cochés" onclick="deleteRow('dataTable')" />
+<INPUT type="button" class="helpButton" value="Supprimer les joueurs cochés" onclick="deleteRow('dataTable')" />
+	
+<INPUT type="button" class="helpButton" value="Générer" onclick="Init()" />
 
 <TABLE id="dataTable" style="width:60%" border="1">
 	<colgroup>
