@@ -39,6 +39,7 @@ table, td {
 <script>
 window.onload = init;	
 init(){
+	alert(document.getElementById("reminderContentText").innerHTML)
 }
 	// Set up our HTTP request
 var data = ""
@@ -75,7 +76,7 @@ xhr.send();
 
 	
 function addRow(tableID) {
-	alert(document.getElementById("reminderContentText").innerHTML)
+	
 		//String mots[] = data.split("[, /n]+");
  		//	for (int i = 0; i < mots.length; i++) {
 		//	    System.out.println(mots[i]);
@@ -153,7 +154,7 @@ function addRow(tableID) {
                 </div>
             </div>
         </div>
-
+<br>
 
 	
 <INPUT type="button" class="helpButton" value="Ajouter un joueur" onclick="addRow('dataTable')" />
