@@ -20,6 +20,7 @@ table, td {
                      
 <script>
 	// Set up our HTTP request
+var data = ""
 var xhr = new XMLHttpRequest();
 
 // Setup our listener to process completed requests
@@ -30,11 +31,11 @@ xhr.onload = function () {
 		// Runs when the request is successful
 		//console.log(xhr.responseText);
 		//console.log(JSON.parse(xhr.responseText));
-		//var data = JSON.parse(xhr.responseText);
+		var data = xhr.responseText
 
 			// Get the first item
 			//var firstPost = data[0];
-		document.getElementById("reminderContentText").innerHTML = xhr.responseText; // Et on affiche !
+ 		document.getElementById("reminderContentText").innerHTML = data //xhr.responseText; // Et on affiche !
 	} else {
 		// Runs when it's not
 		console.log(xhr.responseText);
@@ -130,12 +131,10 @@ xhr.send();
         </div>
 
 
-Test
-
 	
-	<INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
+<INPUT type="button" value="Ajouter un joueur" onclick="addRow('dataTable')" />
 
-<INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
+<INPUT type="button" value="Supprimer les joueurs cochés" onclick="deleteRow('dataTable')" />
 
 <TABLE id="dataTable" style="width:60%" border="1">
 	<colgroup>
