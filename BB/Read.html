@@ -134,11 +134,12 @@ function addRow(tableID) {
     }
 //window.onload = init();	
 function Init(){
-	addRow(dataTable)
+	
 	//var mots = []
 	data = document.getElementById("reminderContentText").innerHTML	
 	alert(data)
 	alert(data.indexOf(","))
+	addRow("dataTable")
 	var res = data.split("[,|/n]");
 	//mots = data.split(",");             //data.split("[, /n]+");
 	//String[] mots = data.split(",");
@@ -146,8 +147,8 @@ function Init(){
 	//		    System.out.println(mots[i]);
 	//		}
 	//alert(mots[2])
-	var x = document.getElementById("dataTable").rows[0].cells;
-		x[2].innerHTML = res[1];
+	var x = document.getElementById("dataTable").rows[1].cells;
+		//x[2].innerHTML = res[1];
 	x[2].innerHTML = res[0];
 	x[3].innerHTML = res[1];
 	x[4].innerHTML = res[2];
