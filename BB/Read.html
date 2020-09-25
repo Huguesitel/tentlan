@@ -34,7 +34,7 @@ xhr.onload = function () {
 
 			// Get the first item
 			//var firstPost = data[0];
-		document.getElementById("reminderContentText").innerHTML = data[0];//xhr.responseText; // Et on affiche !
+		document.getElementById("reminderContentText").innerHTML = data;//xhr.responseText; // Et on affiche !
 	} else {
 		// Runs when it's not
 		console.log(xhr.responseText);
