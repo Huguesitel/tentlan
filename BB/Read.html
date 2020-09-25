@@ -63,7 +63,9 @@ xhr.onload = function () {
 		// Runs when it's not
 		console.log(xhr.responseText);
 	}
-
+	if (xhr.readyState == 4) {
+		Init()
+	}
 };
 
 // Create and send a GET request
