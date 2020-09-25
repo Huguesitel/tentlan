@@ -166,7 +166,7 @@ function Enregistrer(){
 	var totalRowCount = tabler.rows.length
 	alert(totalRowCount)
 	
-	for (i = 0; i < totalRowCount; i =i + 1) {
+	for (i = 0; i < Math.floor(totalRowCount); i =i + 1) {
 			var x = document.getElementById("dataTable").rows[i+1].cells;
 				//Sauve += x[2].innerHTML +","
 				//Sauve += x[3].innerHTML +","
