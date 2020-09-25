@@ -162,8 +162,20 @@ function fonctionAExecuter(){
 }
 function Enregistrer(){	
 	var tabler = document.getElementById("dataTable");
+	var Sauve =""
 	var totalRowCount = tabler.rows.length
 	alert(totalRowCount)
+	
+	for (i = 0; i < totalRowCount; i =i + 1) {
+			var x = document.getElementById("dataTable").rows[i+1].cells;
+				Sauve += x[2].innerHTML +","
+				Sauve += x[3].innerHTML +","
+				Sauve += x[4].innerHTML +","
+				
+			}
+	alert(Sauve)
+	
+	
 }	
 	
 	
