@@ -30,11 +30,11 @@ xhr.onload = function () {
 		// Runs when the request is successful
 		//console.log(xhr.responseText);
 		//console.log(JSON.parse(xhr.responseText));
-		var data = JSON.parse(xhr.responseText);
+		//var data = JSON.parse(xhr.responseText);
 
 			// Get the first item
 			//var firstPost = data[0];
-		document.getElementById("reminderContentText").innerHTML = data;//xhr.responseText; // Et on affiche !
+		document.getElementById("reminderContentText").innerHTML = xhr.responseText; // Et on affiche !
 	} else {
 		// Runs when it's not
 		console.log(xhr.responseText);
