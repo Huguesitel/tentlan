@@ -145,14 +145,14 @@ function Init(){
 	alert(Math.floor(res.length/3))
  			for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
 				addRow("dataTable")
-
-				
-			}
-			for (i = 0; i < Math.floor(res.length); i =i + 1) {
 				var x = document.getElementById("dataTable").rows[i+1].cells;
 				x[2].innerHTML = res[i*3+0];
 				x[3].innerHTML = res[i*3+1];
-				x[4].innerHTML = res[i*3+2];			
+				x[4].innerHTML = res[i*3+2];
+				
+			}
+			for (i = 0; i < Math.floor(res.length); i =i + 1) {
+			
 			}
 
 }
