@@ -35,9 +35,9 @@ xhr.onload = function () {
 
 			// Get the first item
 			//var firstPost = data[0];
- 		document.getElementById("reminderContentText").innerHTML = data //xhr.responseText; // Et on affiche !
+ 		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
 		 
-		//String mots[] = data.split(",");
+		//String mots[] = data.split(",\n");
  		//	for (int i = 0; i < mots.length; i++) {
 		//	    System.out.println(mots[i]);
 		//	}
@@ -57,7 +57,7 @@ xhr.onload = function () {
 // The second argument is the endpoint URL
 xhr.open('GET', 'Joueurs.txt');
 xhr.send();
-	alert( data)
+	alert( xhr.responseText)
 
 	
     function addRow(tableID) {
