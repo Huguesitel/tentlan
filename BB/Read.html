@@ -142,8 +142,8 @@ function Init(){
 	alert(data)
 	
 	var res = data.split(",");
-	alert(res.length)
- 			for (i = 0; i < res.length; i =i+ 3) {
+	alert(Math.floor(res.length))
+ 			for (i = 0; i < Math.floor(res.length); i =i + 3) {
 				alert(i)
 				addRow("dataTable")
 				var x = document.getElementById("dataTable").rows[i+1].cells;
