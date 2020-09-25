@@ -143,13 +143,14 @@ function Init(){
 	
 	var res = data.split(",");
 	alert(Math.floor(res.length))
- 			for (i = 0; i < Math.floor(res.length); i =i + 3) {
-				alert(i)
+ 			for (i = 0; i < 119; i =i + 3) {
+				
 				addRow("dataTable")
 				var x = document.getElementById("dataTable").rows[i+1].cells;
 				x[i+2].innerHTML = res[i+0];
 				x[i+3].innerHTML = res[i+1];
 				x[i+4].innerHTML = res[i+2];
+				alert(i)
 			}
 
 }
