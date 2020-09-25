@@ -1,5 +1,23 @@
 <html>  
 <style>
+.helpButton {
+  font-family: verdana;
+  font-size: 12px;
+  text-align : center;
+    background-color: #DCA331;
+    Color:white;
+    font-weight: bold;
+    padding: 3px 3px;
+    border-radius: 10px;
+    cursor: pointer; 
+    //cursor: url("https://media.istockphoto.com/vectors/computer-mouse-click-cursor-hand-touch-in-drawing-icon-vector-id1132046622"), pointer;
+    box-shadow: 0 8px 16px 0 grey;
+    text-decoration: none;
+    height: 60px;
+    width: 90px;
+    margin-top: 0vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-30%); /* tiré de la moitié de sa propre hauteur */
+}	
 table, th {
 	border: 1px solid black;
 	background-color: Black;	  
@@ -138,9 +156,9 @@ function addRow(tableID) {
 
 
 	
-<INPUT type="button" value="Ajouter un joueur" onclick="addRow('dataTable')" />
+<INPUT type="button" class="helpButton" value="Ajouter un joueur" onclick="addRow('dataTable')" />
 
-<INPUT type="button" value="Supprimer les joueurs cochés" onclick="deleteRow('dataTable')" />
+ <INPUT type="button" class="helpButton" value="Supprimer les joueurs cochés" onclick="deleteRow('dataTable')" />
 
 <TABLE id="dataTable" style="width:60%" border="1">
 	<colgroup>
