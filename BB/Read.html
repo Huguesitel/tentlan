@@ -139,10 +139,10 @@ function Init(){
 	
 	//var mots = []
 	data = document.getElementById("reminderContentText").innerHTML	
-	alert(data)
+	//alert(data)
 	
 	var res = data.split(",");
-	alert(Math.floor(res.length/3))
+	//alert(Math.floor(res.length/3))
  			for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
 				addRow("dataTable")
 				var x = document.getElementById("dataTable").rows[i+1].cells;
@@ -151,11 +151,17 @@ function Init(){
 				x[4].innerHTML = res[i*3+2];
 				
 			}
-			for (i = 0; i < Math.floor(res.length); i =i + 1) {
-			
-			}
 
 }
+function fonctionAExecuter(){
+	alert ("ok")
+}
+function Enregistrer(){	
+	var tabler = document.getElementById("dataTable");
+	var totalRowCount = tabler.rows.length
+	alert(totalRowCount)
+}	
+	
 	
 </script>
 <body marginwidth="5" marginheight="0" topmargin="0" leftmargin="5" onload="fonctionAExecuter()">
