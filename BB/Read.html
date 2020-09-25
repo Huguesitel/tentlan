@@ -36,7 +36,7 @@ xhr.onload = function () {
 			// Get the first item
 			//var firstPost = data[0];
  		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
-		 
+		 String mots[] = data.split("[, /n]+");
 
 		
 		
