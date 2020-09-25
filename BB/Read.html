@@ -37,6 +37,9 @@ table, td {
 </style>
                      
 <script>
+window.onload = init;	
+init(){
+}
 	// Set up our HTTP request
 var data = ""
 var xhr = new XMLHttpRequest();
@@ -140,10 +143,7 @@ function addRow(tableID) {
 <body marginwidth="5" marginheight="0" topmargin="0" leftmargin="5" onload="fonctionAExecuter()">
 	   
       <div id="reminderContainer">
-            <div id="reminderHeader">
-                <span>Reminder:</span>
-            </div>
- 
+
             <div id="reminderContent">
                 <div="reminderContentText">
                     <span style="display:none"; id="reminderContentText">	
