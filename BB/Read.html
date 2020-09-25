@@ -19,37 +19,32 @@ table, td {
 </style>
                      
 <script>
+	// Set up our HTTP request
+var xhr = new XMLHttpRequest();
+
+// Setup our listener to process completed requests
+xhr.onload = function () {
+
+	// Process our return data
+	if (xhr.status >= 200 && xhr.status < 300) {
+		// Runs when the request is successful
+		console.log(xhr.responseText);
+		document.getElementById("reminderContentText").innerHTML = xhr.responseText; // Et on affiche !
+	} else {
+		// Runs when it's not
+		console.log(xhr.responseText);
+	}
+
+};
+
+// Create and send a GET request
+// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+// The second argument is the endpoint URL
+xhr.open('GET', 'Joueurs.txt');
+xhr.send();
 	
-window.onload = function loadFile() 
- {        
-	alert ("Début")
-          var xhr = new XMLHttpRequest();
- 
-          // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-          xhr.open("GET", "Joueurs.txt", true);
-           
-		  xhr.onreadystatechange = function() { // On gère ici une requête asynchrone
 
-		  var montant = xhr.responseText;
-
-
-		      if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 0) { // Si le fichier est chargé sans erreur
-
-			  document.getElementById("reminderContentText").innerHTML = montant; // Et on affiche !
-
-		  	};
-		  xhr.send(null); // La requête est prête, on envoie tout !
-	      };
-	alert ("Fin")
-     	}	
-
-	       // final String SEPARATEUR = ",";
- 
-	       // String mots[] = montant.split(SEPARATEUR);
- 
-        	//for (int i = 0; i < mots.length; i++) {
-//document.getElementById("reminderContentText").innerHTML = document.getElementById("reminderContentText").innerHTML + mots[i]; 
-             // }	
+	
     function addRow(tableID) {
 
         var table = document.getElementById(tableID);
