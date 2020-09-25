@@ -140,8 +140,8 @@ function Init(){
 	data = document.getElementById("reminderContentText").innerHTML	
 	alert(data)
 	
-	addRow("dataTable")
 	var res = data.split(",");
+	alert(res.length)
  			for (i = 0; i < res.length; i+= 3) {
 				
 				addRow("dataTable")
