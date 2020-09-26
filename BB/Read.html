@@ -14,7 +14,7 @@
     box-shadow: 0 8px 16px 0 grey;
     text-decoration: none;
     height: 50px;
-    width: 220px;
+    width: 240px;
     margin-top: 0vh; /* poussé de la moitié de hauteur de viewport */
     transform: translateY(-30%); /* tiré de la moitié de sa propre hauteur */
 }	
@@ -53,7 +53,7 @@ xhr.onload = function () {
 		console.log(xhr.responseText);
 		//console.log(JSON.parse(xhr.responseText));
 		var data = xhr.responseText
-
+alert(data)
 			// Get the first item
 			//var firstPost = data[0];
  		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
@@ -75,7 +75,7 @@ xhr.onload = function () {
 xhr.open('GET', 'Joueurs.txt');
 xhr.send();
 	
-fonctionAExecuter(){}
+//fonctionAExecuter(){}
 	
 function addRow(tableID) {
 	data = document.getElementById("reminderContentText").innerHTML	
