@@ -109,8 +109,9 @@ textContent2 +="Ici, tu es sur le menu Aide de la tribu - il suffit de passer to
 //alert (textContent2)	
 // textContent = "Some sample text."
 	//document.getElementById('BLA').node.textContent ="Hello"
-document.getElementById("Loading").style.display == "none";	
+Invisibler()	
 document.getElementById("Toutentek").focus();	
+	
 }
 	
 //alert("Hello" + obtenirParametre("nom") + "!");
@@ -122,6 +123,14 @@ function obtenirParametre (sVar) {
   return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(sVar).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 
 }
+function Invisibler() {
+  var x = document.getElementById("Loading");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}	
 function ChangerFrameFlash(){
   document.getElementById("inlineCentre").src="https://huguesitel.github.io/tentlan/BB/Actualisation.html" ;
  }
