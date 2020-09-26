@@ -103,7 +103,7 @@ window.onload = function(){
 
 textContent = node.textContent;
 var textContent2 ="Moi, Toutentek je déclare " 
-textContent2 +="Hello " + obtenirParametre("nom") + " !" 
+textContent2 +="Hello " + obtenirParametre("nom") + "\u00a0!" 
 textContent2 +="Ici, tu es sur le menu Aide de la tribu - il suffit de passer ton curseur de souris sur une rubrique pour l'afficher."
     document.getElementById('Blabla').textContent= textContent2;
 //alert (textContent2)	
@@ -149,7 +149,7 @@ var strWindowFeatures = "menubar=no,location=no,resizable=no,scrollbars=no,statu
 <ul>
 	<li>
 		<div class="tooltip">
-		  <span class="tooltiptext" display="inline;">Aller sur la feuille VILLE</span>
+		  <span class="tooltiptext" display="inline;">Massacrer des BB</span>
 			<a > 
 			<img  style="float:left" src="Image/BB.gif" onclick=JouerSon() width="80" height="50%">
 
