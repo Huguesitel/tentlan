@@ -46,14 +46,14 @@ var xhr = new XMLHttpRequest();
 
 // Setup our listener to process completed requests
 xhr.onload = function () {
-alert("ok")
+
 	// Process our return data
 	if (xhr.status >= 200 && xhr.status < 300) {
 		// Runs when the request is successful
 		console.log(xhr.responseText);
 		//console.log(JSON.parse(xhr.responseText));
 		var data = xhr.responseText
-alert(data)
+
 			// Get the first item
 			//var firstPost = data[0];
  		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
@@ -72,8 +72,8 @@ alert(data)
 // Create and send a GET request
 // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
 // The second argument is the endpoint URL
-alert("premier")
-	xhr.open('GET', 'Joueurs.txt');
+
+	xhr.open('GET', 'Data/Joueurs.txt');
 xhr.send();
 	
 //fonctionAExecuter(){}
