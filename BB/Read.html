@@ -78,52 +78,52 @@ xhr.send();
 	
 //fonctionAExecuter(){}
 	
-//function addRow(tableID) {
-//	data = document.getElementById("reminderContentText").innerHTML	
-///	alert(data)
-//	var res = data.split(",");
+function addRow(tableID) {
+	data = document.getElementById("reminderContentText").innerHTML	
+	alert(data)
+	var res = data.split(",");
 	
-// 	for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
+ 	for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
 				
-//        var table = document.getElementById(tableID);
+        var table = document.getElementById(tableID);
 
-//        var rowCount = table.rows.length;
-//        var row = table.insertRow(rowCount);
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
 
-//        var cell1 = row.insertCell(0);
-//        var element1 = document.createElement("input");
-//        element1.type = "checkbox";
-//        element1.name="chkbox[]";
-//        cell1.appendChild(element1);
+        var cell1 = row.insertCell(0);
+       var element1 = document.createElement("input");
+        element1.type = "checkbox";
+        element1.name="chkbox[]";
+        cell1.appendChild(element1);
 
- //      var cell2 = row.insertCell(1);
-//        cell2.innerHTML = rowCount ;
+      var cell2 = row.insertCell(1);
+        cell2.innerHTML = rowCount ;
 
-//        var cell3 = row.insertCell(2);
-//        var element2 = document.createElement("input");
-//        element2.type = "text";
-//        //element2.id = "txtbox" + i*3;
-//	element2.style="width: 100%";
-//	element2.value=res[i*3+0];			
-//        cell3.appendChild(element2);
+        var cell3 = row.insertCell(2);
+        var element2 = document.createElement("input");
+        element2.type = "text";
+        //element2.id = "txtbox" + i*3;
+	element2.style="width: 100%";
+	element2.value=res[i*3+0];			
+        cell3.appendChild(element2);
 	    
-//        var cell4 = row.insertCell(3);
-//        var element3 = document.createElement("input");
-//        element3.type = "text";
+        var cell4 = row.insertCell(3);
+        var element3 = document.createElement("input");
+        element3.type = "text";
         //element3.id = "txtbox" + i*3+1;
-//	 element3.style="width: 100%";   
-//		element3.value=res[i*3+1];		
-//        cell4.appendChild(element3);	
+	 element3.style="width: 100%";   
+		element3.value=res[i*3+1];		
+        cell4.appendChild(element3);	
 	    
-//	var cell5 = row.insertCell(4);
-//        var element4 = document.createElement("input");
-//        element4.type = "text";
-//        //element4.id = "txtbox" + i*3+2;
-//	 element4.style="width: 100%"; 
-//	element4.value=res[i*3+2];		
-//        cell5.appendChild(element4);    
-//	}
-//    }
+	var cell5 = row.insertCell(4);
+        var element4 = document.createElement("input");
+        element4.type = "text";
+        //element4.id = "txtbox" + i*3+2;
+	 element4.style="width: 100%"; 
+	element4.value=res[i*3+2];		
+        cell5.appendChild(element4);    
+	}
+    }
 
 //    function deleteRow(tableID) {
 //        try {
