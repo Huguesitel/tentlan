@@ -103,7 +103,7 @@ function addRow(tableID) {
         var cell3 = row.insertCell(2);
         var element2 = document.createElement("input");
         element2.type = "text";
-        element2.id = "txtbox" + i*3 +"1";
+        element2.id = "txtbox" + row +"1";
 	element2.style="width: 100%";
 	element2.value=res[i*3+0];			
         cell3.appendChild(element2);
@@ -111,7 +111,7 @@ function addRow(tableID) {
         var cell4 = row.insertCell(3);
         var element3 = document.createElement("input");
         element3.type = "text";
-        element3.id = "txtbox" + i*3+"2";
+        element3.id = "txtbox" + row +"2";
 	 element3.style="width: 100%";   
 		element3.value=res[i*3+1];		
         cell4.appendChild(element3);	
@@ -119,7 +119,7 @@ function addRow(tableID) {
 	var cell5 = row.insertCell(4);
         var element4 = document.createElement("input");
         element4.type = "text";
-        element4.id = "txtbox" + i*3+"3";
+        element4.id = "txtbox" + row +"3";
 	 element4.style="width: 100%"; 
 	element4.value=res[i*3+2];		
         cell5.appendChild(element4);    
