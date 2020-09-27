@@ -146,24 +146,24 @@ function addRow(tableID) {
         }
     }
 //window.onload = init();	
-function Init(){
+//function Init(){
 
-	data = document.getElementById("reminderContentText").innerHTML	
-	var res = data.split(",");
- 			for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
-				addRow("dataTable")
-				var x = document.getElementById("dataTable").rows[i+1].cells;
-				x[2].innerHTML = res[i*3+0];
-				x[3].innerHTML = res[i*3+1];
-				x[4].child.value = res[i*3+2];
+//	data = document.getElementById("reminderContentText").innerHTML	
+//	var res = data.split(",");
+// 			for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
+//				addRow("dataTable")
+//				var x = document.getElementById("dataTable").rows[i+1].cells;
+//				x[2].innerHTML = res[i*3+0];
+//				x[3].innerHTML = res[i*3+1];
+//				x[4].child.value = res[i*3+2];
 				
-			}
+//			}
 
-}
-function fonctionAExecuter(){
-	//alert ("fonctionAExecuter")
-	//Init()
-}
+//}
+//function fonctionAExecuter(){
+//	//alert ("fonctionAExecuter")
+//	//Init()
+//}
 function Enregistrer(){	
 	var tabler = document.getElementById("dataTable");
 	var Sauve =""
