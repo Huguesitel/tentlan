@@ -124,24 +124,24 @@ function addRow(tableID) {
 	}
     }
 function deleteRow(tableID) {
-        try {
-       var table = document.getElementById(tableID);
-        var rowCount = table.rows.length;
+//        try {
+//       var table = document.getElementById(tableID);
+//        var rowCount = table.rows.length;
 
-        for(var i=0; i<rowCount; i++) {
-            var row = table.rows[i];
-          var chkbox = row.cells[0].childNodes[0];
-            if(null != chkbox && true == chkbox.checked) {
-                table.deleteRow(i);
+//        for(var i=0; i<rowCount; i++) {
+//            var row = table.rows[i];
+//          var chkbox = row.cells[0].childNodes[0];
+//            if(null != chkbox && true == chkbox.checked) {
+//                table.deleteRow(i);
                rowCount--;
-               i--;
-           }
+//               i--;
+//           }
 
 
-        }
+ //       }
 //        }catch(e) {
 //            alert(e);
-       }
+//       }
    }
 //window.onload = init();	
 //function Init(){
@@ -162,25 +162,25 @@ function deleteRow(tableID) {
 //	//alert ("fonctionAExecuter")
 //	//Init()
 //}
-//function Enregistrer(){	
-//	var tabler = document.getElementById("dataTable");
-//	var Sauve =""
-//	var totalRowCount = tabler.rows.length
+function Enregistrer(){	
+	var tabler = document.getElementById("dataTable");
+	var Sauve =""
+	var totalRowCount = tabler.rows.length
 //	alert(totalRowCount)
 	
-//	for (i = 0; i < totalRowCount; i =i + 1) {
+	for (i = 0; i < totalRowCount; i =i + 1) {
 		
-//			var xx = document.getElementById("txtbox" + (i*3);).value
-// 				Sauve += xx
-//			var xx = document.getElementById("txtbox" + (i*3)+1;).value
-//				Sauve += xx
-//			var xx = document.getElementById("txtbox" + (i*3)+2;).value
-// 				Sauve += xx	
-//			}
-//	alert("ok" + Sauve)
+			var xx = document.getElementById("txtbox" + (i*3);).value
+ 				Sauve += xx
+			var xx = document.getElementById("txtbox" + (i*3)+1;).value
+				Sauve += xx
+			var xx = document.getElementById("txtbox" + (i*3)+2;).value
+ 				Sauve += xx	
+			}
+	alert("ok" + Sauve)
 	
 	
-//}	
+}	
 	
 	
 </script>
