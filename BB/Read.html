@@ -80,7 +80,6 @@ xhr.send();
 	
 function addRow(tableID) {
 	data = document.getElementById("reminderContentText").innerHTML	
-	alert(data)
 	var res = data.split(",");
 	
  	for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
@@ -124,27 +123,26 @@ function addRow(tableID) {
         cell5.appendChild(element4);    
 	}
     }
+function deleteRow(tableID) {
+        try {
+       var table = document.getElementById(tableID);
+        var rowCount = table.rows.length;
 
-//    function deleteRow(tableID) {
-//        try {
-//        var table = document.getElementById(tableID);
-//        var rowCount = table.rows.length;
-
-//        for(var i=0; i<rowCount; i++) {
-//            var row = table.rows[i];
-//          var chkbox = row.cells[0].childNodes[0];
-//            if(null != chkbox && true == chkbox.checked) {
-//                table.deleteRow(i);
- //               rowCount--;
-//                i--;
-//            }
+        for(var i=0; i<rowCount; i++) {
+            var row = table.rows[i];
+          var chkbox = row.cells[0].childNodes[0];
+            if(null != chkbox && true == chkbox.checked) {
+                table.deleteRow(i);
+               rowCount--;
+               i--;
+           }
 
 
-//        }
+        }
 //        }catch(e) {
 //            alert(e);
-//        }
-//    }
+       }
+   }
 //window.onload = init();	
 //function Init(){
 
