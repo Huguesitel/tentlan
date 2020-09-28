@@ -74,7 +74,7 @@ xhr.onload = function () {
 // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
 // The second argument is the endpoint URL
 
-	xhr.open('GET', 'Data/Joueurs.txt');
+xhr.open('GET', 'Data/Joueurs.txt');
 xhr.send();
 </script>
 <script>
@@ -125,7 +125,11 @@ function addRow(tableID) {
         cell5.appendChild(element4);    
 	}
     }
-//function deleteRow(tableID) {
+function deleteRow(tableID) {
+	if (xhr.readyState == 4) {
+		if(xhr.status  == 200) {
+            		
+	
 //        try {
 //       var table = document.getElementById(tableID);
 //        var rowCount = table.rows.length;
@@ -145,6 +149,9 @@ function addRow(tableID) {
 //            alert(e);
 //       }
 //   }
+		}			
+	}
+}	
 //window.onload = init();	
 //function Init(){
 
