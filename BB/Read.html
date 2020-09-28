@@ -85,7 +85,7 @@ function addRow(tableID) {
 	var res = data.split(",");
 	
  	for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
-		var j = -i+1)+""		
+		var j = (i+1)+""		
         var table = document.getElementById(tableID);
 	
         var rowCount = table.rows.length;
