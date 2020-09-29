@@ -175,6 +175,10 @@ function Enregistrer(){
 //if (xhr.readyState == 4) {	
 //private static void copyFileUsingJava7Files('Data/Joueurs.txt', 'Data/Joueurs2.txt') throws IOException {
 //F/var j = (k*3)+1+""
+	var table = document.getElementById("dataTable");
+	var totalRowCount = table.rows.length
+
+	for (k = 0; k < totalRowCount; i =i + 1) {
 		//alert(document.getElementById("txtbox" + j).value)
 		var j = (k*3)+1+""
 			var xx = document.getElementById("txtbox" + j).value
