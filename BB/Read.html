@@ -178,16 +178,16 @@ if (xhr.readyState == 4) {
 	var totalRowCount = tabler.rows.length
 	alert(totalRowCount)
 //*********************************************element2.id = "txtbox" + j +"1";	
-//	for (i = 0; i < totalRowCount; i =i + 1) {
+	for (i = 1; i =< totalRowCount; i =i + 1) {
 		
-//			var xx = document.getElementById("txtbox" + (i*3);).value
-// 				Sauve += xx
-//			var xx = document.getElementById("txtbox" + (i*3)+1;).value
-//				Sauve += xx
-//			var xx = document.getElementById("txtbox" + (i*3)+2;).value
- //				Sauve += xx	
-//			}
-//	alert("ok" + Sauve)
+			var xx = document.getElementById("txtbox" + i + 1).value
+ 				Sauve += xx
+			var xx = document.getElementById("txtbox" + i + 2).value
+				Sauve += xx
+			var xx = document.getElementById("txtbox" + i + 3).value
+ 				Sauve += xx	
+			}
+	alert("ok" + Sauve)
 	
 	}	
 }	
