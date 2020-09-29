@@ -179,16 +179,17 @@ function Enregistrer(){
 	var totalRowCount = table.rows.length
 alert(totalRowCount)
 	for (k = 0; k < totalRowCount; i =i + 1) {
-		//alert(document.getElementById("txtbox" + j).value)
+		/
 		var j = (k*3)+1+""
+		alert(document.getElementById("txtbox" + j).value)
 			var xx = document.getElementById("txtbox" + j).value
- 				Sauve += xx
+ 				Sauve =Sauve + xx
 		var j = (k*3)+2+""
 			var xx = document.getElementById("txtbox" + j).value
-				Sauve += xx
+				Sauve =Sauve + xx
 		var j = (k*3)+3+""
 			var xx = document.getElementById("txtbox" + j).value
- 				Sauve += xx	
+ 				Sauve =Sauve + xx	
 		}
 	
 	
