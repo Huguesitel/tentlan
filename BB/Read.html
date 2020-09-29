@@ -188,16 +188,17 @@ function Enregistrer(){
 	//
 //*********************************************element2.id = "txtbox" + j +"1";	
 	for (k = 0; k < totalRowCount; k =k + 1) {
-		alert(totalRowCount+1)
-		alert(document.getElementById("txtbox" + k + 1).value)
+		//alert(totalRowCount+1)
 		var j = (k*3)+1+""
-			var xx = document.getElementById("txtbox" + k + 1).value
+		alert(document.getElementById("txtbox" + j).value)
+		var j = (k*3)+1+""
+			var xx = document.getElementById("txtbox" + j).value
  				Sauve += xx
 		var j = (k*3)+2+""
-			var xx = document.getElementById("txtbox" + k + 2).value
+			var xx = document.getElementById("txtbox" + j).value
 				Sauve += xx
 		var j = (k*3)+3+""
-			var xx = document.getElementById("txtbox" + k + 3).value
+			var xx = document.getElementById("txtbox" + j).value
  				Sauve += xx	
 		}
 	
