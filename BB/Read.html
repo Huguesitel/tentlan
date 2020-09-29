@@ -172,11 +172,12 @@ function deleteRow(tableID) {
 //	//Init()
 //}
 function Enregistrer(){	
-//	var tabler = document.getElementById("dataTable");
-//	var Sauve =""
-//	var totalRowCount = tabler.rows.length
-//	alert(totalRowCount)
-	
+if (xhr.readyState == 4) {	
+	var tabler = document.getElementById("dataTable");
+	var Sauve =""
+	var totalRowCount = tabler.rows.length
+	alert(totalRowCount)
+//*********************************************element2.id = "txtbox" + j +"1";	
 //	for (i = 0; i < totalRowCount; i =i + 1) {
 		
 //			var xx = document.getElementById("txtbox" + (i*3);).value
@@ -188,7 +189,7 @@ function Enregistrer(){
 //			}
 //	alert("ok" + Sauve)
 	
-	
+	}	
 }	
 	
 	
