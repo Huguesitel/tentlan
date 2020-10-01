@@ -40,44 +40,61 @@ table, td input {
 </style>
                      
 <script>
-
+import java.io.*; 
+public class ReadFromFile2 
+{ 
+  public static void main(String[] args)throws Exception 
+  { 
+  // We need to provide file path as the parameter: 
+  // double backquote is to avoid compiler interpret words 
+  // like \test as \t (ie. as a escape sequence) 
+  File file = new File('Data/Joueurs.txt'); 
+  
+  BufferedReader br = new BufferedReader(new FileReader(file)); 
+  
+  String st; 
+  while ((st = br.readLine()) != null) 
+    System.out.println(st); 
+	  document.getElementById("reminderContentText").innerHTML = xhr.responseText 
+	  addRow("dataTable")
+  } 
+}
 	// Set up our HTTP request
-var data = ""
-var xhr = new XMLHttpRequest();
+//var data = ""
+//var xhr = new XMLHttpRequest();
 
 // Setup our listener to process completed requests
-xhr.onload = function () {
+//xhr.onload = function () {
 
 	// Process our return data
-	if (xhr.status >= 200 && xhr.status < 300) {
+//	if (xhr.status >= 200 && xhr.status < 300) {
 		// Runs when the request is successful
-		console.log(xhr.responseText);
+//		console.log(xhr.responseText);
 		//console.log(JSON.parse(xhr.responseText));
-		var data = xhr.responseText
+//		var data = xhr.responseText
 
 			// Get the first item
 			//var firstPost = data[0];
- 		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
+// 		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
 
 		
-	} else {
+//	} else {
 		// Runs when it's not
-		console.log(xhr.responseText);
-	}
-	if (xhr.readyState == 4) {
-		if(xhr.status  == 200) 
-            		addRow("dataTable")
-	}
-};
+//		console.log(xhr.responseText);
+//	}
+//	if (xhr.readyState == 4) {
+//		if(xhr.status  == 200) 
+//            		addRow("dataTable")
+//	}
+//};
 
 // Create and send a GET request
 // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
 // The second argument is the endpoint URL
 
-xhr.open('GET', 'Data/Joueurs.txt');
-xhr.send();
-</script>
-<script>
+//xhr.open('GET', 'Data/Joueurs.txt');
+//xhr.send();
+
 //fonctionAExecuter(){}
 	
 function addRow(tableID) {
