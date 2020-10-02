@@ -48,7 +48,7 @@ var xhr = new XMLHttpRequest();
 
 // Setup our listener to process completed requests
 xhr.onload = function () {
-
+alert("ok1")
 	// Process our return data
 	if (xhr.status >= 200 && xhr.status < 300) {
 		// Runs when the request is successful
@@ -59,7 +59,7 @@ xhr.onload = function () {
 			// Get the first item
 		//var firstPost = data[0];
  		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
-
+alert("ok2")
 		
 	} else {
 		// Runs when it's not
