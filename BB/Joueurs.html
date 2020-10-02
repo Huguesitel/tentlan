@@ -1,0 +1,61 @@
+<html>
+
+<script>
+	
+
+	// Set up our HTTP request
+//var data = ""
+
+
+var xhr = new XMLHttpRequest();
+
+// Setup our listener to process completed requests
+xhr.onload = function () {
+
+	// Process our return data
+	if (xhr.status >= 200 && xhr.status < 300) {
+		// Runs when the request is successful
+		console.log(xhr.responseText);
+		//console.log(JSON.parse(xhr.responseText));
+		//var data = xhr.responseText
+
+			// Get the first item
+		//var firstPost = data[0];
+ 		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
+alert("ok2")
+		
+	} else {
+		// Runs when it's not
+		console.log(xhr.responseText);
+	}
+	if (xhr.readyState == 4) {
+		if(xhr.status  == 200) 
+            		//addRow("dataTable")
+	}
+};
+
+// Create and send a GET request
+// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+// The second argument is the endpoint URL
+
+xhr.open('GET', 'Data/Joueurs.txt');
+xhr.send();
+</script>
+<body marginwidth="5" marginheight="0" topmargin="0" leftmargin="5" >
+	   
+      <div id="reminderContainer">
+
+            <div id="reminderContent">
+                <div="reminderContentText">
+                    <span ; id="reminderContentText">	
+	test
+	
+                    </span>
+                </div>
+            </div>
+        </div>
+<br>
+</body>
+	
+	
+</html>
