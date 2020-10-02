@@ -48,7 +48,7 @@ var xhr = new XMLHttpRequest();
 
 // Setup our listener to process completed requests
 xhr.onload = function () {
-alert("ok1")
+
 	// Process our return data
 	if (xhr.status >= 200 && xhr.status < 300) {
 		// Runs when the request is successful
@@ -77,11 +77,10 @@ alert("ok2")
 
 xhr.open('GET', 'Data/Joueurs.txt');
 xhr.send();
-//return
-//fonctionAExecuter(){}
+
 	
 function addRow(tableID) {
-	data = document.getElementById("reminderContentText").innerHTML	
+var data = document.getElementById("reminderContentText").innerHTML	
 	var res = data.split(",");
 	
  	for (i = 0; i < Math.floor(res.length/3); i =i + 1) {
@@ -128,8 +127,8 @@ function addRow(tableID) {
         cell5.appendChild(element4);    
 	}
     }
-function deleteRow(tableID) {
-	if (xhr.readyState == 4) {
+//function deleteRow(tableID) {
+//	if (xhr.readyState == 4) {
 //		if(xhr.status  == 200) {
             		
 	
@@ -153,8 +152,8 @@ function deleteRow(tableID) {
 //       }
 //   }
 //		}			
-	}
-}	
+//	}
+//}	
 //window.onload = init();	
 //function Init(){
 
