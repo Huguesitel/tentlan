@@ -41,93 +41,43 @@ table, td input {
                      
 <script>
 	
-public static void copyFilePlainJava('Data/Joueurs.txt', 'Data/Joueurs2.txt') throws IOException {
 
-    InputStream inStream = null;
-    OutputStream outStream = null;
-
-    try {
-
-        File fromFile = new File(from);
-        File toFile = new File(to);
-
-        inStream = new FileInputStream(fromFile);
-        outStream = new FileOutputStream(toFile);
-
-        byte[] buffer = new byte[1024];
-
-        int length;
-        while ((length = inStream.read(buffer)) > 0) {
-            outStream.write(buffer, 0, length);
-            outStream.flush();
-        }
-
-    } finally {
-        if (inStream != null)
-            inStream.close();
-
-        if (outStream != null)
-            outStream.close();
-    }
-
-}
-
-
-
-
-ReadFromFile2()
-public class ReadFromFile2
-{ 
-  public static void main(String[] args)throws Exception 
-  { 
-alert("denit")
-  File file = new File('Data/Joueurs.txt'); 
-  
-  BufferedReader br = new BufferedReader(new FileReader(file)); 
-  
-  String st; 
-  while ((st = br.readLine()) != null) 
-    System.out.println(st); 
-	  document.getElementById("reminderContentText").innerHTML = st
-	  addRow("dataTable")
-  } 
-}
 	// Set up our HTTP request
-//var data = ""
-//var xhr = new XMLHttpRequest();
+var data = ""
+var xhr = new XMLHttpRequest();
 
-// Setup our listener to process completed requests
-//xhr.onload = function () {
+ Setup our listener to process completed requests
+xhr.onload = function () {
 
 	// Process our return data
-//	if (xhr.status >= 200 && xhr.status < 300) {
+	if (xhr.status >= 200 && xhr.status < 300) {
 		// Runs when the request is successful
-//		console.log(xhr.responseText);
+		console.log(xhr.responseText);
 		//console.log(JSON.parse(xhr.responseText));
-//		var data = xhr.responseText
+		var data = xhr.responseText
 
 			// Get the first item
 			//var firstPost = data[0];
-// 		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
+ 		document.getElementById("reminderContentText").innerHTML = xhr.responseText //xhr.responseText; // Et on affiche !
 
 		
-//	} else {
+	} else {
 		// Runs when it's not
-//		console.log(xhr.responseText);
-//	}
-//	if (xhr.readyState == 4) {
-//		if(xhr.status  == 200) 
-//            		addRow("dataTable")
-//	}
-//};
+		console.log(xhr.responseText);
+	}
+	if (xhr.readyState == 4) {
+		if(xhr.status  == 200) 
+            		addRow("dataTable")
+	}
+};
 
 // Create and send a GET request
 // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
 // The second argument is the endpoint URL
 
-//xhr.open('GET', 'Data/Joueurs.txt');
-//xhr.send();
-
+xhr.open('GET', 'Data/Joueurs.txt');
+xhr.send();
+return
 //fonctionAExecuter(){}
 	
 function addRow(tableID) {
