@@ -2,24 +2,24 @@
  essai() {
   alert('oki')       
  }
-private static void copyFileUsingStream('Data/Joueurs.txt', 'Data/Joueurs2.txt') throws IOException {
-        alert('ok')
-    InputStream is = null;
-    OutputStream os = null;
-    try {
-        is = new FileInputStream(source);
-        os = new FileOutputStream(dest);
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = is.read(buffer)) > 0) {
-            os.write(buffer, 0, length);
-        }
-    } finally {
-        alert('fin')
-        is.close();
-        os.close();
-    }
-}
+//private static void copyFileUsingStream('Data/Joueurs.txt', 'Data/Joueurs2.txt') throws IOException {
+//        alert('ok')
+//    InputStream is = null;
+//    OutputStream os = null;
+//    try {
+//        is = new FileInputStream(source);
+//        os = new FileOutputStream(dest);
+//        byte[] buffer = new byte[1024];
+//        int length;
+ //       while ((length = is.read(buffer)) > 0) {
+//            os.write(buffer, 0, length);
+//        }
+//    } finally {
+//        alert('fin')
+//        is.close();
+//        os.close();
+//    }
+//}
 </script>
     
 <html>
