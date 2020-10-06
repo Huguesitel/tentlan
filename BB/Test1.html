@@ -1,17 +1,17 @@
 <script type="text/javascript">
 function  savetofile() {  
      alert('ok')
-    //    Path sourceFile = Paths.get("Data\Joueurs.txt");
-   //     Path targetFile = Paths.get("Data\Joueurs2.txt");
+        Path sourceFile = Paths.get("Data\Joueurs.txt");
+        Path targetFile = Paths.get("Data\Joueurs2.txt");
 
-     //   try {
+        try {
 
-     //       Files.copy(sourceFile, targetFile,
-     //           StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(sourceFile, targetFile,
+                StandardCopyOption.REPLACE_EXISTING);
 
-     //   } catch (IOException ex) {
-      //      System.err.format("I/O Error when copying file");
-     //   }
+        } catch (IOException ex) {
+            System.err.format("I/O Error when copying file");
+        }
  }
 </script>
 <body>
@@ -20,6 +20,6 @@ var editor1 = new WYSIWYG_Editor('editor1', curText);
 editor1.display();
 </script>
 
-<input name="BSave" type="button" value="Save As..................................................................." onclick="savetofile()" />
+<input name="BSave" type="button" value="Save As............................................." onclick="savetofile()" />
 <input name="BLoad" type="button" value="Load..." onclick="loadfile()" />
 </body>
