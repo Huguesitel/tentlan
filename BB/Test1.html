@@ -1,27 +1,18 @@
-<script src="editor.js" type="text/javascript"></script>
-
 <script type="text/javascript">
+ savetofile() {  
+     alert('ok')
+        Path sourceFile = Paths.get("Data\Joueurs.txt");
+        Path targetFile = Paths.get("Data\Joueurs2.txt");
 
-var curText = window.external.GetGlobalVariable('datatoload', 
-'Type <b><em>here</em> what you want</b>...');
+        try {
 
-function savetofile()
-{
-editor1.prepareSubmit();
-curText = $('#editor1_content').val(); 
-window.external.SetGlobalVariable('datatosave', curText, false);
-window.external.runHEScriptCom("UserMain.SaveFile");
-}
+            Files.copy(sourceFile, targetFile,
+                StandardCopyOption.REPLACE_EXISTING);
 
-function loadfile()
-{
-editor1.prepareSubmit();
-curText = $('#editor1_content').val(); 
-window.external.SetGlobalVariable('datatoload', curText, false);
-window.external.runHEScriptCom("UserMain.LoadFile");
-window.location.reload();
-}
-
+        } catch (IOException ex) {
+            System.err.format("I/O Error when copying file");
+        }
+ }
 </script>
 <body>
     <script type="text/javascript">
