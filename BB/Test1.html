@@ -13,7 +13,7 @@
 
   // send it out
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "/Data/Joueur2.txt");
+  xhr.open("POST", "Data/Joueur2.txt");
   xhr.send(formData);
 
   xhr.onload = () => alert(xhr.response);
