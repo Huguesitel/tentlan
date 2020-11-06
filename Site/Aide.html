@@ -315,6 +315,142 @@ L'analogie avec la boxe s'arrête là car dans Tentlan vous pouvez mettre plusie
      </div>
  </div>     
 </DIV>
+     
+   <div class="dropdown">
+  <span>
+Comment se déroule un combat  ??</span> <img src="Image/gif_nouveau.gif" width="50%"> 
+     <div class="dropdown-content">
+<DIV class="nnn">
+          Pour comprendre comment le système de combat fonctionne, nous allons commencer par regarder sa structure. Une bataille est composé <br />
+<ol style="list-style-type: decimal" class="nativeList"><li>D'une <b>phase de préparation</b>, où les attributs de l'unité de l'attaquant et du défenseur (à partir de maintenant « les parties » ou « les adversaires ») sont ajustés, ainsi que d'autres facteurs qui restent statiques pendant le reste de la bataille.<b> </b><br /></li><li><b>Des tours de jeu</b>, où les deux parties s'infligent des dégâts et se défendre contre l'autre selon les unités restante à chaque tour, <br /></li><li>Et <b>d'une conclusion</b>, où les choses telles que le calcul du montant des pertes à envoyer au Temple d'Itzamna ou le pillage ont lieu. <br /></li></ol>Les tours se composent d'une ou plusieurs étapes, et ils répètent jusqu'à ce que l'une des parties soit vaincue, ou si 5 tours se sont déroulés sans résolution (cas où un partage a lieu). Jetons un coup d’œil de plus près à chacune de ces parties. <br />
+<br />
+<span style="font-size: 12pt"><b>Stade de la préparation <br />
+</b></span><br />
+Chaque partie calcule les bonus et des pénalités d'attributs d'unité respectifs. Cela comprend les bonus accordés par les bâtiments, les recherches, les rituels, la saison en cours dans la ville d'où les troupes viennent, les bénédictions, les récompenses reçues pour avoir rempli les missions, les bonus gagnées dans la Roue Tzolk'in ainsi que les effets de certains articles de la boutique tels que le sceptre Kan, et la perte d'endurance qui se produit quand il n'y a pas de maïs restant dans la ville d'origine. <br />
+<br />
+Le calcul des effets de ceux-ci est simple : si un bâtiment accorde un bonus de force de +3%, et la base de la force d'une unité spécifique est de 100, dit type d'unité aurait 103 effectif total. Notez, cependant, que les attributs affichés dans le Temple Jaguar ne montrent pas la valeur de base, mais la valeur finale après bonus et de malus. <br />
+<br />
+En plus des attributs de base de l'unité, dans cette étape et pour chaque partie quatre « facteurs » sont calculés pour une utilisation ultérieure dans les tours :<br />
+<ul style="list-style-type: disc" class="nativeList"><li><b>Facteur chance </b>: aléatoire entre 0% et la somme des bonus de chance obtenus par les éléments décrits ci-dessus (bâtiments, recherches, rituels, etc), jusqu'à 10% maximum. Par exemple, avec une structure Stèle construit au niveau 5, ce qui confère un bonus de chance de 5%, et aucun autre bonus de chance en place, le facteur chance final sera compris entre 0 et 5%. Le facteur chance joue un rôle direct dans le montant final des dommages que l'adversaire peut entraîner comme nous le verrons ci-dessous.<br /></li><li><b>Facteur de régénération</b> : correction en fonction de la quantité d'unités et la quantité de chamans envoyé, et jusqu'à 30% au maximum, où l'on chaman par unité équivaut à un total de 3% de régénération pour toute les troupes (ainsi, l'effet maximum de 30% est atteint d'envoi 10 chamans par unité). La formule suivante peut être utilisée pour calculer le facteur: <br />
+<br />
+<div class="container codeBox plainHighlighter">
+	<div>
+		<div>
+			<h3>Code source</h3>
+		</div>
+		
+		<ol start="1">
+															<li id="codeLine_1_ede2cd"><a href="https://forums.tentlan.com/index.php/Thread/3062-Guide-du-syst%C3%A8me-de-batailles/#codeLine_1_ede2cd" class="lineAnchor"></a>(quantité de chamans / quantité d'unités non chamans ou quipucamayocs) * 3</li>
+								
+									</ol>
+	</div>
+	
+	</div><br />
+<br />
+Si le facteur de régénération est supérieur à zéro, le dit pourcentage des pertes d'unité va pouvoir être récupérer à la fin du tour de jeu, comme nous le verrons ci-dessous sur élaborons.<br /></li><li><b>Facteur de précision </b>: similaire au facteur de régénération, ce facteur est fixée en fonction de la quantité d'unités et de quipucamayocs dans la troupe, jusqu'à 30% maximum, et un quipucamayoc est équivalent à un facteur de précision total de 3%. Il est calculé de la même façon que le facteur de régénération: <br />
+<br />
+<div class="container codeBox plainHighlighter">
+	<div>
+		<div>
+			<h3>Code source</h3>
+		</div>
+		
+		<ol start="1">
+															<li id="codeLine_1_d9d559"><a href="https://forums.tentlan.com/index.php/Thread/3062-Guide-du-syst%C3%A8me-de-batailles/#codeLine_1_d9d559" class="lineAnchor"></a>(quantité de quipucamayocs / quantité d'unités non chamans ou quipucamayocs) * 3</li>
+								
+									</ol>
+	</div>
+	
+	</div><br />
+<br />
+Le facteur de précision augmente la force effective de la troupe lorsque les dégâts sont infligés comme nous le verrons plus tard. <br /></li><li><b>Le facteur de force excessive </b>: si la force totale (la somme de la force de toutes les unités combinées) d'une des parties dépasse le total d'endurance de l'adversaire, en plus d'une défaite complète en un seul tour, la partie victorieuse obtient un bonus en fonction de la différence entre la dite force et l'endurance de l'adversaire. Ce pourcentage ne peut être supérieur à 99%, et est calculé comme tel : <br />
+<br />
+<div class="container codeBox plainHighlighter">
+	<div>
+		<div>
+			<h3>Code source</h3>
+		</div>
+		
+		<ol start="1">
+															<li id="codeLine_1_756148"><a href="https://forums.tentlan.com/index.php/Thread/3062-Guide-du-syst%C3%A8me-de-batailles/#codeLine_1_756148" class="lineAnchor"></a>((Force total de l'agresseur / Endurance total de la partie adversaire) - 1) * 100</li>
+								
+									</ol>
+	</div>
+	
+	</div><br />
+<br />
+Ce facteur a un impact direct sur les dégâts de l'adversaire peut infliger, ainsi au plus les troupes sont en supériorité, au moins elles recevront de dégâts, comme nous le verrons plus tard. <br /></li></ul><br />
+<br />
+<span style="text-decoration: underline"><b>Tours</b></span> <br />
+<br />
+Chaque tour se compose des étapes suivantes décrites ci-dessous, dans l'ordre exact. Notez que les unités de soutien se réfèrent à l'un des type suivants: les espions, les chamans, les Quipucamayocs, les Poloms, les Pochtecas, les colons, les Guerrières Amazones ; alors que des unités de combat se réfèrent à une unité qui ne soit pas une unité de soutien.<br />
+<ul style="list-style-type: disc" class="nativeList"><li><b>Total de force :</b> la partie qui va infliger les dégâts dans ce tour a sa force totale calculée en tenant compte de la quantité d'unités dans ce tour (compte uniquement les unités dont l'endurance est supérieur à zéro). Parce que les Guerrières Amazones attaquent dans une étape distincte, comme nous allons le voir bientôt, l'effectif total aux fins d'infliger des dommages se compose de deux parties : la force globale, qui est la somme de la force de toutes les unités sauf des Amazones, et la force des Amazones, qui est l'exact opposé. Une fois que nous avons ces totaux, nous avons besoin de deux étapes supplémentaires pour calculer la force finale utilisée pour calculer les dommages: <br />
+<br />
+Tout d'abord, on soustrait la force facteur d'excès de l'adversaire de la manière suivante : <div class="container codeBox plainHighlighter">
+	<div>
+		<div>
+			<h3>Code source</h3>
+		</div>
+		
+		<ol start="1">
+															<li id="codeLine_1_4991bb"><a href="https://forums.tentlan.com/index.php/Thread/3062-Guide-du-syst%C3%A8me-de-batailles/#codeLine_1_4991bb" class="lineAnchor"></a>force = force - (force * La force excessive de l'adversaire)</li>
+								
+									</ol>
+	</div>
+	
+	</div><br />
+<br />
+Et puis sur le résultat, nous calculons le facteur de précision et facteur chance.<br />
+<br />
+<div class="container codeBox plainHighlighter">
+	<div>
+		<div>
+			<h3>Code source</h3>
+		</div>
+		
+		<ol start="1">
+															<li id="codeLine_1_264d57"><a href="https://forums.tentlan.com/index.php/Thread/3062-Guide-du-syst%C3%A8me-de-batailles/#codeLine_1_264d57" class="lineAnchor"></a>force = force + (force * facteur de précision de la partie) - (force * le facteur chance de l'adversaire)</li>
+								
+									</ol>
+	</div>
+	
+	</div><br />
+<br />
+Ces deux étapes doivent être appliqués séparément à la force globale et la force des Amazones bien que les facteurs de la formule seront les mêmes pour les deux. Une fois que nous connaissons que les valeurs finales de force, nous sommes prêts à les soustraire directement à partir de l'endurance de la partie défenderesse dans ce tour. <br /></li><li><b>Assaut du mur d'enceinte </b>: si la partie qui reçoit des dommages dans ce tour est le défenseur, et que le défenseur a un mur construit dans la ville, son endurance (le niveau actuel) doit d'abord être ramené à zéro. La partie infligeant des dégâts dans ce tour soustrait sa force total de l'endurance du mur de l'adversaire. Soit l'endurance du mur est en deçà, auquel cas l'agresseur perd  le tour et ne continue pas, soit mur est complètement défait, dans ce cas, l'adversaire continue le tour et la force globale restante est utilisée dans les prochaines étapes. Si l'adversaire n'a pas de mur (pas encore construit), le mur avait déjà été vaincu dans un tour précédent, ou l'adversaire est l'attaquant, cette étape est ignorée et l'adversaire continue le tour.<br /></li><li><b>Attaque des unités de combat </b>: dans cette étape, l'adversaire infligeant des dégâts soustrait leur force totale de l'endurance des unités de combat seulement (lire, les unités non-soutien), dans l'ordre de faiblesse. Ainsi, l'unité la plus faible (celle avec l'attribut « faiblesse » la plus haute) dans les troupes de l'adversaire reçoit des dommages d'abord, et la force est soustrait unité par unité partir jusqu'à ce que soit il n'y a pas plus de force restante ou que toutes les unités de combat ont été entièrement défaites. Dans le premier cas, nous passerons directement à l'étape de l'attaque des Guerrières Amazones, si l'agresseur en a dans ses troupes, sinon, le tour se termine. Cette étape est sautée si la partie qui reçoit des dommages n'a pas d'unités de combat restante dans ses troupes.<br /></li><li><b>L'attaque des unités de soutien</b> : si et seulement si toutes les unités de combat de l'adversaire ont été vaincus, mais que la force globale n'est pas à zéro, l'agresseur procédera à l'attaque des unités de soutien de la même façon que pour l'étape précédente, en soustrayant la force globale restante de l'endurance respective de la plus faible à la moins faible des unités, jusqu'à ce que soit il n'y a pas plus de force restante ou à toutes les unités de soutien ont été totalement vaincu. Comme pour l'étape précédente, l'étape est sautée si il n'y avait pas d'unités de support restante. La prochaine étape se déroule indépendamment des résultats de cele-ci.<br /></li><li><b>L'attaque des guerrières Amazones</b>: Si l'agresseur a des Guerrières Amazone dans ses rangs, et que la force des Amazones précédemment calculée est supérieure à zéro, une attaque supplémentaire aura lieu contre les unités de soutien, en soustrayant la force de ces unités par ordre de faiblesse comme pour les deux étapes précédentes jusqu'à ce que la force des amazones vient à manquer, ou que toutes les unités de soutien soient vaincues. Cette étape est sautée si la partie qui reçoit des dommages n'a pas d'unités de support restante.<br /></li></ul>Une fois que le premier tour se termine, l'attaquant et le défenseur inversent les rôles, et un deuxième tour a lieu.<br />
+<br />
+<span style="text-decoration: underline"><b>Post-tour<br />
+</b></span><br />
+Après que deux tours se sont effectués, les chamans prennent un moment pour guérir les pertes pour chacune des parties avant que les prochains tour commence. Pour chaque partie, nous devons d'abord calculer le montant des pertes qu'il y avait dans ce tour, que nous pouvons facilement trouver sur la base du montant des dommages (la force soustraite) infligé à l'endurance de la troupe. Ainsi, si nous avions 5 lanciers, chacuns avec une endurance de 200, que nous avons reçu un dommage avec une force de 400 exactement et pas plus, nous aurions alors 3 lanciers restant et 2 pertes. <br />
+<br />
+Une fois que le montant des pertes de chaque partie est connu, nous avons juste besoin d'appliquer le facteur de soin correspondant. Ainsi, la quantité d'unités qui seront soignées est fonction de ce qui suit : <br />
+<br />
+<div class="container codeBox plainHighlighter">
+	<div>
+		<div>
+			<h3>Code source</h3>
+		</div>
+		
+		<ol start="1">
+															<li id="codeLine_1_38c593"><a href="https://forums.tentlan.com/index.php/Thread/3062-Guide-du-syst%C3%A8me-de-batailles/#codeLine_1_38c593" class="lineAnchor"></a>unités pouvant être soignées = pertes * facteur de soin des parties</li>
+								
+									</ol>
+	</div>
+	
+	</div><br />
+<br />
+Ces unités iront immédiatement rejoindre vos troupes et participeront au prochain tour, ou reviendront à la maison en toute sécurité si c'était le dernier tour de la bataille. <br />
+<br />
+<span style="font-size: 12pt"><b>Conclusion</b></span> <br />
+<br />
+Une fois que la bataille est terminée, un certain nombre de choses peuvent se produire en fonction des résultats. La suite a lieu quel que soit le vainqueur : <br />
+<ul style="list-style-type: disc" class="nativeList"><li><b>Unités à soigner</b> : le montant des pertes qui reviendrons au Temple Itzamna sont calculées ici et seront de retour avec le reste des troupes. Ce montant sera toujours pour chaque opposant entre 8% et 15% (aléatoire) des pertes totales. Ces pertes « pouvant être soignées » seront, cependant, perdues si il n'y a pas de Temple d'Itzamna construit dans la ville de la partie en question.<br /></li><li><b>Démolition du mur </b>: si le défenseur avait un mur d'enceinte, et qu'il a été détruit dans la bataille, les pertes de niveau de défense de ladite structure pourront se produire jusqu'au niveau 1 minimum. Aucune démolition n'est possible si le mur était déjà au niveau 1.<br /></li></ul>Le suite a lieu si l'attaquant est le gagnant, sauf si la bataille est le résultat d'une mission d'espionnage qui a échoué :<br />
+<ul style="list-style-type: disc" class="nativeList"><li><b>Pillage </b>: si le défenseur a des ressources dans la ville, l'attaquant va piller un montant de calcaire, d'obsidiennes et de cacao jusqu'à 40% + leur bonus de pillages d'astrologie, ou jusqu'à la capacité totale de transport de la troupe si le premier est supérieur au second, des ressources du défenseur à l'exception du montant caché dans la grotte + leur bonus de grottes souterraines lié à leur niveau orfèvrerie. Le montant des ressources cachée du défenseur est soustraite avant le calcul de la quote-part de l'attaquant. En outre, la répartition entre le calcaire, l'obsidienne et le cacao est faite aussi équitablement que possible.<br /></li><li><b>Changement de camp d'unité </b>: les guerrières amazones ont la propriété de survivre en cas de défaite et de rejoindre le coté adverse quand elles défendent. Ainsi, si le défenseur avait des guerrières amazones dans ses rangs, celles-ci se joindront à l'attaquant et seront de retour avec la troupe de l'attaquant. Cette propriété, cependant, ne vaut que lorsque les guerrières amazones sont en défense lors d'une bataille.<br /></li></ul>~~~ <br />
+<br />
+          </DIV>
+     </div>
+ </div>    
+     
+     
  <div class="dropdown">
   <span>Comment protéger nos troupes ?</span> 
      <div class="dropdown-content">
