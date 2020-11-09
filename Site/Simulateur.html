@@ -12,6 +12,11 @@ body {
   font: 16px Verdana, sans-serif;
 	vertical-align: middle;	 
   }
+	 table,input {
+
+  font: 16px Verdana, sans-serif;
+	vertical-align: middle;	 
+  }
 img:hover {
        // margin-left: 0px;
         transform: scale(1.9);
@@ -35,7 +40,7 @@ img:hover {
 <td style="width: 70.4px; text-align: center;">Niveau &agrave; atteindre</td>
 <td style="width: 10.4px;">&nbsp;</td>
 <td style="width: 70.4px; text-align: center;">Calcaire<img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
-<td style="width: 70.4px; text-align: center;">Obsidienne<img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
+<td style="width: 70.4px; text-align: center;">Obsidienne<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
 <td style="width: 70.4px; text-align: center;">Cacao<img style="align: center;" src="Image/xacai.png" width="30" height="30" ></td>
 <td style="width: 25.6px;">&nbsp;</td>
 <td style="width: 70.4px; text-align: center;">CacaoEqui</td>
@@ -43,7 +48,18 @@ img:hover {
 <tr>
 <td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
 <td style="width: 11.2px;">&nbsp;<img style="float:right" src="Image/devin.png" width="50" height="50" ></td>
-<td style="width: 58.4px;">&nbsp;</td>
+<td style="width: 58.4px;"><select name="NiveauDevin" id="Devin">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
+		
+		
+  </select></td>
 <td style="width: 65.6px;">&nbsp;</td>
 <td style="width: 10.4px;">&nbsp;</td>
 <td style="width: 58.4px;">&nbsp;</td>
@@ -57,14 +73,14 @@ img:hover {
 <td style="width: 11.2px;">&nbsp;<img style="float:right" src="Image/tema.png" width="50" height="50" ></td>
 <td style="width: 58.4px;">
 	<select name="NiveauTema" id="Tema">
-    <option value="0">Volvo</option>
-    <option value="1">Saab</option>
-    <option value="2">Opel</option>
-    <option value="3">Audi</option>
-	<option value="4">Volvo</option>
-    <option value="5">Saab</option>
-    <option value="6">Opel</option>
-    <option value="7">Audi</option>	
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
 		
 		
   </select>
@@ -169,8 +185,19 @@ img:hover {
 </tr>
 <tr>
 <td style="width: 78px;">Diplomatie</td>
-<td style="width: 31px;">&nbsp;</td>
-<td style="width: 49px;">&nbsp;</td>
+<td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
+<td style="width: 49px;">	<select name="NiveauTema" id="Tema">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
+		
+		
+  </select></td>
 <td style="width: 75px;">&nbsp;</td>
 <td style="width: 8px;">&nbsp;</td>
 <td style="width: 65px;">&nbsp;</td>
