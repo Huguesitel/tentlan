@@ -47,7 +47,11 @@ function myFunction2() {
   var x = document.getElementById("Tema").value;
   document.getElementById("TTema").innerHTML =   x+1;
 }
-	
+function myFunction3() {
+	alert("ok3")
+  var x = document.getElementById("Diplo").value;
+  document.getElementById("DDiplo").innerHTML =   x+1;
+}
 </script>
 
 <body>
@@ -212,7 +216,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <tr>
 <td style="width: 78px;">Diplomatie</td>
 <td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
-<td style="width: 49px;">	<select name="NiveauTema" id="Tema">
+<td style="width: 49px;">	<select name="NiveauDiplo" id="Diplo" onchange="myFunction3()">
     <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -227,10 +231,25 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 	    <option value="11">11</option>
 	    <option value="12">12</option>	
 	    <option value="13">13</option>
-	
-	
+    <option value="14">14</option>	
+	    <option value="15">15</option>
+	    <option value="16">16</option>	
+	    <option value="17">17</option>	
+	    <option value="18">18</option>	
+	    <option value="19">19</option>
+    <option value="20" selected="selected">20</option>	
+	    <option value="21">21</option>
+	    <option value="22">22</option>	
+	    <option value="23">23</option>
+    <option value="24">24</option>	
+	    <option value="25"25</option>
+	    <option value="26">26</option>	
+	    <option value="27">27</option>	
+	    <option value="28">28</option>	
+	    <option value="29">29</option>
+	    <option value="30">30</option>	
   </select></td>
-<td style="width: 75px;">&nbsp;</td>
+<td style="width: 75px;" id="DDiplo"></td>
 <td style="width: 8px;">&nbsp;</td>
 <td style="width: 65px;">&nbsp;</td>
 <td style="width: 79px;">&nbsp;</td>
