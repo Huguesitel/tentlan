@@ -37,9 +37,16 @@ img:hover {
 </style>
 <script>
 function myFunction() {
+	alert("ok1")
   var x = document.getElementById("Devin").value;
   document.getElementById("DDevin").innerHTML =   x;
 }
+function myFunction2() {
+	alert("ok2")
+  var x = document.getElementById("Tema").value;
+  document.getElementById("TTema").innerHTML =   x;
+}
+	
 </script>
 
 <body>
@@ -90,7 +97,7 @@ function myFunction() {
 <td style="width: 90.6px; text-align: right;">Temazcal</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/tema.png" width="50" height="50" ></td>
 <td style="width: 58.4px;">
-	<select name="NiveauTema" id="Tema">
+	<select name="NiveauTema" id="Tema" onchange="myFunction2()">
     <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -103,7 +110,7 @@ function myFunction() {
 		
   </select>
 	</td>
-<td style="width: 65.6px;">&nbsp;</td>
+<td style="width: 65.6px;" id="TTema"></td>
 <td style="width: 10.4px;">&nbsp;</td>
 <td style="width: 58.4px;">&nbsp;</td>
 <td style="width: 79.2px;">&nbsp;</td>
