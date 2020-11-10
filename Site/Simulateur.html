@@ -37,15 +37,18 @@ img:hover {
     }  
 </style>
 <script>
+function Debut() {
+		myFunction()
+}	
 function myFunction() {
 	//alert("ok1")
   var x =  parseInt(document.getElementById("Devin").value);
 	var y =66667*Math.pow((1.8),(x+1))
-	document.getElementById("DDevinC").innerHTML =   y;
+	document.getElementById("DDevinC").innerHTML =   2000;
 	var y =38889*Math.pow((1.8),(x+1))
 	document.getElementById("DDevinO").innerHTML =   y;
 	var y =108722*Math.pow((1.8),(x+1))
-	document.getElementById("DDevinK").innerHTML =   y;	
+	document.getElementById("DDevinK").innerHTML =   1000;	
 
 //66667
 //38889
@@ -71,7 +74,7 @@ function myFunction3() {
 }
 </script>
 
-<body>
+<body onload="Debut()">
 
 Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #ff0000;">2%</span></strong> !
 <blockquote>
@@ -116,7 +119,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
     <option value="19">19</option>		
   </select></td>
 <td style="width: 65.6px;" id="DDevin"></td>
-<td style="width: 10.4px;">-></td>
+<td style="width: 10.4px;">></td>
 <td style="width: 58.4px;" id="DDevinC"></td>
 <td style="width: 79.2px;" id="DDevinO"></td>
 <td style="width: 44px;" id="DDevinK"></td>
