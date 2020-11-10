@@ -52,12 +52,12 @@ function myFunction() {
 	//alert("ok1")
   var x =  parseInt(document.getElementById("Devin").value);
 	document.getElementById("DDevin").innerHTML =   x+1;
-	var y =66667*Math.pow(1.8,x+1)
-	document.getElementById("DDevinC").innerHTML =   y;
-	var y =38889*Math.pow((1.8),(x+1))
-	document.getElementById("DDevinO").innerHTML =   y;
-	var y =108722*Math.pow((1.8),(x+1))
-	document.getElementById("DDevinK").innerHTML =   Math.round(y);	
+	//var y =66667*Math.pow(1.8,x+1)
+	//document.getElementById("DDevinC").innerHTML =   y;
+	//var y =38889*Math.pow((1.8),(x+1))
+	//document.getElementById("DDevinO").innerHTML =   y;
+	//var y =108722*Math.pow((1.8),(x+1))
+	//document.getElementById("DDevinK").innerHTML =   Math.round(y);	
 
 //66667   DecimalFormat("##,###.## ");
 //38889
@@ -106,7 +106,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <table style="height: 200px; width: 90%;">
 <tbody>
 <tr>
-<td rowspan="4">$50</td>	
+<td></td>	
 <td style="width: 120.6px;">&nbsp;</td>
 <td style="width: 11.2px;">&nbsp;</td>
 <td style="width: 70.4px; text-align: center;">Niveau actuel</td>
@@ -122,7 +122,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 </tr>
 <tr>
 <tr>
-<td></td>
+<td rowspan="3">$50</td>
 <td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/devin.png" width="50" height="50" ></td>
 <td style="width: 58.4px;"><select name="NiveauDevin" id="Devin" onchange="myFunction()">
@@ -226,13 +226,13 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <td style="width: 78px;">Guerrier Aigle</td>
 <td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
 <td style="width: 49px;"><input type="number" id="aigle" name="aigle" onchange="myFunction4()"></td>
-<td style="width: 75px;">&nbsp;</td>
-<td style="width: 8px;" id="aaigle">></td>
-<td style="width: 65px;">&nbsp;</td>
-<td style="width: 79px;" id="aaigleC"></td>
-<td style="width: 46px;" id="aaigleC">&nbsp;</td>
+<td style="width: 75px;" id="aaigle">&nbsp;</td>
+<td style="width: 8px;" >></td>
+<td style="width: 65px;" id="aaigleC"></td>
+<td style="width: 79px;" id="aaigleO"></td>
+<td style="width: 46px;" id="aaigleK">&</td>
 <td style="width: 20px;">=</td>
-<td style="width: 21px;">&nbsp;</td>
+<td style="width: 21px;"id="aaigleKK"></td>
 </tr>
 <tr>
 <td style="width: 78px;">Guerrier Jaguar</td>
