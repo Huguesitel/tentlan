@@ -29,6 +29,13 @@ img:hover {
 	 vertical-align:middle;    
     }  
 </style>
+<script>
+function myFunction() {
+  var x = document.getElementById("Devin").value;
+  document.getElementById("DDevin").innerHTML =   x;
+}
+</script>
+
 <body>
 
 <p>Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #ff0000;">2%</span></strong> !</p>
@@ -51,7 +58,7 @@ img:hover {
 <tr>
 <td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/devin.png" width="50" height="50" ></td>
-<td style="width: 58.4px;"><select name="NiveauDevin" id="Devin">
+<td style="width: 58.4px;"><select name="NiveauDevin" id="Devin" onchange="myFunction()">
     <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -65,7 +72,7 @@ img:hover {
     <option value="10">10</option>		
 		
   </select></td>
-<td style="width: 65.6px;">&nbsp;</td>
+<td style="width: 65.6px; id="DDevin""></td>
 <td style="width: 10.4px;">&nbsp;</td>
 <td style="width: 58.4px;">&nbsp;</td>
 <td style="width: 79.2px;">&nbsp;</td>
