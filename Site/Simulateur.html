@@ -42,20 +42,22 @@ img:hover {
 </style>
 <script>
 function Debut() {
+	myFunction4()
 		myFunction()
 		myFunction2()
 		myFunction3()
-		myFunction4()
+		
 }	
 function myFunction() {
 	//alert("ok1")
   var x =  parseInt(document.getElementById("Devin").value);
-	var y =Math.round(66667*Math.pow(1.8,x+1))
+	document.getElementById("DDevin").innerHTML =   x+1;
+	var y =66667*Math.pow(1.8,x+1)
 	document.getElementById("DDevinC").innerHTML =   y;
-	var y =Math.round(38889*Math.pow((1.8),(x+1)))
+	var y =38889*Math.pow((1.8),(x+1))
 	document.getElementById("DDevinO").innerHTML =   y;
-	var y =Math.round(108722*Math.pow((1.8),(x+1)))
-	document.getElementById("DDevinK").innerHTML =   y;	
+	var y =108722*Math.pow((1.8),(x+1))
+	document.getElementById("DDevinK").innerHTML =   Math.round(y);	
 
 //66667   DecimalFormat("##,###.## ");
 //38889
@@ -67,7 +69,7 @@ function myFunction() {
 	
 
 
-  document.getElementById("DDevin").innerHTML =   x+1;
+  
 }
 function myFunction2() {
 	//alert("ok2")
@@ -113,7 +115,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <td style="width: 70.4px; text-align: center;">Calcaire<img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
 
 <td style="width: 50.4px; text-align: center;">Obsidienne<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
-<td style="width: 70.4px; text-align: center;">Cacao<img style="align: center;" src="Image/xacai.png" width="30" height="30" ></td>
+<td style="width: 70.4px; text-align: center;">Cacao<br><img style="align: center;" src="Image/xacai.png" width="30" height="30" ></td>
 <td style="width: 25.6px;">&nbsp;</td>
 <td style="width: 70.4px; text-align: center;">CacaoEqui<img style="align: center;" src="Image/xacaEqii.png" width="30" height="30" ></td>
 <tbody>
@@ -142,7 +144,17 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
     <option value="16">16</option>
     <option value="17">17</option>	
     <option value="18">18</option>
-    <option value="19">19</option>		
+    <option value="19">19</option>
+    <option value="20" >20</option>		
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>	
+    <option value="28">28</option>
+    <option value="29">29</option>	
   </select></td>
 <td style="width: 65.6px;" id="DDevin"></td>
 <td style="width: 10.4px;">></td>
@@ -170,7 +182,6 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 		
   </select>
 	</td>
-	<td></td>
 <td style="width: 65.6px;" id="TTema"></td>
 <td style="width: 10.4px;" >></td>
 <td style="width: 58.4px;" id="TTemaC"></td>
