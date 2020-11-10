@@ -45,12 +45,12 @@ function Debut() {
 function myFunction() {
 	//alert("ok1")
   var x =  parseInt(document.getElementById("Devin").value);
-	int y =66667*Math.pow(1.8,x+1)
-	document.getElementById("DDevinC").innerHTML =   (int)y;
-	int y =38889*Math.pow((1.8),(x+1))
-	document.getElementById("DDevinO").innerHTML =   (int)y;
-	int y =108722*Math.pow((1.8),(x+1))
-	document.getElementById("DDevinK").innerHTML =   (int)y;	
+	var y =Math.round(66667*Math.pow(1.8,x+1))
+	document.getElementById("DDevinC").innerHTML =   y;
+	var y =Math.round(38889*Math.pow((1.8),(x+1)))
+	document.getElementById("DDevinO").innerHTML =   y;
+	var y =Math.round(108722*Math.pow((1.8),(x+1)))
+	document.getElementById("DDevinK").innerHTML =   y;	
 
 //66667   DecimalFormat("##,###.## ");
 //38889
@@ -68,11 +68,11 @@ function myFunction2() {
 	//alert("ok2")
   var x =  parseInt(document.getElementById("Tema").value);
   document.getElementById("TTema").innerHTML =   x+1;
-	int y =83333*Math.pow((1.8),(x+1))
+	int y =Math.round(83333*Math.pow((1.8),(x+1)))
 	document.getElementById("TTemaC").innerHTML =   y;
-	int y =94444*Math.pow((1.8),(x+1))
+	int y =Math.round(94444*Math.pow((1.8),(x+1)))
 	document.getElementById("TTemaO").innerHTML =   y;
-	int y =75000*Math.pow((1.8),(x+1))
+	int y =Math.round(75000*Math.pow((1.8),(x+1)))
 	document.getElementById("TTemaK").innerHTML =   y;	
 	
 	
