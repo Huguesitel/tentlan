@@ -54,10 +54,14 @@ function myFunction() {
 	document.getElementById("DDevin").innerHTML =   x+1;
 	var y1 =Math.round(66667*Math.pow((1.8),(x+1)))
 	var y2 =Math.round(38889*Math.pow((1.8),(x+1)))
-	var y3 =Math.round(108722*Math.pow((1.8),(x+1)))	
+	var y3 =Math.round(108722*Math.pow((1.8),(x+1)))
+	var y4 =Math.round(y1*0.4)
+	var y5 =Math.round(y2*0.625)
+	var y6 = y5+y4+y3
 	document.getElementById("DDevinC").innerHTML =   y1;
 	document.getElementById("DDevinO").innerHTML =   y2;
 	document.getElementById("DDevinK").innerHTML =   y3;
+	document.getElementById("DDevinKK").innerHTML =   y6;
 	var x =  parseInt(document.getElementById("Tema").value);
 	document.getElementById("TTema").innerHTML =   x+1;
 	
@@ -240,7 +244,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <td style="width: 78px;">Guerrier Aigle</td>
 <td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
 <td style="width: 49px;"><input type="number" id="aigle" name="aigle" onchange="myFunction()"></td>
-<td style="width: 75px;" id="aaigle">&nbsp;</td>
+<td style="width: 75px;" id="aaigle">5000</td>
 <td style="width: 8px;" >></td>
 <td style="width: 65px;" id="aaigleC"></td>
 <td style="width: 79px;" id="aaigleO"></td>
@@ -252,7 +256,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <td style="width: 78px;">Guerrier Jaguar</td>
 <td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
 <td style="width: 49px;"><input type="number" id="jaguar" name="jaguar" onchange="myFunction()"></td>
-<td style="width: 75px;">&nbsp;</td>
+<td style="width: 75px;">4000</td>
 <td style="width: 8px;" id="jjaguar"></td>
 <td style="width: 65px;">&nbsp;</td>
 <td style="width: 79px;">&nbsp;</td>
@@ -264,7 +268,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <td style="width: 78px;">Atlante</td>
 <td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
 <td style="width: 49px;"><input type="number" id="atlante" name="atlante" onchange="myFunction()"></td>
-<td style="width: 75px;">&nbsp;</td>
+<td style="width: 75px;">2000</td>
 <td style="width: 8px;" id="ek"></td>
 <td style="width: 65px;">&nbsp;</td>
 <td style="width: 79px;">&nbsp;</td>
@@ -276,7 +280,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <td style="width: 78px;">Ek Chuah</td>
 <td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
 <td style="width: 49px;"><input type="number" id="ek" name="ek" onchange="myFunction7()"></td>
-<td style="width: 75px;"></td>
+<td style="width: 75px;">1000</td>
 <td style="width: 8px;" id="eek"></td>
 <td style="width: 65px;">&nbsp;</td>
 <td style="width: 79px;">&nbsp;</td>
