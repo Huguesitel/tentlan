@@ -94,28 +94,19 @@ font: 15px Verdana, sans-serif;
 
 <script>
 window.onload = function(){ 
-		//alert("Hello" + obtenirParametre("nom") + "!");
-	//alert(document.getElementById("BLA").InnerText)
-	var node = document.getElementById('Blabla'),
 
-//htmlContent = node.innerHTML,
-// htmlContent = "Some <span class="foo">sample</span> text."
-
+var node = document.getElementById('Blabla'),
 textContent = node.textContent;
 var textContent2 ="Moi, Toutentek je déclare " 
 textContent2 +="Hello " + obtenirParametre("nom") + "\u00a0!\n" 
 textContent2 +="Ici, tu es sur le menu Aide de la tribu - il suffit de passer ton curseur de souris sur une rubrique pour l'afficher."
     document.getElementById('Blabla').textContent= textContent2;
-//alert (textContent2)	
-// textContent = "Some sample text."
-	//document.getElementById('BLA').node.textContent ="Hello"
+
 Invisibler()	
 document.getElementById("Toutentek").focus();	
 	
 }
 	
-//alert("Hello" + obtenirParametre("nom") + "!");
-
  var Namer = document.getElementById("Blabla2").InnerText  ///innerText	
 alert(Namer)
 	document.getElementById('Blabla2').innerText =obtenirParametre("nom")
@@ -141,7 +132,16 @@ function ChangerFrameAide(){
  }
 function ChangerFrameSimu(){
   document.getElementById("inlineCentre").src="https://huguesitel.github.io/tentlan/Site/Simulateur.html" ;
- }
+var node = document.getElementById('Blabla'),
+textContent = node.textContent;
+var textContent2 ="Moi, Toutentek je déclare " 
+textContent2 +="Hello " + obtenirParametre("nom") + "\u00a0!\n" 
+textContent2 +="Ici, tu es sur le menu Simulateur de la tribu - il suffit de passer ton curseur de souris sur une rubrique pour l'afficher."
+    document.getElementById('Blabla').textContent= textContent2;
+
+
+
+}
 	
 function openRequestedPopup() {
 var windowObjectReference;
