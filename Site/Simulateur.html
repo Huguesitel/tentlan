@@ -152,9 +152,14 @@ function myFunction() {
 	
 	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
 	document.getElementById("TotalKK2").innerHTML =   Math.round(TotalKKK/1000000) + " M"
-
-document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
-
+if (z7<TotalKKK) {
+	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
+	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
+}
+	else {
+	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
+	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");		
+	}
   
 }
 
