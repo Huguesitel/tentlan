@@ -155,12 +155,18 @@ function myFunction() {
 if (z7<TotalKKK) {
 	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
 	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
-	document.getElementById("UP").innerHTML =   "L'améliorayion des batiements est " + Math.round(z7*100/TotalKKK) + " % moins coûteuse que la fabricationde troupes."
+	document.getElementById("UP").innerHTML =   "L'amélioration des batiements est " 
+		+ Math.round((TotalKKK-z7)*100/TotalKKK) 
+		+ " % moins coûteuse que la fabrication de troupes."
+	document.getElementById("DOWN").innerHTML =   ""
 }
 	else {
 	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
 	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
-	document.getElementById("DOWN").innerHTML =   Math.round(TotalKKK*100/z7) + " %"	
+	document.getElementById("DOWN").innerHTML =   "La fabrixation de troupes est " 
+		+ Math.round((-TotalKKK+z7)*100/TotalKKK) 
+		+ " % moins coûteuse que l'amélioration des batiements.
+	document.getElementById("UP").innerHTML =   ""		
 	}
   
 }
@@ -173,12 +179,14 @@ if (z7<TotalKKK) {
 <table>
 <tr>
 <td rowspan="2">
+	<img style="align: center;"  id="PouceUP" src="Image/pouceV.png" width="50" height="50" ><br>
 	<p id="UP" >UP</p>
- 	<img style="align: center;"  id="PouceUP" src="Image/pouceV.png" width="50" height="50" ><br>
+ 	
 	<span style="color: #0000ff;">Je veux augmenter ma quantit&eacute; de troupe de <strong>
 	<span style="color: #ff0000;">2%</span></strong> !</span><br>
-	<img style="align: center;" id="PouceDOWN" src="Image/pouceR.png" width="50" height="50" >
+	
 	<p id="DOWN" >DOWN</p>
+	<img style="align: center;" id="PouceDOWN" src="Image/pouceR.png" width="50" height="50" >
 </td>
 <td>
 	
