@@ -150,7 +150,13 @@ function myFunction() {
 	
 	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
 	document.getElementById("TotalKK2").innerHTML =   TotalKKK
-
+	NumberFormat formatter = null;
+      	formatter=java.text.NumberFormat.getInstance(java.util.Locale.FRENCH); 
+  
+   //POUR AJOUTER LES SEPARATEUR ENTRE LES MILIERS
+        formatter = new DecimalFormat("##,###.## ");
+	document.getElementById("TotalKK2").innerHTML =  formatter.format(TotalKKK)
+       //// System.out.println(formatter.format(doubl));
 
 //66667   DecimalFormat("##,###.## ");
   
@@ -166,8 +172,8 @@ function myFunction() {
 <td rowspan="2">Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #ff0000;">2%</span></strong> !
 </td>
 <td>
+	
 <table style="height: 45%;  width: 90%;">
-
 <tr>
 <td rowspan="4"><span style="color: #0000ff;">Soit en améliorant&nbsp;
 	<strong>Pyramide du Devin</strong> et&nbsp;<strong>Temazcal</strong> d'un niveau</span>
