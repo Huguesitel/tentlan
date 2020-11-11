@@ -88,7 +88,7 @@ select {
 input {
   font: 16px Verdana, sans-serif;
 	vertical-align: middle;	
-	width: 19px;
+	width: 40px;
 	align: center;
 	text-align: right;
 	background: #f6faaa;
@@ -139,12 +139,14 @@ function myFunction() {
 	document.getElementById("TTemaKK").innerHTML =   z6;	
 	document.getElementById("TotalKK").innerHTML =   z7;
 	
+	var diplo =  parseInt(document.getElementById("diplo").value);
 	var w =  parseInt(document.getElementById("aigle").value);
 	var w1 =Math.round(w*0.02)
 	document.getElementById("aaigle").innerHTML =   w1;
-	
+	var w1O =Math.round(w1*17500*((100-diplo)/100))
+	document.getElementById("aaigleO").innerHTML =   w1O
 	//var y =38889*Math.pow((1.8),(x+1))
-	//
+          	//17500	7000       90000	134500            550000	400000             10000000	5000000                                        
 	//var y =108722*Math.pow((1.8),(x+1))
 	//document.getElementById("DDevinK").innerHTML =   Math.round(y);	
 
