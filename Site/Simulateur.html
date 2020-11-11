@@ -129,8 +129,9 @@ function myFunction() {
 	var z1 =Math.round(83333*Math.pow((1.8),(x+1)))
 	var z2 =Math.round(94444*Math.pow((1.8),(x+1)))
 	var z3 =Math.round(75000*Math.pow((1.8),(x+1)))
-	var z4 =Math.round(z1*0.4)
-	var z5 =Math.round(z2*0.625)
+
+	
+	
 	var z6 = z5+z4+z3
 	var z7 = z5+z4+z3+y5+y4+y3	
 	document.getElementById("TTemaC").innerHTML =   z1;
@@ -158,16 +159,35 @@ function myFunction() {
 	document.getElementById("aaigleO").innerHTML =   w1O
 	var w1K =Math.round(w1*7000*((100-diplo)/100))
 	document.getElementById("aaigleK").innerHTML =   w1K
+	var w1KK =w1K+Math.round(w1O*0.625)
+	document.getElementById("aaigleKK").innerHTML =   w1KK
+	
+	
 	var ww1O =Math.round(w2*90000*((100-diplo)/100))
 	var ww1K =Math.round(w2*134500*((100-diplo)/100))
 	document.getElementById("jjaguarO").innerHTML =   ww1O
 	document.getElementById("jjaguarK").innerHTML =   ww1K
+	var ww1KK =ww1K+Math.round(ww1O*0.625)
+	document.getElementById("jjaguarKK").innerHTML =   ww1KK	
 	
 	var www1O =Math.round(w2*550000*((100-diplo)/100))
 	var www1K =Math.round(w2*400000*((100-diplo)/100))
+	document.getElementById("aatlanteO").innerHTML =   www1O
+	document.getElementById("aatlanteK").innerHTML =   www1K
+	var www1KK =www1K+Math.round(www1O*0.625)
+	document.getElementById("aatlanteKK").innerHTML =   www1KK
+	
 	var wwww1C =Math.round(w2*10000000*((100-diplo)/100))	
 	var wwww1O =Math.round(w2*5000000*((100-diplo)/100))
-	var wwww1K =Math.round(w2*900000*((100-diplo)/100))	
+	var wwww1K =Math.round(w2*900000*((100-diplo)/100))
+	document.getElementById("eekC").innerHTML =   wwww1C	
+	document.getElementById("eekO").innerHTML =   wwww1O
+	document.getElementById("eekK").innerHTML =   wwww1K
+	var wwww1KK =Math.round(wwww1C*0.4)+Math.round(wwww1O*0.625)+wwww1K
+	document.getElementById("ekKK").innerHTML =   wwww1KK
+	
+	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
+	document.getElementById("TotalKK").innerHTML =   TotalKKK
 	//var y =38889*Math.pow((1.8),(x+1))
 //17500	7000       90000	134500            550000	400000             10000000	5000000                                        
 	//var y =108722*Math.pow((1.8),(x+1))
