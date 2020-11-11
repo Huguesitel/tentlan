@@ -103,7 +103,7 @@ function myFunction() {
 	document.getElementById("TTemaO").innerHTML =   z2;
 	document.getElementById("TTemaK").innerHTML =   z3;
 	document.getElementById("TTemaKK").innerHTML =   z6;	
-	document.getElementById("TotalKK").innerHTML =   z7;
+	document.getElementById("TotalKK").innerHTML =   Math.round(z7/1000000) + " M";
 	
 	
 	var w =  parseInt(document.getElementById("aigle").value);
@@ -151,7 +151,7 @@ function myFunction() {
 	document.getElementById("eekKK").innerHTML =   wwww1KK
 	
 	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
-	document.getElementById("TotalKK2").innerHTML =   Math.round(TotalKKK/1000000) + "M"
+	document.getElementById("TotalKK2").innerHTML =   Math.round(TotalKKK/1000000) + " M"
 
 	// whatYouWant = TotalKKK.ToString("#,##0");
 	//document.getElementById("TotalKK2").innerHTML =  whatYouWant
