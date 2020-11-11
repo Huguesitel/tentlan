@@ -88,7 +88,7 @@ select {
 input {
   font: 16px Verdana, sans-serif;
 	vertical-align: middle;	
-	width: 40px;
+	width: 120px;
 	align: center;
 	text-align: right;
 	background: #f6faaa;
@@ -139,10 +139,11 @@ function myFunction() {
 	document.getElementById("TTemaKK").innerHTML =   z6;	
 	document.getElementById("TotalKK").innerHTML =   z7;
 	
-	var diplo =  parseInt(document.getElementById("diplo").value);
+	
 	var w =  parseInt(document.getElementById("aigle").value);
 	var w1 =Math.round(w*0.02)
 	document.getElementById("aaigle").innerHTML =   w1;
+	var diplo =  parseInt(document.getElementById("Diplo").value);
 	var w1O =Math.round(w1*17500*((100-diplo)/100))
 	document.getElementById("aaigleO").innerHTML =   w1O
 	//var y =38889*Math.pow((1.8),(x+1))
@@ -364,31 +365,31 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <td style="width: 78px;">Diplomatie</td>
 <td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
 <td style="width: 49px;">	<select name="NiveauDiplo" id="Diplo" onchange="myFunction3()">
-    <option value="0">0</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-	<option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>	
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>	
+		    <option value="0">0</option>
+		    <option value="1">1</option>
+		    <option value="2">2</option>
+		    <option value="3">3</option>
+			<option value="4">4</option>
+		    <option value="5">5</option>
+		    <option value="6">6</option>
+		    <option value="7">7</option>	
+		    <option value="8">8</option>
+		    <option value="9">9</option>
+		    <option value="10">10</option>	
 	    <option value="11">11</option>
 	    <option value="12">12</option>	
 	    <option value="13">13</option>
-    <option value="14">14</option>	
+    		<option value="14">14</option>	
 	    <option value="15">15</option>
 	    <option value="16">16</option>	
 	    <option value="17">17</option>	
 	    <option value="18">18</option>	
 	    <option value="19">19</option>
-    <option value="20" selected="selected">20</option>	
+    		<option value="20" selected="selected">20</option>	
 	    <option value="21">21</option>
 	    <option value="22">22</option>	
 	    <option value="23">23</option>
-    <option value="24">24</option>	
+    		<option value="24">24</option>	
 	    <option value="25"25</option>
 	    <option value="26">26</option>	
 	    <option value="27">27</option>	
