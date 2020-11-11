@@ -141,17 +141,18 @@ function myFunction() {
 	
 	
 	var w =  parseInt(document.getElementById("aigle").value);
-	var ww =  parseInt(document.getElementById("Jaguar").value);
-	var www =  parseInt(document.getElementById("atlante").value);
-	var wwww =  parseInt(document.getElementById("ek").value);
 	var w1 =Math.round(w*0.02)
-	var w2 =Math.round(ww*0.02)
-	var w3 =Math.round(www*0.02)
-	var w4 =Math.round(wwww*0.02)
 	document.getElementById("aaigle").innerHTML =   w1;
-	document.getElementById("JJaguar").innerHTML =   w2;	
+	var ww =  parseInt(document.getElementById("Jaguar").value);
+	var w2 =Math.round(ww*0.02)
+	document.getElementById("JJaguar").innerHTML =   w2;
+	var www =  parseInt(document.getElementById("atlante").value);
+	var w3 =Math.round(www*0.02)
 	document.getElementById("aatlante").innerHTML =   w3;	
+	var wwww =  parseInt(document.getElementById("ek").value);
+	var w4 =Math.round(wwww*0.02)
 	document.getElementById("eek").innerHTML =   w4;
+	
 	var diplo =  parseInt(document.getElementById("Diplo").value);
 	var w1O =Math.round(w1*17500*((100-diplo)/100))
 	document.getElementById("aaigleO").innerHTML =   w1O
