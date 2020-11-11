@@ -153,18 +153,8 @@ function myFunction() {
 	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
 	document.getElementById("TotalKK2").innerHTML =   Math.round(TotalKKK/1000000) + " M"
 
-	// whatYouWant = TotalKKK.ToString("#,##0");
-	//document.getElementById("TotalKK2").innerHTML =  whatYouWant
-	
-	//NumberFormat formatter = null;
-      	//formatter=java.text.NumberFormat.getInstance(java.util.Locale.FRENCH); 
-  
-   //POUR AJOUTER LES SEPARATEUR ENTRE LES MILIERS
-       // formatter = new DecimalFormat("##,###.## ");
-	
-       //// System.out.println(formatter.format(doubl));
+document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
 
-//66667   DecimalFormat("##,###.## ");
   
 }
 
@@ -176,10 +166,10 @@ function myFunction() {
 <table>
 <tr>
 <td rowspan="2">
-	<img style="align: center;" src="Image/pouceV.png" width="50" height="50" ><br>
+ 	<img style="align: center;"  id="PouceUP" src="Image/pouceV.png" width="50" height="50" ><br>
 	<span style="color: #0000ff;">Je veux augmenter ma quantit&eacute; de troupe de <strong>
 	<span style="color: #ff0000;">2%</span></strong> !</span><br>
-	<img style="align: center;" src="Image/pouceR.png" width="50" height="50" >
+	<img style="align: center;" id="PouceDOWB" src="Image/pouceR.png" width="50" height="50" >
 </td>
 <td>
 	
