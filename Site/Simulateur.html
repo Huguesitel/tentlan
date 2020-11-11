@@ -88,7 +88,7 @@ select {
 input {
   font: 16px Verdana, sans-serif;
 	vertical-align: middle;	
-	width: 120px;
+	width: 90px;
 	align: center;
 	text-align: right;
 	background: #f6faaa;
@@ -146,6 +146,9 @@ function myFunction() {
 	var diplo =  parseInt(document.getElementById("Diplo").value);
 	var w1O =Math.round(w1*17500*((100-diplo)/100))
 	document.getElementById("aaigleO").innerHTML =   w1O
+	var w1K =Math.round(w1*7000*((100-diplo)/100))
+	document.getElementById("aaigleO").innerHTML =   w1K
+	
 	//var y =38889*Math.pow((1.8),(x+1))
           	//17500	7000       90000	134500            550000	400000             10000000	5000000                                        
 	//var y =108722*Math.pow((1.8),(x+1))
@@ -351,7 +354,7 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <tr>
 <td style="width: 78px;">Ek Chuah</td>
 <td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
-<td ><input type="number" id="ek" name="ek" onchange="myFunction7()" value="100"></td>
+<td ><input type="number" id="ek" name="ek" onchange="myFunction()" value="100"></td>
 <td style="width: 75px;"  id="eek"></td>
 <td style="width: 8px;">></td>
 <td style="width: 65px;" id="eekC">&nbsp;</td>
@@ -364,7 +367,8 @@ Je veux augmenter ma quantit&eacute; de troupe de <strong><span style="color: #f
 <tr>
 <td style="width: 78px;">Diplomatie</td>
 <td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
-<td style="width: 49px;">	<select name="NiveauDiplo" id="Diplo" onchange="myFunction3()">
+<td style="width: 49px;">	
+	<select name="NiveauDiplo" id="Diplo" onchange="myFunction()">
 		    <option value="0">0</option>
 		    <option value="1">1</option>
 		    <option value="2">2</option>
