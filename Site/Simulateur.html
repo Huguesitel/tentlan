@@ -170,17 +170,17 @@ function myFunction() {
 if (z7<TotalKKK) {
 	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
 	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
-	document.getElementById("DOWN").innerHTML =   "L'amélioration des batiements est " 
-		+ Math.round((TotalKKK-z7)*100/TotalKKK) 
-		+ " % moins coûteuse que la fabrication de troupes."
+	//document.getElementById("DOWN").innerHTML =   "L'amélioration des batiements est " 
+	document.getElementById("DOWN").innerHTML =  Math.round((TotalKKK-z7)*100/TotalKKK) 
+	//	+ " % moins coûteuse que la fabrication de troupes."
 
 }
 	else {
 	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
 	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
-	document.getElementById("DOWN").innerHTML =   "La fabrication de troupes est " 
-		+ Math.round((z7-TotalKKK)*100/z7) 
-		+ " % moins coûteuse que l'amélioration des batiements.
+	//document.getElementById("DOWN").innerHTML =   "La fabrication de troupes est " 
+	document.getElementById("DOWN").innerHTML =  Math.round((z7-TotalKKK)*100/z7) 
+	//	+ " % moins coûteuse que l'amélioration des batiements.
 	
 	}
   
