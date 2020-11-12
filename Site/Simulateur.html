@@ -151,16 +151,16 @@ function myFunction() {
 	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
 	document.getElementById("TotalKK2").innerHTML =   Math.round(TotalKKK/1000000) + " M"
 if (z7<TotalKKK) {
-//	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
-//	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
+	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
+	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
 //	document.getElementById("UP").innerHTML =   "L'amélioration des batiements est " 
 //		+ Math.round((TotalKKK-z7)*100/TotalKKK) 
 //		+ " % moins coûteuse que la fabrication de troupes."
 //	document.getElementById("DOWN").innerHTML =   ""
 }
 	else {
-//	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
-//	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
+	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
+	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
 //	document.getElementById("DOWN").innerHTML =   "La fabrication de troupes est " 
 //		+ Math.round((z7-TotalKKK)*100/z7) 
 //		+ " % moins coûteuse que l'amélioration des batiements.
@@ -262,7 +262,7 @@ if (z7<TotalKKK) {
 <td style="width: 44px;" id="DDevinK"></td>
 <td style="width: 25.6px;">=</td>
 <td style="width: 18.4px;" id="DDevinKK"></td>
-<td rowspan="2"  style="align: center;"> <div id="TotalKK">UP</div><br><img  id="PouceUP" src="Image/pouceV.png" width="50" height="50" ><br></td>
+<td rowspan="2"  style="align: center;"> <strong><div id="TotalKK">UP</div></strong><br><img  id="PouceUP" src="Image/pouceV.png" width="50" height="50" ><br></td>
 </tr>
 <tr>
 	
@@ -409,26 +409,26 @@ if (z7<TotalKKK) {
 		    <option value="8">8</option>
 		    <option value="9">9</option>
 		    <option value="10">10</option>	
-	    <option value="11">11</option>
-	    <option value="12">12</option>	
-	    <option value="13">13</option>
-    		<option value="14">14</option>	
-	    <option value="15">15</option>
-	    <option value="16">16</option>	
-	    <option value="17">17</option>	
-	    <option value="18">18</option>	
-	    <option value="19">19</option>
-    		<option value="20" selected="selected">20</option>	
-	    <option value="21">21</option>
-	    <option value="22">22</option>	
-	    <option value="23">23</option>
-    		<option value="24">24</option>	
-	    <option value="25">25</option>
-	    <option value="26">26</option>	
-	    <option value="27">27</option>	
-	    <option value="28">28</option>	
-	    <option value="29">29</option>
-	    <option value="30">30</option>	
+			<option value="11">11</option>
+			<option value="12">12</option>	
+			<option value="13">13</option>
+			<option value="14">14</option>	
+			<option value="15">15</option>
+			<option value="16">16</option>	
+		    <option value="17">17</option>	
+		    <option value="18">18</option>	
+		    <option value="19">19</option>
+			<option value="20" selected="selected">20</option>	
+		    <option value="21">21</option>
+		    <option value="22">22</option>	
+		    <option value="23">23</option>
+			<option value="24">24</option>	
+		    <option value="25">25</option>
+		    <option value="26">26</option>	
+		    <option value="27">27</option>	
+		    <option value="28">28</option>	
+		    <option value="29">29</option>
+		    <option value="30">30</option>	
   </select></td>
 <td colspan="7"></td>
 </tr>
@@ -445,8 +445,8 @@ if (z7<TotalKKK) {
 	
 		<p id="UP" >UP</p>
 
-		<span style="color: #0000ff;">Je veux augmenter ma quantit&eacute; de troupe de <strong>
-		<span style="color: #ff0000;">2%</span></strong> !</span><br>
+		<span style="color: #0000ff;">Je veux augmenter ma quantit&eacute; de troupe<strong>
+		<span style="color: #ff0000;"></span></strong> !</span><br>
 
 		<p id="DOWN" >DOWN</p> 
 	
@@ -455,6 +455,7 @@ if (z7<TotalKKK) {
 
 		<table style="  width: 100;">
 		<tr>
+			<td rowspan="2">Soit en améliorabt la stèle</td>
 			<td></td>
 			<td>Niveau actuel</td>  
 			<td>Niveau à atteindre</td>
