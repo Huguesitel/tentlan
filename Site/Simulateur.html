@@ -107,6 +107,9 @@ function myFunction() {
 	 var dProba9=1-Proba10
 	 var dEsperance =(4,5*dProba9)+(dProba10*10) 
 	var ddEsperance = dEsperance -Esperance
+	if (sx <10) {
+		var ddEsperance = 0.5
+	}
 	 document.getElementById("ssstele").innerHTML = (Math.round(ddEsperance*100)/100) + " %" ;
 	var st1 =Math.round(185185*Math.pow((1.5),(ssx)))
 	document.getElementById("steleC").innerHTML =   st1;
@@ -551,8 +554,8 @@ if (z7<TotalKKK) {
 			<td id="steleC"></td>
 			<td id="steleO"></td>
 			<td id="steleK"></td>
-			<td id="steleKK">=</td>
-			<td id="steleKKK"></td>
+			<td>=</td>
+			<td id="steleKK"></td>
 		</tr>
 		</table>
 	</td>
