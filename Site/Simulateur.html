@@ -130,7 +130,7 @@ function myFunction() {
 	var st4 =Math.round(st1*0.4)
 	var st5 =Math.round(st2*0.625)
 	var st6 = st5+st4+st3
-	document.getElementById("steleKKK").innerHTML =   st6;
+	document.getElementById("steleKKK").innerHTML =   Math.round(st6/1000000) + " M";;
 	
 	var sw =  parseInt(document.getElementById("saigle").value);
 	var sw1 =Math.round(sw*ddEsperance/10)
@@ -548,7 +548,10 @@ function myFunction2() {
 
 		<table style="  width: 100;">
 		<tr>
-			<td rowspan="2">Soit en améliorant la stèle</td>
+			<td rowspan="2">
+				<span style="color: #0000ff;">Soit en améliorant&nbsp;
+			<strong>Pyramide la Stèle</strong> d'un niveau</span>
+			</td>
 			<td colspan="2"></td>
 			<td>Niveau actuel</td>  
 			<td>Niveau à atteindre</td>
