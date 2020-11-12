@@ -117,7 +117,7 @@ function myFunction() {
 	 var dEsperance =(4,5*dProba9)+(dProba10*10) 
 	var ddEsperance = dEsperance -Esperance
 	if (sx <10) {
-		var ddEsperance = 0.5
+		var ddEsperance = 0.05
 	}
 	 document.getElementById("ssstele").innerHTML = (Math.round(ddEsperance*100)/100) + " %" ;
 	var st1 =Math.round(185185*Math.pow((1.5),(ssx)))
@@ -132,17 +132,25 @@ function myFunction() {
 	document.getElementById("steleKK").innerHTML =   st6;
 	
 	var sw =  parseInt(document.getElementById("saigle").value);
-	var sw1 =Math.round(sw*ddEsperance)
+	var sw1 =Math.round(sw*ddEsperance/10)
 	document.getElementById("saaigle").innerHTML =   sw1;
 	var sww =  parseInt(document.getElementById("sjaguar").value);
-	var sw2 =Math.round(sww*ddEsperance)
+	var sw2 =Math.round(sww*ddEsperance/10)
 	document.getElementById("sjjaguar").innerHTML =   sw2;
 	var swww =  parseInt(document.getElementById("satlante").value);
-	var sw3 =Math.round(swww*ddEsperance)
+	var sw3 =Math.round(swww*ddEsperance/10)
 	document.getElementById("saatlante").innerHTML =   sw3;	
 	var swwww =  parseInt(document.getElementById("sek").value);
-	var sw4 =Math.round(swwww*ddEsperance)
+	var sw4 =Math.round(swwww*ddEsperance/10)
 	document.getElementById("seek").innerHTML =  sw4;
+	
+	var sdiplo =  parseInt(document.getElementById("sDiplo").value);
+	var sw1O =Math.round(w1*17500*((100-sdiplo)/100))
+	document.getElementById("saaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(w1*7000*((100-sdiplo)/100))
+	document.getElementById("saaigleK").innerHTML =   sw1K
+	var sw1KK =w1K+Math.round(w1O*0.625)
+	document.getElementById("saaigleKK").innerHTML =   sw1KK
 	
 	
 //	1,50	185185
