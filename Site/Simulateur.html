@@ -152,7 +152,31 @@ function myFunction() {
 	var sw1KK =w1K+Math.round(w1O*0.625)
 	document.getElementById("saaigleKK").innerHTML =   sw1KK
 	
+	var sww1O =Math.round(w2*90000*((100-sdiplo)/100))
+	var sww1K =Math.round(w2*134500*((100-sdiplo)/100))
+	document.getElementById("sjjaguarO").innerHTML =   ww1O
+	document.getElementById("sjjaguarK").innerHTML =   ww1K
+	var sww1KK =sww1K+Math.round(sww1O*0.625)
+	document.getElementById("sjjaguarKK").innerHTML =   sww1KK	
 	
+	var swww1O =Math.round(sw3*550000*((100-sdiplo)/100))
+	var swww1K =Math.round(sw3*400000*((100-sdiplo)/100))
+	document.getElementById("saatlanteO").innerHTML =   swww1O
+	document.getElementById("saatlanteK").innerHTML =   swww1K
+	var swww1KK =swww1K+Math.round(swww1O*0.625)
+	document.getElementById("saatlanteKK").innerHTML =   swww1KK
+	
+	var swwww1C =Math.round(sw4*10000000*((100-sdiplo)/100))	
+	var swwww1O =Math.round(sw4*5000000*((100-sdiplo)/100))
+	var swwww1K =Math.round(sw4*1000000*((100-sdiplo)/100))
+	document.getElementById("seekC").innerHTML =   swwww1C	
+	document.getElementById("seekO").innerHTML =   swwww1O
+	document.getElementById("seekK").innerHTML =   swwww1K
+	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
+	document.getElementById("seekKK").innerHTML =   swwww1KK
+	
+	sTotalKKK = sw1KK+sww1KK+swww1KK+swwww1KK
+	document.getElementById("sTotalKK2").innerHTML =   Math.round(sTotalKKK/1000000) + " M"
 //	1,50	185185
 //1,50	51851
 //1,50	118518
