@@ -119,6 +119,7 @@ function myFunction() {
 	if (sx <10) {
 		var ddEsperance = 0.05
 	}
+	document.getElementById("PC").innerHTML = (Math.round(ddEsperance*100)/100) + " %" ;
 	 document.getElementById("ssstele").innerHTML = (Math.round(ddEsperance*100)/100) + " %" ;
 	var st1 =Math.round(185185*Math.pow((1.5),(ssx)))
 	document.getElementById("steleC").innerHTML =   st1;
@@ -626,7 +627,8 @@ function myFunction2() {
 	<td>
 				<table style="height: 45%;  width: 75%;">
 				<tr>
-				<td rowspan="6"><span style="color: #0000ff;">Soit en agmentant ma quantit&eacute; de troupe de <span style="color: #ff0000;"><strong>2%</strong></span></span>
+<td rowspan="6"><span style="color: #0000ff;">Soit en agmentant ma quantit&eacute; de troupe de 
+	<strong><span style="color: #ff0000;" id="PC">2%</span><</strong>/span>
 				</td>
 				<td colspan="2"></td>
 				<td style=" text-align: center;">Quantit&eacute; actuelle</td>
