@@ -74,6 +74,15 @@ function Debut() {
 }	
 function myFunction() {
 	//alert(x)
+		document.getElementById("saigle").value = document.getElementById("aigle").value
+		document.getElementById("sjaguar").value = document.getElementById("jaguar").value	
+		document.getElementById("satlante").value = document.getElementById("atlante").value
+		document.getElementById("sek").value = document.getElementById("ek").value
+		document.getElementById("sDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
+
+	
+	
+	
   	var x =  parseInt(document.getElementById("Devin").value);
 	document.getElementById("DDevin").innerHTML =   x+1;
 	var y1 =Math.round(66667*Math.pow((1.8),(x+1)))
@@ -121,6 +130,21 @@ function myFunction() {
 	var st5 =Math.round(st2*0.625)
 	var st6 = st5+st4+st3
 	document.getElementById("steleKK").innerHTML =   st6;
+	
+	var sw =  parseInt(document.getElementById("saigle").value);
+	var sw1 =Math.round(sw*ddEsperance)
+	document.getElementById("saaigle").innerHTML =   sw1;
+	var sww =  parseInt(document.getElementById("sjaguar").value);
+	var sw2 =Math.round(sww*ddEsperance)
+	document.getElementById("sjjaguar").innerHTML =   sw2;
+	var swww =  parseInt(document.getElementById("satlante").value);
+	var sw3 =Math.round(swww*ddEsperance)
+	document.getElementById("saatlante").innerHTML =   sw3;	
+	var swwww =  parseInt(document.getElementById("sek").value);
+	var sw4 =Math.round(swwww*ddEsperance)
+	document.getElementById("seek").innerHTML =  sw4;
+	
+	
 //	1,50	185185
 //1,50	51851
 //1,50	118518
@@ -206,7 +230,7 @@ function myFunction2() {
 		document.getElementById("jaguar").value = document.getElementById("sjaguar").value	
 		document.getElementById("atlante").value = document.getElementById("satlante").value
 		document.getElementById("ek").value = document.getElementById("sek").value
-		document.getElementById("diplo").value = document.getElementById("sdiplo").value
+		document.getElementById("Diplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
 	myFunction()
 }	
 </script>
