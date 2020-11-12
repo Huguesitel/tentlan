@@ -69,14 +69,12 @@ img:hover {
 <script>
 function Debut() {
 
-	//	myFunction()
+		myFunction()
 	
 }	
 function myFunction() {
-	alert(x)
+	//alert(x)
   	var x =  parseInt(document.getElementById("Devin").value);
-	alert(x)
-	return
 	document.getElementById("DDevin").innerHTML =   x+1;
 	var y1 =Math.round(66667*Math.pow((1.8),(x+1)))
 	var y2 =Math.round(38889*Math.pow((1.8),(x+1)))
@@ -152,22 +150,22 @@ function myFunction() {
 	
 	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
 	document.getElementById("TotalKK2").innerHTML =   Math.round(TotalKKK/1000000) + " M"
-//if (z7<TotalKKK) {
-//	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
-//	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
+if (z7<TotalKKK) {
+	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
+	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
 //	document.getElementById("UP").innerHTML =   "L'amélioration des batiements est " 
 //		+ Math.round((TotalKKK-z7)*100/TotalKKK) 
 //		+ " % moins coûteuse que la fabrication de troupes."
 //	document.getElementById("DOWN").innerHTML =   ""
-//}
-//	else {
-//	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
-//	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
+}
+	else {
+	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
+	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
 //	document.getElementById("DOWN").innerHTML =   "La fabrixation de troupes est " 
 //		+ Math.round((z7-TotalKKK)*100/z7) 
 //		+ " % moins coûteuse que l'amélioration des batiements.
 //	document.getElementById("UP").innerHTML =   ""		
-//	}
+	}
   
 }
 
