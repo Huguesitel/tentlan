@@ -102,7 +102,7 @@ function myFunction() {
 	 var Proba10=(x-9)/(x+1)
 	 var Proba9=1-Proba10
 	 var Esperance =(4,5*Proba9)+(Proba10*10)
-	 document.getElementById("ssstele").innerHTML = Esperance  ;
+	 document.getElementById("ssstele").innerHTML = (Math.round(Esperance*100)/100) + " %" ;
 	var st1 =Math.round(185185*Math.pow((1.5),(x+1)))
 	document.getElementById("steleC").innerHTML =   st1;
 //	1,50	185185
@@ -498,10 +498,10 @@ if (z7<TotalKKK) {
 		<tr>
 			<td>Stèle</td>
 			<td id="stele" onchange="myFunction()">10</td>  
-			<td id="sstele">11</td>
-			<td id="ssstele">0.52%</td>
+			<td id="sstele"></td>
+			<td id="ssstele"></td>
 			<td id="steleC"></td>
-			<td  id="steleO"></td>
+			<td id="steleO"></td>
 			<td id="steleK"></td>
 			<td id="steleKK">=</td>
 			<td id="steleKKK"></td>
