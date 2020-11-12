@@ -110,9 +110,17 @@ function myFunction() {
 	 document.getElementById("ssstele").innerHTML = (Math.round(ddEsperance*100)/100) + " %" ;
 	var st1 =Math.round(185185*Math.pow((1.5),(ssx)))
 	document.getElementById("steleC").innerHTML =   st1;
+	var st2 =Math.round(51851*Math.pow((1.5),(ssx)))
+	document.getElementById("steleO").innerHTML =   st2;	
+	var st3 =Math.round(118518*Math.pow((1.5),(ssx)))
+	document.getElementById("steleK").innerHTML =   st3;	
+	var st4 =Math.round(st1*0.4)
+	var st5 =Math.round(st2*0.625)
+	var st6 = st5+st4+st3
+	document.getElementById("steleKK").innerHTML =   st6;
 //	1,50	185185
-//1,50	51 851
-//1,50	118 518
+//1,50	51851
+//1,50	118518
 //Porba10=(Niveau-9)/(Niveau+1)  Porba9 =1-B13	  =(4,5*Porba9)+(Porba10*10)
 	
 
@@ -475,7 +483,7 @@ if (z7<TotalKKK) {
 
 		<table style="  width: 100;">
 		<tr>
-			<td rowspan="2">Soit en améliorabt la stèle</td>
+			<td rowspan="2">Soit en améliorant la stèle</td>
 			<td></td>
 			<td>Niveau actuel</td>  
 			<td>Niveau à atteindre</td>
@@ -535,7 +543,8 @@ if (z7<TotalKKK) {
 			    <option value="28">28</option>
 			    <option value="29">29</option>	
  				 </select>
-			</td>  
+			</td> 
+			<td><img style="float:right" src="Image/stele2.png" width="50" height="50" ></td> 
 			<td id="sstele"></td>
 			<td><strong>
 				<span style="color: #ff0000;" id="ssstele">2%</span></strong>
