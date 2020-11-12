@@ -94,7 +94,18 @@ function myFunction() {
 	var z4 =Math.round(z1*0.4)
 	var z5 =Math.round(z2*0.625)
 
-	//	1,50	185 185
+	
+	
+	//*************************************** stele
+	 var x =  parseInt(document.getElementById("stele").value);
+	document.getElementById("sstele").innerHTML =   x+1;
+	 var Proba10=(x-9)/(x+1)
+	 var Proba9=1-Proba10
+	 var Esperance =(4,5*Proba9)+(Proba10*10)
+	 document.getElementById("ssstele").innerHTML = Esperance  ;
+	var st1 =Math.round(185185*Math.pow((1.5),(x+1)))
+	document.getElementById("steleC").innerHTML =   st1;
+//	1,50	185185
 //1,50	51 851
 //1,50	118 518
 //Porba10=(Niveau-9)/(Niveau+1)  Porba9 =1-B13	  =(4,5*Porba9)+(Porba10*10)
@@ -159,9 +170,9 @@ function myFunction() {
 if (z7<TotalKKK) {
 	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
 	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
-//	document.getElementById("DOWN").innerHTML =   "L'amélioration des batiements est " 
-//		+ Math.round((TotalKKK-z7)*100/TotalKKK) 
-//		+ " % moins coûteuse que la fabrication de troupes."
+	document.getElementById("DOWN").innerHTML =   "L'amélioration des batiements est " 
+		+ Math.round((TotalKKK-z7)*100/TotalKKK) 
+		+ " % moins coûteuse que la fabrication de troupes."
 
 }
 	else {
