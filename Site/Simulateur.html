@@ -271,11 +271,9 @@ function myFunction2() {
 	myFunction()
 }
 function myFunction3() {
-		document.getElementById("aigle").value = document.getElementById("saigle").value
-		document.getElementById("jaguar").value = document.getElementById("sjaguar").value	
-		document.getElementById("atlante").value = document.getElementById("satlante").value
-		document.getElementById("ek").value = document.getElementById("sek").value
-		document.getElementById("Diplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
+		document.getElementById("Nentre").value = document.getElementById("entrepot").value
+		document.getElementById("Ntribal").value = document.getElementById("tribal").value	
+		document.getElementById("Nceram").value = document.getElementById("ceramique").value
 	myFunction()
 }	
 </script>
@@ -770,12 +768,8 @@ function myFunction3() {
 <table>
 <tr>
 <td rowspan="3">
-	
- 	
-<span style="color: #0000ff;">Je veux calculer le <strong>volume de stockage</strong> suivant les options possibles (Entrepôt, Céramique, Conseil Tribal)  !</span><br>
-	
-	
-	
+<span style="color: #0000ff;">Je veux rentabiliser le <strong>volume de stockage</strong> suivant les options possibles (Entrepôt, Céramique, Conseil Tribal)  !</span><br>
+
 </td>
 <td>
 	
@@ -785,7 +779,7 @@ function myFunction3() {
 <td colspan="2"></td>
 <td style="width: 70.4px; text-align: center;">Niveau actuel</td>
 <td style="width: 70.4px; text-align: center;">Niveau &agrave; atteindre</td>
-<td style="width: 10.4px;">&nbsp;</td>
+<td style="width: 10.4px;">Volume du stock</td>
 <td style="width: 70.4px; text-align: center;">Calcaire<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
 
 <td style="width: 50.4px; text-align: center;">Obsidienne<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
@@ -806,7 +800,7 @@ function myFunction3() {
 			</td>
 			
 
-<td style="width: 25.6px;">Total CacaoEqui</td>
+<td style="width: 25.6px;">Volume pour <span style="color: #red;">1000<span> CacaoEqui</td>
 </tr>
 <tr>
 
@@ -845,7 +839,7 @@ function myFunction3() {
     <option value="29">29</option>	
   </select></td>
 <td style="width: 65.6px;" id="eentrepot"></td>
-<td style="width: 10.4px;">></td>
+<td style="width: 10.4px;" id="eeentrepot"></td>
 <td style="width: 58.4px;" id="eentrepotC"></td>
 <td style="width: 79.2px;" id="eentrepotO"></td>
 <td style="width: 44px;" id="eentrepotK"></td>
@@ -893,7 +887,7 @@ function myFunction3() {
   </select>
 	</td>
 <td style="width: 65.6px;" id="ttribal"></td>
-<td style="width: 10.4px;" >></td>
+<td style="width: 10.4px;" id="tttribal"></td>
 <td style="width: 58.4px;" id="ttribalC"></td>
 <td style="width: 79.2px;" id="ttribalO"></td>
 <td style="width: 44px;" id="ttribalK"></td>
@@ -940,7 +934,7 @@ function myFunction3() {
   </select>
 	</td>
 <td style="width: 65.6px;" id="cceramique"></td>
-<td style="width: 10.4px;" >></td>
+<td style="width: 10.4px;" id="ccceramique"></td>
 <td style="width: 58.4px;" id="cceramiqueC"></td>
 <td style="width: 79.2px;" id="cceramiqueO"></td>
 <td style="width: 44px;" id="cceramiqueK"></td>
@@ -949,7 +943,11 @@ function myFunction3() {
 </tr>
 <tr>
 <td>1</td><td>2</td><td>3</td>
-	<td>Entrepot à 11<br>+tribal à 11</td>
+	<td>Entrepot à <span style="color: #red;" id="Nentre">11<span> <br>
+	Tribal à <span style="color: #red;" id="Ntribal">11<span> <br>
+	Céramique à <span style="color: #red;" id="Nceram">11<span> <br>
+		
+		</td>
 </tr>
 	<td>1</td><td>2</td><td>3</td>
 	<td>Entrepot à 11<br>+céramique à 11</td>
