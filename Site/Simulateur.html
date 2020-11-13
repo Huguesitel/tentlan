@@ -267,9 +267,30 @@ function myFunction2() {
 	myFunction()
 }
 function myFunction3() {
-		document.getElementById("Nentre").innerHTML = 1+document.getElementById("entrepot").value
-		document.getElementById("Ntribal").innerHTML = document.getElementById("tribal").value	
-		document.getElementById("Nceram").innerHTML = document.getElementById("ceramique").value
+	var Nentrepot = document.getElementById("entrepot").value
+	var Ntribal = document.getElementById("tribal").value
+	var Nceramique = document.getElementById("ceramique").value
+	
+		document.getElementById("Nentre1").innerHTML = Nentrepot+1
+		document.getElementById("Ntribal1").innerHTML = Ntribal
+		document.getElementById("Nceram1").innerHTML = Nceramique
+		document.getElementById("Nentre2").innerHTML = Nentrepot
+		document.getElementById("Ntribal2").innerHTML = Ntribal+1
+		document.getElementById("Nceram2").innerHTML = Nceramique	
+		document.getElementById("Nentre3").innerHTML = Nentrepot
+		document.getElementById("Ntribal3").innerHTML = Ntribal
+		document.getElementById("Nceram3").innerHTML = Nceramique+1
+	
+		document.getElementById("Nentre4").innerHTML = Nentrepot+1
+		document.getElementById("Ntribal4").innerHTML = Ntribal+1
+		document.getElementById("Nceram4").innerHTML = Nceramique
+		document.getElementById("Nentre5").innerHTML = Nentrepot+1
+		document.getElementById("Ntribal5").innerHTML = Ntribal
+		document.getElementById("Nceram5").innerHTML = Nceramique+1
+		document.getElementById("Nentre6").innerHTML = Nentrepot+1
+		document.getElementById("Ntribal6").innerHTML = Ntribal+1
+		document.getElementById("Nceram36").innerHTML = Nceramique+1
+	
 	//1,19	9 883
 	var y1 =Math.round(46585*Math.pow((1.16),(x+1)))
 	document.getElementById("eeentrepot").innerHTML =y1
@@ -839,7 +860,11 @@ function myFunction3() {
     <option value="28">28</option>
     <option value="29">29</option>	
   </select></td>
-<td style="width: 65.6px;" id="eentrepot"></td>
+<td style="width: 65.6px;" id="eentrepot">
+		Entrepot à <span style="color: #ff0000;" id="Nentre1">11</span> <br>
+	Tribal à <span style="color: #ff0000;" id="Ntribal1">11</span> <br>
+	Céramique à <span style="color: #ff0000;" id="Nceram1">11</span> <br>
+	</td>
 <td style="width: 10.4px;" id="eeentrepot"></td>
 <td style="width: 58.4px;" id="eentrepotC"></td>
 <td style="width: 79.2px;" id="eentrepotO"></td>
@@ -887,7 +912,11 @@ function myFunction3() {
 		
   </select>
 	</td>
-<td style="width: 65.6px;" id="ttribal"></td>
+<td style="width: 65.6px;" id="ttribal">
+		Entrepot à <span style="color: #ff0000;" id="Nentre2">11</span> <br>
+	Tribal à <span style="color: #ff0000;" id="Ntribal2">11</span> <br>
+	Céramique à <span style="color: #ff0000;" id="Nceram2">11</span> <br>
+	</td>
 <td style="width: 10.4px;" id="tttribal"></td>
 <td style="width: 58.4px;" id="ttribalC"></td>
 <td style="width: 79.2px;" id="ttribalO"></td>
@@ -934,7 +963,10 @@ function myFunction3() {
 		
   </select>
 	</td>
-<td style="width: 65.6px;" id="cceramique"></td>
+<td style="width: 65.6px;" id="cceramique">	
+	Entrepot à <span style="color: #ff0000;" id="Nentre3">11</span> <br>
+	Tribal à <span style="color: #ff0000;" id="Ntribal3">11</span> <br>
+	Céramique à <span style="color: #ff0000;" id="Nceram3">11</span> <br>
 <td style="width: 10.4px;" id="ccceramique"></td>
 <td style="width: 58.4px;" id="cceramiqueC"></td>
 <td style="width: 79.2px;" id="cceramiqueO"></td>
@@ -943,10 +975,12 @@ function myFunction3() {
 <td style="width: 18.4px;" id="cceramiqueKK"></td>
 </tr>
 <tr>
-<td  colspan="3"></td>
-	<td>Entrepot à <span style="color: #ff0000;" id="Nentre">11</span> <br>
-	Tribal à <span style="color: #ff0000;" id="Ntribal">11</span> <br>
-	Céramique à <span style="color: #ff0000;" id="Nceram">11</span> <br>
+<td  colspan="3"><img style="float:right" src="Image/entrepot.png" width="50" height="50" >
+	<img style="float:right" src="Image/tribal.png" width="50" height="50" >
+	</td>
+	<td>Entrepot à <span style="color: #ff0000;" id="Nentre4">11</span> <br>
+	Tribal à <span style="color: #ff0000;" id="Ntribal4">11</span> <br>
+	Céramique à <span style="color: #ff0000;" id="Nceram4">11</span> <br>
 		
 	</td>
 	<td></td>
@@ -954,9 +988,12 @@ function myFunction3() {
 	<td></td>
 	<td></td>
 </tr>
-	<td>Entrepot à <span style="color: #ff0000;" id="Nentre">11</span> <br>
-	Tribal à <span style="color: #ff0000;" id="Ntribal">11</span> <br>
-	Céramique à <span style="color: #ff0000;" id="Nceram">11</span> <br>
+	<td  colspan="3"><img style="float:right" src="Image/entrepot.png" width="50" height="50" >
+	<img style="float:right" src="Image/ceramique.png" width="50" height="50" >
+	</td>
+	<td>Entrepot à <span style="color: #ff0000;" id="Nentre5">11</span> <br>
+	Tribal à <span style="color: #ff0000;" id="Ntribal5">11</span> <br>
+	Céramique à <span style="color: #ff0000;" id="Nceram5">11</span> <br>
 		
 	</td>
 	<td></td>
@@ -964,9 +1001,14 @@ function myFunction3() {
 	<td></td>
 	<td></td>
 </tr>
-	<td>Entrepot à <span style="color: #ff0000;" id="Nentre">11</span> <br>
-	Tribal à <span style="color: #ff0000;" id="Ntribal">11</span> <br>
-	Céramique à <span style="color: #ff0000;" id="Nceram">11</span> <br>
+	<td  colspan="3">
+	<img style="float:right" src="Image/entrepot.png" width="50" height="50" >
+		<img style="float:right" src="Image/tribal.png" width="50" height="50" >
+		<img style="float:right" src="Image/ceramique.png" width="50" height="50" >
+	</td>
+	<td>Entrepot à <span style="color: #ff0000;" id="Nentre6">11</span> <br>
+	Tribal à <span style="color: #ff0000;" id="Ntribal6">11</span> <br>
+	Céramique à <span style="color: #ff0000;" id="Nceram6">11</span> <br>
 		
 	</td>
 	<td></td>
