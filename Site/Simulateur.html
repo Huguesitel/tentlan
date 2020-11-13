@@ -294,11 +294,12 @@ function myFunction3() {
 		document.getElementById("Nceram36").innerHTML = Nceramique1
 	
 	//1,19	9 883
-	var y1 =Math.round(46585*Math.pow((1.16),(x+1)))
-	document.getElementById("eeentrepot").innerHTML =y1
-	var y2 =Math.round(38889*Math.pow((1.19),(x+1)))
-	var y3 =Math.round(108722*Math.pow((1.19),(x+1)))
-	myFunction()
+	var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
+	document.getElementById("eeentrepot").innerHTML =volumeentrepot
+	document.getElementById("tttribal").innerHTML =1000000
+	document.getElementById("tttribal").innerHTML =2000000
+
+	//myFunction()
 }	
 </script>
 
@@ -862,7 +863,7 @@ function myFunction3() {
     <option value="28">28</option>
     <option value="29">29</option>	
   </select></td>
-<td style="width: 65.6px;" id="eentrepot">
+<td style="width: 100.6px;" id="eentrepot">
 		Entrepot à <span style="color: #ff0000;" id="Nentre1">11</span> <br>
 	Tribal à <span style="color: #326fa8;" id="Ntribal1">11</span> <br>
 	Céramique à <span style="color: #326fa8;" id="Nceram1">11</span> <br>
