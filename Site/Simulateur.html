@@ -269,9 +269,9 @@ function myFunction3() {
 	var Nentrepot = document.getElementById("entrepot").value
 	var Ntribal = document.getElementById("tribal").value
 	var Nceramique = document.getElementById("ceramique").value
-	var Nentrepot1 = 1+document.getElementById("entrepot").value
-	var Ntribal1 = 1+document.getElementById("tribal").value
-	var Nceramique1 = 1+document.getElementById("ceramique").value
+	var Nentrepot1 = 1+Nentrepot
+	var Ntribal1 = 1+Ntribal
+	var Nceramique1 = 1+Nceramique
 	
 		document.getElementById("Nentre1").innerHTML = Nentrepot1
 		document.getElementById("Ntribal1").innerHTML = Ntribal
@@ -297,7 +297,7 @@ function myFunction3() {
 	var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
 	document.getElementById("eeentrepot").innerHTML =volumeentrepot
 	document.getElementById("tttribal").innerHTML =1000000
-	document.getElementById("tttribal").innerHTML =2000000
+	document.getElementById("ccceramique").innerHTML =2000000
 
 	//myFunction()
 }	
