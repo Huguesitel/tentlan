@@ -269,9 +269,9 @@ function myFunction3() {
 	var Nentrepot = document.getElementById("entrepot").value
 	var Ntribal = document.getElementById("tribal").value
 	var Nceramique = document.getElementById("ceramique").value
-	var Nentrepot1 = document.getElementById("entrepot").value
-	var Ntribal1 = document.getElementById("tribal").value
-	var Nceramique1 = document.getElementById("ceramique").value
+	var Nentrepot1 = 1+document.getElementById("entrepot").value
+	var Ntribal1 = 1+document.getElementById("tribal").value
+	var Nceramique1 = 1+document.getElementById("ceramique").value
 	
 		document.getElementById("Nentre1").innerHTML = Nentrepot1
 		document.getElementById("Ntribal1").innerHTML = Ntribal
@@ -665,8 +665,8 @@ function myFunction3() {
 </tr>
 <tr>	
 	<td>
-				<table style="height: 45%;  width: 75%;">
-				<tr>
+<table style="height: 45%;  width: 75%;">
+<tr>
 <td rowspan="6"><span style="color: #0000ff;">Soit en agmentant ma <strong>quantité</strong> de troupe de 
 	<strong><span style="color: #ff0000;" id="PC">2%</span></strong>
 				</td>
@@ -790,9 +790,9 @@ function myFunction3() {
 
 	
 	
-<table width: 15%;>
+<table>
 <tr>
-<td rowspan="3">
+<td rowspan="3" width: 15%;>
 <span style="color: #0000ff;">Je veux rentabiliser le <strong>volume de stockage</strong> suivant les options possibles (Entrepôt, Céramique, Conseil Tribal)  !</span><br>
 
 </td>
@@ -1025,16 +1025,132 @@ function myFunction3() {
 </tr>
 </table>
 	
-</td>
-</tr>	
+
+<br>	
 	
 </table>
 	
 </td>
-</tr>
-	
+<table style="height: 45%;  width: 75%;">
 <tr>
-<td>	
+<td rowspan="6"><span style="color: #0000ff;">Je veux comparer la  <strong>force</strong> et la <strong>rentatbilité</strong> des unités de 
+				</td>
+				<td colspan="2"></td>
+				<td style=" text-align: center;">Quantit&eacute; ) produire</td>
+				<td style=" text-align: center;">Quantit&eacute;&nbsp;&agrave; produire</td>
+				<td style="width: 8px;">&nbsp;</td>
+				<td style="width: 70.4px; text-align: center;">Calcaire<br><img style="float:right align: center;" src="Image/calc.png" width="30" height="30" ></td>
+				<td style="width: 70.4px; text-align: center;">Obsidienne<br><img style="float:right align: center;" src="Image/obsi.png" width="30" height="30" ></td>
+				<td style="width: 70.4px; text-align: center;">Cacao<br><img style="float:right align: center;" src="Image/xacai.png" width="30" height="30" ></td>
+				<td style="width: 20px;">&nbsp;</td>
+							<td style="text-align: center;">
+							<div class="dropdown">
+							<span style="color: #0000ff;">CacaoEqui<br></span>
+							<img style="align: center;" src="Image/xacaEqii.png" width="30" height="30" >
+							 <div class="dropdown-content">
+								<p><DIV>Le cacaoEquitable (CacaoEqui) est calculé en convertissant <br>
+								toutes les ressources en cacao ; ce qui permet <br>
+								de comparer les coûts de 2 'objets' de nature différente.</DIV></p>
+							  </div>
+							</div>
+							</td>
+				<td style="text-align: center;">Total CacaoEqui</td>
+				</tr>
+				<tr>
+
+				<td style="width: 78px;">Guerrier Aigle</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
+				<td ><input type="number" id="saigle" name="aigle" step="1000" onchange="myFunction2()" value="10000"></td>
+				<td style="width: 75px;" id="saaigle"></td>
+				<td style="width: 8px;" >></td>
+				<td style="width: 65px;" id="saaigleC"></td>
+				<td style="width: 79px;" id="saaigleO"></td>
+				<td style="width: 46px;" id="saaigleK"></td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="saaigleKK"></td>
+				<td rowspan="5" style="align: center;" ><strong><div id="sTotalKK2">Bas</div></strong><br><img  id="sPouceDOWN" src="Image/pouceR.png" width="50" height="50" ></td>
+				</tr>
+				<tr>
+				<td style="width: 78px;">Guerrier Jaguar</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
+				<td ><input type="number" id="sjaguar" name="jaguar" step="200" value="4000" onchange="myFunction2()"></td>
+				<td style="width: 75px;" id="sjjaguar"></td>
+				<td style="width: 8px;" >></td>
+				<td style="width: 65px;" id="sjjaguarC">&nbsp;</td>
+				<td style="width: 79px;" id="sjjaguarO">&nbsp;</td>
+				<td style="width: 46px;" id="sjjaguarK">&nbsp;</td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="sjjaguarKK">&nbsp;</td>
+				</tr>
+				<tr>
+				<td style="width: 78px;">Atlante</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
+				<td ><input type="number" id="satlante" name="atlante" step="100" onchange="myFunction2()"  value="2000"></td>
+				<td style="width: 75px;" id="saatlante"></td>
+				<td style="width: 8px;" >></td>
+				<td style="width: 65px;"  id="saatlanteC">&nbsp;</td>
+				<td style="width: 79px;" id="saatlanteO" >&nbsp;</td>
+				<td style="width: 46px;" id="saatlanteK">&nbsp;</td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="saatlanteKK">&nbsp;</td>
+				</tr>
+				<tr>
+				<td style="width: 78px;">Ek Chuah</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
+				<td ><input type="number" id="sek" name="ek" onchange="myFunction2()" value="100"></td>
+				<td style="width: 75px;"  id="seek"></td>
+				<td style="width: 8px;">></td>
+				<td style="width: 65px;" id="seekC">&nbsp;</td>
+				<td style="width: 79px;" id="seekO">&nbsp;</td>
+				<td style="width: 46px;" id="seekK">&nbsp;</td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="seekKK">&nbsp;</td>
+				</tr>
+
+				<tr>
+				<td style="width: 78px;">Diplomatie</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
+				<td style="width: 49px;">	
+					<select name="NiveauDiplo" id="sDiplo" onchange="myFunction2()">
+						    <option value="0">0</option>
+						    <option value="1">1</option>
+						    <option value="2">2</option>
+						    <option value="3">3</option>
+							<option value="4">4</option>
+						    <option value="5">5</option>
+						    <option value="6">6</option>
+						    <option value="7">7</option>	
+						    <option value="8">8</option>
+						    <option value="9">9</option>
+						    <option value="10">10</option>	
+							<option value="11">11</option>
+							<option value="12">12</option>	
+							<option value="13">13</option>
+							<option value="14">14</option>	
+							<option value="15">15</option>
+							<option value="16">16</option>	
+						    <option value="17">17</option>	
+						    <option value="18">18</option>	
+						    <option value="19">19</option>
+							<option value="20" selected="selected">20</option>	
+						    <option value="21">21</option>
+						    <option value="22">22</option>	
+						    <option value="23">23</option>
+							<option value="24">24</option>	
+						    <option value="25">25</option>
+						    <option value="26">26</option>	
+						    <option value="27">27</option>	
+						    <option value="28">28</option>	
+						    <option value="29">29</option>
+						    <option value="30">30</option>	
+				  </select></td>
+				<td colspan="7"></td>
+				</tr>
+				<tr>
+				<td colspan="4">Force d'attaque totale par unité</td>
+				<td colspan="4">Force de défense totale par unité</td>
+				</tr>
+				</table>	
 	
 	
 	
