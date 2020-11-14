@@ -10,7 +10,7 @@ canvas {
     margin-right: auto;
     //width: 6em
 }
-div.test2 {
+td.test2 {
   writing-mode: vertical-lr; 
 }
 .dropdown {
@@ -1315,17 +1315,29 @@ function myFunction3() {
 	
 	</table>
 <script>
-	
-var c = document.getElementById("myCanvas");
+var Matrice = {"myCanvas", "myCanvas1", "myCanvas2", "myCanvas3"};
+for(int i= 0 ; i < 4; i++){
+ if(i==0){
+ var c = document.getElementById("myCanvas");
+ }
+ if(i==1){
+ var c = document.getElementById("myCanvas1");
+ }
+ if(i==2){
+ var c = document.getElementById("myCanvas2");
+ }
+ if(i==3){
+ var c = document.getElementById(Matrice[3]);
+ }
 var ctx = c.getContext("2d");
 
 // Red rectangle
 ctx.beginPath();
 ctx.lineWidth = "5";
 ctx.strokeStyle = "red";
-ctx.rect(5, 5, 10, 40);  
+ctx.rect(5, 5, 20, 40);  
 ctx.stroke();
-
+}
 document.getElementById("myC").innerHTML = document.getElementById("saigle").value
 document.getElementById("myC1").innerHTML = document.getElementById("sjaguar").value
 document.getElementById("myC2").innerHTML = document.getElementById("satlante").value
