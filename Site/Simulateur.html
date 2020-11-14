@@ -1065,7 +1065,7 @@ function myFunction3() {
 
 				<td style="width: 78px;">Guerrier Aigle</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
-				<td ><input type="number" id="saigle" name="aigle" step="1000" onchange="myFunction2()" value="10000"></td>
+				<td ><input type="number" id="saigle" name="aigle" step="1000" onchange="myFunction4()" value="10000"></td>
 				<td style="width: 75px;" id="saaigle">></td>
 				<td style="width: 8px;" ></td>
 				<td style="width: 65px;" id="saaigleC"></td>
@@ -1078,7 +1078,7 @@ function myFunction3() {
 				<tr>
 				<td style="width: 78px;">Guerrier Jaguar</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
-				<td ><input type="number" id="sjaguar" name="jaguar" step="200" value="4000" onchange="myFunction2()"></td>
+				<td ><input type="number" id="sjaguar" name="jaguar" step="200" value="4000" onchange="myFunction4()"></td>
 				<td style="width: 75px;" id="sjjaguar">></td>
 				<td style="width: 8px;" ></td>
 				<td style="width: 65px;" id="sjjaguarC">&nbsp;</td>
@@ -1090,7 +1090,7 @@ function myFunction3() {
 				<tr>
 				<td style="width: 78px;">Atlante</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
-				<td ><input type="number" id="satlante" name="atlante" step="100" onchange="myFunction2()"  value="2000"></td>
+				<td ><input type="number" id="satlante" name="atlante" step="100" onchange="myFunction4()"  value="2000"></td>
 				<td style="width: 75px;" id="saatlante">></td>
 				<td style="width: 8px;" ></td>
 				<td style="width: 65px;"  id="saatlanteC">&nbsp;</td>
@@ -1102,7 +1102,7 @@ function myFunction3() {
 				<tr>
 				<td style="width: 78px;">Ek Chuah</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
-				<td ><input type="number" id="sek" name="ek" onchange="myFunction2()" value="100"></td>
+				<td ><input type="number" id="sek" name="ek" onchange="myFunction4()" value="100"></td>
 				<td style="width: 75px;"  id="seek">></td>
 				<td style="width: 8px;"></td>
 				<td style="width: 65px;" id="seekC">&nbsp;</td>
@@ -1156,6 +1156,9 @@ function myFunction3() {
 <table>	
 	<tr>
 	<td colspan="4">Force totale d'attaque</td>
+	<td colspan="4">Force totale de défense</td>
+	<td colspan="4">Force totale d'attaque pour<br>1000 CacaoRqui dépensés</td>
+	<td colspan="4">Force totale de défense pour<br>1000 CacaoRqui dépensés</td>
 	</tr>
 	<tr>	
 	<td width="50"><canvas id="myCanvas" width="30" height="50" style="border:0px solid #d3d3d3;">
@@ -1181,12 +1184,12 @@ function myFunction3() {
 	</tr>
 
 	<tr>
-				<td colspan="5">Force totale de défense</td>
+
 					<td></td><td></td>
 					<td></td><td></td>					
 	</tr>
 	<tr>
-				<td colspan="5">Force d'attaque pour 1000 CacaoEquiv</td>
+
 					<td></td><td></td>
 					<td></td><td></td>			
 	</tr>
@@ -1207,8 +1210,66 @@ document.getElementById("myC").innerHTML = document.getElementById("saigle").val
 document.getElementById("myC1").innerHTML = document.getElementById("sjaguar").value
 document.getElementById("myC2").innerHTML = document.getElementById("satlante").value
 document.getElementById("myC3").innerHTML = document.getElementById("sek").value
+return;
+function myFunction4() {
+
+var w =  parseInt(document.getElementById("saigle").value);
+	var w1 =Math.round(w*0.02)
+	document.getElementById("saaigle").innerHTML =   w1;
+	var ww =  parseInt(document.getElementById("sjaguar").value);
+	var w2 =Math.round(ww*0.02)
+	document.getElementById("sjjaguar").innerHTML =   w2;
+	var www =  parseInt(document.getElementById("satlante").value);
+	var w3 =Math.round(www*0.02)
+	document.getElementById("saatlante").innerHTML =   w3;	
+	var wwww =  parseInt(document.getElementById("sek").value);
+	var w4 =Math.round(wwww*0.02)
+	document.getElementById("seek").innerHTML =   w4;
 	
+	var diplo =  parseInt(document.getElementById("sDiplo").value);
+	var w1O =Math.round(w1*17500*((100-diplo)/100))
+	document.getElementById("saaigleO").innerHTML =   w1O
+	var w1K =Math.round(w1*7000*((100-diplo)/100))
+	document.getElementById("saaigleK").innerHTML =   w1K
+	var w1KK =w1K+Math.round(w1O*0.625)
+	document.getElementById("saaigleKK").innerHTML =   w1KK
+		
+	var ww1O =Math.round(w2*90000*((100-diplo)/100))
+	var ww1K =Math.round(w2*134500*((100-diplo)/100))
+	document.getElementById("sjjaguarO").innerHTML =   ww1O
+	document.getElementById("sjjaguarK").innerHTML =   ww1K
+	var ww1KK =ww1K+Math.round(ww1O*0.625)
+	document.getElementById("sjjaguarKK").innerHTML =   ww1KK	
+	
+	var www1O =Math.round(w3*550000*((100-diplo)/100))
+	var www1K =Math.round(w3*400000*((100-diplo)/100))
+	document.getElementById("saatlanteO").innerHTML =   www1O
+	document.getElementById("saatlanteK").innerHTML =   www1K
+	var www1KK =www1K+Math.round(www1O*0.625)
+	document.getElementById("saatlanteKK").innerHTML =   www1KK
+	
+	var wwww1C =Math.round(w4*10000000*((100-diplo)/100))	
+	var wwww1O =Math.round(w4*5000000*((100-diplo)/100))
+	var wwww1K =Math.round(w4*1000000*((100-diplo)/100))
+	document.getElementById("seekC").innerHTML =   wwww1C	
+	document.getElementById("seekO").innerHTML =   wwww1O
+	document.getElementById("seekK").innerHTML =   wwww1K
+	var wwww1KK =Math.round(wwww1C*0.4)+Math.round(wwww1O*0.625)+wwww1K
+	document.getElementById("seekKK").innerHTML =   wwww1KK
+	
+	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
+	document.getElementById("TotalsKK2").innerHTML =   Math.round(TotalKKK/1000000) + " M"
+if (z7<TotalKKK) {
+	//document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
+	//document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
+}
+	else {
+	//document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
+	//document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
+
+	}
+  
+}
+
 </script> 
-
-
 </body>
