@@ -1145,24 +1145,41 @@ function myFunction3() {
 				  </select></td>
 				<td colspan="7"></td>
 				</tr>
-				<tr>
-				<td rowspan="2">Force d'attaque totale par unité</td>
+				
+				</table>	
+<table>	
+	<tr>
+				<td colspan="5">Force totale d'attaque</td>
+<td><canvas id="myCanvas" width="50" height="50" style="border:1px solid #d3d3d3;">
+</canvas></td>
+		<td></td>
 					<td></td><td></td>
-					<td></td><td></td>
-				</tr>
-				<tr>
-				<td rowspan="2">Force de défense totale par unité</td>
+	</tr>
+	<tr>
+				<td colspan="5">Force totale de défense</td>
 					<td></td><td></td>
 					<td></td><td></td>					
-				</tr>
-				<tr>
-				<td rowspan="2">Force d'attaque pour 1000 CacaoEquiv</td>
+	</tr>
+	<tr>
+				<td colspan="5">Force d'attaque pour 1000 CacaoEquiv</td>
 					<td></td><td></td>
 					<td></td><td></td>			
-				</tr>
-				</table>	
+	</tr>
 	
-	
-	
-	
+	</table>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Red rectangle
+ctx.beginPath();
+ctx.lineWidth = "6";
+ctx.strokeStyle = "red";
+ctx.rect(5, 5, 100, 140);  
+ctx.stroke();
+
+
+</script> 
+
+
 </body>
