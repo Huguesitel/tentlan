@@ -50,7 +50,7 @@ td {
 	text-align: center;
  	vertical-align: middle;	 
   }
-test2 {
+.test2 {
   writing-mode: vertical-lr; 
 }	
 select {
@@ -1293,7 +1293,10 @@ function myFunction3() {
 	
 	</table>
 <script>
-
+sf = document.getElementById("saigle").value
+sf1 = document.getElementById("sjaguar").value
+sf2 = document.getElementById("satlante").value
+sf3 = document.getElementById("sek").value
 //for(int i= 0 ; i < 4; i++){
 // if(i==0){
  var c = document.getElementById("myCanvas");
@@ -1313,16 +1316,20 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.lineWidth = "5";
 ctx.strokeStyle = "red";
-ctx.rect(5, 5, 20, 40);  
+ctx.rect(5, 5, 20, 60);  
 ctx.stroke();
 	
 ctx.beginPath();
 ctx.lineWidth = "5";
 ctx.strokeStyle = "red";
-ctx.rect(45, 5, 20, 40);  
+ctx.rect(45, 15, 20, 50);  
 ctx.stroke();	
 	
-	
+ctx.beginPath();
+ctx.lineWidth = "5";
+ctx.strokeStyle = "red";
+ctx.rect(45, 35, 20, 30);  
+ctx.stroke();	
 	
 //}
 document.getElementById("myC").innerHTML = document.getElementById("saigle").value
