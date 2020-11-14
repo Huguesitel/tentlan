@@ -4,6 +4,12 @@ body {
   //font-size: 16px;
   font: 16px Verdana, sans-serif;	
   }
+	
+canvas {
+    margin-left: auto;
+    margin-right: auto;
+    //width: 6em
+}
 .dropdown {
   position: relative;
   display: block;
@@ -1060,8 +1066,8 @@ function myFunction3() {
 				<td style="width: 78px;">Guerrier Aigle</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
 				<td ><input type="number" id="saigle" name="aigle" step="1000" onchange="myFunction2()" value="10000"></td>
-				<td style="width: 75px;" id="saaigle"></td>
-				<td style="width: 8px;" >></td>
+				<td style="width: 75px;" id="saaigle">></td>
+				<td style="width: 8px;" ></td>
 				<td style="width: 65px;" id="saaigleC"></td>
 				<td style="width: 79px;" id="saaigleO"></td>
 				<td style="width: 46px;" id="saaigleK"></td>
@@ -1073,8 +1079,8 @@ function myFunction3() {
 				<td style="width: 78px;">Guerrier Jaguar</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
 				<td ><input type="number" id="sjaguar" name="jaguar" step="200" value="4000" onchange="myFunction2()"></td>
-				<td style="width: 75px;" id="sjjaguar"></td>
-				<td style="width: 8px;" >></td>
+				<td style="width: 75px;" id="sjjaguar">></td>
+				<td style="width: 8px;" ></td>
 				<td style="width: 65px;" id="sjjaguarC">&nbsp;</td>
 				<td style="width: 79px;" id="sjjaguarO">&nbsp;</td>
 				<td style="width: 46px;" id="sjjaguarK">&nbsp;</td>
@@ -1085,8 +1091,8 @@ function myFunction3() {
 				<td style="width: 78px;">Atlante</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
 				<td ><input type="number" id="satlante" name="atlante" step="100" onchange="myFunction2()"  value="2000"></td>
-				<td style="width: 75px;" id="saatlante"></td>
-				<td style="width: 8px;" >></td>
+				<td style="width: 75px;" id="saatlante">></td>
+				<td style="width: 8px;" ></td>
 				<td style="width: 65px;"  id="saatlanteC">&nbsp;</td>
 				<td style="width: 79px;" id="saatlanteO" >&nbsp;</td>
 				<td style="width: 46px;" id="saatlanteK">&nbsp;</td>
@@ -1097,8 +1103,8 @@ function myFunction3() {
 				<td style="width: 78px;">Ek Chuah</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
 				<td ><input type="number" id="sek" name="ek" onchange="myFunction2()" value="100"></td>
-				<td style="width: 75px;"  id="seek"></td>
-				<td style="width: 8px;">></td>
+				<td style="width: 75px;"  id="seek">></td>
+				<td style="width: 8px;"></td>
 				<td style="width: 65px;" id="seekC">&nbsp;</td>
 				<td style="width: 79px;" id="seekO">&nbsp;</td>
 				<td style="width: 46px;" id="seekK">&nbsp;</td>
@@ -1162,10 +1168,10 @@ function myFunction3() {
 	</canvas></td>
 	</tr>
 	<tr>
-		<td>1</td>
-		<td>2</td>
-		<td>3</td>
-		<td>4</td>		
+		<td id="myC">1</td>
+		<td id="myC1">2</td>
+		<td id="myC2">3</td>
+		<td id="myC3">4</td>		
 	</tr>	
 	<tr>		
 		<td width="50">Guerrier<br>Aigle</td>
@@ -1197,7 +1203,11 @@ ctx.strokeStyle = "red";
 ctx.rect(5, 5, 10, 40);  
 ctx.stroke();
 
-
+document.getElementById("myC").innerHTML = document.getElementById("saigle").value
+document.getElementById("myC1").innerHTML = document.getElementById("sjaguar").value
+document.getElementById("myC2").innerHTML = document.getElementById("satlante").value
+document.getElementById("myC3").innerHTML = document.getElementById("sek").value
+	
 </script> 
 
 
