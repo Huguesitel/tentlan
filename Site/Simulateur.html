@@ -1232,41 +1232,17 @@ function myFunction3() {
 	<td colspan="4">Force totale de défense pour<br>1000 CacaoRqui dépensés</td>
 	</tr>
 	<tr>	
-	<td width="50"><canvas id="myCanvas" width="30" height="50" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas" width="120" height="50" style="border:0px solid #d3d3d3;">
 	</canvas></td>
-	<td width="50"><canvas id="myCanvas1" width="30" height="50" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas1" width="120" height="50" style="border:0px solid #d3d3d3;">
 	</canvas></td>
-	<td width="50"><canvas id="myCanvas2" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas3" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-
-	<td width="50"><canvas id="myCanvas4" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas5" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas6" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas7" width="30" height="50" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas2" width="120" height="50" style="border:0px solid #d3d3d3;">
 	</canvas></td>		
+	<td  colspan="4"><canvas id="myCanvas3" width="120" height="50" style="border:0px solid #d3d3d3;">
+	</canvas></td>		
+	
 
-	<td width="50"><canvas id="myCanvas8" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas9" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas10" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas11" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
 		
-	<td width="50"><canvas id="myCanvas11" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas12" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas13" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>
-	<td width="50"><canvas id="myCanvas14" width="30" height="50" style="border:0px solid #d3d3d3;">
-	</canvas></td>		
 		
 	</tr>
 	<tr>
@@ -1316,7 +1292,7 @@ function myFunction3() {
 	
 	</table>
 <script>
-var Matrice = {"myCanvas", "myCanvas1", "myCanvas2", "myCanvas3"};
+
 for(int i= 0 ; i < 4; i++){
  if(i==0){
  var c = document.getElementById("myCanvas");
@@ -1328,7 +1304,7 @@ for(int i= 0 ; i < 4; i++){
  var c = document.getElementById("myCanvas2");
  }
  if(i==3){
- var c = document.getElementById(Matrice[3]);
+ var c = document.getElementById("myCanvas3");
  }
 var ctx = c.getContext("2d");
 
@@ -1338,6 +1314,15 @@ ctx.lineWidth = "5";
 ctx.strokeStyle = "red";
 ctx.rect(5, 5, 20, 40);  
 ctx.stroke();
+	
+ctx.beginPath();
+ctx.lineWidth = "5";
+ctx.strokeStyle = "red";
+ctx.rect(45, 5, 20, 40);  
+ctx.stroke();	
+	
+	
+	
 }
 document.getElementById("myC").innerHTML = document.getElementById("saigle").value
 document.getElementById("myC1").innerHTML = document.getElementById("sjaguar").value
