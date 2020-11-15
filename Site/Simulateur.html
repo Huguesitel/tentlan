@@ -1081,12 +1081,12 @@ function myFunction3() {
 				<td style="width: 46px;" id="wsaaigleK"></td>
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsaaigleKK"></td>
-				<td rowspan="5" style="align: center;" ><strong><div id="sTotalKK2">Bas</div></strong><br><img  id="sPouceDOWN" src="Image/pouceR.png" width="50" height="50" ></td>
+				<td rowspan="5" style="align: center;" ><strong><div id="sTotalKK2">Bas</div></strong><br><img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" ></td>
 				</tr>
 				<tr>
 				<td style="width: 78px;">Guerrier Jaguar</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
-				<td ><input type="number" id="wsjaguar" name="jaguar" step="200" value="4000" onchange="myFunction4()"></td>
+				<td ><input type="number" id="wsjaguar" name="jaguar" step="200" value="4000" onchange="myFunction5()"></td>
 				<td style="width: 75px;" id="sjjaguar">></td>
 				<td style="width: 8px;" ></td>
 				<td style="width: 65px;" id="wsjjaguarC">&nbsp;</td>
@@ -1098,7 +1098,7 @@ function myFunction3() {
 				<tr>
 				<td style="width: 78px;">Atlante</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
-				<td ><input type="number" id="wsatlante" name="atlante" step="100" onchange="myFunction4()"  value="2000"></td>
+				<td ><input type="number" id="wsatlante" name="atlante" step="100" onchange="myFunction5()"  value="2000"></td>
 				<td style="width: 75px;" id="saatlante">></td>
 				<td style="width: 8px;" ></td>
 				<td style="width: 65px;"  id="wsaatlanteC">&nbsp;</td>
@@ -1110,7 +1110,7 @@ function myFunction3() {
 				<tr>
 				<td style="width: 78px;">Ek Chuah</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
-				<td ><input type="number" id="wsek" name="ek" onchange="myFunction4()" value="100"></td>
+				<td ><input type="number" id="wsek" name="ek" onchange="myFunction5()" value="100"></td>
 				<td style="width: 75px;"  id="seek">></td>
 				<td style="width: 8px;"></td>
 				<td style="width: 65px;" id="wseekC">&nbsp;</td>
@@ -1124,7 +1124,7 @@ function myFunction3() {
 				<td style="width: 78px;">Diplomatie</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
 				<td style="width: 49px;">	
-					<select name="NiveauDiplo" id="ssDiplo" onchange="myFunction4()">
+					<select name="NiveauDiplo" id="ssDiplo" onchange="myFunction5()">
 						    <option value="0">0</option>
 						    <option value="1">1</option>
 						    <option value="2">2</option>
@@ -1299,8 +1299,8 @@ function myFunction3() {
 	</table>
 <script>
 function myFunction4() { 
-document.getElementById("sDiplo") = document.getElementById("sssDiplo")
-document.getElementById("ssDiplo") = document.getElementById("sssDiplo")
+//document.getElementById("sDiplo") = document.getElementById("sssDiplo")
+//document.getElementById("ssDiplo") = document.getElementById("sssDiplo")
 	
 NiveauDevin =  1+(document.getElementById("sDevin").value/100)	
 NiveauTema =  1+(document.getElementById("sTema").value/100)
@@ -1311,10 +1311,7 @@ sf1 = document.getElementById("wsjaguar").value
 sf2 = document.getElementById("wsatlante").value
 sf3 = document.getElementById("wsek").value	
 
-document.getElementById("wsaaigleC").innerHTML =	sf
-document.getElementById("wsaaigleO").innerHTML =	sf1
-	document.getElementById("wsaaigleK").innerHTML =	sf2
-document.getElementById("wsaaigleKK").innerHTML =	sf13
+
 	
 
 	
@@ -1417,5 +1414,13 @@ document.getElementById("myC7").innerHTML = Math.round(Defek/1000000)
 </script> 
 <script> 
 function myFunction5() { 
+sf = document.getElementById("wsaigle").value
+sf1 = document.getElementById("wsjaguar").value
+sf2 = document.getElementById("wsatlante").value
+sf3 = document.getElementById("wsek").value	
+document.getElementById("wsaaigleC").innerHTML =	sf
+document.getElementById("wsaaigleO").innerHTML =	sf1
+document.getElementById("wsaaigleK").innerHTML =	sf2
+document.getElementById("wsaaigleKK").innerHTML =	sf3	
 </script> 
 </body>
