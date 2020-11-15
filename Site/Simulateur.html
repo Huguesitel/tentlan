@@ -1230,7 +1230,13 @@ function myFunction3() {
 				</table>	
 <table >	
 	<tr>
-	<td colspan="4">Force totale d'attaque</td>
+	<td colspan="4">Force totale d'attaque<br>
+		<div>Attaque identique que les
+		  <input type="radio" id="OB1" name="Aigles" value="Aigles"
+         	checked>
+  		<label for="huey">Aigles</label>
+		</div>
+	</td>
 	<td colspan="4">Force totale de défense</td>
 	<td colspan="4">Force totale d'attaque pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
 	<td colspan="4">Force totale de défense pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
@@ -1450,12 +1456,12 @@ var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
 	var sw1KK =sw1K+Math.round(sw1O*0.625)
 	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
 	
-	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
-	document.getElementById("wsjjaguarO").innerHTML =   1
+	//var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	document.getElementById("wsjjaguarO").innerHTML =   sf1
 	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
-	document.getElementById("wsjjaguarK").innerHTML =   2
+	document.getElementById("wsjjaguarK").innerHTML =   sf1
 	var sww1KK =sww1K+Math.round(sww1O*0.625)
-	document.getElementById("wsjjaguarKK").innerHTML =   3	
+	document.getElementById("wsjjaguarKK").innerHTML =   sf1	
 	
 	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
 	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
