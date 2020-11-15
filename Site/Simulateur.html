@@ -1347,13 +1347,16 @@ Haut3 =	Math.round(MaxHauteur*Attek/MaxAtt)
 	
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-
+ctx.clearRect(0, 0, c.getWidth(), c.getHeight());
 // Red rectangle
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
 ctx.rect(5, MaxHauteur-Haut+5, 20, Haut);  
 ctx.stroke();
+
+	//    <text x="0" y="50" font-family="Verdana" font-size="35" fill="blue">Hello</text>
+ 
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
@@ -1375,6 +1378,7 @@ ctx.stroke();
 	
 var c = document.getElementById("myCanvas1");
 var ctx = c.getContext("2d");	
+ctx.clearRect(0, 0, c.getWidth(), c.getHeight());
 // Red rectangle
 ctx.beginPath();
 ctx.lineWidth = "8";
