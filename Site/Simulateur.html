@@ -80,6 +80,7 @@ img:hover {
 function Debut() {
 		myFunction()
 		myFunction3()	
+		myFunction4()
 }	
 function myFunction() {
 	//alert(x)
@@ -1120,7 +1121,7 @@ function myFunction3() {
 				<td style="width: 78px;">Diplomatie</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
 				<td style="width: 49px;">	
-					<select name="NiveauDiplo" id="sDiplo" onchange="myFunction2()">
+					<select name="NiveauDiplo" id="sDiplo" onchange="myFunction4()">
 						    <option value="0">0</option>
 						    <option value="1">1</option>
 						    <option value="2">2</option>
@@ -1155,7 +1156,7 @@ function myFunction3() {
 				  </select></td>
 				<td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
 				<td style="width: 11.2px;"><img style="float:right" src="Image/devin.png" width="50" height="50" ></td>
-				<td style="width: 58.4px;"><select name="NiveauDevin" id="sDevin" onchange="myFunction()">
+				<td style="width: 58.4px;"><select name="NiveauDevin" id="sDevin" onchange="myFunction4()">
 				    <option value="0">0</option>
 				    <option value="1">1</option>
 				    <option value="2">2</option>
@@ -1190,7 +1191,7 @@ function myFunction3() {
 					
 				<td style="width: 90.6px; text-align: right;">Temazca</td>
 				<td style="width: 11.2px;"><img style="float:right" src="Image/tema.png" width="50" height="50" ></td>
-				<td style="width: 58.4px;"><select name="NiveauDevin" id="sTema" onchange="myFunction()">
+				<td style="width: 58.4px;"><select name="NiveauDevin" id="sTema" onchange="myFunction4()">
 				    <option value="0">0</option>
 				    <option value="1">1</option>
 				    <option value="2">2</option>
@@ -1293,10 +1294,8 @@ function myFunction3() {
 	
 	</table>
 <script>
-//1500   12350
-//15000	38000
-//20000	285000
-//100000	6650000
+function myFunction4() { 
+
 
 NiveauDevin =  document.getElementById("sDevin").value	
 NiveauTema =  document.getElementById("sTema").value
@@ -1317,7 +1316,10 @@ Defatlante =	285000 * NiveauTema * sf2
 	if (	Defatlante>MaxDef) {MaxDef =Defatlante}
 Defek =	6650000 * NiveauTema	* sf3
 	if (	Defek>MaxDef) {MaxDef =Defek}
-	
+Hautb =	Math.round(MaxHauteur*Defaigle/MaxDef)
+Hautb1 =	Math.round(MaxHauteur*Defjaguar/MaxDef)
+Hautb2 =	Math.round(MaxHauteur*Defatlante/MaxDef)
+Hautb3 =	Math.round(MaxHauteur*Defek/MaxDef)	
 	
 	
 MaxAtt = 0	
@@ -1361,7 +1363,31 @@ ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
 ctx.rect(155, Haut3+5, 20, MaxHauteur-Haut3);  
 ctx.stroke();	
-//}
+var c = document.getElementById("myCanvas1");
+// Red rectangle
+ctx.beginPath();
+ctx.lineWidth = "8";
+ctx.strokeStyle = "blue";
+ctx.rect(5, Haut+5, 20, MaxHauteur-Haut);  
+ctx.stroke();
+	
+ctx.beginPath();
+ctx.lineWidth = "8";
+ctx.strokeStyle = "blue";
+ctx.rect(55, Haut1+5, 20, MaxHauteur-Haut1);  
+ctx.stroke();	
+	
+ctx.beginPath();
+ctx.lineWidth = "8";
+ctx.strokeStyle = "blue";
+ctx.rect(105, Haut2+5, 20, MaxHauteur-Haut2);  
+ctx.stroke();	
+
+ctx.beginPath();
+ctx.lineWidth = "8";
+ctx.strokeStyle = "blue";
+ctx.rect(155, Haut3+5, 20, MaxHauteur-Haut3);  
+ctx.stroke();	
 document.getElementById("myC").innerHTML = Math.round(Attaigle/100000)/10
 document.getElementById("myC1").innerHTML = Math.round(Attjaguar/100000)/10
 document.getElementById("myC2").innerHTML = Math.round(Attatlante/100000)/10
@@ -1371,5 +1397,7 @@ document.getElementById("myC4").innerHTML = Math.round(Defaigle/1000000)
 document.getElementById("myC5").innerHTML = Math.round(Defjaguar/1000000)
 document.getElementById("myC6").innerHTML = Math.round(Defatlante/1000000)
 document.getElementById("myC7").innerHTML = Math.round(Defek/1000000)
+
+}
 </script> 
 </body>
