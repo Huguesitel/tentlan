@@ -1351,8 +1351,13 @@ var ctx = c.getContext("2d");
 // Red rectangle
 ctx.beginPath();
 ctx.lineWidth = "8";
-ctx.fillStyle  = "red";
+var my_gradient = ctx.createLinearGradient(5, MaxHauteur-Haut+5, 20, Haut); 
+my_gradient.addColorStop(0, "red");
+my_gradient.addColorStop(1, "yellow");
+ctx.fillStyle = my_gradient;	
 ctx.fillRect(5, MaxHauteur-Haut+5, 20, Haut);  
+ctx.font = "10px Verdana";
+ctx.fillText("10.5M", 10, 10);
 //ctx.stroke();
 
 	//    <text x="0" y="50" font-family="Verdana" font-size="35" fill="blue">Hello</text>
