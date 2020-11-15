@@ -1155,7 +1155,7 @@ function myFunction3() {
 				  </select></td>
 				<td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
 				<td style="width: 11.2px;"><img style="float:right" src="Image/devin.png" width="50" height="50" ></td>
-				<td style="width: 58.4px;"><select name="NiveauDevin" id="Devin" onchange="myFunction()">
+				<td style="width: 58.4px;"><select name="NiveauDevin" id="sDevin" onchange="myFunction()">
 				    <option value="0">0</option>
 				    <option value="1">1</option>
 				    <option value="2">2</option>
@@ -1190,7 +1190,7 @@ function myFunction3() {
 					
 				<td style="width: 90.6px; text-align: right;">Temazca</td>
 				<td style="width: 11.2px;"><img style="float:right" src="Image/tema.png" width="50" height="50" ></td>
-				<td style="width: 58.4px;"><select name="NiveauDevin" id="Tema" onchange="myFunction()">
+				<td style="width: 58.4px;"><select name="NiveauDevin" id="sTema" onchange="myFunction()">
 				    <option value="0">0</option>
 				    <option value="1">1</option>
 				    <option value="2">2</option>
@@ -1297,19 +1297,8 @@ sf = document.getElementById("saigle").value
 sf1 = document.getElementById("sjaguar").value
 sf2 = document.getElementById("satlante").value
 sf3 = document.getElementById("sek").value
-//for(int i= 0 ; i < 4; i++){
-// if(i==0){
- var c = document.getElementById("myCanvas");
-// }
-// if(i==1){
-// var c = document.getElementById("myCanvas1");
-// }
-// if(i==2){
-// var c = document.getElementById("myCanvas2");
-// }
-// if(i==3){
-// var c = document.getElementById("myCanvas3");
-// }
+
+var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
 // Red rectangle
@@ -1322,15 +1311,20 @@ ctx.stroke();
 ctx.beginPath();
 ctx.lineWidth = "5";
 ctx.strokeStyle = "red";
-ctx.rect(45, 15, 20, 50);  
+ctx.rect(55, 15, 20, 50);  
 ctx.stroke();	
 	
 ctx.beginPath();
 ctx.lineWidth = "5";
 ctx.strokeStyle = "red";
-ctx.rect(45, 35, 20, 30);  
+ctx.rect(105, 35, 20, 30);  
 ctx.stroke();	
-	
+
+ctx.beginPath();
+ctx.lineWidth = "5";
+ctx.strokeStyle = "red";
+ctx.rect(155, 35, 20, 30);  
+ctx.stroke();	
 //}
 document.getElementById("myC").innerHTML = document.getElementById("saigle").value
 document.getElementById("myC1").innerHTML = document.getElementById("sjaguar").value
