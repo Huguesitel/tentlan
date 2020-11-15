@@ -1233,13 +1233,13 @@ function myFunction3() {
 	<td colspan="4">Force totale de défense pour<br>1000 CacaoRqui dépensés</td>
 	</tr>
 	<tr>	
-	<td  colspan="4"><canvas id="myCanvas" width="120" height="50" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas" width="220" height="60" style="border:1px solid #d3d3d3;">
 	</canvas></td>
-	<td  colspan="4"><canvas id="myCanvas1" width="120" height="50" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas1" width="220" height="60" style="border:0px solid #d3d3d3;">
 	</canvas></td>
-	<td  colspan="4"><canvas id="myCanvas2" width="120" height="50" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas2" width="1220" height="60" style="border:0px solid #d3d3d3;">
 	</canvas></td>		
-	<td  colspan="4"><canvas id="myCanvas3" width="120" height="50" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas3" width="220" height="60" style="border:0px solid #d3d3d3;">
 	</canvas></td>		
 	
 
@@ -1293,29 +1293,51 @@ function myFunction3() {
 	
 	</table>
 <script>
+//1500   12350
+//15000	38000
+//20000	285000
+//100000	6650000
+
+NiveauDevin =  document.getElementById("sDevin").value	
+NiveauTema =  document.getElementById("sTema").value
+
+
 sf = document.getElementById("saigle").value
 sf1 = document.getElementById("sjaguar").value
 sf2 = document.getElementById("satlante").value
-sf3 = document.getElementById("sek").value
+sf3 = document.getElementById("sek").value	
+	
+Defaigle =12350 * NiveauTema * sf
+Defjaguar =	38000 * NiveauTema * sf1
+Defatlante =	285000 * NiveauTema * sf2
+Defek =	6650000 * NiveauTema	* sf3
+	
+Attaigle =1500 * NiveauDevin * sf
+Attjaguar =	15000 * NiveauDevin* sf1
+Attatlante =	20000 * NiveauDevin* sf2
+Attek =	100000 * NiveauDevin* sf3
+	
+	
+	
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
 // Red rectangle
 ctx.beginPath();
-ctx.lineWidth = "5";
+ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
 ctx.rect(5, 5, 20, 60);  
 ctx.stroke();
 	
 ctx.beginPath();
-ctx.lineWidth = "5";
+ctx.lineWidth = "9";
 ctx.strokeStyle = "red";
 ctx.rect(55, 15, 20, 50);  
 ctx.stroke();	
 	
 ctx.beginPath();
-ctx.lineWidth = "5";
+ctx.lineWidth = "10";
 ctx.strokeStyle = "red";
 ctx.rect(105, 35, 20, 30);  
 ctx.stroke();	
@@ -1326,11 +1348,14 @@ ctx.strokeStyle = "red";
 ctx.rect(155, 35, 20, 30);  
 ctx.stroke();	
 //}
-document.getElementById("myC").innerHTML = document.getElementById("saigle").value
-document.getElementById("myC1").innerHTML = document.getElementById("sjaguar").value
-document.getElementById("myC2").innerHTML = document.getElementById("satlante").value
-document.getElementById("myC3").innerHTML = document.getElementById("sek").value
+document.getElementById("myC").innerHTML = Attaigle
+document.getElementById("myC1").innerHTML = Attjaguar
+document.getElementById("myC2").innerHTML = Attatlante
+document.getElementById("myC3").innerHTML = Attek
 
-
+document.getElementById("myC4").innerHTML = Defaigle
+document.getElementById("myC5").innerHTML = Defjaguar
+document.getElementById("myC6").innerHTML = Defatlante
+document.getElementById("myC7").innerHTML = Defek
 </script> 
 </body>
