@@ -1237,7 +1237,7 @@ function myFunction3() {
 	</canvas></td>
 	<td  colspan="4"><canvas id="myCanvas1" width="220" height="60" style="border:0px solid #d3d3d3;">
 	</canvas></td>
-	<td  colspan="4"><canvas id="myCanvas2" width="1220" height="60" style="border:0px solid #d3d3d3;">
+	<td  colspan="4"><canvas id="myCanvas2" width="220" height="60" style="border:0px solid #d3d3d3;">
 	</canvas></td>		
 	<td  colspan="4"><canvas id="myCanvas3" width="220" height="60" style="border:0px solid #d3d3d3;">
 	</canvas></td>		
@@ -1252,20 +1252,20 @@ function myFunction3() {
 		<td id="myC2">3</td>
 		<td id="myC3">4</td>	
 		
-		<td id="myC5">1</td>
-		<td id="myC6">2</td>
-		<td id="myC7">3</td>
-		<td id="myC8">4</td>
+		<td id="myC4">1</td>
+		<td id="myC5">2</td>
+		<td id="myC6">3</td>
+		<td id="myC7">4</td>
 		
-		<td id="myC9">1</td>
-		<td id="myC10">2</td>
-		<td id="myC11">3</td>
-		<td id="myC12">4</td>	
+		<td id="myC8">1</td>
+		<td id="myC9">2</td>
+		<td id="myC10">3</td>
+		<td id="myC11">4</td>	
 		
-		<td id="myC13">1</td>
-		<td id="myC14">2</td>
-		<td id="myC15">3</td>
-		<td id="myC16">4</td>	
+		<td id="myC12">1</td>
+		<td id="myC13">2</td>
+		<td id="myC14">3</td>
+		<td id="myC15">4</td>	
 		
 	</tr>	
 	<tr>		
@@ -1306,20 +1306,34 @@ sf = document.getElementById("saigle").value
 sf1 = document.getElementById("sjaguar").value
 sf2 = document.getElementById("satlante").value
 sf3 = document.getElementById("sek").value	
-	
-Defaigle =12350 * NiveauTema * sf
-Defjaguar =	38000 * NiveauTema * sf1
-Defatlante =	285000 * NiveauTema * sf2
-Defek =	6650000 * NiveauTema	* sf3
-	
-Attaigle =1500 * NiveauDevin * sf
-Attjaguar =	15000 * NiveauDevin* sf1
-Attatlante =	20000 * NiveauDevin* sf2
-Attek =	100000 * NiveauDevin* sf3
-	
-	
-	
 
+MaxDef = 0
+MaxHauteur = 60
+Defaigle =12350 * NiveauTema * sf
+	if (	Defaigle>MaxDef) {MaxDef =Defaigle}
+Defjaguar =	38000 * NiveauTema * sf1
+	if (	Defjaguar>MaxDef) {MaxDef =Defjaguar}
+Defatlante =	285000 * NiveauTema * sf2
+	if (	Defatlante>MaxDef) {MaxDef =Defatlante}
+Defek =	6650000 * NiveauTema	* sf3
+	if (	Defek>MaxDef) {MaxDef =Defek}
+	
+	
+	
+MaxAtt = 0	
+Attaigle =1500 * NiveauDevin * sf
+	if (	Attaigle>MaxAtt) {MaxAtt =Attaigle}
+Attjaguar =	15000 * NiveauDevin* sf1
+	if (	Attjaguar>MaxAtt) {MaxAtt =Attjaguar}
+Attatlante =	20000 * NiveauDevin* sf2
+	if (	Attatlante>MaxAtt) {MaxAtt =Attatlante}
+Attek =	100000 * NiveauDevin* sf3
+	if (	Attek>MaxAtt) {MaxAtt =Attek}
+Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
+Haut1 =	Math.round(MaxHauteur*Attjaguar/MaxAtt)
+Haut2 =	Math.round(MaxHauteur*Attatlante/MaxAtt)
+Haut3 =	Math.round(MaxHauteur*Attek/MaxAtt)
+	
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
@@ -1327,35 +1341,35 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(5, 5, 20, 60);  
+ctx.rect(5, Haut+5, 20, MaxHauteur-Haut);  
 ctx.stroke();
 	
 ctx.beginPath();
-ctx.lineWidth = "9";
+ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(55, 15, 20, 50);  
+ctx.rect(55, Haut1+5, 20, MaxHauteur-Haut1);  
 ctx.stroke();	
 	
 ctx.beginPath();
-ctx.lineWidth = "10";
+ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(105, 35, 20, 30);  
+ctx.rect(105, Haut2+5, 20, MaxHauteur-Haut2);  
 ctx.stroke();	
 
 ctx.beginPath();
-ctx.lineWidth = "5";
+ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(155, 35, 20, 30);  
+ctx.rect(155, Haut3+5, 20, MaxHauteur-Haut3);  
 ctx.stroke();	
 //}
-document.getElementById("myC").innerHTML = Attaigle
-document.getElementById("myC1").innerHTML = Attjaguar
-document.getElementById("myC2").innerHTML = Attatlante
-document.getElementById("myC3").innerHTML = Attek
+document.getElementById("myC").innerHTML = Math.round(Attaigle/1000)
+document.getElementById("myC1").innerHTML = Math.round(Attjaguar/1000)
+document.getElementById("myC2").innerHTML = Math.round(Attatlante/1000)
+document.getElementById("myC3").innerHTML = Math.round(Attek/1000)
 
-document.getElementById("myC4").innerHTML = Defaigle
-document.getElementById("myC5").innerHTML = Defjaguar
-document.getElementById("myC6").innerHTML = Defatlante
-document.getElementById("myC7").innerHTML = Defek
+document.getElementById("myC4").innerHTML = Math.round(Defaigle/1000)
+document.getElementById("myC5").innerHTML = Math.round(Defjaguar/1000)
+document.getElementById("myC6").innerHTML = Math.round(Defatlante/1000)
+document.getElementById("myC7").innerHTML = Math.round(Defek/1000)
 </script> 
 </body>
