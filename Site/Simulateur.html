@@ -1346,7 +1346,7 @@ ctx.stroke();
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
-ctx.strokeStyle = "red";
+ctx.strokeStyle = "blue";
 ctx.rect(55, Haut1+5, 20, MaxHauteur-Haut1);  
 ctx.stroke();	
 	
@@ -1362,14 +1362,14 @@ ctx.strokeStyle = "red";
 ctx.rect(155, Haut3+5, 20, MaxHauteur-Haut3);  
 ctx.stroke();	
 //}
-document.getElementById("myC").innerHTML = Math.round(Attaigle/1000)
-document.getElementById("myC1").innerHTML = Math.round(Attjaguar/1000)
-document.getElementById("myC2").innerHTML = Math.round(Attatlante/1000)
-document.getElementById("myC3").innerHTML = Math.round(Attek/1000)
+document.getElementById("myC").innerHTML = Math.round(Attaigle/100000)/10
+document.getElementById("myC1").innerHTML = Math.round(Attjaguar/100000)/10
+document.getElementById("myC2").innerHTML = Math.round(Attatlante/100000)/10
+document.getElementById("myC3").innerHTML = Math.round(Attek/100000)/10
 
-document.getElementById("myC4").innerHTML = Math.round(Defaigle/1000)
-document.getElementById("myC5").innerHTML = Math.round(Defjaguar/1000)
-document.getElementById("myC6").innerHTML = Math.round(Defatlante/1000)
-document.getElementById("myC7").innerHTML = Math.round(Defek/1000)
+document.getElementById("myC4").innerHTML = Math.round(Defaigle/1000000)
+document.getElementById("myC5").innerHTML = Math.round(Defjaguar/1000000)
+document.getElementById("myC6").innerHTML = Math.round(Defatlante/1000000)
+document.getElementById("myC7").innerHTML = Math.round(Defek/1000000)
 </script> 
 </body>
