@@ -89,6 +89,7 @@ function myFunction() {
 		document.getElementById("satlante").value = document.getElementById("atlante").value
 		document.getElementById("sek").value = document.getElementById("ek").value
 		document.getElementById("sDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
+		document.getElementById("ssDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
 
 	
 	
@@ -274,6 +275,8 @@ function myFunction2() {
 		document.getElementById("atlante").value = document.getElementById("satlante").value
 		document.getElementById("ek").value = document.getElementById("sek").value
 		document.getElementById("Diplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
+	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
+
 	myFunction()
 }
 function myFunction3() {
@@ -1121,7 +1124,7 @@ function myFunction3() {
 				<td style="width: 78px;">Diplomatie</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
 				<td style="width: 49px;">	
-					<select name="NiveauDiplo" id="sDiplo" onchange="myFunction4()">
+					<select name="NiveauDiplo" id="ssDiplo" onchange="myFunction4()">
 						    <option value="0">0</option>
 						    <option value="1">1</option>
 						    <option value="2">2</option>
@@ -1154,6 +1157,7 @@ function myFunction3() {
 						    <option value="29">29</option>
 						    <option value="30">30</option>	
 				  </select></td>
+				<td></td>
 				<td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
 				<td style="width: 11.2px;"><img style="float:right" src="Image/devin.png" width="50" height="50" ></td>
 				<td style="width: 58.4px;"><select name="NiveauDevin" id="sDevin" onchange="myFunction4()">
@@ -1297,8 +1301,8 @@ function myFunction3() {
 function myFunction4() { 
 
 
-NiveauDevin =  document.getElementById("sDevin").value	
-NiveauTema =  document.getElementById("sTema").value
+NiveauDevin =  1+(document.getElementById("sDevin").value/100)	
+NiveauTema =  1+(document.getElementById("sTema").value/100)
 
 
 sf = document.getElementById("saigle").value
@@ -1363,35 +1367,37 @@ ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
 ctx.rect(155, Haut3+5, 20, MaxHauteur-Haut3);  
 ctx.stroke();	
+	
 var c = document.getElementById("myCanvas1");
+var ctx = c.getContext("2d");	
 // Red rectangle
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(5, Haut+5, 20, MaxHauteur-Haut);  
+ctx.rect(5, Haut+5, 20, MaxHauteur-Hautb);  
 ctx.stroke();
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(55, Haut1+5, 20, MaxHauteur-Haut1);  
+ctx.rect(55, Haut1+5, 20, MaxHauteur-Hautb1);  
 ctx.stroke();	
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(105, Haut2+5, 20, MaxHauteur-Haut2);  
+ctx.rect(105, Haut2+5, 20, MaxHauteur-Hautb2);  
 ctx.stroke();	
 
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(155, Haut3+5, 20, MaxHauteur-Haut3);  
+ctx.rect(155, Haut3+5, 20, MaxHauteur-Hautb3);  
 ctx.stroke();	
 document.getElementById("myC").innerHTML = Math.round(Attaigle/100000)/10
 document.getElementById("myC1").innerHTML = Math.round(Attjaguar/100000)/10
 document.getElementById("myC2").innerHTML = Math.round(Attatlante/100000)/10
-document.getElementById("myC3").innerHTML = Math.round(Attek/100000)/10
+document.getElementById("myC3").innerHTML = Math.round(Attek/100000)/10 + "M"
 
 document.getElementById("myC4").innerHTML = Math.round(Defaigle/1000000)
 document.getElementById("myC5").innerHTML = Math.round(Defjaguar/1000000)
