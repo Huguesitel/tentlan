@@ -274,7 +274,7 @@ function myFunction2() {
 		document.getElementById("jaguar").value = document.getElementById("sjaguar").value	
 		document.getElementById("atlante").value = document.getElementById("satlante").value
 		document.getElementById("ek").value = document.getElementById("sek").value
-		document.getElementById("Diplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
+	document.getElementById("Diplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
 	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
 
 	myFunction()
@@ -1234,8 +1234,8 @@ function myFunction3() {
 	<tr>
 	<td colspan="4">Force totale d'attaque</td>
 	<td colspan="4">Force totale de défense</td>
-	<td colspan="4">Force totale d'attaque pour<br>1000 CacaoRqui dépensés</td>
-	<td colspan="4">Force totale de défense pour<br>1000 CacaoRqui dépensés</td>
+	<td colspan="4">Force totale d'attaque pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
+	<td colspan="4">Force totale de défense pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
 	</tr>
 	<tr>	
 	<td  colspan="4"><canvas id="myCanvas" width="220" height="100" style="border:1px solid #d3d3d3;">
@@ -1281,7 +1281,7 @@ function myFunction3() {
 		<td style="width: 50px" id="test2">Ek<br>Chuah</td>
 		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
 		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
-		<td style="width: 50px" id="test2">Atlante</td>
+		<td style="width: 50px" id="test2">Atlante <br> ...</td>
 		<td style="width: 50px" id="test2">Ek<br>Chuah</td>	
 		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
 		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
@@ -1299,8 +1299,10 @@ function myFunction3() {
 	</table>
 <script>
 function myFunction4() { 
-//document.getElementById("sDiplo") = document.getElementById("sssDiplo")
-//document.getElementById("ssDiplo") = document.getElementById("sssDiplo")
+	document.getElementById("Diplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+	document.getElementById("sDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+
 	
 NiveauDevin =  1+(document.getElementById("sDevin").value/100)	
 NiveauTema =  1+(document.getElementById("sTema").value/100)
