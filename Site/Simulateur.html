@@ -1356,18 +1356,20 @@ document.getElementById("myC4").innerHTML = Math.round(Defaigle/100000)/10 + "M"
 document.getElementById("myC5").innerHTML = Math.round(Defjaguar/100000)/10 + "M"
 document.getElementById("myC6").innerHTML = Math.round(Defatlante/100000)/10 + "M"
 document.getElementById("myC7").innerHTML = Math.round(Defek/100000)/10 + "M"
-	
+
+	Effacer("myCanvas")	
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
-// Red rectangle
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "red";	
-ctx.fillRect(15, MaxHauteur-Haut+25, 30, Haut);  
-ctx.font = "10px Verdana";
-ctx.fillStyle = "black";
-ctx.fillText(XT1, 15, MaxHauteur-Haut+15);
+// Red rectangle Dessiner(XX,YY,Lag,Hau,Cou,60,TxtD,Kan)
+	Dessiner(15,0,30,Haut,"red",60,XT1,"myCanvas")
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "red";	
+//ctx.fillRect(15, MaxHauteur-Haut+25, 30, Haut);  
+//ctx.font = "10px Verdana";
+//ctx.fillStyle = "black";
+//ctx.fillText(XT1, 15, MaxHauteur-Haut+15);
 
 
 ctx.beginPath();
@@ -1470,6 +1472,24 @@ var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
 	document.getElementById("wseekK").innerHTML =   333
 	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
 	document.getElementById("wseekKK").innerHTML =   444	
+}
+function Dessiner(XX,YY,Lag,Hau,Cou,MaxHau,TxtD,Kankan) {
+var c = document.getElementById(Kankan);
+var ctx = c.getContext("2d");	
+ctx.beginPath();
+ctx.lineWidth = "8";
+ctx.fillStyle = Cou;
+ctx.fillRect(XX, MaxHau-Hau+25, Lag, Hau);  
+ctx.font = "10px Verdana";
+ctx.fillStyle = "black";
+ctx.fillText(TxtD, 85, MaxHau-Hau+15);
+	
+}
+function Effacer(Kankan) {
+var c = document.getElementById(Kankan);
+var ctx = c.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, 240, 100);	
 }	
 </script> 
 </body>
