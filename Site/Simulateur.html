@@ -1352,7 +1352,7 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(5, Haut+5, 20, MaxHauteur-Haut);  
+ctx.rect(5, MaxHauteur-Haut+5, 20, Haut);  
 ctx.stroke();
 	
 ctx.beginPath();
@@ -1364,13 +1364,13 @@ ctx.stroke();
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(125, Haut2+5, 20, MaxHauteur-Haut2);  
+ctx.rect(125, MaxHauteur-Haut2+5, 20, Haut2);  
 ctx.stroke();	
 
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(185, Haut3+5, 20, MaxHauteur-Haut3);  
+ctx.rect(185, MaxHauteur-Haut3+5, 20, Haut3);  
 ctx.stroke();	
 	
 var c = document.getElementById("myCanvas1");
@@ -1379,25 +1379,25 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(5, Haut+5, 20, MaxHauteur-Hautb);  
+ctx.rect(5, MaxHauteur-Hautb+5, 20, Hautb);  
 ctx.stroke();
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(65, Haut1+5, 20, MaxHauteur-Hautb1);  
+ctx.rect(65, MaxHauteur-Hautb1+5, 20, Hautb1);  
 ctx.stroke();	
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(125, Haut2+5, 20, MaxHauteur-Hautb2);  
+ctx.rect(125, MaxHauteur-Hautb2+5, 20, Hautb2);  
 ctx.stroke();	
 
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(185, Haut3+5, 20, MaxHauteur-Hautb3);  
+ctx.rect(185, MaxHauteur-Hautb3+5, 20, Hautb3);  
 ctx.stroke();	
 document.getElementById("myC").innerHTML = Math.round(Attaigle/100000)/10
 document.getElementById("myC1").innerHTML = Math.round(Attjaguar/100000)/10
