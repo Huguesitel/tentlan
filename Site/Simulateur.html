@@ -1076,11 +1076,11 @@ function myFunction3() {
 				<td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsaigle" name="aigle" step="100" onchange="myFunction4()" value="100"></td>
 				<td style="width: 8px;" >></td>
-				<td style="width: 65px;" id="wsaaigleC"></td>
-				<td style="width: 79px;" id="wsaaigleO"></td>
-				<td style="width: 46px;" id="wsaaigleK"></td>
+				<td style="width: 65px;" id="wsaaigleC">0</td>
+				<td style="width: 79px;" id="wsaaigleO">00</td>
+				<td style="width: 46px;" id="wsaaigleK">000</td>
 				<td style="width: 20px;">=</td>
-				<td style="width: 21px;" id="wsaaigleKK"></td>
+				<td style="width: 21px;" id="wsaaigleKK">0000</td>
 				<td rowspan="4" style="align: center;" ><strong><div id="sTotalKK2">Bas</div></strong><br><img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" ></td>
 				</tr>
 				<tr>
@@ -1088,22 +1088,22 @@ function myFunction3() {
 				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsjaguar" name="jaguar" step="100" value="100" onchange="myFunction5()"></td>
 				<td style="width: 8px;" >></td>
-				<td style="width: 65px;" id="wsjjaguarC">&nbsp;</td>
-				<td style="width: 79px;" id="wsjjaguarO">&nbsp;</td>
-				<td style="width: 46px;" id="wsjjaguarK">&nbsp;</td>
+				<td style="width: 65px;" id="wsjjaguarC">1</td>
+				<td style="width: 79px;" id="wsjjaguarO">11</td>
+				<td style="width: 46px;" id="wsjjaguarK">111</td>
 				<td style="width: 20px;">=</td>
-				<td style="width: 21px;" id="wsjjaguarKK">&nbsp;</td>
+				<td style="width: 21px;" id="wsjjaguarKK">1111</td>
 				</tr>
 				<tr>
 				<td style="width: 78px;">Atlante</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsatlante" name="atlante" step="100" onchange="myFunction5()"  value="100"></td>
 				<td style="width: 8px;" >></td>
-				<td style="width: 65px;"  id="wsaatlanteC">&nbsp;</td>
-				<td style="width: 79px;" id="wsaatlanteO" >&nbsp;</td>
-				<td style="width: 46px;" id="wsaatlanteK">&nbsp;</td>
+				<td style="width: 65px;"  id="wsaatlanteC">2</td>
+				<td style="width: 79px;" id="wsaatlanteO" >22</td>
+				<td style="width: 46px;" id="wsaatlanteK">222</td>
 				<td style="width: 20px;">=</td>
-				<td style="width: 21px;" id="wsaatlanteKK">&nbsp;</td>
+				<td style="width: 21px;" id="wsaatlanteKK">2222</td>
 				</tr>
 				<tr>
 				<td style="width: 78px;">Ek Chuah</td>
@@ -1111,11 +1111,11 @@ function myFunction3() {
 				<td ><input type="number" id="wsek" name="ek" step="100" onchange="myFunction5()" value="100"></td>
 				
 				<td style="width: 8px;">></td>
-				<td style="width: 65px;" id="wseekC">&nbsp;</td>
-				<td style="width: 79px;" id="wseekO">&nbsp;</td>
-				<td style="width: 46px;" id="wseekK">&nbsp;</td>
+				<td style="width: 65px;" id="wseekC">3</td>
+				<td style="width: 79px;" id="wseekO">33</td>
+				<td style="width: 46px;" id="wseekK">333</td>
 				<td style="width: 20px;">=</td>
-				<td style="width: 21px;" id="wseekKK">&nbsp;</td>
+				<td style="width: 21px;" id="wseekKK">3333</td>
 				</tr>
 
 				<tr>
@@ -1440,31 +1440,31 @@ document.getElementById("wsaaigleO").innerHTML =	sf1
 document.getElementById("wsaaigleK").innerHTML =	sf2
 document.getElementById("wsaaigleKK").innerHTML =	sf3
 	
-var sdiplo =  parseInt(document.getElementById("sssDiplo").value);
-	var sw1O =Math.round(sf*17500*((100-sdiplo)/100))
+var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
 	document.getElementById("wsaaigleO").innerHTML =   sw1O
-	var sw1K =Math.round(sf*7000*((100-sdiplo)/100))
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
 	document.getElementById("wsaaigleK").innerHTML =   sw1K
 	var sw1KK =sw1K+Math.round(sw1O*0.625)
 	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
 	
-	var sww1O =Math.round(sf2*90000*((100-sdiplo)/100))
-	var sww1K =Math.round(sf2*134500*((100-sdiplo)/100))
+	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
 	document.getElementById("wsjjaguarO").innerHTML =   1
+	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
 	document.getElementById("wsjjaguarK").innerHTML =   2
 	var sww1KK =sww1K+Math.round(sww1O*0.625)
 	document.getElementById("wsjjaguarKK").innerHTML =   3	
 	
-	var swww1O =Math.round(sw3*550000*((100-sdiplo)/100))
-	var swww1K =Math.round(sw3*400000*((100-sdiplo)/100))
+	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
+	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
 	document.getElementById("wsaatlanteO").innerHTML =   11
 	document.getElementById("wsaatlanteK").innerHTML =   22
 	var swww1KK =swww1K+Math.round(swww1O*0.625)
 	document.getElementById("wsaatlanteKK").innerHTML =   33
 	
-	var swwww1C =Math.round(sf3*10000000*((100-sdiplo)/100))	
-	var swwww1O =Math.round(sf3*5000000*((100-sdiplo)/100))
-	var swwww1K =Math.round(sf3*1000000*((100-sdiplo)/100))
+	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
+	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
+	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
 	document.getElementById("wseekC").innerHTML =   111	
 	document.getElementById("wseekO").innerHTML =   222
 	document.getElementById("wseekK").innerHTML =   333
