@@ -1347,12 +1347,12 @@ Haut3 =	Math.round(MaxHauteur*Attek/MaxAtt)
 	
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.clearRect(0, 0, c.getWidth(), c.getHeight());
+
 // Red rectangle
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(5, MaxHauteur-Haut+5, 20, Haut);  
+ctx.fillRect(5, MaxHauteur-Haut+5, 20, Haut);  
 ctx.stroke();
 
 	//    <text x="0" y="50" font-family="Verdana" font-size="35" fill="blue">Hello</text>
@@ -1361,47 +1361,47 @@ ctx.stroke();
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(65, Haut1+5, 20, MaxHauteur-Haut1);  
+ctx.rect(65, Haut1+15, 20, MaxHauteur-Haut1);  
 ctx.stroke();	
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(125, MaxHauteur-Haut2+5, 20, Haut2);  
+ctx.rect(125, MaxHauteur-Haut2+15, 20, Haut2);  
 ctx.stroke();	
 
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "red";
-ctx.rect(185, MaxHauteur-Haut3+5, 20, Haut3);  
+ctx.rect(185, MaxHauteur-Haut3+15, 20, Haut3);  
 ctx.stroke();	
 	
 var c = document.getElementById("myCanvas1");
 var ctx = c.getContext("2d");	
-ctx.clearRect(0, 0, c.getWidth(), c.getHeight());
+
 // Red rectangle
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(5, MaxHauteur-Hautb+5, 20, Hautb);  
+ctx.rect(5, MaxHauteur-Hautb+15, 20, Hautb);  
 ctx.stroke();
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(65, MaxHauteur-Hautb1+5, 20, Hautb1);  
+ctx.rect(65, MaxHauteur-Hautb1+15, 20, Hautb1);  
 ctx.stroke();	
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(125, MaxHauteur-Hautb2+5, 20, Hautb2);  
+ctx.rect(125, MaxHauteur-Hautb2+15, 20, Hautb2);  
 ctx.stroke();	
 
 ctx.beginPath();
 ctx.lineWidth = "8";
 ctx.strokeStyle = "blue";
-ctx.rect(185, MaxHauteur-Hautb3+5, 20, Hautb3);  
+ctx.rect(185, MaxHauteur-Hautb3+15, 20, Hautb3);  
 ctx.stroke();	
 document.getElementById("myC").innerHTML = Math.round(Attaigle/100000)/10
 document.getElementById("myC1").innerHTML = Math.round(Attjaguar/100000)/10
