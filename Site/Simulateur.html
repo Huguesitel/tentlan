@@ -1231,19 +1231,19 @@ function myFunction3() {
 <table >	
 	<tr>
 	<td colspan="4">Force totale d'attaque<br>
-		<div>Attaque identique que les
+		<div display="inline;" style="font-size:10px;">Attaque identique que les
 		  <input type="radio" id="OB1" name="Aigles" value="Aigles"  checked>
   		<label for="Aigles">Aigles</label>
 		</div>
-		<div>
+		<div display="inline;" style="font-size:10px;">
 		  <input type="radio" id="OB2" name="Jaguars" value="Jaguars">
   		<label for="Jaguars">Jaguars</label>
 		</div>
-		<div>
+		<div display="inline;" style="font-size:10px;">
 		  <input type="radio" id="OB3" name="Atlantes" value="Atlantes">
   		<label for="Atlantes">Atlantes</label>
 		</div>		
-		<div>
+		<div display="inline;" style="font-size:10px;">
 		  <input type="radio" id="OB4" name="EK" value="EK">
   		<label for="EK">EK</label>
 		</div>	
@@ -1364,15 +1364,21 @@ XT1 = Math.round(Attaigle/100000)/10 + "M"
 XT2 = Math.round(Attjaguar/100000)/10 + "M"
 XT3 = Math.round(Attatlante/100000)/10 + "M"
 XT4 = 	Math.round(Attek/100000)/10 + "M"
+	
 document.getElementById("myC").innerHTML = XT1
 document.getElementById("myC1").innerHTML = XT2
 document.getElementById("myC2").innerHTML = XT3
 document.getElementById("myC3").innerHTML = XT4
+	
+XT5 = Math.round(Defaigle/100000)/10 + "M"	
+XT6 = Math.round(Defjaguar/100000)/10 + "M"
+XT7 = Math.round(Defatlante/100000)/10 + "M"
+XT8 = 	Math.round(Defek/100000)/10 + "M"
 
-document.getElementById("myC4").innerHTML = Math.round(Defaigle/100000)/10 + "M"
-document.getElementById("myC5").innerHTML = Math.round(Defjaguar/100000)/10 + "M"
-document.getElementById("myC6").innerHTML = Math.round(Defatlante/100000)/10 + "M"
-document.getElementById("myC7").innerHTML = Math.round(Defek/100000)/10 + "M"
+document.getElementById("myC4").innerHTML = XT5
+document.getElementById("myC5").innerHTML = XT6
+document.getElementById("myC6").innerHTML = XT7
+document.getElementById("myC7").innerHTML = XT8
 
 	Effacer("myCanvas")	
 var c = document.getElementById("myCanvas");
@@ -1396,50 +1402,60 @@ Dessiner(85,0,30,Haut1,"red",60,XT2,"myCanvas")
 //ctx.font = "10px Verdana";
 //ctx.fillStyle = "black";
 //ctx.fillText(XT2, 85, MaxHauteur-Haut1+15);
+
+Dessiner(150,0,30,Haut2,"red",60,XT3,"myCanvas")	
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "red";
+//ctx.fillRect(150, MaxHauteur-Haut2+25, 30, Haut2);  
+//ctx.font = "10px Verdana";
+//ctx.fillStyle = "black";
+//ctx.fillText(XT3, 150, MaxHauteur-Haut2+15);
+
+Dessiner(210,0,30,Haut3,"red",60,XT4,"myCanvas")	
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "red";
+//ctx.fillRect(210, MaxHauteur-Haut3+25, 30, Haut3);  
+//ctx.font = "10px Verdana";
+//ctx.fillStyle = "black";
+//ctx.fillText(XT4, 210, MaxHauteur-Haut3+15);
 	
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "red";
-ctx.fillRect(150, MaxHauteur-Haut2+25, 30, Haut2);  
-ctx.font = "10px Verdana";
-ctx.fillStyle = "black";
-ctx.fillText(XT3, 150, MaxHauteur-Haut2+15);
-	
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "red";
-ctx.fillRect(210, MaxHauteur-Haut3+25, 30, Haut3);  
-ctx.font = "10px Verdana";
-ctx.fillStyle = "black";
-ctx.fillText(XT4, 210, MaxHauteur-Haut3+15);
-	
-var c = document.getElementById("myCanvas1");
-var ctx = c.getContext("2d");	
+//var c = document.getElementById("myCanvas1");
+//var ctx = c.getContext("2d");	
 
 // Red rectangle
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "blue";
-ctx.fillRect(15, MaxHauteur-Hautb+15, 30, Hautb);  
+Dessiner(15,0,30,Hautb,"blue",60,XT5,"myCanvas1")	
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "blue";
+//ctx.fillRect(15, MaxHauteur-Hautb+15, 30, Hautb);  
 
+Dessiner(75,0,30,Hautb1,"blue",60,XT6,"myCanvas1")
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "blue";
+//ctx.fillRect(75, MaxHauteur-Hautb1+15, 30, Hautb1);  
 	
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "blue";
-ctx.fillRect(75, MaxHauteur-Hautb1+15, 30, Hautb1);  
-	
-	
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "blue";
-ctx.fillRect(135, MaxHauteur-Hautb2+15, 30, Hautb2);  
+Dessiner(135,0,30,Hautb2,"blue",60,XT7,"myCanvas1")	
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "blue";
+//ctx.fillRect(135, MaxHauteur-Hautb2+15, 30, Hautb2);  
 
-Dessiner(195,0,30,Hautb3,"blue",60,"essai","myCanvas1")
+Dessiner(195,0,30,Hautb3,"blue",60,XT8,"myCanvas1")
 //ctx.beginPath();
 //ctx.lineWidth = "8";
 //ctx.fillStyle = "blue";	
 //ctx.fillRect(195, MaxHauteur-Hautb3+15, 30, Hautb3);  
-	
+
+	var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	var sw1KK =sw1K+Math.round(sw1O*0.625)
+	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
 
 myFunction5()
 }
@@ -1455,9 +1471,9 @@ sf1 = document.getElementById("wsjaguar").value
 sf2 = document.getElementById("wsatlante").value
 sf3 = document.getElementById("wsek").value	
 
-document.getElementById("wsaaigleO").innerHTML =	sf1
-document.getElementById("wsaaigleK").innerHTML =	sf2
-document.getElementById("wsaaigleKK").innerHTML =	sf3
+//document.getElementById("wsaaigleO").innerHTML =	sf1
+//document.getElementById("wsaaigleK").innerHTML =	sf2
+//document.getElementById("wsaaigleKK").innerHTML =	sf3
 	
 var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
 	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
