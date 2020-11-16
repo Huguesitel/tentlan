@@ -172,8 +172,8 @@ document.getElementById("myC2").innerHTML = XT3
 document.getElementById("myC3").innerHTML = XT4
 document.getElementById("Attak1").innerHTML = XT1
 document.getElementById("Attak2").innerHTML = XT2
-//document.getElementById("Attak3").innerHTML = XT3
-//document.getElementById("Attak4").innerHTML = XT4	
+document.getElementById("Attak3").innerHTML = XT3
+document.getElementById("Attak4").innerHTML = XT4	
 Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
 Haut1 =	Math.round(MaxHauteur*Attjaguar/MaxAtt)
 Haut2 =	Math.round(MaxHauteur*Attatlante/MaxAtt)
@@ -188,9 +188,9 @@ document.getElementById("myC5").innerHTML = XT6
 document.getElementById("myC6").innerHTML = XT7
 document.getElementById("myC7").innerHTML = XT8
 document.getElementById("Def1").innerHTML = XT5
-//document.getElementById("Def2").innerHTML = XT6
-//document.getElementById("Def3").innerHTML = XT7
-//document.getElementById("Def4").innerHTML = XT8
+document.getElementById("Def2").innerHTML = XT6
+document.getElementById("Def3").innerHTML = XT7
+document.getElementById("Def4").innerHTML = XT8
 
 	Effacer("myCanvas")
 	Effacer("myCanvas1")
@@ -209,6 +209,17 @@ Dessiner(15,0,30,Hautb,"blue",60,XT5,"myCanvas1")
 Dessiner(75,0,30,Hautb1,"blue",60,XT6,"myCanvas1")
 Dessiner(150,0,30,Hautb2,"blue",60,XT7,"myCanvas1")	
 Dessiner(210,0,30,Hautb3,"blue",60,XT8,"myCanvas1")
+	
+var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
+	
+document.getElementById("wsjjaguarC").innerHTML =   777777
+
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	var sw1KK =sw1K+Math.round(sw1O*0.625)
+	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
 }
 	
 
@@ -461,7 +472,7 @@ function myFunction5()
 var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 	
 document.getElementById("wsjjaguarC").innerHTML =   777777
-	var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
+
 	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
 	document.getElementById("wsaaigleO").innerHTML =   sw1O
 	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
@@ -1309,11 +1320,11 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 21px;" id="wsaaigleKK">0000</td>
 				<td style="align: center;" >
 					<strong><span id="Attak1">Bas</span></strong>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>
 				<td style="align: center;" >
 					<strong><div id="Def1">Bas</div></strong>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>
 				</tr>
 				<tr>
@@ -1328,11 +1339,11 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 21px;" id="wsjjaguarKK">1111</td>
 				<td style="align: center;" >
 					<strong><div id="Attak2">Bas</div></strong>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>
 				<td style="align: center;" >
 					<strong><div id="Def2">Bas</div></strong>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>					
 				</tr>
 				<tr>
@@ -1347,11 +1358,11 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 21px;" id="wsaatlanteKK">2222</td>
 					<td style="align: center;" >
 					<strong><div id="Attak3">Bas</div></strong>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>	
 				<td style="align: center;" >
 					<strong><div id="Def3">Bas</div></strong>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>					
 				</tr>
 				<tr>
