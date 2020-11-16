@@ -84,21 +84,14 @@ function Debut() {
 }
 
 function myFunction4() { 
-
 	
 NiveauDevin =  1+(document.getElementById("sDevin").value/100)	
 NiveauTema =  1+(document.getElementById("sTema").value/100)
-
 
 sf = document.getElementById("wsaigle").value
 sf1 = document.getElementById("wsjaguar").value
 sf2 = document.getElementById("wsatlante").value
 sf3 = document.getElementById("wsek").value	
-
-
-	
-
-	
 	
 MaxDef = 0
 MaxHauteur = 60
@@ -139,10 +132,6 @@ document.getElementById("myC").innerHTML = XT1
 document.getElementById("myC1").innerHTML = XT2
 document.getElementById("myC2").innerHTML = XT3
 document.getElementById("myC3").innerHTML = XT4
-
-
-	
-
 	
 Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
 Haut1 =	Math.round(MaxHauteur*Attjaguar/MaxAtt)
@@ -163,68 +152,20 @@ document.getElementById("myC7").innerHTML = XT8
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
-// Red rectangle Dessiner(XX,YY,Lag,Hau,Cou,60,TxtD,Kan)
-	Dessiner(15,0,30,Haut,"red",60,XT1,"myCanvas")
-//ctx.beginPath();
-//ctx.lineWidth = "8";
-//ctx.fillStyle = "red";	
-//ctx.fillRect(15, MaxHauteur-Haut+25, 30, Haut);  
-//ctx.font = "10px Verdana";
-//ctx.fillStyle = "black";
-//ctx.fillText(XT1, 15, MaxHauteur-Haut+15);
 
+Dessiner(15,0,30,Haut,"red",60,XT1,"myCanvas")
 Dessiner(85,0,30,Haut1,"red",60,XT2,"myCanvas")
-//ctx.beginPath();
-//ctx.lineWidth = "8";
-//ctx.fillStyle = "red";
-//ctx.fillRect(85, MaxHauteur-Haut1+25, 30, Haut1);  
-//ctx.font = "10px Verdana";
-//ctx.fillStyle = "black";
-//ctx.fillText(XT2, 85, MaxHauteur-Haut1+15);
-
 Dessiner(150,0,30,Haut2,"red",60,XT3,"myCanvas")	
-//ctx.beginPath();
-//ctx.lineWidth = "8";
-//ctx.fillStyle = "red";
-//ctx.fillRect(150, MaxHauteur-Haut2+25, 30, Haut2);  
-//ctx.font = "10px Verdana";
-//ctx.fillStyle = "black";
-//ctx.fillText(XT3, 150, MaxHauteur-Haut2+15);
-
 Dessiner(210,0,30,Haut3,"red",60,XT4,"myCanvas")	
-//ctx.beginPath();
-//ctx.lineWidth = "8";
-//ctx.fillStyle = "red";
-//ctx.fillRect(210, MaxHauteur-Haut3+25, 30, Haut3);  
-//ctx.font = "10px Verdana";
-//ctx.fillStyle = "black";
-//ctx.fillText(XT4, 210, MaxHauteur-Haut3+15);
 	
-//var c = document.getElementById("myCanvas1");
-//var ctx = c.getContext("2d");	
 
-// Red rectangle
+
 Dessiner(15,0,30,Hautb,"blue",60,XT5,"myCanvas1")	
-//ctx.beginPath();
-//ctx.lineWidth = "8";
-//ctx.fillStyle = "blue";
-//ctx.fillRect(15, MaxHauteur-Hautb+15, 30, Hautb);  
-
 Dessiner(75,0,30,Hautb1,"blue",60,XT6,"myCanvas1")
-//ctx.beginPath();
-//ctx.lineWidth = "8";
-//ctx.fillStyle = "blue";
-//ctx.fillRect(85, MaxHauteur-Hautb1+15, 30, Hautb1);  
-	
 Dessiner(150,0,30,Hautb2,"blue",60,XT7,"myCanvas1")	
-//ctx.beginPath();
-//ctx.lineWidth = "8";
-//ctx.fillStyle = "blue";
-//ctx.fillRect(135, MaxHauteur-Hautb2+15, 30, Hautb2);  
-
 Dessiner(210,0,30,Hautb3,"blue",60,XT8,"myCanvas1")
-
-	
+}
+function myFunction6() { 
 var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);	
 document.getElementById("wsjjaguarC").innerHTML =   777777
 	var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
@@ -332,9 +273,6 @@ function myFunction() {
 		document.getElementById("sDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
 		document.getElementById("ssDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
 
-	
-	
-	
   	var x =  parseInt(document.getElementById("Devin").value);
 	document.getElementById("DDevin").innerHTML =   x+1;
 	var y1 =Math.round(66667*Math.pow((1.8),(x+1)))
@@ -355,8 +293,6 @@ function myFunction() {
 	var z4 =Math.round(z1*0.4)
 	var z5 =Math.round(z2*0.625)
 
-	
-	
 	//*************************************** stele
 	 var sx =  parseInt(document.getElementById("stele").value);
 	var ssx =sx +1
@@ -441,9 +377,6 @@ function myFunction() {
 
 	}
 	
-	
-
-	
 	var z6 = z5+z4+z3
 	var z7 = z5+z4+z3+y5+y4+y3	
 	document.getElementById("TTemaC").innerHTML =   z1;
@@ -451,7 +384,6 @@ function myFunction() {
 	document.getElementById("TTemaK").innerHTML =   z3;
 	document.getElementById("TTemaKK").innerHTML =   z6;	
 	document.getElementById("TotalKK").innerHTML =   Math.round(z7/1000000) + " M";
-	
 	
 	var w =  parseInt(document.getElementById("aigle").value);
 	var w1 =Math.round(w*0.02)
@@ -553,7 +485,6 @@ function myFunction3() {
 	document.getElementById("eeentrepot").innerHTML =volumeentrepot
 	document.getElementById("tttribal").innerHTML =1000000
 	document.getElementById("ccceramique").innerHTML =2000000
-
 
 }	
 </script>
