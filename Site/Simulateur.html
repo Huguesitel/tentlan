@@ -217,10 +217,10 @@ document.getElementById("Def4").innerHTML = XT8
 //Dessiner(210,0,30,Hautb3,"blue",60,XT8,"myCanvas1")
 	
 document.getElementById("wsjjaguarC").innerHTML =   777777
-var wsdiplo =  document.getElementById("ssDiplo").value;
+//var wsdiplo =  document.getElementById("ssDiplo").value;
 
-	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
-	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	//var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	//document.getElementById("wsaaigleO").innerHTML =   sw1O
 	//var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
 	//document.getElementById("wsaaigleK").innerHTML =   sw1K
 	//var sw1KK =sw1K+Math.round(sw1O*0.625)
@@ -473,13 +473,58 @@ function myFunction2() {
 }
 function myFunction3() {
 	var Nentrepot = document.getElementById("entrepot").value
-	var Ntribal = document.getElementById("tribal").value
-	var Nceramique = document.getElementById("ceramique").value
+	var x[1] = 5776
+	var x[2] = 9817
+	var x[3] = 14830
+	var x[4] = 21004
+	var x[5] = 28557
+	var x[6] = 37747
+	var x[7] = 48877
+	var x[25] =  1503604
+	var x[26] =  1769105
+	var x[27] =  2078633
+	var x[28] =  2439202
+	var x[29] =  2858913
+	var x[30] =  3347121
+	var x[31] =  3914620
+	var x[32] =  4573866
+	var x[33] =  5339226
+	var x[34] =  6227265
+	var x[35] =  7257077
+	var x[36] =  8450665
+	var x[37] =  9833376
+	var x[39] = 13287366
+	var x[40] = 15430950
+	var x[41] = 17909688
+	var x[42] =  20774811
+	var x[43] =  24085253
+	var x[44] =  27908787
+	var x[45] =  32323337
+	var x[46] =  37418479
+	var x[47] =  43297161
+	var x[48] =  50077677
+	var x[49] = 
+	var x[50] = 66908007
+	var x[51] = 77293179
+	var x[52] = 89257272
+	var x[53] = 103036574
+	var x[54] = 118902298
+	var x[55] = 137165691
+	var x[56] = 158183884
+	var x[57] = 182366592
+	var x[58] = 210183786
+	var x[59] = 242174471	
+	
+	//var volumeentrepot = x[Nentrepot]
 	var Nentrepot1 = 1+Nentrepot
-	var Ntribal1 = 1+Ntribal
+	var volumeentrepot1 = x[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
+	// volumeentrepot*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
+	var Ntribal = document.getElementById("tribal").value
+	var Ntribal1 = 1+Ntribal	
+	var Nceramique = document.getElementById("ceramique").value
 	var Nceramique1 = 1+Nceramique
 	
-		document.getElementById("Nentre1").innerHTML = Nentrepot1
+		document.getElementById("Nentre1").innerHTML =Nentrepot
 		document.getElementById("Ntribal1").innerHTML = Ntribal
 		document.getElementById("Nceram1").innerHTML = Nceramique
 		document.getElementById("Nentre2").innerHTML = Nentrepot
@@ -500,8 +545,8 @@ function myFunction3() {
 		document.getElementById("Nceram36").innerHTML = Nceramique1
 	
 	//1,19	9 883
-	var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
-	document.getElementById("eeentrepot").innerHTML =volumeentrepot
+	//var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
+	document.getElementById("eeentrepot").innerHTML =volumeentrepot1
 	document.getElementById("tttribal").innerHTML =1000000
 	document.getElementById("ccceramique").innerHTML =2000000
 
