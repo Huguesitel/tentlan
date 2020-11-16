@@ -1424,16 +1424,20 @@ function myFunction3() {
 				</table>	
 <table >	
 	<tr>
-	<td colspan="4">Force totale d'attaque<br>
-	
-	</td>
+	<td colspan="5">Force totale d'attaque<br></td>
 	<td colspan="4">Force totale de défense</td>
 	<td colspan="4">Force totale d'attaque pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
 	<td colspan="4">Force totale de défense pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
 	</tr>
+	
 	<tr>	
 	<td  colspan="4"><canvas align='left" id="myCanvas" width="240" height="100" style="border:1px solid #d3d3d3;">
-	</canvas></td><td><input type="range" orient="vertical" /></td>
+	</canvas></td>
+		<td>
+			<div class="slidecontainer">
+			<input type="range" orient="vertical" min="1" max="100" value="50" class="slider" id="myRange">
+			</div>	
+		</td>
 		
 	<td  colspan="4"><canvas align='left" id="myCanvas1" width="240" height="100" style="border:1px solid #d3d3d3;">
 	</canvas></td>
@@ -1450,7 +1454,8 @@ function myFunction3() {
 		<td id="myC">1</td>
 		<td id="myC1">2</td>
 		<td id="myC2">3</td>
-		<td id="myC3">4</td>	
+		<td id="myC3">4</td>
+		<td></td>
 		
 		<td id="myC4">1</td>
 		<td id="myC5">2</td>
@@ -1474,6 +1479,7 @@ function myFunction3() {
 		<td style="width: 50px writing-mode: vertical-lr; border-color: black transparent black transparent;" id="test2">Guerrier<br>Jaguar</td>
 		<td style="width: 50px" id="test2">Atlante <br> ...</td>
 		<td style="width: 50px" id="test2">Ek<br>Chuah</td>
+		<td></td>
 		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
 		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
 		<td style="width: 50px" id="test2">Atlante <br> ...</td>
