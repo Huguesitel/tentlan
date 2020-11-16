@@ -1377,14 +1377,14 @@ var ctx = c.getContext("2d");
 //ctx.fillStyle = "black";
 //ctx.fillText(XT1, 15, MaxHauteur-Haut+15);
 
-
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "red";
-ctx.fillRect(85, MaxHauteur-Haut1+25, 30, Haut1);  
-ctx.font = "10px Verdana";
-ctx.fillStyle = "black";
-ctx.fillText(XT2, 85, MaxHauteur-Haut1+15);
+Dessiner(85,0,30,Haut1,"red",60,XT2,"myCanvas")
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "red";
+//ctx.fillRect(85, MaxHauteur-Haut1+25, 30, Haut1);  
+//ctx.font = "10px Verdana";
+//ctx.fillStyle = "black";
+//ctx.fillText(XT2, 85, MaxHauteur-Haut1+15);
 	
 ctx.beginPath();
 ctx.lineWidth = "8";
@@ -1423,11 +1423,11 @@ ctx.lineWidth = "8";
 ctx.fillStyle = "blue";
 ctx.fillRect(135, MaxHauteur-Hautb2+15, 30, Hautb2);  
 
-
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = "blue";	
-ctx.fillRect(195, MaxHauteur-Hautb3+15, 30, Hautb3);  
+Dessiner(195,0,30,Hautb3,"blue",60,"essai","myCanvas1")
+//ctx.beginPath();
+//ctx.lineWidth = "8";
+//ctx.fillStyle = "blue";	
+//ctx.fillRect(195, MaxHauteur-Hautb3+15, 30, Hautb3);  
 	
 
 myFunction5()
@@ -1456,7 +1456,8 @@ var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
 	var sw1KK =sw1K+Math.round(sw1O*0.625)
 	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
 	
-	//var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	alert(sww1O)
 	document.getElementById("wsjjaguarO").innerHTML =   sf1
 	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
 	document.getElementById("wsjjaguarK").innerHTML =   sf1
@@ -1488,7 +1489,7 @@ ctx.fillStyle = Cou;
 ctx.fillRect(XX, MaxHau-Hau+25, Lag, Hau);  
 ctx.font = "10px Verdana";
 ctx.fillStyle = "black";
-ctx.fillText(TxtD, 85, MaxHau-Hau+15);
+ctx.fillText(TxtD, XX, MaxHau-Hau+15);
 	
 }
 function Effacer(Kankan) {
