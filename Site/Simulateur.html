@@ -118,6 +118,7 @@ function Debut() {
 		myFunction()
 		myFunction3()	
 		myFunction4()
+		myFunction5()
 }
 
 function myFunction4() { 
@@ -453,7 +454,93 @@ function myFunction3() {
 	document.getElementById("tttribal").innerHTML =1000000
 	document.getElementById("ccceramique").innerHTML =2000000
 
-}	
+}
+unction myFunction6() 
+{ 
+
+var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
+	
+document.getElementById("wsjjaguarC").innerHTML =   777777
+	var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	var sw1KK =sw1K+Math.round(sw1O*0.625)
+	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+
+
+	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	document.getElementById("wsjjaguarO").innerHTML =   sww1O
+	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
+	document.getElementById("wsjjaguarK").innerHTML =   sww1K
+	var sww1KK =sww1K+Math.round(sww1O*0.625)
+	document.getElementById("wsjjaguarKK").innerHTML =   sww1KK	
+	
+	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
+	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
+	document.getElementById("wsaatlanteO").innerHTML =   11
+	document.getElementById("wsaatlanteK").innerHTML =   22
+	var swww1KK =swww1K+Math.round(swww1O*0.625)
+	document.getElementById("wsaatlanteKK").innerHTML =   33
+	
+	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
+	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
+	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
+	document.getElementById("wseekC").innerHTML =   111	
+	document.getElementById("wseekO").innerHTML =   222
+	document.getElementById("wseekK").innerHTML =   333
+	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
+	document.getElementById("wseekKK").innerHTML =   444
+}
+
+function myFunction5() { 
+//	document.getElementById("Diplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+//	document.getElementById("sDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+//	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+	
+sf = document.getElementById("wsaigle").value
+sf1 = document.getElementById("wsjaguar").value
+sf2 = document.getElementById("wsatlante").value
+sf3 = document.getElementById("wsek").value	
+
+
+var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	var sw1KK =sw1K+Math.round(sw1O*0.625)
+	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+	
+	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	alert(sww1O)
+	document.getElementById("wsjjaguarO").innerHTML =   sf1
+	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
+	document.getElementById("wsjjaguarK").innerHTML =   sf1
+	var sww1KK =sww1K+Math.round(sww1O*0.625)
+	document.getElementById("wsjjaguarKK").innerHTML =   sf1	
+	
+	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
+	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
+	document.getElementById("wsaatlanteO").innerHTML =   11
+	document.getElementById("wsaatlanteK").innerHTML =   22
+	var swww1KK =swww1K+Math.round(swww1O*0.625)
+	document.getElementById("wsaatlanteKK").innerHTML =   33
+	
+	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
+	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
+	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
+	document.getElementById("wseekC").innerHTML =   111	
+	document.getElementById("wseekO").innerHTML =   222
+	document.getElementById("wseekK").innerHTML =   333
+	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
+	document.getElementById("wseekKK").innerHTML =   444	
+}
+
+	
+	
+	
 </script>
 
 <body onload="Debut()">
