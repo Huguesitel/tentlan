@@ -170,8 +170,8 @@ document.getElementById("myC").innerHTML = XT1
 document.getElementById("myC1").innerHTML = XT2
 document.getElementById("myC2").innerHTML = XT3
 document.getElementById("myC3").innerHTML = XT4
-//document.getElementById("Attak1").innerHTML = XT1
-//document.getElementById("Attak2").innerHTML = XT2
+document.getElementById("Attak1").innerHTML = XT1
+document.getElementById("Attak2").innerHTML = XT2
 //document.getElementById("Attak3").innerHTML = XT3
 //document.getElementById("Attak4").innerHTML = XT4	
 Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
@@ -187,7 +187,7 @@ document.getElementById("myC4").innerHTML = XT5
 document.getElementById("myC5").innerHTML = XT6
 document.getElementById("myC6").innerHTML = XT7
 document.getElementById("myC7").innerHTML = XT8
-//document.getElementById("Def1").innerHTML = XT5
+document.getElementById("Def1").innerHTML = XT5
 //document.getElementById("Def2").innerHTML = XT6
 //document.getElementById("Def3").innerHTML = XT7
 //document.getElementById("Def4").innerHTML = XT8
@@ -1308,11 +1308,11 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsaaigleKK">0000</td>
 				<td style="align: center;" >
-					<strong><div id="Attak1">Bas</div></strong><br>
+					<strong><span id="Attak1">Bas</span></strong>
 					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
 				</td>
 				<td style="align: center;" >
-					<strong><div id="Def1">Bas</div></strong><br>
+					<strong><div id="Def1">Bas</div></strong>
 					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
 				</td>
 				</tr>
@@ -1327,11 +1327,11 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsjjaguarKK">1111</td>
 				<td style="align: center;" >
-					<strong><div id="Attak2">Bas</div></strong><br>
+					<strong><div id="Attak2">Bas</div></strong>
 					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
 				</td>
 				<td style="align: center;" >
-					<strong><div id="Def2">Bas</div></strong><br>
+					<strong><div id="Def2">Bas</div></strong>
 					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
 				</td>					
 				</tr>
@@ -1346,11 +1346,11 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsaatlanteKK">2222</td>
 					<td style="align: center;" >
-					<strong><div id="Attak3">Bas</div></strong><br>
+					<strong><div id="Attak3">Bas</div></strong>
 					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
 				</td>	
 				<td style="align: center;" >
-					<strong><div id="Def3">Bas</div></strong><br>
+					<strong><div id="Def3">Bas</div></strong>
 					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
 				</td>					
 				</tr>
@@ -1367,12 +1367,12 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wseekKK">3333</td>
 					<td style="align: center;" >
-					<strong><div id="Attak4">Bas</div></strong><br>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<strong><div id="Attak4">Bas</div></strong>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>
 				<td style="align: center;" >
-					<strong><div id="Def4">Bas</div></strong><br>
-					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+					<strong><div id="Def4">Bas</div></strong>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="20" height="20" >
 				</td>					
 				</tr>
 
@@ -1495,10 +1495,13 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 	</tr>
 	
 	<tr>	
-	<td  colspan="4"><canvas align='left" id="myCanvas" width="240" height="100" style="border:1px solid #d3d3d3;">
-	</canvas></td>
+	<td  colspan="4">
+	<canvas align='left" id="myCanvas" width="240" height="100" style="border:1px solid #d3d3d3;">
+	</canvas>
+	</td>
 	<td width="50px">ooooo</td>
-		
+	<td width="50px">ooooo</td>
+		       
 	<td  colspan="4"><canvas align='left" id="myCanvas1" width="240" height="100" style="border:1px solid #d3d3d3;">
 	</canvas></td>
 	<td  colspan="4"><canvas align='left" id="myCanvas2" width="240" height="100" style="border:2px solid #d3d3d3;">
