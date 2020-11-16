@@ -169,7 +169,10 @@ document.getElementById("myC").innerHTML = XT1
 document.getElementById("myC1").innerHTML = XT2
 document.getElementById("myC2").innerHTML = XT3
 document.getElementById("myC3").innerHTML = XT4
-	
+document.getElementById("Attak1").innerHTML = XT1
+document.getElementById("Attak2").innerHTML = XT2
+document.getElementById("Attak3").innerHTML = XT3
+document.getElementById("Attak4").innerHTML = XT4	
 Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
 Haut1 =	Math.round(MaxHauteur*Attjaguar/MaxAtt)
 Haut2 =	Math.round(MaxHauteur*Attatlante/MaxAtt)
@@ -183,6 +186,10 @@ document.getElementById("myC4").innerHTML = XT5
 document.getElementById("myC5").innerHTML = XT6
 document.getElementById("myC6").innerHTML = XT7
 document.getElementById("myC7").innerHTML = XT8
+document.getElementById("Def1").innerHTML = XT5
+document.getElementById("Def2").innerHTML = XT6
+document.getElementById("Def3").innerHTML = XT7
+document.getElementById("Def4").innerHTML = XT8
 
 	Effacer("myCanvas")
 	Effacer("myCanvas1")
@@ -1183,7 +1190,7 @@ function myFunction3() {
 				</td>
 				<td colspan="2"></td>
 				<td style=" text-align: center;">Quantit&eacute; à produire</td>
-				<td style="width: 8px;">Imposer la même def que</td>
+
 				<td style="width: 70.4px; text-align: center;">Calcaire<br><img style="float:right align: center;" src="Image/calc.png" width="30" height="30" ></td>
 				<td style="width: 70.4px; text-align: center;">Obsidienne<br><img style="float:right align: center;" src="Image/obsi.png" width="30" height="30" ></td>
 				<td style="width: 70.4px; text-align: center;">Cacao<br><img style="float:right align: center;" src="Image/xacai.png" width="30" height="30" ></td>
@@ -1199,77 +1206,87 @@ function myFunction3() {
 							  </div>
 							</div>
 							</td>
-				<td style="text-align: center;"></td>
+				<td style="text-align: center;">Attaque</td>
+				<td style="text-align: center;">Défense</td>
 				</tr>
 				<tr>
 
 				<td style="width: 78px;">Guerrier Aigle</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsaigle" name="aigle" step="100" onchange="myFunction4()" value="100"></td>
-				<td style="width: 8px;" >		
-					<div display="inline;" style="font-size:10px;">
-					  <input type="checkbox" id="OB1" name="Aigles" value="Aigles"  >
-					<label for="Aigles"></label>
-					</div>
-
-				</td>
+				<td style="width: 8px;" >></td>
 				<td style="width: 65px;" id="wsaaigleC">0</td>
 				<td style="width: 79px;" id="wsaaigleO">00</td>
 				<td style="width: 46px;" id="wsaaigleK">000</td>
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsaaigleKK">0000</td>
-				<td rowspan="4" style="align: center;" ><strong><div id="sTotalKK2">Bas</div></strong><br><img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" ></td>
+				<td style="align: center;" >
+					<strong><div id="Attak1">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>
+				<td style="align: center;" >
+					<strong><div id="Def1">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>
 				</tr>
 				<tr>
 				<td style="width: 78px;">Guerrier Jaguar</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsjaguar" name="jaguar" step="100" value="100" onchange="myFunction4()"></td>
-				<td style="width: 8px;" >
-					<div display="inline;" style="font-size:10px;">
-		  			<input type="checkbox" id="OB2" name="Jaguars" value="Jaguars">
-					<label for="Jaguars"></label>
-					</div>
-
-				</td>
+				<td style="width: 8px;" >	>	</td>
 				<td style="width: 65px;" id="wsjjaguarC">1</td>
 				<td style="width: 79px;" id="wsjjaguarO">11</td>
 				<td style="width: 46px;" id="wsjjaguarK">111</td>
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsjjaguarKK">1111</td>
+				<td style="align: center;" >
+					<strong><div id="Attak2">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>
+				<td style="align: center;" >
+					<strong><div id="Def2">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>					
 				</tr>
 				<tr>
 				<td style="width: 78px;">Atlante</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsatlante" name="atlante" step="100" onchange="myFunction4()"  value="100"></td>
-				<td style="width: 8px;" >
-					<div display="inline;" style="font-size:10px;">
-					  <input type="checkbox" id="OB3" name="Atlantes" value="Atlantes">
-					<label for="Atlantes"></label>
-					</div>		
-
-				</td>
+				<td style="width: 8px;" >>				</td>
 				<td style="width: 65px;"  id="wsaatlanteC">2</td>
 				<td style="width: 79px;" id="wsaatlanteO" >22</td>
 				<td style="width: 46px;" id="wsaatlanteK">222</td>
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsaatlanteKK">2222</td>
+					<td style="align: center;" >
+					<strong><div id="Attak3">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>	
+				<td style="align: center;" >
+					<strong><div id="Def3">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>					
 				</tr>
 				<tr>
 				<td style="width: 78px;">Ek Chuah</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsek" name="ek" step="100" onchange="myFunction4()" value="100"></td>
 				
-				<td style="width: 8px;">
-					<div display="inline;" style="font-size:10px;">
-					 <input type="checkbox" id="OB4" name="EK" value="EK">
-					<label for="EK"></label>
-					</div>	
+				<td style="width: 8px;">>	
 				</td>
 				<td style="width: 65px;" id="wseekC">3</td>
 				<td style="width: 79px;" id="wseekO">33</td>
 				<td style="width: 46px;" id="wseekK">333</td>
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wseekKK">3333</td>
+					<td style="align: center;" >
+					<strong><div id="Attak4">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>
+				<td style="align: center;" >
+					<strong><div id="Def4">Bas</div></strong><br>
+					<img  id="sPouceDOWN" src="Image/pouceR.png" width="30" height="30" >
+				</td>					
 				</tr>
 
 				<tr>
