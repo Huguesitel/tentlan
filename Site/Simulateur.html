@@ -111,7 +111,17 @@ img:hover {
   border: 0;
   background: url('image/slide.png');
   cursor: pointer;
+	
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }	
+	
+	
+}
+	
 </style>
 <script>
 function Debut() {
@@ -178,8 +188,10 @@ Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
 Haut1 =	Math.round(MaxHauteur*Attjaguar/MaxAtt)
 Haut2 =	Math.round(MaxHauteur*Attatlante/MaxAtt)
 Haut3 =	Math.round(MaxHauteur*Attek/MaxAtt)
-	document.getElementById("BB1").style.width = "150%";
-	document.getElementById("BB2").style.width = "70%";
+	
+	document.getElementById("BR1").style.width =(Attaigle/MaxAtt) + "%";
+	document.getElementById("BR2").style.width = "70%";
+	
 XT5 = Math.round(Defaigle/100000)/10 + "M"	
 XT6 = Math.round(Defjaguar/100000)/10 + "M"
 XT7 = Math.round(Defatlante/100000)/10 + "M"
@@ -214,15 +226,13 @@ document.getElementById("Def4").innerHTML = XT8
 
 	document.getElementById("wsjjaguarC").innerHTML =   777777
 var wsdiplo =  document.getElementById("ssDiplo").value;
-//	alert(wsdiplo)
 
-
-//	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
-//	document.getElementById("wsaaigleO").innerHTML =   sw1O
-//	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
-//	document.getElementById("wsaaigleK").innerHTML =   sw1K
-//	var sw1KK =sw1K+Math.round(sw1O*0.625)
-//	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	var sw1KK =sw1K+Math.round(sw1O*0.625)
+	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
 }
 	
 
@@ -1322,9 +1332,14 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wsaaigleKK">0000</td>
 				<td style="align: center;" >
+					<div class="container">
+					<div class="centered">
 					<strong><span id="Attak1">Bas</span></strong>
-					<img  id="BR1" src="Image/barrerouge.png" width="15" height="15" >
-				</td>
+					</div>	
+					<img style="align: left;" id="BR1" src="Image/barrerouge.png" width="15" height="15" >
+					
+					</div>
+						</td>
 				<td style="align: center;" >
 					<strong><div id="Def1">Bas</div></strong>
 					<img  id="BB1" src="Image/barrebleu.png" width="15" height="15" >
@@ -1361,11 +1376,11 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 21px;" id="wsaatlanteKK">2222</td>
 					<td style="align: center;" >
 					<strong><div id="Attak3">Bas</div></strong>
-					<img  id="BR3" src="Image/pouceR.png" width="20" height="20" >
+					<img  id="BR3" src="Image/barrerouge.png" width="15" height="15" >
 				</td>	
 				<td style="align: center;" >
 					<strong><div id="Def3">Bas</div></strong>
-					<img  id="BB3" src="Image/pouceR.png" width="20" height="20" >
+					<img  id="BB3" src="Image/barrebleu.png" width="15" height="15" >
 				</td>					
 				</tr>
 				<tr>
@@ -1380,13 +1395,13 @@ var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
 				<td style="width: 46px;" id="wseekK">333</td>
 				<td style="width: 20px;">=</td>
 				<td style="width: 21px;" id="wseekKK">3333</td>
-					<td style="align: center;" >
+					<td style="align: left;" >
 					<strong><div id="Attak4">Bas</div></strong>
-					<img  id="BR4" src="Image/pouceR.png" width="20" height="20" >
+					<img  id="BR4" src="Image/barrerouge.png" width="15" height="15" >
 				</td>
-				<td style="align: center;" >
+				<td style="align: left;" >
 					<strong><div id="Def4">Bas</div></strong>
-					<img  id="BB4" src="Image/pouceR.png" width="20" height="20" >
+					<img  id="BB4" src="Image/barrebleu.png" width="15" height="15" >
 				</td>					
 				</tr>
 
