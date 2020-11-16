@@ -81,8 +81,8 @@ img:hover {
 
 .slider {
   -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
+  width: 10px;
+  height: 100%;
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;
@@ -186,8 +186,8 @@ document.getElementById("myC7").innerHTML = XT8
 
 	Effacer("myCanvas")
 	Effacer("myCanvas1")
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
+//var c = document.getElementById("myCanvas");
+//var ctx = c.getContext("2d");
 
 
 Dessiner(15,0,30,Haut,"red",60,XT1,"myCanvas")
@@ -202,85 +202,8 @@ Dessiner(75,0,30,Hautb1,"blue",60,XT6,"myCanvas1")
 Dessiner(150,0,30,Hautb2,"blue",60,XT7,"myCanvas1")	
 Dessiner(210,0,30,Hautb3,"blue",60,XT8,"myCanvas1")
 }
-function myFunction6() { 
-var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);	
-document.getElementById("wsjjaguarC").innerHTML =   777777
-	var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
-	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
-	document.getElementById("wsaaigleO").innerHTML =   sw1O
-	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
-	document.getElementById("wsaaigleK").innerHTML =   sw1K
-	var sw1KK =sw1K+Math.round(sw1O*0.625)
-	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+	
 
-
-	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
-	document.getElementById("wsjjaguarO").innerHTML =   sww1O
-	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
-	document.getElementById("wsjjaguarK").innerHTML =   sww1K
-	var sww1KK =sww1K+Math.round(sww1O*0.625)
-	document.getElementById("wsjjaguarKK").innerHTML =   sww1KK	
-	
-	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
-	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
-	document.getElementById("wsaatlanteO").innerHTML =   11
-	document.getElementById("wsaatlanteK").innerHTML =   22
-	var swww1KK =swww1K+Math.round(swww1O*0.625)
-	document.getElementById("wsaatlanteKK").innerHTML =   33
-	
-	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
-	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
-	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
-	document.getElementById("wseekC").innerHTML =   111	
-	document.getElementById("wseekO").innerHTML =   222
-	document.getElementById("wseekK").innerHTML =   333
-	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
-	document.getElementById("wseekKK").innerHTML =   444
-}
-
-function myFunction5() { 
-//	document.getElementById("Diplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
-//	document.getElementById("sDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
-//	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
-	
-sf = document.getElementById("wsaigle").value
-sf1 = document.getElementById("wsjaguar").value
-sf2 = document.getElementById("wsatlante").value
-sf3 = document.getElementById("wsek").value	
-
-
-var wsdiplo =  parseInt(document.getElementById("sssDiplo").value);
-	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
-	document.getElementById("wsaaigleO").innerHTML =   sw1O
-	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
-	document.getElementById("wsaaigleK").innerHTML =   sw1K
-	var sw1KK =sw1K+Math.round(sw1O*0.625)
-	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
-	
-	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
-	alert(sww1O)
-	document.getElementById("wsjjaguarO").innerHTML =   sf1
-	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
-	document.getElementById("wsjjaguarK").innerHTML =   sf1
-	var sww1KK =sww1K+Math.round(sww1O*0.625)
-	document.getElementById("wsjjaguarKK").innerHTML =   sf1	
-	
-	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
-	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
-	document.getElementById("wsaatlanteO").innerHTML =   11
-	document.getElementById("wsaatlanteK").innerHTML =   22
-	var swww1KK =swww1K+Math.round(swww1O*0.625)
-	document.getElementById("wsaatlanteKK").innerHTML =   33
-	
-	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
-	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
-	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
-	document.getElementById("wseekC").innerHTML =   111	
-	document.getElementById("wseekO").innerHTML =   222
-	document.getElementById("wseekK").innerHTML =   333
-	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
-	document.getElementById("wseekKK").innerHTML =   444	
-}
 function Dessiner(XX,YY,Lag,Hau,Cou,MaxHau,TxtD,Kankan) {
 var c = document.getElementById(Kankan);
 var ctx = c.getContext("2d");	
@@ -1470,11 +1393,7 @@ function myFunction3() {
 	<tr>	
 	<td  colspan="4"><canvas align='left" id="myCanvas" width="240" height="100" style="border:1px solid #d3d3d3;">
 	</canvas></td>
-		<td>
-			<div class="slidecontainer">gggggggg
-			<input type="range" orient="vertical" min="1" max="100" value="50" class="slider" id="myRanger">
-			</div>	
-		</td>
+	
 		
 	<td  colspan="4"><canvas align='left" id="myCanvas1" width="240" height="100" style="border:1px solid #d3d3d3;">
 	</canvas></td>
