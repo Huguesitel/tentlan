@@ -1,0 +1,677 @@
+
+<style>
+body {
+  //font-size: 16px;
+  font: 16px Verdana, sans-serif;	
+  }
+	
+//canvas {
+//    margin-left: auto;
+//    margin-right: auto;
+//    //width: 6em
+//}
+
+.dropdown {
+  position: relative;
+  display: block;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ecff9e;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+	align: right
+	width: 160px;
+}
+	
+	
+table {
+ border-width:3px; 
+ border-style:solid; 
+ border-color:blue;
+ border-spacing: 0;
+	padding: 0px;
+ }	
+	
+td {
+  	font: 16px Verdana, sans-serif;
+	border-width:1px;
+ 	border-style:solid; 
+ 	border-color:black;	
+	text-align: center;
+ 	vertical-align: middle;	 
+  }
+.test2 {
+  writing-mode: vertical-lr; 
+}	
+select {
+  font: 16px Verdana, sans-serif;
+	vertical-align: middle;
+	align: center;
+	background: #f6faaa;
+  }
+input {
+  font: 16px Verdana, sans-serif;
+	vertical-align: middle;	
+	width: 90px;
+	align: center;
+	text-align: right;
+	background: #f6faaa;
+  }
+img:hover {
+       // margin-left: 0px;
+        transform: scale(1.9);
+      //  display: inline;
+      //  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;  
+	 vertical-align:middle;    
+    }  
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 100%;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('image/slide.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('image/slide.png');
+  cursor: pointer;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}	
+	
+	
+
+	
+</style>
+<script>
+function Debut() {
+		myFunction()
+		//myFunction4()
+		//myFunction3()	
+
+		//myFunction5()
+}
+
+function myFunction4() { 
+	
+NiveauDevin =  1+(document.getElementById("sDevin").value/100)	
+NiveauTema =  1+(document.getElementById("sTema").value/100)
+
+sf = document.getElementById("wsaigle").value
+sf1 = document.getElementById("wsjaguar").value
+sf2 = document.getElementById("wsatlante").value
+sf3 = document.getElementById("wsek").value	
+	
+MaxDef = 0
+MaxHauteur = 60
+Defaigle =12350 * NiveauTema * sf
+	if (	Defaigle>MaxDef) {MaxDef =Defaigle}
+Defjaguar =	38000 * NiveauTema * sf1
+	if (	Defjaguar>MaxDef) {MaxDef =Defjaguar}
+Defatlante =	285000 * NiveauTema * sf2
+	if (	Defatlante>MaxDef) {MaxDef =Defatlante}
+Defek =	6650000 * NiveauTema	* sf3
+	if (	Defek>MaxDef) {MaxDef =Defek}
+Hautb =	Math.round(MaxHauteur*(1-Defaigle/MaxDef))
+Hautb1 =	Math.round(MaxHauteur*(1-Defjaguar/MaxDef))
+Hautb2 =	Math.round(MaxHauteur*(1-Defatlante/MaxDef))
+Hautb3 =	Math.round(MaxHauteur*(1-Defek/MaxDef))	
+	
+	
+MaxAtt = 0	
+Attaigle =1500 * NiveauDevin * sf
+	if (	Attaigle>MaxAtt) {MaxAtt =Attaigle}
+Attjaguar =	15000 * NiveauDevin* sf1
+	if (	Attjaguar>MaxAtt) {MaxAtt =Attjaguar}
+Attatlante =	20000 * NiveauDevin* sf2
+	if (	Attatlante>MaxAtt) {MaxAtt =Attatlante}
+Attek =	100000 * NiveauDevin* sf3
+	if (	Attek>MaxAtt) {MaxAtt =Attek}
+Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
+Haut1 =	Math.round(MaxHauteur*Attjaguar/MaxAtt)
+Haut2 =	Math.round(MaxHauteur*Attatlante/MaxAtt)
+Haut3 =	Math.round(MaxHauteur*Attek/MaxAtt)
+
+XT1 = Math.round(Attaigle/100000)/10 + "M"	
+XT2 = Math.round(Attjaguar/100000)/10 + "M"
+XT3 = Math.round(Attatlante/100000)/10 + "M"
+XT4 = 	Math.round(Attek/100000)/10 + "M"
+	
+document.getElementById("myC").innerHTML = XT1
+document.getElementById("myC1").innerHTML = XT2
+document.getElementById("myC2").innerHTML = XT3
+document.getElementById("myC3").innerHTML = XT4
+document.getElementById("Attak1").innerHTML = XT1
+document.getElementById("Attak2").innerHTML = XT2
+document.getElementById("Attak3").innerHTML = XT3
+document.getElementById("Attak4").innerHTML = XT4	
+Haut =	Math.round(MaxHauteur*(1-Attaigle/MaxAtt)
+Haut1 =	Math.round(MaxHauteur*(1-Attjaguar/MaxAtt))
+Haut2 =	Math.round(MaxHauteur*(1-Attatlante/MaxAtt))
+Haut3 =	Math.round(MaxHauteur*(1-Attek/MaxAtt))
+	
+
+	
+XT5 = Math.round(Defaigle/100000)/10 + "M"	
+XT6 = Math.round(Defjaguar/100000)/10 + "M"
+XT7 = Math.round(Defatlante/100000)/10 + "M"
+XT8 = 	Math.round(Defek/100000)/10 + "M"
+
+document.getElementById("myC4").innerHTML = XT5
+document.getElementById("myC5").innerHTML = XT6
+document.getElementById("myC6").innerHTML = XT7
+document.getElementById("myC7").innerHTML = XT8
+document.getElementById("Def1").innerHTML = XT5
+document.getElementById("Def2").innerHTML = XT6
+document.getElementById("Def3").innerHTML = XT7
+document.getElementById("Def4").innerHTML = XT8
+
+//Dessiner(15,0,30,Haut,"red",60,XT1,"myCanvas")
+//Dessiner(85,0,30,Haut1,"red",60,XT2,"myCanvas")
+//Dessiner(150,0,30,Haut2,"red",60,XT3,"myCanvas")	
+//Dessiner(210,0,30,Haut3,"red",60,XT4,"myCanvas")	
+	
+//Dessiner(15,0,30,Hautb,"blue",60,XT5,"myCanvas1")	
+//Dessiner(75,0,30,Hautb1,"blue",60,XT6,"myCanvas1")
+//Dessiner(150,0,30,Hautb2,"blue",60,XT7,"myCanvas1")	
+//Dessiner(210,0,30,Hautb3,"blue",60,XT8,"myCanvas1")
+	
+document.getElementById("wsjjaguarC").innerHTML =   777777
+//var wsdiplo =  document.getElementById("ssDiplo").value;
+
+	//var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	//document.getElementById("wsaaigleO").innerHTML =   sw1O
+	//var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	//document.getElementById("wsaaigleK").innerHTML =   sw1K
+	//var sw1KK =sw1K+Math.round(sw1O*0.625)
+	//document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+	
+	//var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	//document.getElementById("wsjjaguarO").innerHTML =   sww1O
+	//var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
+	//document.getElementById("wsjjaguarK").innerHTML =   sww1K
+	//var sww1KK =sww1K+Math.round(sww1O*0.625)
+	//document.getElementById("wsjjaguarKK").innerHTML =   sww1KK	
+	
+	//var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
+	//var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
+	//document.getElementById("wsaatlanteO").innerHTML =   swww1O
+	//document.getElementById("wsaatlanteK").innerHTML =   swww1K
+	//var swww1KK =swww1K+Math.round(swww1O*0.625)
+	//document.getElementById("wsaatlanteKK").innerHTML =   swww1KK
+	
+	//var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
+	//var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
+	//var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
+	//document.getElementById("wseekC").innerHTML =   swwww1C	
+	//document.getElementById("wseekO").innerHTML =   swwww1O
+	////document.getElementById("wseekK").innerHTML =   swwww1K
+	//var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
+	//document.getElementById("wseekKK").innerHTML =   swwww1KK	
+	
+	//document.getElementById("BR1").style.width =Haut ;
+	//document.getElementById("BR2").style.width = Haut1;
+	//document.getElementById("BR3").style.width = Haut2;
+	//document.getElementById("BR4").style.width =Haut3;	
+	
+	//document.getElementById("BB1").style.width =Hautb
+	//document.getElementById("BB2").style.width = Hautb1
+	//document.getElementById("BB3").style.width = Hautb2;
+	//document.getElementById("BB4").style.width = Hautb3;
+	
+	
+}
+	
+
+function Dessiner(XX,YY,Lag,Hau,Cou,MaxHau,TxtD,Kankan) {
+var c = document.getElementById(Kankan);
+var ctx = c.getContext("2d");	
+ctx.beginPath();
+ctx.lineWidth = "8";
+ctx.fillStyle = Cou;
+ctx.fillRect(XX, MaxHau-Hau+25, Lag, Hau);  
+ctx.font = "10px Verdana";
+ctx.fillStyle = "black";
+ctx.fillText(TxtD, XX, MaxHau-Hau+15);
+	
+}
+function Effacer(Kankan) {
+var c = document.getElementById(Kankan);
+var ctx = c.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, 240, 100);	
+}	
+ 	
+	
+
+
+function myFunction5() 
+{ 
+
+var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
+	
+document.getElementById("wsjjaguarC").innerHTML =   777777
+
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	var sw1KK =sw1K+Math.round(sw1O*0.625)
+	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+
+
+	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	document.getElementById("wsjjaguarO").innerHTML =   sww1O
+	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
+	document.getElementById("wsjjaguarK").innerHTML =   sww1K
+	var sww1KK =sww1K+Math.round(sww1O*0.625)
+	document.getElementById("wsjjaguarKK").innerHTML =   sww1KK	
+	
+	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
+	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
+	document.getElementById("wsaatlanteO").innerHTML =   11
+	document.getElementById("wsaatlanteK").innerHTML =   22
+	var swww1KK =swww1K+Math.round(swww1O*0.625)
+	document.getElementById("wsaatlanteKK").innerHTML =   33
+	
+	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
+	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
+	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
+	document.getElementById("wseekC").innerHTML =   111	
+	document.getElementById("wseekO").innerHTML =   222
+	document.getElementById("wseekK").innerHTML =   333
+	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
+	document.getElementById("wseekKK").innerHTML =   444
+}
+
+function myFunction6() { 
+//	document.getElementById("Diplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+//	document.getElementById("sDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+//	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sssDiplo").selectedIndex
+	
+sf = document.getElementById("wsaigle").value
+sf1 = document.getElementById("wsjaguar").value
+sf2 = document.getElementById("wsatlante").value
+sf3 = document.getElementById("wsek").value	
+
+
+var wsdiplo =  parseInt(document.getElementById("ssDiplo").value);
+	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
+	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	var sw1KK =sw1K+Math.round(sw1O*0.625)
+	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+	
+	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
+	alert(sww1O)
+	document.getElementById("wsjjaguarO").innerHTML =   sf1
+	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
+	document.getElementById("wsjjaguarK").innerHTML =   sf1
+	var sww1KK =sww1K+Math.round(sww1O*0.625)
+	document.getElementById("wsjjaguarKK").innerHTML =   sf1	
+	
+	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
+	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
+	document.getElementById("wsaatlanteO").innerHTML =   11
+	document.getElementById("wsaatlanteK").innerHTML =   22
+	var swww1KK =swww1K+Math.round(swww1O*0.625)
+	document.getElementById("wsaatlanteKK").innerHTML =   33
+	
+	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
+	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
+	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
+	document.getElementById("wseekC").innerHTML =   111	
+	document.getElementById("wseekO").innerHTML =   222
+	document.getElementById("wseekK").innerHTML =   333
+	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
+	document.getElementById("wseekKK").innerHTML =   444	
+}
+
+	
+	
+	
+</script>
+
+<body onload="Debut()">
+
+
+<table style="height: 45%;  width: 75%;">
+<tr>
+<td rowspan="6"><span style="color: #0000ff;">Je veux comparer la  <strong>force</strong> et la <strong>rentatbilité</strong> des unités de 
+				</td>
+				<td colspan="2"></td>
+				<td style=" text-align: center;">Quantit&eacute; à produire</td>
+				<td></td>
+				<td style="width: 70.4px; text-align: center;">Calcaire<br><img style="float:right align: center;" src="Image/calc.png" width="30" height="30" ></td>
+				<td style="width: 70.4px; text-align: center;">Obsidienne<br><img style="float:right align: center;" src="Image/obsi.png" width="30" height="30" ></td>
+				<td style="width: 70.4px; text-align: center;">Cacao<br><img style="float:right align: center;" src="Image/xacai.png" width="30" height="30" ></td>
+				<td style="width: 20px;">&nbsp;</td>
+							<td style="text-align: center;">
+							<div class="dropdown">
+							<span style="color: #0000ff;">CacaoEqui<br></span>
+							<img style="align: center;" src="Image/xacaEqii.png" width="30" height="30" >
+							 <div class="dropdown-content">
+								<p><DIV>Le cacaoEquitable (CacaoEqui) est calculé en convertissant <br>
+								toutes les ressources en cacao ; ce qui permet <br>
+								de comparer les coûts de 2 'objets' de nature différente.</DIV></p>
+							  </div>
+							</div>
+							</td>
+				<td style="text-align: center;">Attaque</td>
+				<td style="text-align: center;">Défense</td>
+				<td style="text-align: center;">Attaque pour 1000 Equi</td>
+				<td style="text-align: center;">Défense pour 1000 Equi</td>	
+				</tr>
+				<tr>
+
+				<td style="width: 78px;">Guerrier Aigle</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
+				<td ><input type="number" id="wsaigle" name="aigle" step="100" onchange="myFunction4()" value="100"></td>
+				<td style="width: 8px;" >></td>
+				<td style="width: 65px;" id="wsaaigleC">0</td>
+				<td style="width: 79px;" id="wsaaigleO">00</td>
+				<td style="width: 46px;" id="wsaaigleK">000</td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="wsaaigleKK">0000</td>
+				<td style="align: left;" >
+					<div class="container">
+					<div class="centered">
+					<strong><span id="Attak1">Bas</span></strong>
+					</div>	
+					<img style="align: left;" id="BR1" src="Image/barrerouge.png" width="15" height="15" >
+					
+					</div>
+						</td>
+				<td style="align: left;" >
+					<strong><div id="Def1">Bas</div></strong>
+					<img style="align: left;"  id="BB1" src="Image/barrebleu.png" width="15" height="15" >
+				</td>
+				</tr>
+				<tr>
+				<td style="width: 78px;">Guerrier Jaguar</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
+				<td ><input type="number" id="wsjaguar" name="jaguar" step="100" value="100" onchange="myFunction4()"></td>
+				<td style="width: 8px;" >	>	</td>
+				<td style="width: 65px;" id="wsjjaguarC">1</td>
+				<td style="width: 79px;" id="wsjjaguarO">11</td>
+				<td style="width: 46px;" id="wsjjaguarK">111</td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="wsjjaguarKK">1111</td>
+				<td style="align: center;" >
+					<strong><div id="Attak2">Bas</div></strong>
+					<img style="align: left;"  id="BR2" src="Image/barrerouge.png" width="15" height="15" >
+				</td>
+				<td style="align: left;" >
+					<strong><div id="Def2">Bas</div></strong>
+					<img style="align: left;"  id="BB2" src="Image/barrebleu.png" width="15" height="15" >
+				</td>					
+				</tr>
+				<tr>
+				<td style="width: 78px;">Atlante</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
+				<td ><input type="number" id="wsatlante" name="atlante" step="100" onchange="myFunction4()"  value="100"></td>
+				<td style="width: 8px;" >>				</td>
+				<td style="width: 65px;"  id="wsaatlanteC">2</td>
+				<td style="width: 79px;" id="wsaatlanteO" >22</td>
+				<td style="width: 46px;" id="wsaatlanteK">222</td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="wsaatlanteKK">2222</td>
+					<td style="align: center;" >
+					<strong><div id="Attak3">Bas</div></strong>
+					<img  id="BR3" src="Image/barrerouge.png" width="15" height="15" >
+				</td>	
+				<td style="align: center;" >
+					<strong><div id="Def3">Bas</div></strong>
+					<img  id="BB3" src="Image/barrebleu.png" width="15" height="15" >
+				</td>					
+				</tr>
+				<tr>
+				<td style="width: 78px;">Ek Chuah</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
+				<td ><input type="number" id="wsek" name="ek" step="100" onchange="myFunction4()" value="100"></td>
+				
+				<td style="width: 8px;">>	
+				</td>
+				<td style="width: 65px;" id="wseekC">3</td>
+				<td style="width: 79px;" id="wseekO">33</td>
+				<td style="width: 46px;" id="wseekK">333</td>
+				<td style="width: 20px;">=</td>
+				<td style="width: 21px;" id="wseekKK">3333</td>
+					<td style="align: left;" >
+					<strong><div id="Attak4">Bas</div></strong>
+					<img  id="BR4" src="Image/barrerouge.png" width="15" height="15" >
+				</td>
+				<td style="align: left;" >
+					<strong><div id="Def4">Bas</div></strong>
+					<img  id="BB4" src="Image/barrebleu.png" width="15" height="15" >
+				</td>					
+				</tr>
+
+				<tr>
+				<td style="width: 78px;">Diplomatie</td>
+				<td style="width: 31px;"><img style="float:right" src="Image/diplomatie.PNG" width="50" height="50" ></td>
+				<td style="width: 49px;">	
+					<select name="NiveauDiplo" id="ssDiplo" onchange="myFunction4()">
+						    <option value="0">0</option>
+						    <option value="1">1</option>
+						    <option value="2">2</option>
+						    <option value="3">3</option>
+							<option value="4">4</option>
+						    <option value="5">5</option>
+						    <option value="6">6</option>
+						    <option value="7">7</option>	
+						    <option value="8">8</option>
+						    <option value="9">9</option>
+						    <option value="10">10</option>	
+							<option value="11">11</option>
+							<option value="12">12</option>	
+							<option value="13">13</option>
+							<option value="14">14</option>	
+							<option value="15">15</option>
+							<option value="16">16</option>	
+						    <option value="17">17</option>	
+						    <option value="18">18</option>	
+						    <option value="19">19</option>
+							<option value="20" selected="selected">20</option>	
+						    <option value="21">21</option>
+						    <option value="22">22</option>	
+						    <option value="23">23</option>
+							<option value="24">24</option>	
+						    <option value="25">25</option>
+						    <option value="26">26</option>	
+						    <option value="27">27</option>	
+						    <option value="28">28</option>	
+						    <option value="29">29</option>
+						    <option value="30">30</option>	
+				  </select></td>
+				<td></td>
+				<td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
+				<td style="width: 11.2px;"><img style="alrn:right" src="Image/devin.png" width="50" height="50" ></td>
+				<td style="width: 58.4px;"><select name="NiveauDevin" id="sDevin" onchange="myFunction4()">
+				    <option value="0">0</option>
+				    <option value="1">1</option>
+				    <option value="2">2</option>
+				    <option value="3">3</option>
+				    <option value="4">4</option>
+				    <option value="5">5</option>
+				    <option value="6">6</option>
+				    <option value="7">7</option>	
+				    <option value="8">8</option>
+				    <option value="9">9</option>
+				    <option value="10" selected="selected">10</option>		
+				    <option value="11">11</option>
+				    <option value="12">12</option>
+				    <option value="13">13</option>
+				    <option value="14">14</option>
+				    <option value="15">15</option>
+				    <option value="16">16</option>
+				    <option value="17">17</option>	
+				    <option value="18">18</option>
+				    <option value="19">19</option>
+				    <option value="20" >20</option>		
+				    <option value="21">21</option>
+				    <option value="22">22</option>
+				    <option value="23">23</option>
+				    <option value="24">24</option>
+				    <option value="25">25</option>
+				    <option value="26">26</option>
+				    <option value="27">27</option>	
+				    <option value="28">28</option>
+				    <option value="29">29</option>	
+				  </select></td>	
+					
+				<td style="width: 90.6px; text-align: right;">Temazca</td>
+				<td style="width: 11.2px;"><img style="float:right" src="Image/tema.png" width="50" height="50" ></td>
+				<td style="width: 58.4px;"><select name="NiveauDevin" id="sTema" onchange="myFunction4()">
+				    <option value="0">0</option>
+				    <option value="1">1</option>
+				    <option value="2">2</option>
+				    <option value="3">3</option>
+				    <option value="4">4</option>
+				    <option value="5">5</option>
+				    <option value="6">6</option>
+				    <option value="7">7</option>	
+				    <option value="8">8</option>
+				    <option value="9">9</option>
+				    <option value="10" selected="selected">10</option>		
+				    <option value="11">11</option>
+				    <option value="12">12</option>
+				    <option value="13">13</option>
+				    <option value="14">14</option>
+				    <option value="15">15</option>
+				    <option value="16">16</option>
+				    <option value="17">17</option>	
+				    <option value="18">18</option>
+				    <option value="19">19</option>
+				    <option value="20" >20</option>		
+				    <option value="21">21</option>
+				    <option value="22">22</option>
+				    <option value="23">23</option>
+				    <option value="24">24</option>
+				    <option value="25">25</option>
+				    <option value="26">26</option>
+				    <option value="27">27</option>	
+				    <option value="28">28</option>
+				    <option value="29">29</option>	
+				  </select></td>
+				</tr>
+				
+				</table>	
+<table >	
+	<tr>
+	<td colspan="5">Force totale d'attaque<br></td>
+	<td colspan="4">Force totale de défense</td>
+	<td colspan="4">Force totale d'attaque pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
+	<td colspan="4">Force totale de défense pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
+	</tr>
+	
+	<tr>	
+	<td  colspan="4">
+	<canvas align='left" id="myCanvas" width="240" height="100" style="border:1px solid #d3d3d3;">
+	</canvas>
+	</td>
+	<td width="50px">ooooo</td>
+	<td width="50px">ooooo</td>
+		       
+	<td  colspan="4"><canvas align='left" id="myCanvas1" width="240" height="100" style="border:1px solid #d3d3d3;">
+	</canvas></td>
+	<td  colspan="4"><canvas align='left" id="myCanvas2" width="240" height="100" style="border:2px solid #d3d3d3;">
+	</canvas></td>		
+	<td  colspan="4"><canvas align='left" id="myCanvas3" width="240" height="100" style="border:2px solid #d3d3d3;">
+	</canvas></td>		
+	
+
+		
+		
+	</tr>
+	<tr>
+		<td id="myC">1</td>
+		<td id="myC1">2</td>
+		<td id="myC2">3</td>
+		<td id="myC3">4</td>
+		<td></td>
+		
+		<td id="myC4">1</td>
+		<td id="myC5">2</td>
+		<td id="myC6">3</td>
+		<td id="myC7">4</td>
+		
+		<td id="myC8">1</td>
+		<td id="myC9">2</td>
+		<td id="myC10">3</td>
+		<td id="myC11">4</td>	
+		
+		<td id="myC12">1</td>
+		<td id="myC13">2</td>
+		<td id="myC14">3</td>
+		<td id="myC15">4</td>	
+		
+	</tr>	
+	<tr>		
+		<td style="width: 50px writing-mode: vertical-lr; border-color: black black black transparent;" id="test2">
+			Guerrier<br>Aigle</td>
+		<td style="width: 50px writing-mode: vertical-lr; border-color: black transparent black transparent;" id="test2">Guerrier<br>Jaguar</td>
+		<td style="width: 50px" id="test2">Atlante <br> ...</td>
+		<td style="width: 50px" id="test2">Ek<br>Chuah</td>
+		<td></td>
+		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
+		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
+		<td style="width: 50px" id="test2">Atlante <br> ...</td>
+		<td style="width: 50px" id="test2">Ek<br>Chuah</td>	
+		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
+		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
+		<td style="width: 50px" id="test2">Atlante <br> ...</td>
+		<td style="width: 50px" id="test2">Ek<br>Chuah</td>
+		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
+		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
+		<td style="width: 50px" id="test2">Atlante</td>
+		<td style="width: 50px" id="test2">Ek<br>Chuah</td>	
+		
+	</tr>
+
+
+	
+	</table>
+
+</body>
