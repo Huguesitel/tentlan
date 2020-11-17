@@ -79,48 +79,13 @@ img:hover {
   width: 100%;
 }
 
-.slider {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 100%;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
 
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('image/slide.png');
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('image/slide.png');
-  cursor: pointer;
-}
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }	
-	
-	
-
 	
 </style>
 <script>
@@ -186,8 +151,8 @@ function myFunction() {
 	
 	var sww1O =Math.round(sw2*90000*((100-sdiplo)/100))
 	var sww1K =Math.round(sw2*134500*((100-sdiplo)/100))
-	document.getElementById("sjjaguarO").innerHTML =   ww1O
-	document.getElementById("sjjaguarK").innerHTML =   ww1K
+	document.getElementById("sjjaguarO").innerHTML =   sww1O
+	document.getElementById("sjjaguarK").innerHTML =   sww1K
 	var sww1KK =sww1K+Math.round(sww1O*0.625)
 	document.getElementById("sjjaguarKK").innerHTML =   sww1KK	
 	
@@ -223,19 +188,7 @@ function myFunction() {
 	
   
 }
-function myFunction2() {
-		document.getElementById("aigle").value = document.getElementById("saigle").value
-		document.getElementById("jaguar").value = document.getElementById("sjaguar").value	
-		document.getElementById("atlante").value = document.getElementById("satlante").value
-		document.getElementById("ek").value = document.getElementById("sek").value
-	document.getElementById("Diplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
-	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
 
-	myFunction()
-}
-
-	
-	
 	
 </script>
 
