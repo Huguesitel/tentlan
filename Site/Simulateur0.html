@@ -31,6 +31,11 @@ body {
 }
 </style>	
 <script>
+	function Debut() {
+		document.getElementById("BB1").style.background='#48b025';
+
+}
+	
 function ChangerSimul(){
 document.getElementById("BB1").style.background='#48b025';
 document.getElementById("BB2").style.background='#d15047';
@@ -70,7 +75,7 @@ document.getElementById("BB1").style.background='#d15047';
 	
 </script>  
 <head></head>
-<body>
+<body onload="Debut()">
 <div display="inline;">	
  <a href="#" id="BB1" class="myButton" display="inline;" onclick="ChangerSimul()">Simulateur de Tema Devin</a>
 <a href="#" id="BB2" class="myButton" display="inline;"  onclick="ChangerSimul1()">Simulateur de Stèle</a>
