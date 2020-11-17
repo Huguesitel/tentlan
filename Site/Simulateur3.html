@@ -115,10 +115,7 @@ Defatlante =	285000 * NiveauTema * sf2
 	if (	Defatlante>MaxDef) {MaxDef =Defatlante}
 Defek =	6650000 * NiveauTema	* sf3
 	if (	Defek>MaxDef) {MaxDef =Defek}
-Hautb =	Math.round(MaxHauteur*(1-(Defaigle/MaxDef)))
-Hautb1 =	Math.round(MaxHauteur*(1-(Defjaguar/MaxDef)))
-Hautb2 =	Math.round(MaxHauteur*(1-(Defatlante/MaxDef)))
-Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))	
+	
 	
 	
 MaxAtt = 0	
@@ -130,40 +127,24 @@ Attatlante =	20000 * NiveauDevin* sf2
 	if (	Attatlante>MaxAtt) {MaxAtt =Attatlante}
 Attek =	100000 * NiveauDevin* sf3
 	if (	Attek>MaxAtt) {MaxAtt =Attek}
-Haut =	Math.round(MaxHauteur*(1-(Attaigle/MaxAtt))
-Haut1 =	Math.round(MaxHauteur*(1-(Attjaguar/MaxAtt))
-Haut2 =	Math.round(MaxHauteur*(1-(Attatlante/MaxAtt))
-Haut3 =	Math.round(MaxHauteur*(1-(Attek/MaxAtt))
+
 
 XT1 = Math.round(Attaigle/100000)/10 + "M"	
 XT2 = Math.round(Attjaguar/100000)/10 + "M"
 XT3 = Math.round(Attatlante/100000)/10 + "M"
 XT4 = 	Math.round(Attek/100000)/10 + "M"
-	
-document.getElementById("myC").innerHTML = XT1
-document.getElementById("myC1").innerHTML = XT2
-document.getElementById("myC2").innerHTML = XT3
-document.getElementById("myC3").innerHTML = XT4
+
 document.getElementById("Attak1").innerHTML = XT1
 document.getElementById("Attak2").innerHTML = XT2
 document.getElementById("Attak3").innerHTML = XT3
 document.getElementById("Attak4").innerHTML = XT4	
-Haut =	Math.round(MaxHauteur*(1-Attaigle/MaxAtt))
-Haut1 =	Math.round(MaxHauteur*(1-Attjaguar/MaxAtt))
-Haut2 =	Math.round(MaxHauteur*(1-Attatlante/MaxAtt))
-Haut3 =	Math.round(MaxHauteur*(1-Attek/MaxAtt))
-	
-
 	
 XT5 = Math.round(Defaigle/100000)/10 + "M"	
 XT6 = Math.round(Defjaguar/100000)/10 + "M"
 XT7 = Math.round(Defatlante/100000)/10 + "M"
 XT8 = 	Math.round(Defek/100000)/10 + "M"
 
-document.getElementById("myC4").innerHTML = XT5
-document.getElementById("myC5").innerHTML = XT6
-document.getElementById("myC6").innerHTML = XT7
-document.getElementById("myC7").innerHTML = XT8
+
 document.getElementById("Def1").innerHTML = XT5
 document.getElementById("Def2").innerHTML = XT6
 document.getElementById("Def3").innerHTML = XT7
@@ -202,6 +183,15 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	document.getElementById("wseekK").innerHTML =   swwww1K
 	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
 	document.getElementById("wseekKK").innerHTML =   swwww1KK	
+
+Haut =	Math.round(MaxHauteur*(1-(Attaigle/MaxAtt)))
+Haut1 =	Math.round(MaxHauteur*(1-(Attjaguar/MaxAtt)))
+Haut2 =	Math.round(MaxHauteur*(1-(Attatlante/MaxAtt)))
+Haut3 =	Math.round(MaxHauteur*(1-(Attek/MaxAtt)))
+Hautb =	Math.round(MaxHauteur*(1-(Defaigle/MaxDef)))
+Hautb1 =	Math.round(MaxHauteur*(1-(Defjaguar/MaxDef)))
+Hautb2 =	Math.round(MaxHauteur*(1-(Defatlante/MaxDef)))
+Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))
 	
 	document.getElementById("BR1").style.width =Haut ;
 	document.getElementById("BR2").style.width = Haut1;
@@ -445,74 +435,6 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 				</tr>
 				
 				</table>	
-<table >	
-	<tr>
-	<td colspan="5">Force totale d'attaque<br></td>
-	<td colspan="4">Force totale de défense</td>
-	<td colspan="4">Force totale d'attaque pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
-	<td colspan="4">Force totale de défense pour<br><span style="color: #ff0000;"><strong>1000</strong></span> CacaoRqui dépensés</td>
-	</tr>
-	
-	<tr>	
-	<td  colspan="4">	</td>
-	<td width="50px">ooooo</td>
-	<td width="50px">ooooo</td>
-		       
-	<td  colspan="4"></td>
-	<td  colspan="4"></td>		
-	<td  colspan="4"></td>		
-	
 
-		
-		
-	</tr>
-	<tr>
-		<td id="myC">1</td>
-		<td id="myC1">2</td>
-		<td id="myC2">3</td>
-		<td id="myC3">4</td>
-		<td></td>
-		
-		<td id="myC4">1</td>
-		<td id="myC5">2</td>
-		<td id="myC6">3</td>
-		<td id="myC7">4</td>
-		
-		<td id="myC8">1</td>
-		<td id="myC9">2</td>
-		<td id="myC10">3</td>
-		<td id="myC11">4</td>	
-		
-		<td id="myC12">1</td>
-		<td id="myC13">2</td>
-		<td id="myC14">3</td>
-		<td id="myC15">4</td>	
-		
-	</tr>	
-	<tr>		
-		<td style="width: 50px writing-mode: vertical-lr; border-color: black black black transparent;" id="test2">
-			Guerrier<br>Aigle</td>
-		<td style="width: 50px writing-mode: vertical-lr; border-color: black transparent black transparent;" id="test2">Guerrier<br>Jaguar</td>
-		<td style="width: 50px" id="test2">Atlante <br> ...</td>
-		<td style="width: 50px" id="test2">Ek<br>Chuah</td>
-		<td></td>
-		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
-		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
-		<td style="width: 50px" id="test2">Atlante <br> ...</td>
-		<td style="width: 50px" id="test2">Ek<br>Chuah</td>	
-		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
-		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
-		<td style="width: 50px" id="test2">Atlante <br> ...</td>
-		<td style="width: 50px" id="test2">Ek<br>Chuah</td>
-		<td style="width: 50px" id="test2">Guerrier<br>Aigle</td>
-		<td style="width: 50px" id="test2">Guerrier<br>Jaguar</td>
-		<td style="width: 50px" id="test2">Atlante</td>
-		<td style="width: 50px" id="test2">Ek<br>Chuah</td>	
-		
-	</tr>
-
-
-	
-	</table>
 
 </body>
