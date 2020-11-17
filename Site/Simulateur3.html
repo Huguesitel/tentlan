@@ -115,10 +115,10 @@ Defatlante =	285000 * NiveauTema * sf2
 	if (	Defatlante>MaxDef) {MaxDef =Defatlante}
 Defek =	6650000 * NiveauTema	* sf3
 	if (	Defek>MaxDef) {MaxDef =Defek}
-Hautb =	Math.round(MaxHauteur*(1-Defaigle/MaxDef))
-Hautb1 =	Math.round(MaxHauteur*(1-Defjaguar/MaxDef))
-Hautb2 =	Math.round(MaxHauteur*(1-Defatlante/MaxDef))
-Hautb3 =	Math.round(MaxHauteur*(1-Defek/MaxDef))	
+Hautb =	Math.round(MaxHauteur*(1-(Defaigle/MaxDef)))
+Hautb1 =	Math.round(MaxHauteur*(1-(Defjaguar/MaxDef)))
+Hautb2 =	Math.round(MaxHauteur*(1-(Defatlante/MaxDef)))
+Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))	
 	
 	
 MaxAtt = 0	
@@ -130,10 +130,10 @@ Attatlante =	20000 * NiveauDevin* sf2
 	if (	Attatlante>MaxAtt) {MaxAtt =Attatlante}
 Attek =	100000 * NiveauDevin* sf3
 	if (	Attek>MaxAtt) {MaxAtt =Attek}
-Haut =	Math.round(MaxHauteur*Attaigle/MaxAtt)
-Haut1 =	Math.round(MaxHauteur*Attjaguar/MaxAtt)
-Haut2 =	Math.round(MaxHauteur*Attatlante/MaxAtt)
-Haut3 =	Math.round(MaxHauteur*Attek/MaxAtt)
+Haut =	Math.round(MaxHauteur*(1-(Attaigle/MaxAtt))
+Haut1 =	Math.round(MaxHauteur*(1-(Attjaguar/MaxAtt))
+Haut2 =	Math.round(MaxHauteur*(1-(Attatlante/MaxAtt))
+Haut3 =	Math.round(MaxHauteur*(1-(Attek/MaxAtt))
 
 XT1 = Math.round(Attaigle/100000)/10 + "M"	
 XT2 = Math.round(Attjaguar/100000)/10 + "M"
