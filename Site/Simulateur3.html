@@ -155,11 +155,11 @@ document.getElementById("Def4").innerHTML = XT8
 var wsdiplo =  document.getElementById("ssDiplo").value;
 
 	var sw1O =Math.round(sf*17500*((100-wsdiplo)/100))
-	document.getElementById("wsaaigleO").innerHTML =   sw1O
+	document.getElementById("wsaaigleO").innerHTML =   Math.round(sw1O/100000)/10 + "M"
 	var sw1K =Math.round(sf*7000*((100-wsdiplo)/100))
-	document.getElementById("wsaaigleK").innerHTML =   sw1K
+	document.getElementById("wsaaigleK").innerHTML =   Math.round(sw1K/100000)/10 + "M"
 	var sw1KK =sw1K+Math.round(sw1O*0.625)
-	document.getElementById("wsaaigleKK").innerHTML =   sw1KK
+	document.getElementById("wsaaigleKK").innerHTML =   Math.round(sw1KK/100000)/10 + "M"
 	
 	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
 	document.getElementById("wsjjaguarO").innerHTML =   sww1O
@@ -184,14 +184,14 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
 	document.getElementById("wseekKK").innerHTML =   swwww1KK	
 
-Haut =	Math.round(MaxHauteur*(1-(Attaigle/MaxAtt)))
-Haut1 =	Math.round(MaxHauteur*(1-(Attjaguar/MaxAtt)))
-Haut2 =	Math.round(MaxHauteur*(1-(Attatlante/MaxAtt)))
-Haut3 =	Math.round(MaxHauteur*(1-(Attek/MaxAtt)))
-Hautb =	Math.round(MaxHauteur*(1-(Defaigle/MaxDef)))
-Hautb1 =	Math.round(MaxHauteur*(1-(Defjaguar/MaxDef)))
-Hautb2 =	Math.round(MaxHauteur*(1-(Defatlante/MaxDef)))
-Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))
+Haut =	Math.round(MaxHauteur*((Attaigle/MaxAtt)))
+Haut1 =	Math.round(MaxHauteur*((Attjaguar/MaxAtt)))
+Haut2 =	Math.round(MaxHauteur*((Attatlante/MaxAtt)))
+Haut3 =	Math.round(MaxHauteur*((Attek/MaxAtt)))
+Hautb =	Math.round(MaxHauteur*((Defaigle/MaxDef)))
+Hautb1 =	Math.round(MaxHauteur*((Defjaguar/MaxDef)))
+Hautb2 =	Math.round(MaxHauteur*((Defatlante/MaxDef)))
+Hautb3 =	Math.round(MaxHauteur*((Defek/MaxDef)))
 	
 	document.getElementById("BR1").style.width =Haut ;
 	document.getElementById("BR2").style.width = Haut1;
@@ -264,13 +264,14 @@ Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))
 					<strong><div id="Def1">Bas</div></strong>
 					<img style="align: left;"  id="BB1" src="Image/barrebleu.png" width="15" height="15" >
 				</td>
+				<td></td><td></td>	
 				</tr>
 				<tr>
 				<td style="width: 78px;">Guerrier Jaguar</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsjaguar" name="jaguar" step="100" value="100" onchange="myFunction4()"></td>
 				<td style="width: 8px;" >	>	</td>
-				<td style="width: 65px;" id="wsjjaguarC">1</td>
+				<td style="width: 65px;" id="wsjjaguarC">0</td>
 				<td style="width: 79px;" id="wsjjaguarO">11</td>
 				<td style="width: 46px;" id="wsjjaguarK">111</td>
 				<td style="width: 20px;">=</td>
@@ -282,14 +283,15 @@ Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))
 				<td style="align: left;" >
 					<strong><div id="Def2">Bas</div></strong>
 					<img style="align: left;"  id="BB2" src="Image/barrebleu.png" width="15" height="15" >
-				</td>					
+				</td>	
+				<td></td><td></td>	
 				</tr>
 				<tr>
 				<td style="width: 78px;">Atlante</td>
 				<td style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
 				<td ><input type="number" id="wsatlante" name="atlante" step="100" onchange="myFunction4()"  value="100"></td>
 				<td style="width: 8px;" >>				</td>
-				<td style="width: 65px;"  id="wsaatlanteC">2</td>
+				<td style="width: 65px;"  id="wsaatlanteC">0</td>
 				<td style="width: 79px;" id="wsaatlanteO" >22</td>
 				<td style="width: 46px;" id="wsaatlanteK">222</td>
 				<td style="width: 20px;">=</td>
@@ -301,7 +303,8 @@ Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))
 				<td style="align: center;" >
 					<strong><div id="Def3">Bas</div></strong>
 					<img  id="BB3" src="Image/barrebleu.png" width="15" height="15" >
-				</td>					
+				</td>
+					<td></td><td></td>
 				</tr>
 				<tr>
 				<td style="width: 78px;">Ek Chuah</td>
@@ -322,7 +325,8 @@ Hautb3 =	Math.round(MaxHauteur*(1-(Defek/MaxDef)))
 				<td style="align: left;" >
 					<strong><div id="Def4">Bas</div></strong>
 					<img  id="BB4" src="Image/barrebleu.png" width="15" height="15" >
-				</td>					
+				</td>
+					<td></td><td></td>
 				</tr>
 
 				<tr>
