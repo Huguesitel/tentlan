@@ -124,14 +124,14 @@ function myFunction3() {
 		document.getElementById("Ntribal6").innerHTML = Ntribal1
 		document.getElementById("Nceram36").innerHTML = Nceramique1
 	
-	var volumeentrepot1 = Stock[Nentrepot1] //*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
+	//var volumeentrepot1 = Stock[Nentrepot1] //*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
 	// volumeentrepot*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
 	
 	//1,19	9 883
 	//var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
-	document.getElementById("eeentrepot").innerHTML =volumeentrepot1
-	document.getElementById("tttribal").innerHTML =volumeentrepot1*((0.005*Ntribal))
-	document.getElementById("ccceramique").innerHTML =volumeentrepot1*((0.03*Nceramique))
+	document.getElementById("eeentrepot").innerHTML = Stock[3] // volumeentrepot1
+	document.getElementById("tttribal").innerHTML = 1 //volumeentrepot1*((0.005*Ntribal))
+	document.getElementById("ccceramique").innerHTML =2 //volumeentrepot1*((0.03*Nceramique))
 
 }
 
@@ -219,12 +219,12 @@ function myFunction3() {
 	Tribal à <span style="color: #326fa8;" id="Ntribal1">11</span> <br>
 	Céramique à <span style="color: #326fa8;" id="Nceram1">11</span> <br>
 	</td>
-<td style="width: 10.4px;" id="eeentrepot"></td>
-<td style="width: 58.4px;" id="eentrepotC"></td>
-<td style="width: 79.2px;" id="eentrepotO"></td>
-<td style="width: 44px;" id="eentrepotK"></td>
+<td style="width: 10.4px;" id="eeentrepot">...</td>
+<td style="width: 58.4px;" id="eentrepotC">....</td>
+<td style="width: 79.2px;" id="eentrepotO">.....</td>
+<td style="width: 44px;" id="eentrepotK">......</td>
 <td style="width: 25.6px;">=</td>
-<td style="width: 18.4px;" id="eentrepotKK"></td>
+<td style="width: 18.4px;" id="eentrepotKK">TT</td>
 <td style="align: center;"> <strong><div id="Totaleentrepot">UP</div></strong><br>
 	<img  id="PouceUP" src="Image/pouceV.png" width="10" height="10" ><br></td>
 </tr>
