@@ -125,11 +125,8 @@ img:hover {
 </style>
 <script>
 function Debut() {
-		myFunction()
-		//myFunction4()
-		//myFunction3()	
-
-		//myFunction5()
+		
+		myFunction4()
 }
 
 function myFunction4() { 
@@ -206,15 +203,6 @@ document.getElementById("Def2").innerHTML = XT6
 document.getElementById("Def3").innerHTML = XT7
 document.getElementById("Def4").innerHTML = XT8
 
-//Dessiner(15,0,30,Haut,"red",60,XT1,"myCanvas")
-//Dessiner(85,0,30,Haut1,"red",60,XT2,"myCanvas")
-//Dessiner(150,0,30,Haut2,"red",60,XT3,"myCanvas")	
-//Dessiner(210,0,30,Haut3,"red",60,XT4,"myCanvas")	
-	
-//Dessiner(15,0,30,Hautb,"blue",60,XT5,"myCanvas1")	
-//Dessiner(75,0,30,Hautb1,"blue",60,XT6,"myCanvas1")
-//Dessiner(150,0,30,Hautb2,"blue",60,XT7,"myCanvas1")	
-//Dessiner(210,0,30,Hautb3,"blue",60,XT8,"myCanvas1")
 	
 document.getElementById("wsjjaguarC").innerHTML =   777777
 //var wsdiplo =  document.getElementById("ssDiplo").value;
@@ -263,24 +251,7 @@ document.getElementById("wsjjaguarC").innerHTML =   777777
 }
 	
 
-function Dessiner(XX,YY,Lag,Hau,Cou,MaxHau,TxtD,Kankan) {
-var c = document.getElementById(Kankan);
-var ctx = c.getContext("2d");	
-ctx.beginPath();
-ctx.lineWidth = "8";
-ctx.fillStyle = Cou;
-ctx.fillRect(XX, MaxHau-Hau+25, Lag, Hau);  
-ctx.font = "10px Verdana";
-ctx.fillStyle = "black";
-ctx.fillText(TxtD, XX, MaxHau-Hau+15);
 	
-}
-function Effacer(Kankan) {
-var c = document.getElementById(Kankan);
-var ctx = c.getContext("2d");
-ctx.fillStyle = "white";
-ctx.fillRect(0, 0, 240, 100);	
-}	
  	
 	
 
