@@ -125,44 +125,16 @@ img:hover {
 </style>
 <script>
 function Debut() {
-		//myFunction()
-		//myFunction4()
-		//myFunction3()	
+		myFunction()
 
-		//myFunction5()
 }
 
 	
  	
 	
 function myFunction() {
-	//alert(x)
-		document.getElementById("saigle").value = document.getElementById("aigle").value
-		document.getElementById("sjaguar").value = document.getElementById("jaguar").value	
-		document.getElementById("satlante").value = document.getElementById("atlante").value
-		document.getElementById("sek").value = document.getElementById("ek").value
-		document.getElementById("sDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
-		document.getElementById("ssDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
 
-  	var x =  parseInt(document.getElementById("Devin").value);
-	document.getElementById("DDevin").innerHTML =   x+1;
-	var y1 =Math.round(66667*Math.pow((1.8),(x+1)))
-	var y2 =Math.round(38889*Math.pow((1.8),(x+1)))
-	var y3 =Math.round(108722*Math.pow((1.8),(x+1)))
-	var y4 =Math.round(y1*0.4)
-	var y5 =Math.round(y2*0.625)
-	var y6 = y5+y4+y3
-	document.getElementById("DDevinC").innerHTML =   y1;
-	document.getElementById("DDevinO").innerHTML =   y2;
-	document.getElementById("DDevinK").innerHTML =   y3;
-	document.getElementById("DDevinKK").innerHTML =   y6;
-	var x =  parseInt(document.getElementById("Tema").value);
-	document.getElementById("TTema").innerHTML =   x+1;
-	var z1 =Math.round(83333*Math.pow((1.8),(x+1)))
-	var z2 =Math.round(94444*Math.pow((1.8),(x+1)))
-	var z3 =Math.round(75000*Math.pow((1.8),(x+1)))
-	var z4 =Math.round(z1*0.4)
-	var z5 =Math.round(z2*0.625)
+  
 
 	//*************************************** stele
 	 var sx =  parseInt(document.getElementById("stele").value);
@@ -248,69 +220,7 @@ function myFunction() {
 
 	}
 	
-	var z6 = z5+z4+z3
-	var z7 = z5+z4+z3+y5+y4+y3	
-	document.getElementById("TTemaC").innerHTML =   z1;
-	document.getElementById("TTemaO").innerHTML =   z2;
-	document.getElementById("TTemaK").innerHTML =   z3;
-	document.getElementById("TTemaKK").innerHTML =   z6;	
-	document.getElementById("TotalKK").innerHTML =   Math.round(z7/1000000) + " M";
 	
-	var w =  parseInt(document.getElementById("aigle").value);
-	var w1 =Math.round(w*0.02)
-	document.getElementById("aaigle").innerHTML =   w1;
-	var ww =  parseInt(document.getElementById("jaguar").value);
-	var w2 =Math.round(ww*0.02)
-	document.getElementById("jjaguar").innerHTML =   w2;
-	var www =  parseInt(document.getElementById("atlante").value);
-	var w3 =Math.round(www*0.02)
-	document.getElementById("aatlante").innerHTML =   w3;	
-	var wwww =  parseInt(document.getElementById("ek").value);
-	var w4 =Math.round(wwww*0.02)
-	document.getElementById("eek").innerHTML =   w4;
-	
-	var diplo =  parseInt(document.getElementById("Diplo").value);
-	var w1O =Math.round(w1*17500*((100-diplo)/100))
-	document.getElementById("aaigleO").innerHTML =   w1O
-	var w1K =Math.round(w1*7000*((100-diplo)/100))
-	document.getElementById("aaigleK").innerHTML =   w1K
-	var w1KK =w1K+Math.round(w1O*0.625)
-	document.getElementById("aaigleKK").innerHTML =   w1KK
-		
-	var ww1O =Math.round(w2*90000*((100-diplo)/100))
-	var ww1K =Math.round(w2*134500*((100-diplo)/100))
-	document.getElementById("jjaguarO").innerHTML =   ww1O
-	document.getElementById("jjaguarK").innerHTML =   ww1K
-	var ww1KK =ww1K+Math.round(ww1O*0.625)
-	document.getElementById("jjaguarKK").innerHTML =   ww1KK	
-	
-	var www1O =Math.round(w3*550000*((100-diplo)/100))
-	var www1K =Math.round(w3*400000*((100-diplo)/100))
-	document.getElementById("aatlanteO").innerHTML =   www1O
-	document.getElementById("aatlanteK").innerHTML =   www1K
-	var www1KK =www1K+Math.round(www1O*0.625)
-	document.getElementById("aatlanteKK").innerHTML =   www1KK
-	
-	var wwww1C =Math.round(w4*10000000*((100-diplo)/100))	
-	var wwww1O =Math.round(w4*5000000*((100-diplo)/100))
-	var wwww1K =Math.round(w4*1000000*((100-diplo)/100))
-	document.getElementById("eekC").innerHTML =   wwww1C	
-	document.getElementById("eekO").innerHTML =   wwww1O
-	document.getElementById("eekK").innerHTML =   wwww1K
-	var wwww1KK =Math.round(wwww1C*0.4)+Math.round(wwww1O*0.625)+wwww1K
-	document.getElementById("eekKK").innerHTML =   wwww1KK
-	
-	TotalKKK = w1KK+ww1KK+www1KK+wwww1KK
-	document.getElementById("TotalKK2").innerHTML =   Math.round(TotalKKK/1000000) + " M"
-if (z7<TotalKKK) {
-	document.getElementById("PouceUP").setAttribute("src", "Image/pouceV.png");
-	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceR.png");	
-}
-	else {
-	document.getElementById("PouceUP").setAttribute("src", "Image/pouceR.png");
-	document.getElementById("PouceDOWN").setAttribute("src", "Image/pouceV.png");	
-
-	}
   
 }
 function myFunction2() {
