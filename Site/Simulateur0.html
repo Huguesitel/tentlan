@@ -40,11 +40,11 @@ function ChangerSimul()(){
 
 	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur.html" ;
 }
-function ChangerSimul2()(){
+function ChangerSimul1()(){
 	 document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Progression.html" ;
 	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur1.html" ;
 }
-	function ChangerSimul1()(){
+function ChangerSimul2()(){
 	 document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Progression.html" ;
 	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur1.html" ;
 }
@@ -55,17 +55,19 @@ function ChangerSimul3()(){
 </script>  
 <head></head>
 <body>
+<div display="inline;">	
  <a href="#" class="myButton" display="inline;" onclick="ChangerSimul()">Simulateur de Tema Devin</a>
 <a href="#" class="myButton" display="inline;"  onclick="ChangerSimul1()">Simulateur de Stèle</a>
 <a href="#" class="myButton" display="inline;"  onclick="ChangerSimul2()">Simulateur d'entrepôt</a>
 <a href="#" class="myButton" display="inline;"  onclick="ChangerSimul3()">Simulateur de troupes</a>	
+	
 	<div display="inline;" id="Ztema">1</div>
 	<div display="inline;" id="Zdevin">2</div>
 	<div display="inline;" id="Zdiplo">3</div>
 	<div display="inline;" id="Zstele">4</div>
-		
+</div>	
 <iframe id="inlineSimu"
-    width="82%" height="550" style="float:left" align="left" scrolling="auto" display="inline;" frameBorder="0"
+    width="100%" height="550" style="float:left" align="left" scrolling="auto" display="inline;" frameBorder="0"
              src="Simulateur.html">
 
 </iframe>
