@@ -104,7 +104,7 @@ function myFunction3() {
 
 
 	
-		document.getElementById("Nentre1").innerHTML =Nentrepot
+		document.getElementById("Nentre1").innerHTML =Nentrepot1
 		document.getElementById("Ntribal1").innerHTML = Ntribal
 		document.getElementById("Nceram1").innerHTML = Nceramique
 		document.getElementById("Nentre2").innerHTML = Nentrepot
@@ -124,14 +124,14 @@ function myFunction3() {
 		document.getElementById("Ntribal6").innerHTML = Ntribal1
 		document.getElementById("Nceram36").innerHTML = Nceramique1
 	
-	//var volumeentrepot1 = Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
+	var volumeentrepot1 = Stock[Nentrepot1] //*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
 	// volumeentrepot*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
 	
 	//1,19	9 883
 	//var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
-	//document.getElementById("eeentrepot").innerHTML =volumeentrepot1
-	//document.getElementById("tttribal").innerHTML =1000000
-	//document.getElementById("ccceramique").innerHTML =2000000
+	document.getElementById("eeentrepot").innerHTML =volumeentrepot1
+	document.getElementById("tttribal").innerHTML =volumeentrepot1*((0.005*Ntribal))
+	document.getElementById("ccceramique").innerHTML =volumeentrepot1*((0.03*Nceramique))
 
 }
 
