@@ -5,11 +5,7 @@ body {
   font: 16px Verdana, sans-serif;	
   }
 	
-//canvas {
-//    margin-left: auto;
-//    margin-right: auto;
-//    //width: 6em
-//}
+
 
 .dropdown {
   position: relative;
@@ -75,43 +71,7 @@ img:hover {
 	cursor: pointer;  
 	 vertical-align:middle;    
     }  
-.slidecontainer {
-  width: 100%;
-}
 
-.slider {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 100%;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('image/slide.png');
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('image/slide.png');
-  cursor: pointer;
-}
 .centered {
   position: absolute;
   top: 50%;
@@ -125,11 +85,8 @@ img:hover {
 </style>
 <script>
 function Debut() {
-		//myFunction()
-		//myFunction4()
-		//myFunction3()	
+		myFunction()
 
-		//myFunction5()
 }
 
 	
@@ -141,8 +98,8 @@ function myFunction() {
 		document.getElementById("sjaguar").value = document.getElementById("jaguar").value	
 		document.getElementById("satlante").value = document.getElementById("atlante").value
 		document.getElementById("sek").value = document.getElementById("ek").value
-		document.getElementById("sDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
-		document.getElementById("ssDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
+		//document.getElementById("sDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
+		//document.getElementById("ssDiplo").selectedIndex = document.getElementById("Diplo").selectedIndex
 
   	var x =  parseInt(document.getElementById("Devin").value);
 	document.getElementById("DDevin").innerHTML =   x+1;
@@ -163,93 +120,9 @@ function myFunction() {
 	var z3 =Math.round(75000*Math.pow((1.8),(x+1)))
 	var z4 =Math.round(z1*0.4)
 	var z5 =Math.round(z2*0.625)
-
-	//*************************************** stele
-	 var sx =  parseInt(document.getElementById("stele").value);
-	var ssx =sx +1
-	document.getElementById("sstele").innerHTML =   ssx;
-	 var Proba10=(sx-9)/(sx+1)
-	 var Proba9=1-Proba10
-	 var Esperance =(4,5*Proba9)+(Proba10*10)	 
-	 var dProba10=(ssx-9)/(ssx+1)
-	 var dProba9=1-Proba10
-	 var dEsperance =(4,5*dProba9)+(dProba10*10) 
-	var ddEsperance = dEsperance -Esperance
-	if (sx <10) {
-		var ddEsperance = 0.05
-	}
-	document.getElementById("PC").innerHTML = (Math.round(ddEsperance*100)/100) + "%" ;
-	 document.getElementById("ssstele").innerHTML = (Math.round(ddEsperance*100)/100) + "%" ;
-	var st1 =Math.round(185185*Math.pow((1.5),(ssx)))
-	document.getElementById("steleC").innerHTML =   st1;
-	var st2 =Math.round(51851*Math.pow((1.5),(ssx)))
-	document.getElementById("steleO").innerHTML =   st2;	
-	var st3 =Math.round(118518*Math.pow((1.5),(ssx)))
-	document.getElementById("steleK").innerHTML =   st3;	
-	var st4 =Math.round(st1*0.4)
-	var st5 =Math.round(st2*0.625)
-	var st6 = st5+st4+st3
-	document.getElementById("steleKKK").innerHTML =   Math.round(st6/1000000) + " M";;
-	
-	var sw =  parseInt(document.getElementById("saigle").value);
-	var sw1 =Math.round(sw*ddEsperance/10)
-	document.getElementById("saaigle").innerHTML =   sw1;
-	var sww =  parseInt(document.getElementById("sjaguar").value);
-	var sw2 =Math.round(sww*ddEsperance/10)
-	document.getElementById("sjjaguar").innerHTML =   sw2;
-	var swww =  parseInt(document.getElementById("satlante").value);
-	var sw3 =Math.round(swww*ddEsperance/10)
-	document.getElementById("saatlante").innerHTML =   sw3;	
-	var swwww =  parseInt(document.getElementById("sek").value);
-	var sw4 =Math.round(swwww*ddEsperance/10)
-	document.getElementById("seek").innerHTML =  sw4;
-	
-	var sdiplo =  parseInt(document.getElementById("sDiplo").value);
-	var sw1O =Math.round(sw1*17500*((100-sdiplo)/100))
-	document.getElementById("saaigleO").innerHTML =   sw1O
-	var sw1K =Math.round(sw1*7000*((100-sdiplo)/100))
-	document.getElementById("saaigleK").innerHTML =   sw1K
-	var sw1KK =sw1K+Math.round(sw1O*0.625)
-	document.getElementById("saaigleKK").innerHTML =   sw1KK
-	
-	var sww1O =Math.round(sw2*90000*((100-sdiplo)/100))
-	var sww1K =Math.round(sw2*134500*((100-sdiplo)/100))
-	document.getElementById("sjjaguarO").innerHTML =   ww1O
-	document.getElementById("sjjaguarK").innerHTML =   ww1K
-	var sww1KK =sww1K+Math.round(sww1O*0.625)
-	document.getElementById("sjjaguarKK").innerHTML =   sww1KK	
-	
-	var swww1O =Math.round(sw3*550000*((100-sdiplo)/100))
-	var swww1K =Math.round(sw3*400000*((100-sdiplo)/100))
-	document.getElementById("saatlanteO").innerHTML =   swww1O
-	document.getElementById("saatlanteK").innerHTML =   swww1K
-	var swww1KK =swww1K+Math.round(swww1O*0.625)
-	document.getElementById("saatlanteKK").innerHTML =   swww1KK
-	
-	var swwww1C =Math.round(sw4*10000000*((100-sdiplo)/100))	
-	var swwww1O =Math.round(sw4*5000000*((100-sdiplo)/100))
-	var swwww1K =Math.round(sw4*1000000*((100-sdiplo)/100))
-	document.getElementById("seekC").innerHTML =   swwww1C	
-	document.getElementById("seekO").innerHTML =   swwww1O
-	document.getElementById("seekK").innerHTML =   swwww1K
-	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
-	document.getElementById("seekKK").innerHTML =   swwww1KK
-	
-	sTotalKKK = sw1KK+sww1KK+swww1KK+swwww1KK
-	document.getElementById("sTotalKK2").innerHTML =   Math.round(sTotalKKK/1000000) + " M"
-	//document.getElementById("steleKK").innerHTML = st6 +" " +sTotalKKK
-	if (st6<sTotalKKK) {
-	document.getElementById("sPouceUP").setAttribute("src", "Image/pouceV.png");
-	document.getElementById("sPouceDOWN").setAttribute("src", "Image/pouceR.png");	
-}
-	else {
-	document.getElementById("sPouceUP").setAttribute("src", "Image/pouceR.png");
-	document.getElementById("sPouceDOWN").setAttribute("src", "Image/pouceV.png");	
-
-	}
-	
 	var z6 = z5+z4+z3
 	var z7 = z5+z4+z3+y5+y4+y3	
+	
 	document.getElementById("TTemaC").innerHTML =   z1;
 	document.getElementById("TTemaO").innerHTML =   z2;
 	document.getElementById("TTemaK").innerHTML =   z3;
@@ -313,20 +186,7 @@ if (z7<TotalKKK) {
 	}
   
 }
-function myFunction2() {
-		document.getElementById("aigle").value = document.getElementById("saigle").value
-		document.getElementById("jaguar").value = document.getElementById("sjaguar").value	
-		document.getElementById("atlante").value = document.getElementById("satlante").value
-		document.getElementById("ek").value = document.getElementById("sek").value
-	document.getElementById("Diplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
-	document.getElementById("ssDiplo").selectedIndex = document.getElementById("sDiplo").selectedIndex
 
-	myFunction()
-}
-
-
-	
-	
 	
 </script>
 
