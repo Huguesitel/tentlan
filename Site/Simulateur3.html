@@ -172,11 +172,11 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
 	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
 	var swwww1K =Math.round(sf3*1000000*((100-wsdiplo)/100))
-	document.getElementById("wseekC").innerHTML =   swwww1C	
-	document.getElementById("wseekO").innerHTML =   swwww1O
-	document.getElementById("wseekK").innerHTML =   swwww1K
+	document.getElementById("wseekC").innerHTML =  Million( swwww1C)	
+	document.getElementById("wseekO").innerHTML =   Million(swwww1O)
+	document.getElementById("wseekK").innerHTML =   Million(swwww1K)
 	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
-	document.getElementById("wseekKK").innerHTML =   swwww1KK	
+	document.getElementById("wseekKK").innerHTML =   Million(swwww1KK)	
 
 Haut =	Math.round(MaxHauteur*((Attaigle/MaxAtt)))
 Haut1 =	Math.round(MaxHauteur*((Attjaguar/MaxAtt)))
@@ -254,7 +254,12 @@ return BN
 				<td style="align: left;" >
 					<strong><div id="Def1">Bas</div></strong>
 				</td>
-				<td></td><td></td>
+				<td style="align: center;" >
+					<strong><div id="AttakE1">Bas</div></strong>
+				</td>
+				<td style="align: left;" >
+					<strong><div id="DefE1">Bas</div></strong>
+				</td>
 				<tr>	
 					<td>
 					<img style="float:left" id="BR1" src="Image/barrerouge.png" width="15" height="15" >
@@ -262,7 +267,10 @@ return BN
 					<td>
 					<img style="float:left"  id="BB1" src="Image/barrebleu.png" width="15" height="15" >
 					</td>
-					<td></td><td></td>
+					<td><img style="float:left" id="BRE1" src="Image/barrerouge.png" width="15" height="15" >
+					</td>
+					<td><img style="float:left"  id="BBE1" src="Image/barrebleu.png" width="15" height="15" >
+					</td>
 				</tr>
 				<tr>
 				<td  rowspan="2"  style="width: 78px;">Guerrier Jaguar</td>
@@ -280,13 +288,22 @@ return BN
 				<td style="align: left;" >
 					<strong><div id="Def2">Bas</div></strong>
 				</td>	
-				<td></td><td></td>	
+				<td style="align: center;" >
+					<strong><div id="AttakE2">Bas</div></strong>
+				</td>
+				<td style="align: left;" >
+					<strong><div id="DefE2">Bas</div></strong>
+				</td>	
 				</tr>
 				<tr>
 					<td><img style="float:left"  id="BR2" src="Image/barrerouge.png" width="15" height="15" >
 					</td>
 					<td><img style="float:left"  id="BB2" src="Image/barrebleu.png" width="15" height="15" >
 					</td>
+					<td><img style="float:left" id="BRE2" src="Image/barrerouge.png" width="15" height="15" >
+					</td>
+					<td><img style="float:left"  id="BBE2" src="Image/barrebleu.png" width="15" height="15" >
+					</td>					
 				</tr>
 				<tr>
 				<td  rowspan="2"  style="width: 78px;">Atlante</td>
@@ -304,13 +321,22 @@ return BN
 				<td style="align: center;" >
 					<strong><div id="Def3">Bas</div></strong>
 				</td>
-					<td></td><td></td>
+				<td style="align: center;" >
+					<strong><div id="AttakE3">Bas</div></strong>
+				</td>
+				<td style="align: left;" >
+					<strong><div id="DefE3">Bas</div></strong>
+				</td>
 				</tr>
 					<tr>
 					<td><img style="float:left"  id="BR3" src="Image/barrerouge.png" width="15" height="15" >
 					</td>
 					<td><img style="float:left"  id="BB3" src="Image/barrebleu.png" width="15" height="15" >
 					</td>
+					<td><img style="float:left" id="BRE3" src="Image/barrerouge.png" width="15" height="15" >
+					</td>
+					<td><img style="float:left"  id="BBE3" src="Image/barrebleu.png" width="15" height="15" >
+					</td>						
 				</tr>
 				<tr>
 				<td  rowspan="2"  style="width: 78px;">Ek Chuah</td>
@@ -330,13 +356,22 @@ return BN
 				<td style="align: left;" >
 					<strong><div id="Def4">Bas</div></strong>
 				</td>
-					<td></td><td></td>
+				<td style="align: center;" >
+					<strong><div id="AttakE4">Bas</div></strong>
+				</td>
+				<td style="align: left;" >
+					<strong><div id="DefE4">Bas</div></strong>
+				</td>
 				</tr>
 				<tr>
 					<td><img style="float:left"  id="BR4" src="Image/barrerouge.png" width="15" height="15" >
 					</td>
 					<td><img style="float:left"  id="BB4" src="Image/barrebleu.png" width="15" height="15" >
 					</td>
+					<td><img style="float:left" id="BRE4" src="Image/barrerouge.png" width="15" height="15" >
+					</td>
+					<td><img style="float:left"  id="BBE4" src="Image/barrebleu.png" width="15" height="15" >
+					</td>		
 				</tr>
 				<tr>
 				<td style="width: 78px;">Diplomatie</td>
