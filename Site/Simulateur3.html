@@ -156,8 +156,8 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	document.getElementById("wsaaigleKK").innerHTML =   Math.round(sw1KK/100000)/10 + "M"
 	var MilleA1 =1000* Attaigle/sw1KK
 	var MilleD1 =1000* Defaigle/sw1KK
-	document.getElementById("AttakE1").innerHTML =   Math.round(MilleA1/100000)/10 + "M"
-	document.getElementById("DefE1").innerHTML =   Math.round(MilleD1/100000)/10 + "M"
+	document.getElementById("AttakE1").innerHTML =   MilleA1
+	document.getElementById("DefE1").innerHTML =   MilleD1
 	
 	
 	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
@@ -166,6 +166,10 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	document.getElementById("wsjjaguarK").innerHTML =   Million(sww1K)
 	var sww1KK =sww1K+Math.round(sww1O*0.625)
 	document.getElementById("wsjjaguarKK").innerHTML =   Million(sww1KK)	
+	var MilleA2 =1000* Attjaguar/sww1KK
+	var MilleD2 =1000* Defjaguar/sww1KK
+	document.getElementById("AttakE2").innerHTML =   MilleA2
+	document.getElementById("DefE2").innerHTML =   MilleD2
 	
 	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
 	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
@@ -173,6 +177,10 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	document.getElementById("wsaatlanteK").innerHTML =   Million(swww1K)
 	var swww1KK =swww1K+Math.round(swww1O*0.625)
 	document.getElementById("wsaatlanteKK").innerHTML =   Million(swww1KK)
+	var MilleA3 =1000* Attatlante/swww1KK
+	var MilleD3 =1000* Defatlante/swww1KK
+	document.getElementById("AttakE3").innerHTML =   MilleA3
+	document.getElementById("DefE3").innerHTML =   MilleD3
 	
 	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
 	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
@@ -182,7 +190,11 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	document.getElementById("wseekK").innerHTML =   Million(swwww1K)
 	var swwww1KK =Math.round(swwww1C*0.4)+Math.round(swwww1O*0.625)+swwww1K
 	document.getElementById("wseekKK").innerHTML =   Million(swwww1KK)	
-
+	var MilleA4 =1000* Attek/swwww1KK
+	var MilleD4 =1000* Defek/swwww1KK
+	document.getElementById("AttakE4").innerHTML =   MilleA4
+	document.getElementById("DefE4").innerHTML =   MilleD4
+	
 Haut =	Math.round(MaxHauteur*((Attaigle/MaxAtt)))
 Haut1 =	Math.round(MaxHauteur*((Attjaguar/MaxAtt)))
 Haut2 =	Math.round(MaxHauteur*((Attatlante/MaxAtt)))
