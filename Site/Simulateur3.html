@@ -76,7 +76,30 @@ img:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }	
-	
+	.myButton {
+	box-shadow:inset 0px 1px 0px 0px #c7c3c3;
+	background:linear-gradient(to bottom, #d15047 5%, #e4685d 100%);
+	background-color:#d15047;
+	border-radius:6px;
+	border:1px solid #b03125;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #e4685d 5%, #d15047 100%);
+	background-color:#e4685d;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 	
 
 	
@@ -524,8 +547,13 @@ return BN
 				    <option value="28">28</option>
 				    <option value="29">29</option>	
 				  </select></td>
-					<td>
-					Calculer les quantités pour 	
+					<td rowspan="4" >
+					Calculer les quantités pour avoir
+					<input type="number" id="Quant" name="atlante" step="100" onchange="myFunction4()"  value="100">
+<div display="inline;">	
+ <a href="#" id="BB1" class="myButton" display="inline;" onclick="ChangerSimul()">Attaque</a>
+	<a href="#" id="BB1" class="myButton" display="inline;" onclick="ChangerSimul()">Défense</a>
+</div>				
 					</td>
 				</tr>
 				
