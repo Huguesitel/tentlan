@@ -210,9 +210,19 @@ Haut1 =	Math.round(MaxHauteur*((Attjaguar/MaxAtt)))
 Haut2 =	Math.round(MaxHauteur*((Attatlante/MaxAtt)))
 Haut3 =	Math.round(MaxHauteur*((Attek/MaxAtt)))
 Hautb =	Math.round(MaxHauteur*((Defaigle/MaxDef)))
-Hautb1 =	Math.round(MaxHauteur*((Defjaguar/MaxDef)))
-Hautb2 =	Math.round(MaxHauteur*((Defatlante/MaxDef)))
-Hautb3 =	Math.round(MaxHauteur*((Defek/MaxDef)))
+Hautb1 =Math.round(MaxHauteur*((Defjaguar/MaxDef)))
+Hautb2 =Math.round(MaxHauteur*((Defatlante/MaxDef)))
+Hautb3 =Math.round(MaxHauteur*((Defek/MaxDef)))
+	
+MHaut =	Math.round(MaxHauteur*((MilleA1/MaxMilleA)))
+MHaut1 =Math.round(MaxHauteur*((MilleA2/MaxMilleA)))
+MHaut2 =Math.round(MaxHauteur*((MilleA3/MaxMilleA)))
+MHaut3 =Math.round(MaxHauteur*((MilleA4/MaxMilleA)))
+MHautb =Math.round(MaxHauteur*((MilleD1/MaxMilleD)))
+MHautb1 =Math.round(MaxHauteur*((MilleD2/MaxMilleD)))
+MHautb2 =Math.round(MaxHauteur*((MilleD3/MaxMilleD)))
+MHautb3 =Math.round(MaxHauteur*((MilleD4/MaxMilleD)))
+
 	
 	document.getElementById("BR1").style.width =Haut ;
 	document.getElementById("BR2").style.width = Haut1;
@@ -224,7 +234,15 @@ Hautb3 =	Math.round(MaxHauteur*((Defek/MaxDef)))
 	document.getElementById("BB3").style.width = Hautb2;
 	document.getElementById("BB4").style.width = Hautb3;
 	
+	document.getElementById("BRE1").style.width =MHaut ;
+	document.getElementById("BRE2").style.width = MHaut1;
+	document.getElementById("BRE3").style.width = MHaut2;
+	document.getElementById("BRE4").style.width =MHaut3;	
 	
+	document.getElementById("BBE1").style.width =MHautb
+	document.getElementById("BBE2").style.width = MHautb1
+	document.getElementById("BBE3").style.width = MHautb2;
+	document.getElementById("BBE4").style.width = MHautb3;
 }
 function Million(NB) { 
 	var BN = Math.round(NB/100000)/10 + "M"
@@ -437,8 +455,8 @@ return BN
 						    <option value="29">29</option>
 						    <option value="30">30</option>	
 				  </select></td>
-				<td></td>
-				<td style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
+				
+				<td  rowspan="2" style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
 				<td style="width: 11.2px;"><img style="alrn:right" src="Image/devin.png" width="50" height="50" ></td>
 				<td style="width: 58.4px;"><select name="NiveauDevin" id="sDevin" onchange="myFunction4()">
 				    <option value="0">0</option>
@@ -472,8 +490,7 @@ return BN
 				    <option value="28">28</option>
 				    <option value="29">29</option>	
 				  </select></td>	
-					<td></td>
-				<td style="width: 90.6px; text-align: right;">Temazcal</td>
+				<td  rowspan="2"  style="width: 90.6px; text-align: right;">Temazcal</td>
 				<td style="width: 11.2px;"><img style="float:right" src="Image/tema.png" width="50" height="50" ></td>
 				<td style="width: 58.4px;"><select name="NiveauDevin" id="sTema" onchange="myFunction4()">
 				    <option value="0">0</option>
