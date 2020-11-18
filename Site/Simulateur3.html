@@ -156,7 +156,7 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	document.getElementById("wsaaigleKK").innerHTML =   Math.round(sw1KK/100000)/10 + "M"
 	
 	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
-	document.getElementById("wsjjaguarO").innerHTML =   sww1O
+	document.getElementById("wsjjaguarO").innerHTML =   Million(sww1O)
 	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
 	document.getElementById("wsjjaguarK").innerHTML =   sww1K
 	var sww1KK =sww1K+Math.round(sww1O*0.625)
@@ -199,9 +199,10 @@ Hautb3 =	Math.round(MaxHauteur*((Defek/MaxDef)))
 	
 	
 }
-
-	
-	
+function Million(NB) { 
+	var BN = Math.round(NB/100000)/10 + "M"
+return BN
+}	
 </script>
 
 <body onload="Debut()">
