@@ -17,7 +17,7 @@ body {
   display: none;
   position: absolute;
   background-color: #ecff9e;
-  width: 160px;
+  width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
@@ -26,7 +26,7 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 	align: right
-	width: 160px;
+	width: 200px;
 }
 	
 	
@@ -214,8 +214,11 @@ function myFunction3() {
 			<div class="dropdown">
   			<span style="color: #0000ff;">Conseil Tribal</span>
 			<div class="dropdown-content">
-				<p><DIV>Le Conseil Tribal permùent une hausse<br>
-				de 0.5% du stock à chaque niveaue</DIV></p>
+				<p><DIV>Le Conseil Tribal<br>
+					permet une hausse<br>
+				de <span style="color: #326fa8;" id="Nentre3">0.5%</span></strong> du stock <br>
+					de l'entrepôt <br>
+					à chaque niveau</DIV></p>
 			  </div>
 			</div>
 	</td>
@@ -271,7 +274,18 @@ function myFunction3() {
 </tr>
 <tr>
 	
-<td style="width: 90.6px; text-align: right;">Recherche Céramique</td>
+<td style="width: 90.6px; text-align: right;">
+				<div class="dropdown">
+  			<span style="color: #0000ff;">Conseil Tribal</span>
+			<div class="dropdown-content">
+				<p><DIV>La Recherche Céramique<br>
+					permet une hausse<br>
+				de <span style="color: #326fa8;" id="Nentre3">3%</span></strong> du stock <br>
+					de l'entrepôt <br>
+					à chaque niveau</DIV></p>
+			  </div>
+			</div>
+	</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/ceramique.png" width="50" height="50" ></td>
 <td style="width: 58.4px;">
 	<select name="Niveauceramique" id="ceramique" onchange="myFunction3()">
