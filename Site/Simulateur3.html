@@ -158,16 +158,16 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
 	document.getElementById("wsjjaguarO").innerHTML =   Million(sww1O)
 	var sww1K =Math.round(sf1*134500*((100-wsdiplo)/100))
-	document.getElementById("wsjjaguarK").innerHTML =   sww1K
+	document.getElementById("wsjjaguarK").innerHTML =   Million(sww1K)
 	var sww1KK =sww1K+Math.round(sww1O*0.625)
-	document.getElementById("wsjjaguarKK").innerHTML =   sww1KK	
+	document.getElementById("wsjjaguarKK").innerHTML =   Million(sww1KK)	
 	
 	var swww1O =Math.round(sf2*550000*((100-wsdiplo)/100))
 	var swww1K =Math.round(sf2*400000*((100-wsdiplo)/100))
-	document.getElementById("wsaatlanteO").innerHTML =   swww1O
-	document.getElementById("wsaatlanteK").innerHTML =   swww1K
+	document.getElementById("wsaatlanteO").innerHTML =   Million(swww1O)
+	document.getElementById("wsaatlanteK").innerHTML =   Million(swww1K)
 	var swww1KK =swww1K+Math.round(swww1O*0.625)
-	document.getElementById("wsaatlanteKK").innerHTML =   swww1KK
+	document.getElementById("wsaatlanteKK").innerHTML =   Million(swww1KK)
 	
 	var swwww1C =Math.round(sf3*10000000*((100-wsdiplo)/100))	
 	var swwww1O =Math.round(sf3*5000000*((100-wsdiplo)/100))
@@ -210,7 +210,7 @@ return BN
 
 <table style="height: 45%;  width: 75%;">
 <tr>
-<td rowspan="6"><span style="color: #0000ff;">Je veux comparer la  <strong>force</strong> et la <strong>rentatbilité</strong> des unités de 
+<td rowspan="10"><span style="color: #0000ff;">Je veux comparer la  <strong>force</strong> et la <strong>rentatbilité</strong> des unités de 
 				</td>
 				<td colspan="2"></td>
 				<td style=" text-align: center;">Quantit&eacute; à produire</td>
