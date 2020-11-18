@@ -129,12 +129,13 @@ function myFunction3() {
 	var volumeentrepot= Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))
 
 	//var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
-	document.getElementById("eeentrepot").innerHTML = Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
-	document.getElementById("tttribal").innerHTML = Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))
-	document.getElementById("ccceramique").innerHTML = Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))
-//int[] Stock = { 0, 5776, 9817, 14830, 21004, 28557, 37747, 48877, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 , 772081, 914530, 1081213, 1276057, 1503604, 1769105, 2078633, 2439202, 2858913, 3347121, 3914620, 4573866 , 5339226, 6227265, 8450665, 9833376, 13287366, 15430950, 17909688, 20774811, 24085253,  27908787, 32323337, 37418479, 43297161, 50077677, 57895957, 66908007, 77293179, 89257272, 103036574, 118902298, 137165691, 158183884, 182366592, 210183786, 242174471, 278956737, 321239261, 369834471, 425873606};
-//var Stock = [0,5776,9817,14830, 21004,28557,37747,48877,8,9,10,11,12,13,14,15,16,17,18,19,20,772081,914530,1081213,1276057,1503604,1769105, 2078633, 2439202, 2858913, 3347121,3914620, 4573866 , 5339226, 6227265, 8450665,9833376, 13287366, 15430950, 17909688, 20774811,24085253,  27908787, 32323337, 37418479, 43297161,50077677, 57895957, 66908007, 77293179, 89257272,103036574, 118902298, 137165691, 158183884,182366592, 210183786,242174471,278956737,321239261,369834471,425873606];
-	//alert(Stock[35])
+	document.getElementById("eeentrepot").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique)))
+	document.getElementById("tttribal").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique)))
+	document.getElementById("ccceramique").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1)))
+	document.getElementById("Hypo4V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique)))
+	document.getElementById("Hypo5V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1)))
+	document.getElementById("Hypo6V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique1)))
+
 }
 //<option value="0">0</option>
 //    <option value="1">1</option>
@@ -299,9 +300,9 @@ function myFunction3() {
   </select>
 	</td>
 <td style="width: 65.6px;" id="cceramique">	
-	Entrepot à <span style="color: #326fa8;" id="Nentre3">11</span> <br>
-	Tribal à <span style="color: #326fa8;" id="Ntribal3">11</span> <br>
-	Céramique à <span style="color: #ff0000;" id="Nceram3">11</span> <br>
+	Entrepot à <strong><span style="color: #326fa8;" id="Nentre3">11</span></strong> <br>
+	Tribal à <strong><span style="color: #326fa8;" id="Ntribal3">11</span></strong> <br>
+	Céramique à <strong><span style="color: #ff0000;" id="Nceram3">11</span></strong> <br>
 <td style="width: 10.4px;" id="ccceramique"></td>
 <td style="width: 58.4px;" id="cceramiqueC"></td>
 <td style="width: 79.2px;" id="cceramiqueO"></td>
@@ -316,15 +317,15 @@ function myFunction3() {
 	<img style="float:left" src="Image/tribal.png" width="50" height="50" >
 	<img style="float:left" src="Image/ceramique.png" width="30" height="30" >
 	</td>
-	<td>Entrepot à <span style="color: #ff0000;" id="Nentre4">11</span> <br>
-	Tribal à <span style="color: #ff0000;" id="Ntribal4">11</span> <br>
-	Céramique à <span style="color: #326fa8;" id="Nceram4">11</span> <br>
+	<td>Entrepot à <strong><span style="color: #ff0000;" id="Nentre4">11</span></strong> <br>
+	Tribal à <strong><span style="color: #ff0000;" id="Ntribal4">11</span></strong> <br>
+	Céramique à <strong><span style="color: #326fa8;" id="Nceram4">11</span></strong> <br>
 		
 	</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td id="Hypo4V"></td>
+	<tdid="Hypo4C></td>
+	<tdid="Hypo4O></td>
+	<tdid="Hypo4K></td>
 	<td>=</td>
 	<td style="width: 18.4px;" id="Hypo4KK"></td>
 	<td></td>
@@ -333,15 +334,15 @@ function myFunction3() {
 		<img style="float:left" src="Image/tribal.png" width="30" height="30" >
 	<img style="float:left" src="Image/ceramique.png" width="50" height="50" >
 	</td>
-	<td>Entrepot à <span style="color: #ff0000;" id="Nentre5">11</span> <br>
-	Tribal à <span style="color: #326fa8;" id="Ntribal5">11</span> <br>
-	Céramique à <span style="color: #ff0000;" id="Nceram5">11</span> <br>
+	<td>Entrepot à <strong><span style="color: #ff0000;" id="Nentre5">11</span></trong> <br>
+	Tribal à <strong><span style="color: #326fa8;" id="Ntribal5">11</span></trong> <br>
+	Céramique à <strong><span style="color: #ff0000;" id="Nceram5">11</span></trong> <br>
 		
 	</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td id="Hypo5V"></td>
+	<tdid="Hypo5C></td>
+	<tdid="Hypo5O></td>
+	<tdid="Hypo5K></td>
 	<td>=</td>
 	<td style="width: 18.4px;" id="Hypo5KK"></td>
 	<td></td>
@@ -351,15 +352,15 @@ function myFunction3() {
 		<img style="float:left" src="Image/tribal.png" width="50" height="50" >
 		<img style="float:left" src="Image/ceramique.png" width="50" height="50" >
 	</td>
-	<td>Entrepot à&nbsp;<span style="color: #ff0000;" id="Nentre6">11</span> <br>
-	Tribal à <span style="color: #ff0000;" id="Ntribal6">11</span> <br>
-	Céramique à <span style="color: #ff0000;" id="Nceram6">11</span> <br>
+	<td>Entrepot à&nbsp;<strong><span style="color: #ff0000;" id="Nentre6">11</span></strong> <br>
+	Tribal à <strong><span style="color: #ff0000;" id="Ntribal6">11</span></strong> <br>
+	Céramique à <strong><span style="color: #ff0000;" id="Nceram6">11</span></strong> <br>
 		
 	</td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td id="Hypo6V"></td>
+	<tdid="Hypo6C></td>
+	<tdid="Hypo6O></td>
+	<tdid="Hypo6K></td>
 	<td>=</td>
 	<td style="width: 18.4px;" id="Hypo6KK"></td>
 	<td></td>
