@@ -154,6 +154,11 @@ var wsdiplo =  document.getElementById("ssDiplo").value;
 	document.getElementById("wsaaigleK").innerHTML =   Math.round(sw1K/100000)/10 + "M"
 	var sw1KK =sw1K+Math.round(sw1O*0.625)
 	document.getElementById("wsaaigleKK").innerHTML =   Math.round(sw1KK/100000)/10 + "M"
+	var MilleA1 =1000* Attaigle/sw1KK
+	var MilleD1 =1000* Defaigle/sw1KK
+	document.getElementById("AttakE1").innerHTML =   Math.round(MilleA1/100000)/10 + "M"
+	document.getElementById("DefE1").innerHTML =   Math.round(MilleD1/100000)/10 + "M"
+	
 	
 	var sww1O =Math.round(sf1*90000*((100-wsdiplo)/100))
 	document.getElementById("wsjjaguarO").innerHTML =   Million(sww1O)
