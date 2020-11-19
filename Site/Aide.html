@@ -86,7 +86,42 @@ span {
 	align: right
 	width: 160px;
 }
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
 
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
 </style>
   
   
@@ -103,9 +138,21 @@ span {
 <DIV class="bnn">ʘ </DIV></p>
   </div>
 </div>
-  
+ <button class="accordion">Comment produire des ressources efficacement ?</button>
+	<div class="panel">
+	 <DIV class="bnn"></DIV><DIV class="nnn">Mines et champs, y compris et surtout le <DIV class="bnn">Maïs</DIV>
+          doivent être montés régulièrement. Le meilleur rendement de ressources c'est calcaire 
+          <DIV class="bnb">3</DIV>, obsidienne <DIV class="bnb">2</DIV>, cacao <DIV class="bnb">1</DIV>.
+          (exemple calcaire <DIV class="bnb">32</DIV>, obsidienne <DIV class="bnb">31</DIV>, Cacao <DIV class="bnb">30</DIV>). 
+          <br>– Le meilleur rendement  des ressources est en <DIV class="bnr">hiver</DIV> (meilleur rapport de rendement avec utilisation du marché).
+          <br>– Le <DIV class="bnn">maïs</DIV> doit être monté <DIV class="bnb">4</DIV> points au dessus du temple du soleil pour la ville principale (VP) 
+          et/ou la ville d'attaque et  de <DIV class="bnb">2</DIV> points pour les villes secondaires. 
+          La meilleure production et récolte du maïs est en <DIV class="bnn">maïs</DIV> class="bnr">automne</DIV>. 
+          Donc, s'il y a manque de maïs, se mettre en automne et faire tourner le plus souvent possible</DIV>
+</div></div>
+	
  <div class="dropdown">
-  <span>Comment produire des ressources efficacement ? </span> 
+  <span>Comment produire des ressources efficacement ?</span> 
      <div class="dropdown-content">
  <DIV class="bnn"></DIV><DIV class="nnn">Mines et champs, y compris et surtout le <DIV class="bnn">Maïs</DIV>
           doivent être montés régulièrement. Le meilleur rendement de ressources c'est calcaire 
