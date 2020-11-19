@@ -76,7 +76,7 @@ img:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }	
-	.myButton2 {
+.myButton2 {
 	width: 100px;
 	heigth: 30px;
 	box-shadow:inset 0px 1px 0px 0px #c7c3c3;
@@ -94,11 +94,11 @@ img:hover {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
 }
-.myButton:hover {
+.myButton2:hover {
 	background:linear-gradient(to bottom, #e4685d 5%, #d15047 100%);
 	background-color:#e4685d;
 }
-.myButton:active {
+.myButton2:active {
 	position:relative;
 	top:1px;
 }
@@ -510,7 +510,7 @@ function Changer2() {
 						    <option value="29">29</option>
 						    <option value="30">30</option>	
 				  </select></td>
-				<td colspan="6" >Calculer les quantités pour avoir</td>
+				<td colspan="6" rowspan="3">Calculer les quantités pour avoir</td>
 					<td colspan="2" >
 				<input type="number" id="Quant"  step="100" "  value="1000"> M
 				</td>
@@ -556,13 +556,13 @@ function Changer2() {
 				  </select></td>
 						     
 						      
-				<td colspan="6"></td>
-					<td colspan="2">       
+				<td colspan="6" colspan="2"></td>
+				<td >       
 				<div display="inline;">	
 				<a href="#"  class="myButton2" display="inline;" onclick="Changer1()">en Attaque</a>
-									</div></td>	      
+				</div></td>	      
 						      
-					</tr><tr>	      
+				</tr><tr>	      
 				<td   style="width: 90.6px; text-align: right;">Temazcal</td>
 				<td style="width: 11.2px;"><img style="float:right" src="Image/tema.png" width="50" height="50" ></td>
 				<td style="width: 58.4px;"><select name="NiveauDevin" id="sTema" onchange="myFunction4()">
@@ -597,14 +597,14 @@ function Changer2() {
 				    <option value="28">28</option>
 				    <option value="29">29</option>	
 				  </select></td>
-					<td colspan="6"></td>
-					<td colspan="2">	       
+					<td colspan="6" colspan="2"></td>
+					       
 				<div display="inline;">	
 				<a href="#"  class="myButton2" display="inline;" onclick="Changer2()">en Défense</a>
 				</div></td>	      
 						      
 						      
-					</tr>	
+				</tr>	
 									
 				</table>	
 
