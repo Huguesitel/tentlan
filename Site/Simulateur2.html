@@ -143,14 +143,14 @@ function myFunction3() {
 		var CoutceraO =Math.round(1471*Math.pow((1.7),(Nceramique1)))
 		var CoutceraK =Math.round(882*Math.pow((1.7),(Nceramique1)))	
 		var CoutceraKK =Math.round(CoutceraC*0.4)+Math.round(CoutceraO*0.625)+CoutceraK
-	document.getElementById("ttribalC").innerHTML =   Million(CouttribalC);	
-	document.getElementById("ttribalO").innerHTML =   Million(CouttribalO));
-	document.getElementById("ttribalK").innerHTML =   Million(CouttribalK);		
-	document.getElementById("ttribalKK").innerHTML =   Million(CouttribalKK);	
-	document.getElementById("tceraC").innerHTML =   Million(CoutceraC);	
-	document.getElementById("tceraO").innerHTML =   Million(CoutceraO));
-	document.getElementById("tceraK").innerHTML =   Million(CoutceraK);		
-	document.getElementById("tceraK").innerHTML =   Million(CoutceraKK);
+	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/100000)/10 +"M";	
+	document.getElementById("ttribalO").innerHTML =   Math.round(CouttribalO/100000)/10 +"M";;
+	document.getElementById("ttribalK").innerHTML =   Math.round(CouttribalK/100000)/10 +"M";;		
+	document.getElementById("ttribalKK").innerHTML =   Math.round(CouttribalKK/100000)/10 +"M";;	
+	document.getElementById("tceraC").innerHTML =   Math.round(CoutceraC/100000)/10 +"M";;	
+	document.getElementById("tceraO").innerHTML =   Math.round(CoutceraO/100000)/10 +"M";;
+	document.getElementById("tceraK").innerHTML =   Math.round(CoutceraK/100000)/10 +"M";;		
+	document.getElementById("tceraK").innerHTML =   Math.round(CoutceraKK/100000)/10 +"M";;
 	
 //1,55	335 ttribalC
 //1,55	710
@@ -162,9 +162,9 @@ function myFunction3() {
 	
 	
 }
-function Million(NB) { 
-	var BN = Math.round(NB/100000)/10 + "M"
-return BN
+//function Million(NB) { 
+//	var BN = Math.round(NB/100000)/10 + "M"
+//return BN
 }
 ///function Million2(NB) { 
 //	var BN = Math.round(NB/10000)/100 + "M"
