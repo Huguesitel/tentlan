@@ -281,10 +281,10 @@ function Changer1() {
 
 var QAtt =  document.getElementById("Quant").value;
 
-	var QAttaigle =QAtt/(1500 * NiveauDevin)
-	var QAttjaguar =QAtt/(15000 * NiveauDevin)
-	var QAttatlante =QAtt/(20000 * NiveauDevin)
-	var QAttek =QAtt/(100000 * NiveauDevin)		
+	var QAttaigle =QAtt*1000000/(1500 * NiveauDevin)
+	var QAttjaguar =QAtt*1000000/(15000 * NiveauDevin)
+	var QAttatlante =QAtt*1000000/(20000 * NiveauDevin)
+	var QAttek =QAtt*1000000/(100000 * NiveauDevin)		
 	document.getElementById("wsaigle").value = Math.round(QAttaigle)
 	document.getElementById("wsjaguar").value = Math.round(QAttjaguar)
 	document.getElementById("wsatlante").value = Math.round(QAttatlante)
