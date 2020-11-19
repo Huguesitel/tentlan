@@ -298,8 +298,27 @@ var QAtt =  document.getElementById("Quant").value;
 	myFunction4()
 }
 function Changer2() {
-	//chgt = 2;
-	//myFunction4()
+	chgt = 2;
+	var NiveauDevin =  1+(parseInt(document.getElementById("sDevin").value)/50)	
+	var NiveauTema =  1+(parseInt(document.getElementById("sTema").value)/50)	
+
+var QDef =  document.getElementById("Quant").value;
+
+	var QDefaigle =QDef*1000000/(12350 * NiveauTema)
+	var QDefjaguar =QDef*1000000/(38000 * NiveauTema)
+	var QDefatlante =QDef*1000000/(285000 * NiveauTema)
+	var QDefek =QDef*1000000/(6650000 * NiveauTema)		
+	document.getElementById("wsaigle").value = Math.round(QDefaigle)
+	document.getElementById("wsjaguar").value = Math.round(QDefjaguar)
+	document.getElementById("wsatlante").value = Math.round(QDefatlante)
+	document.getElementById("wsek").value = Math.round(QDefek)	
+//var Defaigle =12350 * NiveauTema * sf
+//var Defjaguar =	38000 * NiveauTema * sf1
+//var Defatlante =	285000 * NiveauTema * sf2
+//var Defek =	6650000 * NiveauTema	* sf3
+	
+	chgt=0	
+	myFunction4()
 }
 function myFunction5() {
 	if (chgt=0)	{
@@ -343,7 +362,7 @@ function myFunction5() {
 				<td  rowspan="2" style="width: 78px;">Guerrier Aigle</td>
 				<td   rowspan="2" style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
 				<td   rowspan="2"   rowspan="2"   rowspan="2" >
-					<input type="number" id="wsaigle" name="aigle" step="100" onchange="myFunction5()" value="100"></td>
+					<input type="number"  min="0"  id="wsaigle" name="aigle" step="100" onchange="myFunction5()" value="100"></td>
 				<td   rowspan="2" style="width: 8px;" >></td>
 				<td   rowspan="2" style="width: 65px;" id="wsaaigleC">0</td>
 				<td   rowspan="2" style="width: 79px;" id="wsaaigleO">00</td>
@@ -379,7 +398,7 @@ function myFunction5() {
 				<tr>
 				<td  rowspan="2"  style="width: 78px;">Guerrier Jaguar</td>
 				<td  rowspan="2"  style="width: 31px;"><img style="float:right" src="Image/jaguar.png" width="50" height="50" ></td>
-				<td  rowspan="2"  ><input type="number" id="wsjaguar" name="jaguar" step="100" value="100" onchange="myFunction4()"></td>
+				<td  rowspan="2"  ><input type="number"  min="0"  id="wsjaguar" name="jaguar" step="100" value="100" onchange="myFunction4()"></td>
 				<td  rowspan="2"  style="width: 8px;" >	>	</td>
 				<td  rowspan="2"  style="width: 65px;" id="wsjjaguarC">0</td>
 				<td  rowspan="2"  style="width: 79px;" id="wsjjaguarO">11</td>
@@ -412,7 +431,7 @@ function myFunction5() {
 				<tr>
 				<td  rowspan="2"  style="width: 78px;">Atlante</td>
 				<td  rowspan="2"  style="width: 31px;"><img style="float:right" src="Image/atlante.png" width="50" height="50" ></td>
-				<td  rowspan="2"  ><input type="number" id="wsatlante" name="atlante" step="100" onchange="myFunction4()"  value="100"></td>
+				<td  rowspan="2"  ><input type="number" min="0" id="wsatlante" name="atlante" step="100" onchange="myFunction4()"  value="100"></td>
 				<td  rowspan="2"  style="width: 8px;" >>				</td>
 				<td  rowspan="2"  style="width: 65px;"  id="wsaatlanteC">0</td>
 				<td  rowspan="2"  style="width: 79px;" id="wsaatlanteO" >22</td>
@@ -445,7 +464,7 @@ function myFunction5() {
 				<tr>
 				<td  rowspan="2"  style="width: 78px;">Ek Chuah</td>
 				<td  rowspan="2"  style="width: 31px;"><img style="float:right" src="Image/ek.png" width="50" height="50" ></td>
-				<td  rowspan="2"  ><input type="number" id="wsek" name="ek" step="100" onchange="myFunction4()" value="100"></td>
+				<td  rowspan="2"  ><input type="number"  min="0"  id="wsek" name="ek" step="100" onchange="myFunction4()" value="100"></td>
 				
 				<td  rowspan="2"  style="width: 8px;">>	
 				</td>
@@ -514,10 +533,10 @@ function myFunction5() {
 						    <option value="29">29</option>
 						    <option value="30">30</option>	
 				  </select></td>
-				<td colspan="6" rowspan="3" vertical-align="top;">
+				<td colspan="6"  vertical-align="top;">
 					Calculer les quantités pour avoir</td>
 					<td colspan="2" >
-				<input type="number" id="Quant"  step="100" "  value="1000"> M
+				<input type="number" id="Quant"  step="100" " min="0" value="100"> M
 				</td>
 				</tr>
 				<tr>
@@ -556,10 +575,10 @@ function myFunction5() {
 				    <option value="29">29</option>	
 				  </select></td>
 						     
-						      
+					<td  	rowspan="2"  colspan="6">  </td>  
 				<td  colspan="2">       
 				<div display="inline;">	
-				<a href="#"  class="myButton2" display="inline;" onclick="Changer1()">en Attaque</a>
+				<a class="myButton2" display="inline;" onclick="Changer1()">en Attaque</a>
 				</div></td>	      
 						      
 				</tr><tr>	      
@@ -599,7 +618,7 @@ function myFunction5() {
 				  </select></td>
 				<td colspan="2">       
 				<div display="inline;">	
-				<a href="#"  class="myButton2" display="inline;" onclick="Changer2()">en Défense</a>
+				<a class="myButton2" display="inline;" onclick="Changer2()">en Défense</a>
 				</div></td>	      
 						      
 						      
