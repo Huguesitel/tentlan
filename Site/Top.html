@@ -61,32 +61,7 @@ font: 15px Verdana, sans-serif;
   visibility: visible;
 }    
 
-//.tooltip2 {
-//  position: relative;
-//  display: inline-block;
-//  border-bottom: 1px dotted black;
-//}
-
-//.tooltip2 .tooltiptext2 {
-//  visibility: hidden;
-//  width: 130px;
-//  background-color: black;
-//  color: #fff;
-//  text-align: center;
-//  border-radius: 6px;
-//  padding: 5px 0;
-
-  //* Position the tooltip */
-//  position: absolute;
-//  z-index: 1;
-
- // top: 120%;
-//  left: 50%;
-//  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-//}  
-//.tooltip2:hover .tooltiptext {
-//  visibility: visible;
-//}    
+   
 
 
 </style> 
@@ -126,8 +101,10 @@ document.getElementById("inlineCentre").src="https://huguesitel.github.io/tentla
 textContent = node.textContent;
 var textContent2 ="Moi, Toutentek je déclare " 
 textContent2 +="Hello " + obtenirParametre("nom") + "\u00a0!\n" 
-textContent2 +="Ici, tu es sur le menu Aide de la tribu - il suffit de passer ton curseur de souris sur une rubrique pour l'afficher."
-    document.getElementById('Blabla').textContent= textContent2;
+textContent2 +="Ici, tu es sur le menu Aide de la tribu - il suffit de cliquer sur une rubrique pour l'afficher,"+ "\u00a0!\n" 
+textContent2 +="puis de re-cliquer pour la fermer."
+   
+document.getElementById('Blabla').textContent= textContent2;
   document.getElementById("inlineCentre").src="https://huguesitel.github.io/tentlan/Site/Aide2.html" ;
  }
 ////Invisibler()	
