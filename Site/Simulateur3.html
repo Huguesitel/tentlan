@@ -302,7 +302,12 @@ function Changer1() {
 function Changer2() {
 	
 	myFunction4(2)
-}	
+}
+function myFunction5() {
+	if (chgt=0)	{
+		myFunction4(0)
+	}
+}
 </script>
 
 <body onload="Debut()">
@@ -339,7 +344,8 @@ function Changer2() {
 
 				<td  rowspan="2" style="width: 78px;">Guerrier Aigle</td>
 				<td   rowspan="2" style="width: 31px;"><img style="float:right" src="Image/aigle.png" width="50" height="50" ></td>
-				<td   rowspan="2"   rowspan="2"   rowspan="2" ><input type="number" id="wsaigle" name="aigle" step="100" onchange="myFunction4()" value="100"></td>
+				<td   rowspan="2"   rowspan="2"   rowspan="2" >
+					<input type="number" id="wsaigle" name="aigle" step="100" onchange="myFunction5()" value="100"></td>
 				<td   rowspan="2" style="width: 8px;" >></td>
 				<td   rowspan="2" style="width: 65px;" id="wsaaigleC">0</td>
 				<td   rowspan="2" style="width: 79px;" id="wsaaigleO">00</td>
@@ -514,10 +520,6 @@ function Changer2() {
 					<td colspan="2" >
 				<input type="number" id="Quant"  step="100" "  value="1000"> M
 				</td>
-	
-	
-					
-				<td></td>
 				</tr>
 				<tr>
 				<td  " style="width: 90.6px; text-align: right;">Pyramide du Devin</td>
