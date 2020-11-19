@@ -129,12 +129,12 @@ function myFunction3() {
 	var volumeentrepot= Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))
 
 	//var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
-	document.getElementById("eeentrepot").innerHTML = Million2((Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique)))
-	document.getElementById("tttribal").innerHTML = Million2((Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique)))
-	document.getElementById("ccceramique").innerHTML = Million2((Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1)))
-	document.getElementById("Hypo4V").innerHTML = Million2((Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique)))
-	document.getElementById("Hypo5V").innerHTML = Million2((Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1)))
-	document.getElementById("Hypo6V").innerHTML = Million2((Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique1)))
+	document.getElementById("eeentrepot").innerHTML = Math.round((Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M")
+	document.getElementById("tttribal").innerHTML = Math.round((Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	document.getElementById("ccceramique").innerHTML = Math.round((Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
+	document.getElementById("Hypo4V").innerHTML = Math.round((Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	document.getElementById("Hypo5V").innerHTML = Math.round((Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
+	document.getElementById("Hypo6V").innerHTML = Math.round((Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique1))/10000)/100 + "M"
 
 }
 function Million(NB) { 
@@ -350,9 +350,9 @@ return BN
 		
 	</td>
 	<td id="Hypo4V"></td>
-	<tdid="Hypo4C></td>
-	<tdid="Hypo4O></td>
-	<tdid="Hypo4K></td>
+	<td id="Hypo4C></td>
+	<td id="Hypo4O></td>
+	<td id="Hypo4K></td>
 	<td>=</td>
 	<td style="width: 18.4px;" id="Hypo4KK"></td>
 	<td></td>
@@ -367,9 +367,9 @@ return BN
 		
 	</td>
 	<td id="Hypo5V"></td>
-	<tdid="Hypo5C></td>
-	<tdid="Hypo5O></td>
-	<tdid="Hypo5K></td>
+	<td id="Hypo5C></td>
+	<td id="Hypo5O></td>
+	<td id="Hypo5K></td>
 	<td>=</td>
 	<td style="width: 18.4px;" id="Hypo5KK"></td>
 	<td></td>
@@ -385,9 +385,9 @@ return BN
 		
 	</td>
 	<td id="Hypo6V"></td>
-	<tdid="Hypo6C></td>
-	<tdid="Hypo6O></td>
-	<tdid="Hypo6K></td>
+	<td id="Hypo6C></td>
+	<td id="Hypo6O></td>
+	<td id="Hypo6K></td>
 	<td>=</td>
 	<td style="width: 18.4px;" id="Hypo6KK"></td>
 	<td></td>
