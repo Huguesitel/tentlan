@@ -119,7 +119,7 @@ function myFunction3() {
 		document.getElementById("Ntribal6").innerHTML = Ntribal1
 		document.getElementById("Nceram6").innerHTML = Nceramique1
 	
-	var Stock = [0,5776,9817,14830,21004,28557,37747,48877,8,9,10,11,12,13,14,15,16,17,18,19,20,772081,914530,1081213,1276057,1503604,1769105, 2078633, 2439202, 2858913, 3347121,3914620, 4573866 , 5339226, 6227265, 8450665,9833376,11434406, 13287366, 15430950, 17909688, 20774811,24085253,  27908787, 32323337, 37418479, 43297161,50077677, 57895957, 66908007, 77293179, 89257272,103036574, 118902298, 137165691, 158183884,182366592, 210183786,242174471,278956737,321239261,369834471,425873606];
+	var Stock = [0,5776,9817,14830,21004,28557,37747,48877,8,9,10,11,12,13,14,15,16,17,18,19,20,772081,914530,1081213,1276057,1503604,1769105, 2078633, 2439202, 2858913, 3347121,3914620, 4573866 , 5339226, 6227265,7257077,8450665,9833376,11434406, 13287366, 15430950, 17909688, 20774811,24085253,  27908787, 32323337, 37418479, 43297161,50077677, 57895957, 66908007, 77293179, 89257272,103036574, 118902298, 137165691, 158183884,182366592, 210183786,242174471,278956737,321239261,369834471,425873606];
 
 	//var volumeentrepot1 = Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))
 	//var volumeentrepot= Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))
@@ -158,7 +158,7 @@ function myFunction3() {
 	var Volumeceramique = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	var DeltaVolumeceramique =Volumeceramique1-Volumeceramique
 	var  Milleceramique = Math.round(DeltaVolumeceramique*1000/CoutceraKK)
-	document.getElementById("cceramiqueKKK").innerHTML = VolumeTribal 	
+	document.getElementById("cceramiqueKKK").innerHTML = DeltaVolumeTribal 	
 	
 	document.getElementById("Hypo4C").innerHTML = 10 +Math.round(CouttribalC/1000000)/100 +"M";
 	document.getElementById("Hypo4O").innerHTML = 10 +Math.round(CouttribalO/1000000)/100 +"M";
