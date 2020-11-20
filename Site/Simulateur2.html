@@ -148,6 +148,18 @@ function myFunction3() {
 	document.getElementById("cceramiqueK").innerHTML =   Math.round(CoutceraK/1)/1 +"M";		
 	document.getElementById("cceramiqueKK").innerHTML =   Math.round(CoutceraKK/1000000)/100 +"M";
 	
+	var VolumeTribal1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	var VolumeTribal = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	var DeltaVolumeTribal =VolumeTribal1-VolumeTribal
+	var  MilleTribal = Math.round(DeltaVolumeTribal*1000/CouttribalKK)
+	document.getElementById("ttribalKKK").innerHTML = MilleTribal 
+
+	var Volumeceramique1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
+	var Volumeceramique = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	var DeltaVolumeceramique =Volumeceramique1-Volumeceramique
+	var  Milleceramique = Math.round(DeltaVolumeceramique*1000/CoutceraKK)
+	document.getElementById("cceramiqueKKK").innerHTML = Milleceramique 	
+	
 	document.getElementById("Hypo4C").innerHTML = 10 +Math.round(CouttribalC/1000000)/100 +"M";
 	document.getElementById("Hypo4O").innerHTML = 10 +Math.round(CouttribalO/1000000)/100 +"M";
 	document.getElementById("Hypo4K").innerHTML = 10 +Math.round(CouttribalK/1000000)/100 +"M";
@@ -279,9 +291,12 @@ function myFunction3() {
 </tr>
 <tr>
 	
-<td style="width: 90.6px; text-align: right;">
+
 			<div class="dropdown">
-  			<span style="color: #0000ff;">Conseil Tribal</span>
+			<td style="width: 90.6px; text-align: right;">	
+  			<span style="color: #0000ff;">Conseil Tribal</span></td>
+			<td style="width: 11.2px;"><img style="float:right" src="Image/tribal.png" width="50" height="50" ></td>
+	
 			<div class="dropdown-content">
 				<p><DIV>Le Conseil Tribal<br>
 					permet une hausse<br>
@@ -290,9 +305,8 @@ function myFunction3() {
 					à chaque niveau</DIV></p>
 			  </div>
 			</div>
-	</td>
 	
-<td style="width: 11.2px;"><img style="float:right" src="Image/tribal.png" width="50" height="50" ></td>
+	
 <td style="width: 58.4px;">
 	<select name="Niveautribal" id="tribal" onchange="myFunction3()">
     <option value="0">0</option>
@@ -339,7 +353,7 @@ function myFunction3() {
 <td style="width: 44px;" id="ttribalK">aaa</td>
 <td style="width: 25.6px;">=</td>
 <td style="width: 18.4px;" id="ttribalKK">aaaa</td>
-<td></td>
+<td id="ttribalKKK" ></td>
 </tr>
 <tr>
 	
@@ -401,7 +415,7 @@ function myFunction3() {
 <td  id="cceramiqueK">vvvv</td>
 <td >=</td>
 <td id="cceramiqueKK">vvvv</td>
-<td></td>	
+<td id="cceramiqueKKK"></td>	
 </tr>
 <tr>
 <td  colspan="3"><img style="float:left" src="Image/entrepot.png" width="50" height="50" >
