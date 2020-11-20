@@ -139,17 +139,19 @@ function myFunction3() {
 		var CoutceraO =Math.round(1471*Math.pow((1.7),(Nceramique1)))
 		var CoutceraK =Math.round(882*Math.pow((1.7),(Nceramique1)))	
 		var CoutceraKK =Math.round(CoutceraC*0.4)+Math.round(CoutceraO*0.625)+CoutceraK
-	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/100000)/10 +"M";	
-	document.getElementById("ttribalO").innerHTML =   Math.round(CouttribalO/100000)/10 +"M";
-	document.getElementById("ttribalK").innerHTML =   Math.round(CouttribalK/100000)/10 +"M";		
-	document.getElementById("ttribalKK").innerHTML =   Math.round(CouttribalKK/100000)/10 +"M";	
-	document.getElementById("tceraC").innerHTML =   Math.round(CoutceraC/100000)/10 +"M";	
-	document.getElementById("tceraO").innerHTML =   Math.round(CoutceraO/100000)/10 +"M";
-	document.getElementById("tceraK").innerHTML =   Math.round(CoutceraK/100000)/10 +"M";		
-	document.getElementById("tceraK").innerHTML =   Math.round(CoutceraKK/100000)/10 +"M";
+	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/1000000)/100 +"M";	
+	document.getElementById("ttribalO").innerHTML =   Math.round(CouttribalO/1000000)/100 +"M";
+	document.getElementById("ttribalK").innerHTML =   Math.round(CouttribalK/1000000)/100 +"M";		
+	document.getElementById("ttribalKK").innerHTML =   Math.round(CouttribalKK/1000000)/100 +"M";	
+	document.getElementById("tceraC").innerHTML =   Math.round(CoutceraC/1000000)/100 +"M";	
+	document.getElementById("tceraO").innerHTML =   Math.round(CoutceraO/1000000)/100 +"M";
+	document.getElementById("tceraK").innerHTML =   Math.round(CoutceraK/1000000)/100 +"M";		
+	document.getElementById("tceraK").innerHTML =   Math.round(CoutceraKK/1000000)/100 +"M";
 	
-
-	
+	document.getElementById("Hypo4C").innerHTML = 1000000 +Math.round(CouttribalC/1000000)/100 +"M";
+	document.getElementById("Hypo4O").innerHTML = 1000000 +Math.round(CouttribalO/1000000)/100 +"M";
+	document.getElementById("Hypo4K").innerHTML = 1000000 +Math.round(CouttribalK/1000000)/100 +"M";
+	document.getElementById("Hypo4KK").innerHTML = 1000000 +Math.round(CouttribalKK/1000000)/100 +"M";
 	
 }
 
