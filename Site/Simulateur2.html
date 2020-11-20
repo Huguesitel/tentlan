@@ -139,26 +139,26 @@ function myFunction3() {
 		var CoutceraO =Math.round(1471*Math.pow((1.7),(Nceramique1)))
 		var CoutceraK =Math.round(882*Math.pow((1.7),(Nceramique1)))	
 		var CoutceraKK =Math.round(CoutceraC*0.4)+Math.round(CoutceraO*0.625)+CoutceraK
-	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/1)/1 +"M";	
-	document.getElementById("ttribalO").innerHTML =   Math.round(CouttribalO/1)/1 +"M";
-	document.getElementById("ttribalK").innerHTML =   Math.round(CouttribalK/1)/1 +"M";		
-	document.getElementById("ttribalKK").innerHTML =   Math.round(CouttribalKK/1)/1 +"M";	
-	document.getElementById("cceramiqueC").innerHTML =   Math.round(CoutceraC/1)/1 +"M";	
-	document.getElementById("cceramiqueO").innerHTML =   Math.round(CoutceraO/1)/1 +"M";
-	document.getElementById("cceramiqueK").innerHTML =   Math.round(CoutceraK/1)/1 +"M";		
-	document.getElementById("cceramiqueKK").innerHTML =   Math.round(CoutceraKK/1000000)/100 +"M";
+	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/1)/1 //+"M";	
+	document.getElementById("ttribalO").innerHTML =   Math.round(CouttribalO/1)/1 //+"M";
+	document.getElementById("ttribalK").innerHTML =   Math.round(CouttribalK/1)/1 //+"M";		
+	document.getElementById("ttribalKK").innerHTML =   Math.round(CouttribalKK/1)/1 //+"M";	
+	document.getElementById("cceramiqueC").innerHTML =   Math.round(CoutceraC/1)/1 //+"M";	
+	document.getElementById("cceramiqueO").innerHTML =   Math.round(CoutceraO/1)/1 //+"M";
+	document.getElementById("cceramiqueK").innerHTML =   Math.round(CoutceraK/1)/1 //+"M";		
+	document.getElementById("cceramiqueKK").innerHTML =   Math.round(CoutceraKK/1)/1 //+"M";
 	
 	var VolumeTribal1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	var VolumeTribal = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	var DeltaVolumeTribal =VolumeTribal1-VolumeTribal
 	var  MilleTribal = Math.round(DeltaVolumeTribal*1000/CouttribalKK)
-	document.getElementById("ttribalKKK").innerHTML = MilleTribal 
+	document.getElementById("ttribalKKK").innerHTML = DeltaVolumeTribal 
 
 	var Volumeceramique1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
 	var Volumeceramique = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	var DeltaVolumeceramique =Volumeceramique1-Volumeceramique
 	var  Milleceramique = Math.round(DeltaVolumeceramique*1000/CoutceraKK)
-	document.getElementById("cceramiqueKKK").innerHTML = Milleceramique 	
+	document.getElementById("cceramiqueKKK").innerHTML = MilleTribal 	
 	
 	document.getElementById("Hypo4C").innerHTML = 10 +Math.round(CouttribalC/1000000)/100 +"M";
 	document.getElementById("Hypo4O").innerHTML = 10 +Math.round(CouttribalO/1000000)/100 +"M";
