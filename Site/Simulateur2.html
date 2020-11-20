@@ -99,10 +99,7 @@ function myFunction3() {
 	var Nentrepot = parseInt(document.getElementById("entrepot").value)	
 //	alert(Stock[60])
 	var Nentrepot1 = Nentrepot+1
-	
-
-
-	
+		
 		document.getElementById("Nentre1").innerHTML =Nentrepot1
 		document.getElementById("Ntribal1").innerHTML = Ntribal
 		document.getElementById("Nceram1").innerHTML = Nceramique
@@ -113,15 +110,15 @@ function myFunction3() {
 		document.getElementById("Ntribal3").innerHTML = Ntribal
 		document.getElementById("Nceram3").innerHTML = Nceramique1
 	
-		document.getElementById("Nentre4").innerHTML = Nentrepot1
-		document.getElementById("Ntribal4").innerHTML = Ntribal1
-		document.getElementById("Nceram4").innerHTML = Nceramique
-		document.getElementById("Nentre5").innerHTML = Nentrepot1
-		document.getElementById("Ntribal5").innerHTML = Ntribal
-		document.getElementById("Nceram5").innerHTML = Nceramique1
-		document.getElementById("Nentre6").innerHTML = Nentrepot1
-		document.getElementById("Ntribal6").innerHTML = Ntribal1
-		document.getElementById("Nceram6").innerHTML = Nceramique1
+		//document.getElementById("Nentre4").innerHTML = Nentrepot1
+		//document.getElementById("Ntribal4").innerHTML = Ntribal1
+		//document.getElementById("Nceram4").innerHTML = Nceramique
+		//document.getElementById("Nentre5").innerHTML = Nentrepot1
+		//document.getElementById("Ntribal5").innerHTML = Ntribal
+		//document.getElementById("Nceram5").innerHTML = Nceramique1
+		//document.getElementById("Nentre6").innerHTML = Nentrepot1
+		//document.getElementById("Ntribal6").innerHTML = Ntribal1
+		//document.getElementById("Nceram6").innerHTML = Nceramique1
 	
 	var Stock = [0,5776,9817,14830, 21004,28557,37747,48877,8,9,10,11,12,13,14,15,16,17,18,19,20,772081,914530,1081213,1276057,1503604,1769105, 2078633, 2439202, 2858913, 3347121,3914620, 4573866 , 5339226, 6227265, 8450665,9833376, 13287366, 15430950, 17909688, 20774811,24085253,  27908787, 32323337, 37418479, 43297161,50077677, 57895957, 66908007, 77293179, 89257272,103036574, 118902298, 137165691, 158183884,182366592, 210183786,242174471,278956737,321239261,369834471,425873606];
 
@@ -129,7 +126,7 @@ function myFunction3() {
 	var volumeentrepot= Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))
 
 	//var volumeentrepot =Math.round(46585*Math.pow((1.16),(x+1)))
-	document.getElementById("eeentrepot").innerHTML = zzzz //Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 +"M"
+	document.getElementById("eeentrepot").innerHTML = "zzzz" //Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 +"M"
 	//document.getElementById("tttribal").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	//document.getElementById("ccceramique").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
 	//document.getElementById("Hypo4V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
