@@ -152,13 +152,13 @@ function myFunction3() {
 	var VolumeTribal = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	var DeltaVolumeTribal =VolumeTribal1-VolumeTribal
 	var  MilleTribal = Math.round(DeltaVolumeTribal*1000/CouttribalKK)
-	document.getElementById("ttribalKKK").innerHTML = DeltaVolumeTribal 
+	document.getElementById("ttribalKKK").innerHTML = VolumeTribal1 
 
 	var Volumeceramique1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
 	var Volumeceramique = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	var DeltaVolumeceramique =Volumeceramique1-Volumeceramique
 	var  Milleceramique = Math.round(DeltaVolumeceramique*1000/CoutceraKK)
-	document.getElementById("cceramiqueKKK").innerHTML = MilleTribal 	
+	document.getElementById("cceramiqueKKK").innerHTML = VolumeTribal 	
 	
 	document.getElementById("Hypo4C").innerHTML = 10 +Math.round(CouttribalC/1000000)/100 +"M";
 	document.getElementById("Hypo4O").innerHTML = 10 +Math.round(CouttribalO/1000000)/100 +"M";
