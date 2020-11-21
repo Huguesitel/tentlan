@@ -138,10 +138,10 @@ function myFunction3() {
 		var CoutceraK =Math.round(882*Math.pow((1.7),(Nceramique1)))	
 		var CoutceraKK =Math.round(CoutceraC*0.4)+Math.round(CoutceraO*0.625)+CoutceraK
 	
-	var CoutentrepotKK =Math.round(StockC[Nentrepot1]*0.4)+Math.round(StockO[Nentrepot1]*0.625)+StockK[Nentrepot1]
-	document.getElementById("eentrepotC").innerHTML =   Math.round(StockC[Nentrepot1]/1)/1 //+"M";	
-	document.getElementById("eentrepotO").innerHTML =   Math.round(StockO[Nentrepot1]/1)/1 //+"M";
-	document.getElementById("eentrepotK").innerHTML =   Math.round(StockK[Nentrepot1]/1)/1 //+"M";	
+	var CoutentrepotKK =Math.round(StockC[Nentrepot1-1]*0.4)+Math.round(StockO[Nentrepot1-1]*0.625)+StockK[Nentrepot1-1]
+	document.getElementById("eentrepotC").innerHTML =   Math.round(StockC[Nentrepot1-1]/1)/1 //+"M";	
+	document.getElementById("eentrepotO").innerHTML =   Math.round(StockO[Nentrepot1-1]/1)/1 //+"M";
+	document.getElementById("eentrepotK").innerHTML =   Math.round(StockK[Nentrepot1-1]/1)/1 //+"M";	
 	document.getElementById("eentrepotKK").innerHTML =   Math.round(CoutentrepotKK/1)/1 //+"M";	
 		
 	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/1)/1 //+"M";	
