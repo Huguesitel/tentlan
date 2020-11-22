@@ -129,7 +129,11 @@ function myFunction3() {
 	document.getElementById("Hypo4V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
 	document.getElementById("Hypo5V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
 	document.getElementById("Hypo6V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique1))/10000)/100 + "M"
-		var CouttribalC =Math.round(335*Math.pow((1.55),(Ntribal1)))
+		
+	document.getElementById("delta1").innerHTML = Math.round(Stock[Nentrepot1]-Stock[Nentrepot])
+	
+	
+	var CouttribalC =Math.round(335*Math.pow((1.55),(Ntribal1)))
 		var CouttribalO =Math.round(710*Math.pow((1.55),(Ntribal1)))
 		var CouttribalK =Math.round(452*Math.pow((1.55),(Ntribal1)))
 		var CouttribalKK =Math.round(CouttribalC*0.4)+Math.round(CouttribalO*0.625)+CouttribalK
@@ -192,6 +196,7 @@ function myFunction3() {
 <td style="width: 70.4px; text-align: center;">Niveau actuel</td>
 <td style="width: 100.4px; text-align: center;">Niveau à &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atteindre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td style="width: 10.4px;">Volume du stock</td>
+<td >Volume sup.</td>
 <td style="width: 70.4px; text-align: center;">Calcaire<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
 
 <td style="width: 50.4px; text-align: center;">Obsidienne<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
@@ -285,7 +290,9 @@ function myFunction3() {
 	Tribal à <strong><span style="color: #326fa8;" id="Ntribal1">11</span></strong> <br>
 	Céramique à <strong><span style="color: #326fa8;" id="Nceram1">11</span> </strong><br>
 	</td>
+
 <td style="width: 10.4px;" id="eeentrepot">...</td>
+<td id="delta1">d</td>	
 <td style="width: 58.4px;" id="eentrepotC">....</td>
 <td style="width: 79.2px;" id="eentrepotO">.....</td>
 <td style="width: 44px;" id="eentrepotK">......</td>
@@ -353,6 +360,7 @@ function myFunction3() {
 	Céramique à <strong><span style="color: #326fa8;" id="Nceram2">11</span></strong> <br>
 	</td>
 <td style="width: 10.4px;" id="tttribal">a</td>
+<td id="delta2">d</td>
 <td style="width: 58.4px;" id="ttribalC">aa</td>
 <td style="width: 79.2px;" id="ttribalO">aaa</td>
 <td style="width: 44px;" id="ttribalK">aaa</td>
@@ -415,6 +423,7 @@ function myFunction3() {
 	Tribal à <strong><span style="color: #326fa8;" id="Ntribal3">11</span></strong> <br>
 	Céramique à <strong><span style="color: #ff0000;" id="Nceram3">11</span></strong> </td>
 <td  id="ccceramique">v</td>
+	<td id="delta3">d</td>
 <td  id="cceramiqueC">vv</td>
 <td  id="cceramiqueO">vvv</td>
 <td  id="cceramiqueK">vvvv</td>
@@ -434,6 +443,7 @@ function myFunction3() {
 		
 	</td>
 	<td id="Hypo4V">1</td>
+	<td id="delta4">d</td>
 	<td id="Hypo4C">11</td>
 	<td id="Hypo4O">111</td>
 	<td id="Hypo4K">1111</td>
@@ -451,6 +461,7 @@ function myFunction3() {
 		
 	</td>
 	<td id="Hypo5V">2</td>
+	<td id="delta5">d</td>
 	<td id="Hypo5C">22</td>
 	<td id="Hypo5O">222</td>
 	<td id="Hypo5K">2222</td>
@@ -469,6 +480,7 @@ function myFunction3() {
 		
 	</td>
 	<td id="Hypo6V">5</td>
+	<td id="delta6">d</td>
 	<td id="Hypo6C">55</td>
 	<td id="Hypo6O">555</td>
 	<td id="Hypo6K">5555</td>
