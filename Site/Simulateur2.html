@@ -130,9 +130,9 @@ function myFunction3() {
 	document.getElementById("Hypo5V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
 	document.getElementById("Hypo6V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique1))/10000)/100 + "M"
 		
-	document.getElementById("delta1").innerHTML = Math.round(3Stock[Nentrepot1])
+	document.getElementById("delta1").innerHTML = Math.round(Stock[Nentrepot1])
 	document.getElementById("delta2").innerHTML = Math.round(Stock[Nentrepot])
-	//document.getElementById("delta3").innerHTML = Math.round(Stock[Nentrepot1]-Stock[Nentrepot])
+	document.getElementById("delta3").innerHTML = Math.round(Stock[Nentrepot1]-Stock[Nentrepot])
 	
 	var CouttribalC =Math.round(335*Math.pow((1.55),(Ntribal1)))
 		var CouttribalO =Math.round(710*Math.pow((1.55),(Ntribal1)))
