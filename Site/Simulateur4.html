@@ -64,19 +64,19 @@ input {
 	background: #f6faaa;
   }
 img {
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-          transition:         transform .8s ease-in-out;
-	transition:         scale .8s ease-in-out;
+  -webkit-transition: all .8s ease-in-out;
+          transition: all .8s ease-in-out;
+	vertical-align:middle;
+	 cursor: pointer;  
 }
 img:hover {
 
-        
-	cursor: pointer;  
-	 vertical-align:middle; 
-	  -webkit-transform: rotate(360deg);
-	 -webkit-transform: scale(2.5);
-          transform: rotate(360deg);
-	transform: scale(2.5);
+       -webkit-transform: scale(2.5) rotate(360deg);
+	transform: scale(2.5) rotate(360deg);  
+	//  -webkit-transform: rotate(360deg);
+	// -webkit-transform: scale(2.5);
+        //  transform: rotate(360deg);
+	//transform: scale(2.5);
     }  
 
 
