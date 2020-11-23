@@ -17,7 +17,7 @@ body {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:3px 3px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
 }
@@ -41,6 +41,7 @@ document.getElementById("BB1").style.background='#48b025';
 document.getElementById("BB2").style.background='#d15047';
 document.getElementById("BB3").style.background='#d15047';
 document.getElementById("BB4").style.background='#d15047';
+document.getElementById("BB5").style.background='#d15047';	
 	 document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Progression.html" ;
 	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur.html" ;
 }
@@ -49,6 +50,7 @@ function ChangerSimul1(){
 document.getElementById("BB1").style.background='#d15047';
 document.getElementById("BB3").style.background='#d15047';
 document.getElementById("BB4").style.background='#d15047';
+document.getElementById("BB5").style.background='#d15047';	
 	 document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Progression.html" ;
 	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur1.html" ;
 }
@@ -57,6 +59,7 @@ function ChangerSimul2(){
 document.getElementById("BB2").style.background='#d15047';
 document.getElementById("BB1").style.background='#d15047';
 document.getElementById("BB4").style.background='#d15047';
+document.getElementById("BB5").style.background='#d15047';
 	 document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Progression.html" ;
 	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur2.html" ;
 }
@@ -64,14 +67,20 @@ function ChangerSimul3(){
 	document.getElementById("BB4").style.background='#48b025';
 document.getElementById("BB2").style.background='#d15047';
 document.getElementById("BB3").style.background='#d15047';
-document.getElementById("BB1").style.background='#d15047';
+document.getElementById("BB5").style.background='#d15047';
+	document.getElementById("BB4").style.background='#d15047';
 	 document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Progression.html" ;
 	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur3.html" ;
 }
-	//<div display="inline;" id="Ztema">1</div>
-	//<div display="inline;" id="Zdevin">2</div>
-	//<div display="inline;" id="Zdiplo">3</div>
-	//<div display="inline;" id="Zstele">4</div>	
+function ChangerSimul4(){
+	document.getElementById("BB5").style.background='#48b025';
+document.getElementById("BB2").style.background='#d15047';
+document.getElementById("BB3").style.background='#d15047';
+document.getElementById("BB1").style.background='#d15047';
+	document.getElementById("BB4").style.background='#d15047';
+	 document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Progression.html" ;
+	  document.getElementById("inlineSimu").src="https://huguesitel.github.io/tentlan/Site/Simulateur4.html" ;
+}	
 	
 </script>  
 <head></head>
@@ -81,7 +90,8 @@ document.getElementById("BB1").style.background='#d15047';
 <a href="#" id="BB2" class="myButton" display="inline;"  onclick="ChangerSimul1()">Simulateur de Stèle</a>
 <a href="#" id="BB3" class="myButton" display="inline;"  onclick="ChangerSimul2()">Simulateur d'entrepôt</a>
 <a href="#" id="BB4" class="myButton" display="inline;"  onclick="ChangerSimul3()">Simulateur de troupes</a>	
-	
+<a href="#" id="BB5" class="myButton" display="inline;"  onclick="ChangerSimul4()">Simulateur de ressources</a>	
+
 
 </div>	
 <iframe id="inlineSimu"
