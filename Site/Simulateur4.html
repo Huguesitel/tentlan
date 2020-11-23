@@ -1,0 +1,498 @@
+
+<style>
+body {
+  //font-size: 16px;
+  font: 16px Verdana, sans-serif;	
+  }
+	
+
+
+.dropdown {
+  position: relative;
+  display: block;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ecff9e;
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+	align: right
+	width: 200px;
+}
+	
+	
+table {
+ border-width:3px; 
+ border-style:solid; 
+ border-color:blue;
+ border-spacing: 0;
+	padding: 0px;
+ }	
+	
+td {
+  	font: 16px Verdana, sans-serif;
+	border-width:1px;
+ 	border-style:solid; 
+ 	border-color:black;	
+	text-align: center;
+ 	vertical-align: middle;	 
+  }
+.test2 {
+  writing-mode: vertical-lr; 
+}	
+select {
+  font: 16px Verdana, sans-serif;
+	vertical-align: middle;
+	align: center;
+	background: #f6faaa;
+  }
+input {
+  font: 16px Verdana, sans-serif;
+	vertical-align: middle;	
+	width: 90px;
+	align: center;
+	text-align: right;
+	background: #f6faaa;
+  }
+img:hover {
+       // margin-left: 0px;
+        transform: scale(1.9);
+      //  display: inline;
+      //  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;  
+	 vertical-align:middle;    
+    }  
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}	
+	
+</style>
+
+<script>
+function Debut() {
+		myFunction3()	
+}
+
+
+function myFunction3() {
+
+	
+  
+	var Ntribal = parseInt(document.getElementById("tribal").value)
+	var Ntribal1 = 1+Ntribal	
+	var Nceramique = parseInt(document.getElementById("ceramique").value)
+	var Nceramique1 = 1+Nceramique
+	var Nentrepot = parseInt(document.getElementById("entrepot").value)	
+	var Nentrepot1 = Nentrepot+1
+		
+		document.getElementById("Nentre1").innerHTML =Nentrepot1
+		document.getElementById("Ntribal1").innerHTML = Ntribal
+		document.getElementById("Nceram1").innerHTML = Nceramique
+		document.getElementById("Nentre2").innerHTML = Nentrepot
+		document.getElementById("Ntribal2").innerHTML = Ntribal1
+		document.getElementById("Nceram2").innerHTML = Nceramique	
+		document.getElementById("Nentre3").innerHTML = Nentrepot
+		document.getElementById("Ntribal3").innerHTML = Ntribal
+		document.getElementById("Nceram3").innerHTML = Nceramique1
+	
+		document.getElementById("Nentre4").innerHTML = Nentrepot1
+		document.getElementById("Ntribal4").innerHTML = Ntribal1
+		document.getElementById("Nceram4").innerHTML = Nceramique
+		document.getElementById("Nentre5").innerHTML = Nentrepot1
+		document.getElementById("Ntribal5").innerHTML = Ntribal
+		document.getElementById("Nceram5").innerHTML = Nceramique1
+		document.getElementById("Nentre6").innerHTML = Nentrepot1
+		document.getElementById("Ntribal6").innerHTML = Ntribal1
+		document.getElementById("Nceram6").innerHTML = Nceramique1
+	
+	var Stock = [0,5776,9817,14830,21004,28557,37747,48877,8,9,10,11,12,13,14,15,16,17,18,631080,733365,772081,914530,1081213,1276057,1503604,1769105,2078633,2439202,2858913,3347121,3914620,4573866,5339226,6227265,7257077,8450665,9833376,11434406,13287366,15430950,17909688,20774811,24085253,27908787,32323337,37418479,43297161,50077677,57895957,66908007,77293179,89257272,103036574,118902298,137165691,158183884,182366592,210183786,242174471,278956737,321239261,369834471,425673606];
+	var StockC = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,36457,46191,21,22,23,24,25,26,27,28,388644,492412,621137,790464,1607726,2036989,2580865,3269956,4258557,5249225,6842944,8426523,10970780,13880110,17138716,21714753,27512592,34858454,44165661,55957893,70898651,89828591,113014544,144200849,231484036,284282980,357742427,470815651,566029957,755795187];
+	var StockO = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,43182,54712,21,22,23,24,25,26,27,28,460336,583245,735709,030795542,936278,1904297,2412744,3056947,3873152,5044024,65743241,6217528,8105070,18634921,9980930,12994226,3967711,16440136,0036055,20300226,25720387,32587730,41286654,52312725,66280223,83977043,106398913,133857561,677577,170801005,274184975,336711303,090615,423717940,03571,557665141,670416898,650324,895213716];
+	var StockK = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,18051,22871,21,22,23,24,25,26,27,28,192435,243815,307552,391394,796058,1008606,1277904,1619104,2108602,2599130,3388250,4172356,5432132,6872677,8486160,10751965,13622739,17260811,21868434,27707306,35105157,44478234,55958873,71400420,114618309,140762245,177135640,233122313,280269133,374226684];	
+	document.getElementById("eeentrepot").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 +"M"
+	document.getElementById("tttribal").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	document.getElementById("ccceramique").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
+	document.getElementById("Hypo4V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	document.getElementById("Hypo5V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
+	document.getElementById("Hypo6V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique1))/10000)/100 + "M"
+		
+	document.getElementById("delta1").innerHTML = Math.round(Stock[Nentrepot1])
+	document.getElementById("delta2").innerHTML = Math.round(Stock[Nentrepot])
+	document.getElementById("delta3").innerHTML = Math.round(Stock[Nentrepot1]-Stock[Nentrepot])
+	
+	var CouttribalC =Math.round(335*Math.pow((1.55),(Ntribal1)))
+		var CouttribalO =Math.round(710*Math.pow((1.55),(Ntribal1)))
+		var CouttribalK =Math.round(452*Math.pow((1.55),(Ntribal1)))
+		var CouttribalKK =Math.round(CouttribalC*0.4)+Math.round(CouttribalO*0.625)+CouttribalK
+		var CoutceraC =Math.round(2647*Math.pow((1.7),(Nceramique1)))
+		var CoutceraO =Math.round(1471*Math.pow((1.7),(Nceramique1)))
+		var CoutceraK =Math.round(882*Math.pow((1.7),(Nceramique1)))	
+		var CoutceraKK =Math.round(CoutceraC*0.4)+Math.round(CoutceraO*0.625)+CoutceraK
+	
+	var CoutentrepotKK =Math.round(StockC[Nentrepot1-1]*0.4)+Math.round(StockO[Nentrepot1-1]*0.625)+StockK[Nentrepot1-1]
+	document.getElementById("eentrepotC").innerHTML =   Math.round(StockC[Nentrepot1-1]/1)/1 //+"M";	
+	document.getElementById("eentrepotO").innerHTML =   Math.round(StockO[Nentrepot1-1]/1)/1 //+"M";
+	document.getElementById("eentrepotK").innerHTML =   Math.round(StockK[Nentrepot1-1]/1)/1 //+"M";	
+	document.getElementById("eentrepotKK").innerHTML =   Math.round(CoutentrepotKK/1)/1 //+"M";	
+		
+	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/1)/1 //+"M";	
+	document.getElementById("ttribalO").innerHTML =   Math.round(CouttribalO/1)/1 //+"M";
+	document.getElementById("ttribalK").innerHTML =   Math.round(CouttribalK/1)/1 //+"M";		
+	document.getElementById("ttribalKK").innerHTML =   Math.round(CouttribalKK/1)/1 //+"M";	
+	document.getElementById("cceramiqueC").innerHTML =   Math.round(CoutceraC/1)/1 //+"M";	
+	document.getElementById("cceramiqueO").innerHTML =   Math.round(CoutceraO/1)/1 //+"M";
+	document.getElementById("cceramiqueK").innerHTML =   Math.round(CoutceraK/1)/1 //+"M";		
+	document.getElementById("cceramiqueKK").innerHTML =   Math.round(CoutceraKK/1)/1 //+"M";
+	
+	var VolumeTribal1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	var VolumeTribal = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	//var DeltaVolumeTribal =VolumeTribal1 - VolumeTribal
+	var  MilleTribal = Math.round((VolumeTribal1 - VolumeTribal)*1000/CouttribalKK)
+	document.getElementById("ttribalKKK").innerHTML = (VolumeTribal1 - VolumeTribal)
+	
+	var Volumeceramique1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
+	var Volumeceramique = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
+	var DeltaVolumeceramique =Volumeceramique1-Volumeceramique
+	var  Milleceramique = Math.round(DeltaVolumeceramique*1000/CoutceraKK)
+	document.getElementById("cceramiqueKKK").innerHTML = VolumeTribal1 	
+	
+	document.getElementById("Hypo4C").innerHTML = 10 +Math.round(CouttribalC/1000000)/100 +"M";
+	document.getElementById("Hypo4O").innerHTML = 10 +Math.round(CouttribalO/1000000)/100 +"M";
+	document.getElementById("Hypo4K").innerHTML = 10 +Math.round(CouttribalK/1000000)/100 +"M";
+	document.getElementById("Hypo4KK").innerHTML = 10 +Math.round(CouttribalKK/1000000)/100 +"M";
+	
+}
+
+</script>
+
+<body onload="Debut()">
+
+	
+<table>
+<tr>
+<td rowspan="3" width: 15%;>
+<span style="color: #0000ff;">Je veux rentabiliser le <strong>volume de stockage</strong> suivant les options possibles (Entrepôt, Céramique, Conseil Tribal)  !</span><br>
+
+</td>
+<td>
+	
+<table style="height: 45%;  width: 85%;">
+<tr>
+	
+<td colspan="2"></td>
+<td style="width: 70.4px; text-align: center;">Niveau actuel</td>
+<td style="width: 100.4px; text-align: center;">Niveau à &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atteindre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="width: 10.4px;">Volume du stock</td>
+<td >Volume sup.</td>
+<td style="width: 70.4px; text-align: center;">Calcaire<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
+
+<td style="width: 50.4px; text-align: center;">Obsidienne<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
+<td style="width: 70.4px; text-align: center;">Cacao<br><img style="align: center;" src="Image/xacai.png" width="30" height="30" ></td>
+<td style="width: 25.6px;"></td>
+
+	
+			<td style="text-align: center;">
+			<div class="dropdown">
+  			<span style="color: #0000ff;">CacaoEqui<br></span>
+			<img style="align: center;" src="Image/xacaEqii.png" width="30" height="30" >
+			 <div class="dropdown-content">
+				<p><DIV>Le cacaoEquitable (CacaoEqui) est calculé en convertissant <br>
+				toutes les ressources en cacao ; ce qui permet <br>
+				de comparer les coûts de 2 'objets' de nature différente</DIV></p>
+			  </div>
+			</div>
+			</td>
+			
+
+<td style="width: 25.6px;">Volume pour <strong><span style="color: #ff0000;">1000</span></strong> CacaoEqui</td>
+</tr>
+<tr>
+
+<td style="width: 90.6px; text-align: right;">Entrepot</td>
+<td style="width: 11.2px;"><img style="float:right" src="Image/entrepot.png" width="50" height="50" ></td>
+<td style="width: 58.4px;"><select name="Niveauentrepot" id="entrepot" onchange="myFunction3()">
+  <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
+  <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10" >10</option>		
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>	
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20" >20</option>		
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>	
+    <option value="28">28</option>
+    <option value="29">29</option>
+	<option value="30" >30</option>		
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>	
+    <option value="38">38</option>
+    <option value="39">39</option>
+	<option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42" selected="selected">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>	
+    <option value="48">48</option>
+    <option value="49">49</option>
+	<option value="50">50</option>
+    <option value="51">51</option>
+   <option value="52">52</option>
+	   <option value="53">53</option>
+	   <option value="54">54</option>
+	   <option value="55">55</option>
+	   <option value="56">56</option>
+	   <option value="57">57</option>
+	   <option value="58">58</option>
+	   <option value="59">59</option>
+  </select></td>
+<td style="width: 100.6px;" id="eentrepot">
+		Entrepot à&nbsp;<strong><span style="color: #ff0000;" id="Nentre1">11</span></strong> <br>
+	Tribal à <strong><span style="color: #326fa8;" id="Ntribal1">11</span></strong> <br>
+	Céramique à <strong><span style="color: #326fa8;" id="Nceram1">11</span> </strong><br>
+	</td>
+
+<td style="width: 10.4px;" id="eeentrepot">...</td>
+<td id="delta1">d</td>	
+<td style="width: 58.4px;" id="eentrepotC">....</td>
+<td style="width: 79.2px;" id="eentrepotO">.....</td>
+<td style="width: 44px;" id="eentrepotK">......</td>
+<td style="width: 25.6px;">=</td>
+<td style="width: 18.4px;" id="eentrepotKK">TT</td>
+<td style="align: center;"> <strong><div id="Totaleentrepot">UP</div></strong><br>
+	<img  id="PouceUP" src="Image/pouceV.png" width="10" height="10" ><br></td>
+</tr>
+<tr>
+	
+
+			<div class="dropdown">
+			<td style="width: 90.6px; text-align: right;">	
+  			<span style="color: #0000ff;">Conseil Tribal</span></td>
+			<td style="width: 11.2px;"><img style="float:right" src="Image/tribal.png" width="50" height="50" ></td>
+	
+			<div class="dropdown-content">
+				<p><DIV>Le Conseil Tribal<br>
+					permet une hausse<br>
+				de <strong><span style="color: #ff0000;">0.5%</span></strong> du stock <br>
+					de l'entrepôt <br>
+					à chaque niveau</DIV></p>
+			  </div>
+			</div>
+	
+	
+<td style="width: 58.4px;">
+	<select name="Niveautribal" id="tribal" onchange="myFunction3()">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
+  <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10" selected="selected">10</option>		
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>	
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20" >20</option>		
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>	
+    <option value="28">28</option>
+    <option value="29">29</option>		
+		
+  </select>
+	</td>
+<td style="width: 65.6px;" id="ttribal">
+		Entrepot à&nbsp;<strong><span style="color: #326fa8;" id="Nentre2">11</span> </strong><br>
+	Tribal à <strong><span style="color: #ff0000;" id="Ntribal2">11</span></strong> <br>
+	Céramique à <strong><span style="color: #326fa8;" id="Nceram2">11</span></strong> <br>
+	</td>
+<td style="width: 10.4px;" id="tttribal">a</td>
+<td id="delta2">d</td>
+<td style="width: 58.4px;" id="ttribalC">aa</td>
+<td style="width: 79.2px;" id="ttribalO">aaa</td>
+<td style="width: 44px;" id="ttribalK">aaa</td>
+<td style="width: 25.6px;">=</td>
+<td style="width: 18.4px;" id="ttribalKK">aaaa</td>
+<td id="ttribalKKK" ></td>
+</tr>
+<tr>
+	
+<td style="width: 90.6px; text-align: left;">
+				<div class="dropdown">
+  			<span style="color: #0000ff;">Recherche Céramique</span>
+			<div class="dropdown-content">
+				<p><DIV>La Recherche Céramique<br>
+					permet une hausse<br>
+				de <strong><span style="color: #ff0000;">3%</span></strong> du stock <br>
+					de l'entrepôt <br>
+					à chaque niveau</DIV></p>
+			  </div>
+			</div>
+	</td>
+<td style="width: 11.2px;"><img style="float:right" src="Image/ceramique.png" width="50" height="50" ></td>
+<td style="width: 58.4px;">
+	<select name="Niveauceramique" id="ceramique" onchange="myFunction3()">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
+  <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10" selected="selected">10</option>		
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>	
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20" >20</option>		
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>	
+    <option value="28">28</option>
+    <option value="29">29</option>		
+		
+  </select>
+	</td>
+<td id="cceramique">	
+	Entrepot à <strong><span style="color: #326fa8;" id="Nentre3">11</span></strong> <br>
+	Tribal à <strong><span style="color: #326fa8;" id="Ntribal3">11</span></strong> <br>
+	Céramique à <strong><span style="color: #ff0000;" id="Nceram3">11</span></strong> </td>
+<td  id="ccceramique">v</td>
+	<td id="delta3">d</td>
+<td  id="cceramiqueC">vv</td>
+<td  id="cceramiqueO">vvv</td>
+<td  id="cceramiqueK">vvvv</td>
+<td >=</td>
+<td id="cceramiqueKK">vvvv</td>
+<td id="cceramiqueKKK"></td>	
+</tr>
+<tr>
+<td  colspan="3"><img style="float:left" src="Image/entrepot.png" width="50" height="50" >
+	
+	<img style="float:left" src="Image/tribal.png" width="50" height="50" >
+	<img style="float:left" src="Image/ceramique.png" width="30" height="30" >
+	</td>
+	<td>Entrepot à <strong><span style="color: #ff0000;" id="Nentre4">11</span></strong> <br>
+	Tribal à <strong><span style="color: #ff0000;" id="Ntribal4">11</span></strong> <br>
+	Céramique à <strong><span style="color: #326fa8;" id="Nceram4">11</span></strong>
+		
+	</td>
+	<td id="Hypo4V">1</td>
+	<td id="delta4">d</td>
+	<td id="Hypo4C">11</td>
+	<td id="Hypo4O">111</td>
+	<td id="Hypo4K">1111</td>
+	<td>=</td>
+	<td id="Hypo4KK">11111</td>
+	<td></td>
+</tr>
+	<td  colspan="3"><img style="float:left" src="Image/entrepot.png" width="50" height="50" >
+		<img style="float:left" src="Image/tribal.png" width="30" height="30" >
+	<img style="float:left" src="Image/ceramique.png" width="50" height="50" >
+	</td>
+	<td>Entrepot à <strong><span style="color: #ff0000;" id="Nentre5">11</span></strong> <br>
+	Tribal à <strong><span style="color: #326fa8;" id="Ntribal5">11</span></strong> <br>
+	Céramique à <strong><span style="color: #ff0000;" id="Nceram5">11</span></strong> 
+		
+	</td>
+	<td id="Hypo5V">2</td>
+	<td id="delta5">d</td>
+	<td id="Hypo5C">22</td>
+	<td id="Hypo5O">222</td>
+	<td id="Hypo5K">2222</td>
+	<td>=</td>
+	<td style="width: 18.4px;" id="Hypo5KK">22222</td>
+	<td></td>
+</tr>
+	<td  colspan="3">
+	<img style="float:left" src="Image/entrepot.png" width="50" height="50" >
+		<img style="float:left" src="Image/tribal.png" width="50" height="50" >
+		<img style="float:left" src="Image/ceramique.png" width="50" height="50" >
+	</td>
+	<td>Entrepot à&nbsp;<strong><span style="color: #ff0000;" id="Nentre6">11</span></strong> <br>
+	Tribal à <strong><span style="color: #ff0000;" id="Ntribal6">11</span></strong> <br>
+	Céramique à <strong><span style="color: #ff0000;" id="Nceram6">11</span></strong> 
+		
+	</td>
+	<td id="Hypo6V">5</td>
+	<td id="delta6">d</td>
+	<td id="Hypo6C">55</td>
+	<td id="Hypo6O">555</td>
+	<td id="Hypo6K">5555</td>
+	<td>=</td>
+	<td style="width: 18.4px;" id="Hypo6KK">55555</td>
+	<td></td>
+</tr>
+</table>
+	
+	
+</table>
+
+
+</body>
