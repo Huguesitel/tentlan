@@ -63,13 +63,17 @@ input {
 	text-align: right;
 	background: #f6faaa;
   }
+img {
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
 img:hover {
-       // margin-left: 0px;
+
         transform: scale(1.9);
-      //  display: inline;
-      //  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 	cursor: pointer;  
-	 vertical-align:middle;    
+	 vertical-align:middle; 
+	  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
     }  
 
 
