@@ -117,12 +117,14 @@ function myFunction1() {
 	
 }
 function myFunction2() {
-	alert("ok")
-	var MAstro = document.getElementById("Astronomie").value
-	alert(1-(MAstro/50))
-	document.getElementById("Temps10").innerHTML = 55
-	document.getElementById("Temps1").innerHTML = MAstro
-	
+	//alert("ok")
+	var MAstro = (1-(document.getElementById("Astronomie").value/50))
+	//alert(1-(MAstro/50))
+	document.getElementById("Temps10").innerHTML = 60*MAstro
+	document.getElementById("Temps1").innerHTML = 60*MAstro
+	document.getElementById("Temps2").innerHTML = 240*MAstro
+	document.getElementById("Temps4").innerHTML = 480*MAstro
+
 myFunction1()
 }	
 
