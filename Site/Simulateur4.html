@@ -94,6 +94,8 @@ function Debut() {
 		myFunction1()	
 }
 function myFunction1() {
+	document.getElementsById('Temps1').innerHTML = document.getElementsById('SaisonImg').value
+	
 	if (document.getElementsById('SaisonImg').value=0) {
 		document.getElementsById('SaisonImg').src = 'Image/printemps.png';
 		var S1 =0;var S2 =0;var S3 =0
@@ -219,8 +221,8 @@ function myFunction3() {
 <table style="height: 45%;  width: 85%;">
 <tr>
 	
-<td colspan="2"></td>
-<td style="width: 70.4px; text-align: center;"></td>
+<td colspan="3"></td>
+
 <td style="width: 100.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps1">10<br></span> minutes</td>
 <td>|</td>
 <td style="width: 10.4px;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps2">1<br></span> heure</td>
@@ -328,19 +330,7 @@ function myFunction3() {
 <tr>
 	
 
-			<div class="dropdown">
-			<td style="width: 90.6px; text-align: right;">	
-  			<span style="color: #0000ff;">Mine d'obsidiennes</span></td>
-			<td style="width: 11.2px;"><img style="float:right" src="Image/obsuduebbe.png" width="50" height="50" ></td>
-	
-			<div class="dropdown-content">
-				<p><DIV>Le Conseil Tribal<br>
-					permet une hausse<br>
-				de <strong><span style="color: #ff0000;">0.5%</span></strong> du stock <br>
-					de l'entrepôt <br>
-					à chaque niveau</DIV></p>
-			  </div>
-			</div>
+
 	
 	
 <td style="width: 58.4px;">
