@@ -94,34 +94,34 @@ function Debut() {
 		myFunction2()	
 }
 function myFunction1() {
-	//document.getElementsById('Temps1').innerHTML = document.getElementsById('Saison').value
-	//var MSaison = document.getElementsById('Saison').value
+	//document.getElementById('Temps1').innerHTML = document.getElementsById('Saison').value
+	//var MSaison = document.getElementById('Saison').value
 	
-	//if (document.getElementsById('Saison').value=0) {
-	//	document.getElementsById('SaisonImg').src = 'Image/printemps.png';
+	//if (document.getElementById('Saison').value=0) {
+	//	document.getElementById('SaisonImg').src = 'Image/printemps.png';
 	//	var S1 =0;var S2 =0;var S3 =0
 	//}
-	//if (document.getElementsById('Saison').value=1) {
-	//	document.getElementsById('SaisonImg').src = 'Image/ete.png';
+	//if (document.getElementById('Saison').value=1) {
+	//	document.getElementById('SaisonImg').src = 'Image/ete.png';
 	//	var S1 =0.95;var S2 =1.2 ;var S3 =0.85
 	//}
-	//if (document.getElementsById('Saison').value=2) {
-	//	document.getElementsById('SaisonImg').src = 'Image/hiver.png';
+	//if (document.getElementById('Saison').value=2) {
+	//	document.getElementById('SaisonImg').src = 'Image/hiver.png';
 	//	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
 	//}
-	//if (document.getElementsById('Saison').value=3) {
-	//	document.getElementsById('SaisonImg').src = 'Image/autone.png';
+	//if (document.getElementById('Saison').value=3) {
+	//	document.getElementById('SaisonImg').src = 'Image/autone.png';
 	//	var S1 =1.20;var S2 =0.85 ;var S3 =0.95
 	//}
-	//document.getElementsById('Temps1').innerHTML = 11
+	//document.getElementById('Temps1').innerHTML = 11
 	
 }
 function myFunction2() {
 	alert("ok")
-	var MAstro = document.getElementsById('Astronomie').value
+	var MAstro = document.getElementById("Astronomie").value
 	alert(1-(MAstro/50))
-	document.getElementsById('Temps10').innerHTML = 55
-	document.getElementsById('Temps1').innerHTML = MAstro
+	document.getElementById("Temps10").innerHTML = 55
+	document.getElementById("Temps1").innerHTML = MAstro
 	
 myFunction1()
 }	
@@ -227,7 +227,7 @@ myFunction1()
 
 <td style="width: 90.6px; text-align: right;">Carrière </td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/carriere.png" width="50" height="50" ></td>
-<td style="width: 58.4px;"><select name="Niveaucarriere" id="carriere" onchange="myFunction3()">
+<td style="width: 58.4px;"><select name="Niveaucarriere" id="carriere" onchange="myFunction1()">
   <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -307,7 +307,7 @@ myFunction1()
 	
 	
 <td style="width: 58.4px;">
-	<select name="Niveauobsidienne" id="obsidienne" onchange="myFunction3()">
+	<select name="Niveauobsidienne" id="obsidienne" onchange="myFunction1()">
     <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -341,7 +341,13 @@ myFunction1()
 		
   </select>
 	</td>
+<td id="Prod21"></td>	<td id="Prod22"></td><td id="Prod23"></td>
 
+<td id="Prod24"></td>	<td id="Prod25"></td><td id="Prod26"></td>
+	
+<td id="Prod127"></td>	<td id="Prod28"></td><td id="Prod29"></td>
+
+<td id="Prod1210"></td>	<td id="Prod211"></td><td id="Prod212"></td>
 </tr>
 <tr>
 	
