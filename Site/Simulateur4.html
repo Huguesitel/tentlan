@@ -113,7 +113,9 @@ function myFunction1() {
 		document.getElementById('SaisonImg').src = 'Image/autone.png';
 		var S1 =1.20;var S2 =0.85 ;var S3 =0.95
 	}
-	document.getElementById('Prod11').innerHTML = S1
+	document.getElementById('SS1').innerHTML = ((1-S1)*100) +"%"
+	document.getElementById('SS2').innerHTML = ((1-S2)*100) +"%"
+	document.getElementById('SS2').innerHTML =( (1-S3)*100) +"%"
 	
 }
 function myFunction2() {
@@ -124,7 +126,7 @@ function myFunction2() {
 	document.getElementById("Temps10").innerHTML = Math.round(10*MAstro)
 	document.getElementById("Temps2").innerHTML = Math.round(60*MAstro)
 	document.getElementById("Temps3").innerHTML = Math.round(24000*MAstro/60)/100
-	document.getElementById("Temps4").innerHTML = Math.round(48000*MAstro)/100
+	document.getElementById("Temps4").innerHTML = Math.round(48000*MAstro/60)/100
 
 myFunction1()
 }	
@@ -228,7 +230,7 @@ myFunction1()
 	</tr>
 <tr>
 
-<td style="width: 90.6px; text-align: right;">Carrière </td>
+<td style="width: 90.6px; text-align: right;"><span style="color: #ff0000;" id="SS1">1</span> Carrière </td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/carriere.png" width="50" height="50" ></td>
 <td style="width: 58.4px;"><select name="Niveaucarriere" id="carriere" onchange="myFunction1()">
   <option value="0">0</option>
@@ -304,7 +306,7 @@ myFunction1()
 <tr>
 	
 
-<td style="width: 90.6px; text-align: right;">Mine d'obsidiennes</td>
+<td style="width: 90.6px; text-align: right;"><span style="color: #ff0000;" id="SS2">1</span>Mine d'obsidiennes</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/obsuduebbe.png" width="50" height="50" ></td>
 
 	
@@ -354,7 +356,7 @@ myFunction1()
 </tr>
 <tr>
 	
-<td style="width: 90.6px; text-align: left;">Plantation de cacao
+<td style="width: 90.6px; text-align: left;"><span style="color: #ff0000;" id="SS3">1</span>Plantation de cacao
 
 	</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/cacao.png" width="50" height="50" ></td>
