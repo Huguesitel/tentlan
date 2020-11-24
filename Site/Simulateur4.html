@@ -96,15 +96,19 @@ function Debut() {
 function myFunction1() {
 	if (document.getElementsByTagName('SaisonImg').value=0) {
 		document.getElementsById('SaisonImg').src = 'Image/printemps.png';
+		var S1 =0;var S2 =0;var S3 =0
 	}
 	if (document.getElementsById('SaisonImg').value=1) {
 		document.getElementsById('SaisonImg').src = 'Image/ete.png';
+		var S1 =0.95;var S2 =1.2 ;var S3 =0.85
 	}
 	if (document.getElementsById('SaisonImg').value=2) {
 		document.getElementsById('SaisonImg').src = 'Image/hiver.png';
+		var S1 =1.05;var S2 =0.95 ;var S3 =1.2
 	}
 	if (document.getElementsById('SaisonImg').value=3) {
 		document.getElementsById('SaisonImg').src = 'Image/autone.png';
+		var S1 =1.20;var S2 =0.85 ;var S3 =0.95
 	}
 	document.getElementsById('Temps1').innerHTML = 11
 	
@@ -527,7 +531,7 @@ function myFunction3() {
 	<td>Saison</td>
 	<td ><img style="float:left" id="SaisonImg" src="Image/hiver.png" width="50" height="50" >
 	<td>
-	<select style="width: 20px;" name="Saison" id="Saison" onchange="myFunction1()">
+	<select style="width: 60px;" name="Saison" id="Saison" onchange="myFunction1()">
     <option value="0">Printemps</option>
     <option value="1">Eté</option>
     <option value="2"  selected="selected">Hiver</option>
