@@ -97,10 +97,10 @@ function myFunction1() {
 	//document.getElementById('Temps1').innerHTML = document.getElementsById('Saison').value
 	//var MSaison = document.getElementById('Saison').value
 	
-	//if (document.getElementById('Saison').value=0) {
-	//	document.getElementById('SaisonImg').src = 'Image/printemps.png';
-	//	var S1 =0;var S2 =0;var S3 =0
-	//}
+	if (document.getElementById('Saison').value=0) {
+		document.getElementById('SaisonImg').src = 'Image/printemps.png';
+		var S1 =0;var S2 =0;var S3 =0
+	}
 	//if (document.getElementById('Saison').value=1) {
 	//	document.getElementById('SaisonImg').src = 'Image/ete.png';
 	//	var S1 =0.95;var S2 =1.2 ;var S3 =0.85
@@ -120,10 +120,11 @@ function myFunction2() {
 	//alert("ok")
 	var MAstro = (1-(document.getElementById("Astronomie").value/50))
 	//alert(1-(MAstro/50))
-	document.getElementById("Temps10").innerHTML = 60*MAstro
-	document.getElementById("Temps1").innerHTML = 60*MAstro
-	document.getElementById("Temps2").innerHTML = 240*MAstro
-	document.getElementById("Temps4").innerHTML = 480*MAstro
+	document.getElementById("Temps1").innerHTML = Math.round(10*MAstro)	
+	document.getElementById("Temps10").innerHTML = Math.round(10*MAstro)
+	document.getElementById("Temps2").innerHTML = Math.round(60*MAstro)
+	document.getElementById("Temps3").innerHTML = Math.round(240*MAstro)
+	document.getElementById("Temps4").innerHTML = Math.round(480*MAstro)
 
 myFunction1()
 }	
@@ -136,7 +137,7 @@ myFunction1()
 	
 <table>
 <tr>
-<td rowspan="3" width: 15%;>
+<td rowspan="2" width: 15%;>
 <span style="color: #0000ff;">Je veux simuler mes <strong>capacités de production!</strong></span><br>
 
 </td>
@@ -160,7 +161,7 @@ myFunction1()
 
 <td style="width: 100.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps1">10<br></span> minutes</td>
 
-<td style="width: 10.4px;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps2">1<br></span> heure</td>
+<td style="width: 10.4px;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps2">1<br></span> minutes</td>
 
 <td style="width: 70.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps3">4<br></span> heures<br></td>
 
