@@ -91,7 +91,7 @@ img:hover {
 
 <script>
 function Debut() {
-		myFunction1()	
+		myFunction2()	
 }
 function myFunction1() {
 	document.getElementsById('Temps1').innerHTML = document.getElementsById('Saison').value
@@ -116,96 +116,10 @@ function myFunction1() {
 	
 }
 function myFunction12() {
-	document.getElementsById('Temps1').innerHTML = document.getElementsById('Astronomie').value =
+	document.getElementsById('Temps1').innerHTML = document.getElementsById('Astronomie').value 
+myFunction1()
 }	
-function myFunction3() {
 
-	
-  
-	var Ntribal = parseInt(document.getElementById("tribal").value)
-	var Ntribal1 = 1+Ntribal	
-	var Nceramique = parseInt(document.getElementById("ceramique").value)
-	var Nceramique1 = 1+Nceramique
-	var Nentrepot = parseInt(document.getElementById("entrepot").value)	
-	var Nentrepot1 = Nentrepot+1
-		
-		document.getElementById("Nentre1").innerHTML =Nentrepot1
-		document.getElementById("Ntribal1").innerHTML = Ntribal
-		document.getElementById("Nceram1").innerHTML = Nceramique
-		document.getElementById("Nentre2").innerHTML = Nentrepot
-		document.getElementById("Ntribal2").innerHTML = Ntribal1
-		document.getElementById("Nceram2").innerHTML = Nceramique	
-		document.getElementById("Nentre3").innerHTML = Nentrepot
-		document.getElementById("Ntribal3").innerHTML = Ntribal
-		document.getElementById("Nceram3").innerHTML = Nceramique1
-	
-		document.getElementById("Nentre4").innerHTML = Nentrepot1
-		document.getElementById("Ntribal4").innerHTML = Ntribal1
-		document.getElementById("Nceram4").innerHTML = Nceramique
-		document.getElementById("Nentre5").innerHTML = Nentrepot1
-		document.getElementById("Ntribal5").innerHTML = Ntribal
-		document.getElementById("Nceram5").innerHTML = Nceramique1
-		document.getElementById("Nentre6").innerHTML = Nentrepot1
-		document.getElementById("Ntribal6").innerHTML = Ntribal1
-		document.getElementById("Nceram6").innerHTML = Nceramique1
-	
-	var Stock = [0,5776,9817,14830,21004,28557,37747,48877,8,9,10,11,12,13,14,15,16,17,18,631080,733365,772081,914530,1081213,1276057,1503604,1769105,2078633,2439202,2858913,3347121,3914620,4573866,5339226,6227265,7257077,8450665,9833376,11434406,13287366,15430950,17909688,20774811,24085253,27908787,32323337,37418479,43297161,50077677,57895957,66908007,77293179,89257272,103036574,118902298,137165691,158183884,182366592,210183786,242174471,278956737,321239261,369834471,425673606];
-	var StockC = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,36457,46191,21,22,23,24,25,26,27,28,388644,492412,621137,790464,1607726,2036989,2580865,3269956,4258557,5249225,6842944,8426523,10970780,13880110,17138716,21714753,27512592,34858454,44165661,55957893,70898651,89828591,113014544,144200849,231484036,284282980,357742427,470815651,566029957,755795187];
-	var StockO = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,43182,54712,21,22,23,24,25,26,27,28,460336,583245,735709,030795542,936278,1904297,2412744,3056947,3873152,5044024,65743241,6217528,8105070,18634921,9980930,12994226,3967711,16440136,0036055,20300226,25720387,32587730,41286654,52312725,66280223,83977043,106398913,133857561,677577,170801005,274184975,336711303,090615,423717940,03571,557665141,670416898,650324,895213716];
-	var StockK = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,18051,22871,21,22,23,24,25,26,27,28,192435,243815,307552,391394,796058,1008606,1277904,1619104,2108602,2599130,3388250,4172356,5432132,6872677,8486160,10751965,13622739,17260811,21868434,27707306,35105157,44478234,55958873,71400420,114618309,140762245,177135640,233122313,280269133,374226684];	
-	document.getElementById("eeentrepot").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 +"M"
-	document.getElementById("tttribal").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
-	document.getElementById("ccceramique").innerHTML = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
-	document.getElementById("Hypo4V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
-	document.getElementById("Hypo5V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
-	document.getElementById("Hypo6V").innerHTML = Math.round(Stock[Nentrepot1]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique1))/10000)/100 + "M"
-		
-	document.getElementById("delta1").innerHTML = Math.round(Stock[Nentrepot1])
-	document.getElementById("delta2").innerHTML = Math.round(Stock[Nentrepot])
-	document.getElementById("delta3").innerHTML = Math.round(Stock[Nentrepot1]-Stock[Nentrepot])
-	
-	var CouttribalC =Math.round(335*Math.pow((1.55),(Ntribal1)))
-		var CouttribalO =Math.round(710*Math.pow((1.55),(Ntribal1)))
-		var CouttribalK =Math.round(452*Math.pow((1.55),(Ntribal1)))
-		var CouttribalKK =Math.round(CouttribalC*0.4)+Math.round(CouttribalO*0.625)+CouttribalK
-		var CoutceraC =Math.round(2647*Math.pow((1.7),(Nceramique1)))
-		var CoutceraO =Math.round(1471*Math.pow((1.7),(Nceramique1)))
-		var CoutceraK =Math.round(882*Math.pow((1.7),(Nceramique1)))	
-		var CoutceraKK =Math.round(CoutceraC*0.4)+Math.round(CoutceraO*0.625)+CoutceraK
-	
-	var CoutentrepotKK =Math.round(StockC[Nentrepot1-1]*0.4)+Math.round(StockO[Nentrepot1-1]*0.625)+StockK[Nentrepot1-1]
-	document.getElementById("eentrepotC").innerHTML =   Math.round(StockC[Nentrepot1-1]/1)/1 //+"M";	
-	document.getElementById("eentrepotO").innerHTML =   Math.round(StockO[Nentrepot1-1]/1)/1 //+"M";
-	document.getElementById("eentrepotK").innerHTML =   Math.round(StockK[Nentrepot1-1]/1)/1 //+"M";	
-	document.getElementById("eentrepotKK").innerHTML =   Math.round(CoutentrepotKK/1)/1 //+"M";	
-		
-	document.getElementById("ttribalC").innerHTML =   Math.round(CouttribalC/1)/1 //+"M";	
-	document.getElementById("ttribalO").innerHTML =   Math.round(CouttribalO/1)/1 //+"M";
-	document.getElementById("ttribalK").innerHTML =   Math.round(CouttribalK/1)/1 //+"M";		
-	document.getElementById("ttribalKK").innerHTML =   Math.round(CouttribalKK/1)/1 //+"M";	
-	document.getElementById("cceramiqueC").innerHTML =   Math.round(CoutceraC/1)/1 //+"M";	
-	document.getElementById("cceramiqueO").innerHTML =   Math.round(CoutceraO/1)/1 //+"M";
-	document.getElementById("cceramiqueK").innerHTML =   Math.round(CoutceraK/1)/1 //+"M";		
-	document.getElementById("cceramiqueKK").innerHTML =   Math.round(CoutceraKK/1)/1 //+"M";
-	
-	var VolumeTribal1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal1))*(1+(0.03*Nceramique))/10000)/100 + "M"
-	var VolumeTribal = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
-	//var DeltaVolumeTribal =VolumeTribal1 - VolumeTribal
-	var  MilleTribal = Math.round((VolumeTribal1 - VolumeTribal)*1000/CouttribalKK)
-	document.getElementById("ttribalKKK").innerHTML = (VolumeTribal1 - VolumeTribal)
-	
-	var Volumeceramique1 = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique1))/10000)/100 + "M"
-	var Volumeceramique = Math.round(Stock[Nentrepot]*(1+(0.005*Ntribal))*(1+(0.03*Nceramique))/10000)/100 + "M"
-	var DeltaVolumeceramique =Volumeceramique1-Volumeceramique
-	var  Milleceramique = Math.round(DeltaVolumeceramique*1000/CoutceraKK)
-	document.getElementById("cceramiqueKKK").innerHTML = VolumeTribal1 	
-	
-	document.getElementById("Hypo4C").innerHTML = 10 +Math.round(CouttribalC/1000000)/100 +"M";
-	document.getElementById("Hypo4O").innerHTML = 10 +Math.round(CouttribalO/1000000)/100 +"M";
-	document.getElementById("Hypo4K").innerHTML = 10 +Math.round(CouttribalK/1000000)/100 +"M";
-	document.getElementById("Hypo4KK").innerHTML = 10 +Math.round(CouttribalKK/1000000)/100 +"M";
-	
-}
 
 </script>
 
@@ -229,9 +143,9 @@ function myFunction3() {
 
 <td style="width: 10.4px;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps2">1<br></span> heure</td>
 
-	<td style="width: 70.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps3">4<br></span> heures<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
+<td style="width: 70.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps3">4<br></span> heures<br></td>
 
-<td style="width: 50.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps4">8<br></span> heures<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
+<td style="width: 50.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps4">8<br></span> heures<br></td>
 	
 
 			
@@ -260,7 +174,7 @@ function myFunction3() {
 
 <td style="width: 90.6px; text-align: right;">Carrière </td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/carriere.png" width="50" height="50" ></td>
-<td style="width: 58.4px;"><select name="Niveauentrepot" id="entrepot" onchange="myFunction3()">
+<td style="width: 58.4px;"><select name="Niveaucarriere" id="carriere" onchange="myFunction3()">
   <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -334,11 +248,13 @@ function myFunction3() {
 <tr>
 	
 
+<td style="width: 90.6px; text-align: right;">Mine d'obsidiennes</td>
+<td style="width: 11.2px;"><img style="float:right" src="Image/obsidienne.png" width="50" height="50" ></td>
 
 	
 	
 <td style="width: 58.4px;">
-	<select name="Niveautribal" id="tribal" onchange="myFunction3()">
+	<select name="Niveauobsidienne" id="obsidienne" onchange="myFunction3()">
     <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -376,12 +292,12 @@ function myFunction3() {
 </tr>
 <tr>
 	
-<td style="width: 90.6px; text-align: left;">
+<td style="width: 90.6px; text-align: left;">Plantation de cacao
 
 	</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/cacao.png" width="50" height="50" ></td>
 <td style="width: 58.4px;">
-	<select name="Niveauceramique" id="ceramique" onchange="myFunction3()">
+	<select name="Niveaucacao" id="cacao" onchange="myFunction3()">
     <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
