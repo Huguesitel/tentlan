@@ -94,6 +94,20 @@ function Debut() {
 		myFunction1()	
 }
 function myFunction1() {
+	if (document.getElementsByTagName('SaisonImg').value=0) {
+		document.getElementsById('SaisonImg').src = 'Image/printemps.png';
+	}
+	if (document.getElementsById('SaisonImg').value=1) {
+		document.getElementsById('SaisonImg').src = 'Image/ete.png';
+	}
+	if (document.getElementsById('SaisonImg').value=2) {
+		document.getElementsById('SaisonImg').src = 'Image/hiver.png';
+	}
+	if (document.getElementsById('SaisonImg').value=3) {
+		document.getElementsById('SaisonImg').src = 'Image/autone.png';
+	}
+	document.getElementsById('Temps1').innerHTML = 11
+	
 }
 
 function myFunction3() {
@@ -204,22 +218,14 @@ function myFunction3() {
 <td colspan="2"></td>
 <td style="width: 70.4px; text-align: center;"></td>
 <td style="width: 100.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps1">10<br></span> minutes</td>
+<td>|</td>
 <td style="width: 10.4px;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps2">1<br></span> heure</td>
-<td style="width: 70.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps3">4<br></span> heures<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
-
+<td>|</td>
+	<td style="width: 70.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps3">4<br></span> heures<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
+<td>|</td>
 <td style="width: 50.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps4">8<br></span> heures<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
 	
-			<td style="text-align: center;">
-			<div class="dropdown">
-  			<span style="color: #0000ff;"><br></span>
-			<img style="align: center;" src="Image/xacaEqii.png" width="30" height="30" >
-			 <div class="dropdown-content">
-				<p><DIV>Le cacaoEquitable (CacaoEqui) est calculé en convertissant <br>
-				toutes les ressources en cacao ; ce qui permet <br>
-				de comparer les coûts de 2 'objets' de nature différente</DIV></p>
-			  </div>
-			</div>
-			</td>
+
 			
 
 </tr>
@@ -519,9 +525,9 @@ function myFunction3() {
 </tr>
 <tr>
 	<td>Saison</td>
-	<td ><img style="float:left" src="Image/astronomie.png" width="50" height="50" >
+	<td ><img style="float:left" id="SaisonImg" src="Image/hiver.png" width="50" height="50" >
 	<td>
-	<select style="width: 20px;" name="Saison" id="Saison" onchange="myFunction2()">
+	<select style="width: 20px;" name="Saison" id="Saison" onchange="myFunction1()">
     <option value="0">Printemps</option>
     <option value="1">Eté</option>
     <option value="2"  selected="selected">Hiver</option>
