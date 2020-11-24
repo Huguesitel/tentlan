@@ -96,24 +96,24 @@ function Debut() {
 function myFunction1() {
 	//document.getElementById('Temps1').innerHTML = document.getElementsById('Saison').value
 	//var MSaison = document.getElementById('Saison').value
-	
+	alert(document.getElementById('Saison').value)
 	if (document.getElementById('Saison').value=0) {
 		document.getElementById('SaisonImg').src = 'Image/printemps.png';
 		var S1 =0;var S2 =0;var S3 =0
 	}
-	//if (document.getElementById('Saison').value=1) {
-	//	document.getElementById('SaisonImg').src = 'Image/ete.png';
-	//	var S1 =0.95;var S2 =1.2 ;var S3 =0.85
-	//}
-	//if (document.getElementById('Saison').value=2) {
-	//	document.getElementById('SaisonImg').src = 'Image/hiver.png';
-	//	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
-	//}
-	//if (document.getElementById('Saison').value=3) {
-	//	document.getElementById('SaisonImg').src = 'Image/autone.png';
-	//	var S1 =1.20;var S2 =0.85 ;var S3 =0.95
-	//}
-	//document.getElementById('Temps1').innerHTML = 11
+	if (document.getElementById('Saison').value=1) {
+		document.getElementById('SaisonImg').src = 'Image/ete.png';
+		var S1 =0.95;var S2 =1.2 ;var S3 =0.85
+	}
+	if (document.getElementById('Saison').value=2) {
+		document.getElementById('SaisonImg').src = 'Image/hiver.png';
+		var S1 =1.05;var S2 =0.95 ;var S3 =1.2
+	}
+	if (document.getElementById('Saison').value=3) {
+		document.getElementById('SaisonImg').src = 'Image/autone.png';
+		var S1 =1.20;var S2 =0.85 ;var S3 =0.95
+	}
+	document.getElementById('Prod11').innerHTML = S1
 	
 }
 function myFunction2() {
@@ -123,8 +123,8 @@ function myFunction2() {
 	document.getElementById("Temps1").innerHTML = Math.round(10*MAstro)	
 	document.getElementById("Temps10").innerHTML = Math.round(10*MAstro)
 	document.getElementById("Temps2").innerHTML = Math.round(60*MAstro)
-	document.getElementById("Temps3").innerHTML = Math.round(240*MAstro)
-	document.getElementById("Temps4").innerHTML = Math.round(480*MAstro)
+	document.getElementById("Temps3").innerHTML = Math.round(24000*MAstro/60)/100
+	document.getElementById("Temps4").innerHTML = Math.round(48000*MAstro)/100
 
 myFunction1()
 }	
@@ -209,19 +209,19 @@ myFunction1()
 		
   </select>
 	</td>
-			<td>Prod. <span style="color: #ff0000;" id="Temps10">1<br></span></td>
+			<td>Prod. <span style="color: #ff0000;" id="Temps10">1<br></span> min</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>
 	
-			<td>Prod. <span style="color: #ff0000;" id="Temps20">1<br></span></td>
+			<td>Prod. <span style="color: #ff0000;" id="Temps20">1<br></span> min</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>
 
-			<td>Prod. <span style="color: #ff0000;" id="Temps30">1<br></span></td>
+			<td>Prod. <span style="color: #ff0000;" id="Temps30">1<br></span> hr</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>	
 
-			<td>Prod. <span style="color: #ff0000;" id="Temps40">1<br></span></td>
+			<td>Prod. <span style="color: #ff0000;" id="Temps40">1<br></span> hr</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>		
 		
