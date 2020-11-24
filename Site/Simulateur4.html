@@ -94,28 +94,30 @@ function Debut() {
 		myFunction1()	
 }
 function myFunction1() {
-	document.getElementsById('Temps1').innerHTML = document.getElementsById('SaisonImg').value
+	document.getElementsById('Temps1').innerHTML = document.getElementsById('Saison').value
 	
-	if (document.getElementsById('SaisonImg').value=0) {
+	if (document.getElementsById('Saison').value=0) {
 		document.getElementsById('SaisonImg').src = 'Image/printemps.png';
 		var S1 =0;var S2 =0;var S3 =0
 	}
-	if (document.getElementsById('SaisonImg').value=1) {
+	if (document.getElementsById('Saison').value=1) {
 		document.getElementsById('SaisonImg').src = 'Image/ete.png';
 		var S1 =0.95;var S2 =1.2 ;var S3 =0.85
 	}
-	if (document.getElementsById('SaisonImg').value=2) {
+	if (document.getElementsById('Saison').value=2) {
 		document.getElementsById('SaisonImg').src = 'Image/hiver.png';
 		var S1 =1.05;var S2 =0.95 ;var S3 =1.2
 	}
-	if (document.getElementsById('SaisonImg').value=3) {
+	if (document.getElementsById('Saison').value=3) {
 		document.getElementsById('SaisonImg').src = 'Image/autone.png';
 		var S1 =1.20;var S2 =0.85 ;var S3 =0.95
 	}
 	document.getElementsById('Temps1').innerHTML = 11
 	
 }
-
+function myFunction12() {
+	document.getElementsById('Temps1').innerHTML = document.getElementsById('Astronomie').value =
+}	
 function myFunction3() {
 
 	
@@ -325,7 +327,9 @@ function myFunction3() {
 <td></td>	<td></td><td></td>
 <td>|</td>	
 <td></td>	<td></td><td></td>
-<td>|</td>	
+<td>|</td>
+<td></td>	<td></td><td></td>
+<td>|</td>
 </tr>
 <tr>
 	
@@ -457,7 +461,7 @@ function myFunction3() {
 	<td>Recherche Astronomie</td>
 	<td ><img style="float:left" src="Image/astronomie.png" width="50" height="50" >
 	<td>
-	<select name="Astronomie" id="Astronomie" onchange="myFunction1()">
+	<select name="Astronomie" id="Astronomie" onchange="myFunction2()">
     <option value="0">0</option>
     <option value="1">1</option>
     <option value="2">2</option>
