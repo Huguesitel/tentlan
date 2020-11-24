@@ -192,7 +192,7 @@ function myFunction3() {
 <table>
 <tr>
 <td rowspan="3" width: 15%;>
-<span style="color: #0000ff;">Je veux rentabiliser mes <strong>capacités de production</strong> en les comparant avec la recherche astronomie   !</span><br>
+<span style="color: #0000ff;">Je veux simuler mes <strong>capacités de production !</strong></span><br>
 
 </td>
 <td>
@@ -201,16 +201,13 @@ function myFunction3() {
 <tr>
 	
 <td colspan="2"></td>
-<td style="width: 70.4px; text-align: center;">Niveau actuel</td>
-<td style="width: 100.4px; text-align: center;">Niveau à &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atteindre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td style="width: 10.4px;">Volume du stock</td>
+<td style="width: 70.4px; text-align: center;">Niveau</td>
+<td style="width: 100.4px; text-align: center;" colspan="3">Production < 10 minutes</td>
+<td style="width: 10.4px;" colspan="3">Production < 1 heure</td>
 <td >Volume sup.</td>
-<td style="width: 70.4px; text-align: center;">Calcaire<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
+<td style="width: 70.4px; text-align: center;" colspan="3">Production < 4 heures<br><img style="align: center;" src="Image/calc.png" width="30" height="30" ></td>
 
-<td style="width: 50.4px; text-align: center;">Obsidienne<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
-<td style="width: 70.4px; text-align: center;">Cacao<br><img style="align: center;" src="Image/xacai.png" width="30" height="30" ></td>
-<td style="width: 25.6px;"></td>
-
+<td style="width: 50.4px; text-align: center;" colspan="3">Production < 8 heures<br><img style="align: center;" src="Image/obsi.png" width="30" height="30" ></td>
 	
 			<td style="text-align: center;">
 			<div class="dropdown">
@@ -225,8 +222,23 @@ function myFunction3() {
 			</td>
 			
 
-<td style="width: 25.6px;">Volume pour <strong><span style="color: #ff0000;">1000</span></strong> CacaoEqui</td>
 </tr>
+	<tr>
+		<td colspan="3"></td>
+			<td>Production de calcaire</td>
+			<td>Production de calcaire par jour</td>
+			<td>Production de CacaoEqui par jour</td>
+		
+			<td>Production d'obsidienne</td>
+			<td>Production d'obsidienne par jour</td>
+			<td>Production de CacaoEqui par jour</td>
+		
+			<td>Production de cacao</td>
+			<td>Production de cacao par jour</td>
+			<td>Production de CacaoEqui par jour</td>	
+		
+		
+	</tr>
 <tr>
 
 <td style="width: 90.6px; text-align: right;">Carrière </td>
@@ -442,7 +454,33 @@ function myFunction3() {
 <tr>
 <td>Nombre de ville</td>	
 <td ><img style="float:left" src="Image/ville.png" width="50" height="50" >
-<td></td>
+<td>
+	<select name="Niveauceramique" id="ceramique" onchange="myFunction3()">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
+  <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10" selected="selected">10</option>		
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>	
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20" >20</option>		
+
+		
+  </select>
+</td>
 	</td>
 	<td>Entrepot à <strong><span style="color: #ff0000;" id="Nentre4">11</span></strong> <br>
 	Tribal à <strong><span style="color: #ff0000;" id="Ntribal4">11</span></strong> <br>
@@ -460,7 +498,41 @@ function myFunction3() {
 </tr><tr>
 	<td>Recherche Astronomie</td>
 	<td ><img style="float:left" src="Image/astronomie.png" width="50" height="50" >
-	<td></td>
+	<td>
+	<select name="Niveauceramique" id="ceramique" onchange="myFunction3()">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+	<option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>	
+  <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10" selected="selected">10</option>		
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>	
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20" >20</option>		
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>	
+    <option value="28">28</option>
+    <option value="29">29</option>		
+		
+  </select>
+	</td>
 	</td>
 	<td>Entrepot à <strong><span style="color: #ff0000;" id="Nentre5">11</span></strong> <br>
 	Tribal à <strong><span style="color: #326fa8;" id="Ntribal5">11</span></strong> <br>
@@ -476,7 +548,34 @@ function myFunction3() {
 	<td style="width: 18.4px;" id="Hypo5KK">22222</td>
 	<td></td>
 </tr>
-	
+<tr>
+	<td>Saison</td>
+	<td ><img style="float:left" src="Image/astronomie.png" width="50" height="50" >
+	<td>
+	<select name="Niveauceramique" id="ceramique" onchange="myFunction3()">
+    <option value="0">Printemps</option>
+    <option value="1">Ete</option>
+    <option value="2"  selected="selected">Hiver</option>
+    <option value="3">Automne.</option>
+ 		
+		
+  </select>
+	</td>
+	</td>
+	<td>Entrepot à <strong><span style="color: #ff0000;" id="Nentre5">11</span></strong> <br>
+	Tribal à <strong><span style="color: #326fa8;" id="Ntribal5">11</span></strong> <br>
+	Céramique à <strong><span style="color: #ff0000;" id="Nceram5">11</span></strong> 
+		
+	</td>
+	<td id="Hypo5V">2</td>
+	<td id="delta5">d</td>
+	<td id="Hypo5C">22</td>
+	<td id="Hypo5O">222</td>
+	<td id="Hypo5K">2222</td>
+	<td>=</td>
+	<td style="width: 18.4px;" id="Hypo5KK">22222</td>
+	<td></td>
+</tr>	
 </table>
 	
 	
