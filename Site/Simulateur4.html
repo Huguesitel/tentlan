@@ -154,11 +154,12 @@ function myFunction1() {
 	document.getElementById('Prod31').innerHTML = Math.round(Vcacao)
 	document.getElementById('Prod61').innerHTML = Math.round(Vcacao*Nbville)
 	
-	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*2*S1*60*60/(MAstro*10))
+	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*S1*0.93749*2*(10*MAstro/60))
+	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*2*S1*60*60/(10*MAstro/60))
 	document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*0.6*2*S1*60*60/(MAstro*10))
 
-	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*S1*0.93749*2*(10*MAstro/60))
-	document.getElementById('Prod15').innerHTML = Math.round(Vcarriere*12*S1*60*60*0.93749/(10*MAstro/60))
+	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*S1*0.93749*2*(60*MAstro/60))
+	document.getElementById('Prod15').innerHTML = Math.round(Vcarriere*12*S1*60*60*0.93749/(60*MAstro/60))
 	document.getElementById('Prod16').innerHTML = Math.round(Vcarriere*0.6*12*S1*60*60*0.93749/(MAstro*10))	
 	document.getElementById('Prod44').innerHTML = Math.round(Vcarriere*S1*Nbville*0.93749*2*(10*MAstro/60))	
 
