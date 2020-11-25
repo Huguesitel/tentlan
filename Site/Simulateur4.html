@@ -122,13 +122,16 @@ function myFunction1() {
 		{Cara ="+"}
 
 	document.getElementById('SS3').innerHTML =Cara +  Math.round((S3-1)*100) +"% "
+	
 	var BaseCalc = [0,5331,5445,5605,5812,6069,6380,6749,7184,7691,8278,8958,9740,10640,11675,12862,14225,15787,17580,19636,21993,24570,27388,30465,33824,37489,41484,45836,50576,55735,61347,67449,74081,81285,89108,97600,106814,116807,127641,139384,152108,165889,180810,196963,214442,233352,253804,275918,299824,325658]
 	var BaseObsi = [0,3821,3864,3942,4055,4206,4396,4629,4907,5237,5622,6072,6593,7196,7892,8692,9614,10673,11889,13202,14619,16149,17797,19574,21487,23546,25762,28144,30704,33454,36407,39577,42978,46626,50537,54729,59220,64030,69180,74692,80591,86901,93650,100866,108578,116820,125626,154021,166794,180687]
 	var BaseCacao = [0,2756,2756,2756,2756,2756,2779,2845,2952,3101,3295,3535,3827,4174,4582,5059,5608,6238,6916,7643,8424,9261,10158,11119,12147,13248,14426,15685,17030,18467,20002,21640,23388,25253,27241,29360,31619,34024,36586,39314,42217,45307,48593,52088,55805,59755,65119,70932,77233,84062]
 	var MAstr = document.getElementById("Astronomie").value
 	var MAstro = (1-(MAstr*0.02))
-
+	var MAstro1 = 10*MAstro
+	var MAstro2 = 60*MAstro
 	//var MAstro = (1-(document.getElementById("Astronomie").value/50))
+	
 
 	document.getElementById("Temps1").innerHTML = Math.round(100*MAstro)/10	
 	document.getElementById("Temps10").innerHTML = Math.round(100*MAstro)/10
@@ -143,14 +146,16 @@ function myFunction1() {
 	var Nobsidienne = document.getElementById('obsidienne').value
 	var Ncacao = document.getElementById('cacao').value
 	
-	var Vcarriere =BaseCalc[Ncarriere]
-	var Vobsidienne =BaseObsi[Nobsidienne]
-	var Vcacao =BaseCacao[Ncacao]
-	
+	var Vcarrier =BaseCalc[Ncarriere]
+	var Vobsidienn =BaseObsi[Nobsidienne]
+	var Vcaca =BaseCacao[Ncacao]
+	var Vcarriere = Vcarrier*2*S1
+	var Vobsidienne =Vobsidienn*2*S2
+	var Vcacao =Vcaca*2*S3
 	
 	var Nbville = document.getElementById('ville').value
 	
-	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*2*S1)
+	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*MAstro1/60)
 	//document.getElementById('Prod41').innerHTML = Math.round(Vcarriere*Nbville*2*S1)
 	//document.getElementById('Prod21').innerHTML = Math.round(Vobsidienne)
 	//document.getElementById('Prod51').innerHTML = Math.round(Vobsidienne*Nbville)
@@ -161,7 +166,7 @@ function myFunction1() {
 	//document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*24*60/60)
 	//document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*24*0.6*60/60)
 	
-	//document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*0.9375*MAstro/60)
+	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*0.9375*MAstro2/60)
 	//document.getElementById('Prod15').innerHTML = Math.round(Vcarriere*12*S1*60*60*0.9375/(60*MAstro))
 	//document.getElementById('Prod16').innerHTML = Math.round(Vcarriere*0.6*12*S1*60*60*0.9375/60*(MAstro))	
 	//document.getElementById('Prod44').innerHTML = Math.round(Vcarriere*S1*Nbville*0.93749*2*(60*MAstro))	
@@ -522,7 +527,7 @@ function myFunction2() {
 		
   </select>
 </td>
-<td colspan="12" > Production estimée pour <strong><span style="color: #ff0000;" id="Temps30">10</span></strong> villes</td>	
+<td colspan="12" > Récoltes estimées pour <strong><span style="color: #ff0000;" id="Temps30">10</span></strong> villes</td>	
 </tr>
 <tr>
 <td colspan="3"  style="width: 70.4px; text-align: right;">Calcaire  <img style="float:right align: center;" src="Image/calc.png" width="30" height="30" ></td>
