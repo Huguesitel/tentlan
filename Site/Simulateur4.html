@@ -82,7 +82,8 @@ function Debut() {
 		myFunction2()	
 }
 function myFunction1() {
-	var MAstro = (1-(document.getElementById("Astronomie").value/50))
+	var MAstr = document.getElementById("Astronomie").value
+	var MAstrp = 1-(MAstr*0.02)
 	var Saisai = document.getElementById('Saison').value
 	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
 	//alert(Saisai)
