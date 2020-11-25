@@ -111,6 +111,22 @@ function myFunction1() {
 	document.getElementById('SS2').innerHTML = Math.round((1-S2)*100) +"% "
 	document.getElementById('SS3').innerHTML = Math.round((1-S3)*100) +"% "
 	
+	
+	
+}
+function myFunction2() {
+	//alert("ok")
+	var MAstro = (1-(document.getElementById("Astronomie").value/50))
+	//alert(1-(MAstro/50))
+	document.getElementById("Temps1").innerHTML = Math.round(100*MAstro)/10	
+	document.getElementById("Temps10").innerHTML = Math.round(100*MAstro)/10
+	document.getElementById("Temps2").innerHTML = Math.round(600*MAstro)/10
+	document.getElementById("Temps3").innerHTML = Math.round(24000*MAstro/60)/100
+	document.getElementById("Temps4").innerHTML = Math.round(48000*MAstro/60)/100
+	document.getElementById("Temps20").innerHTML = Math.round(600*MAstro)/10
+	document.getElementById("Temps30").innerHTML = Math.round(24000*MAstro/60)/100
+	document.getElementById("Temps40").innerHTML = Math.round(48000*MAstro/60)/100
+	
 	var Ncarriere = document.getElementById('carriere').value
 	var Nobsidienne = document.getElementById('obsidienne').value
 	var Ncacao = document.getElementById('cacao').value
@@ -128,20 +144,8 @@ function myFunction1() {
 	document.getElementById('Prod61').innerHTML = Math.round(Vcacao*Nbville)
 	
 	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*2*S1*60*60/(MAstro*10))
+	document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*0.6*2*S1*60*60/(MAstro*10))
 	
-}
-function myFunction2() {
-	//alert("ok")
-	var MAstro = (1-(document.getElementById("Astronomie").value/50))
-	//alert(1-(MAstro/50))
-	document.getElementById("Temps1").innerHTML = Math.round(100*MAstro)/10	
-	document.getElementById("Temps10").innerHTML = Math.round(100*MAstro)/10
-	document.getElementById("Temps2").innerHTML = Math.round(600*MAstro)/10
-	document.getElementById("Temps3").innerHTML = Math.round(24000*MAstro/60)/100
-	document.getElementById("Temps4").innerHTML = Math.round(48000*MAstro/60)/100
-	document.getElementById("Temps20").innerHTML = Math.round(600*MAstro)/10
-	document.getElementById("Temps30").innerHTML = Math.round(24000*MAstro/60)/100
-	document.getElementById("Temps40").innerHTML = Math.round(48000*MAstro/60)/100	
 myFunction1()
 }	
 
@@ -326,7 +330,7 @@ myFunction1()
 <tr>
 	
 
-<td style="width: 90.6px; text-align: right;"><span style="color: #ff0000;" id="SS2">1</span>Mine d'obsidiennes</td>
+<td style="width: 90.6px; text-align: right;"><strong><span style="color: #ff0000;" id="SS2">1</span></strong> Mine d'obsidiennes</td>
 <td style="width: 11.2px;"><img style="float:right" src="Image/obsuduebbe.png" width="50" height="50" ></td>
 
 	
@@ -453,7 +457,7 @@ myFunction1()
 		
   </select>
 </td>
-<td colspan="12" > Production estimée pour 10 villes</td>	
+<td colspan="12" > Production estimée pour <strong><span style="color: #ff0000;" id="Temps30">10</span></strong> villes</td>	
 </tr>
 <tr>
 <td colspan="3" ></td>	
