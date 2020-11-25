@@ -95,13 +95,13 @@ function myFunction1() {
 		//src="Image/hiver.png"
 	}
 	if (Saisai==1) {
-		var S1 =0.95;var S2 =1.2 ;var S3 =0.85
+		var S1 =0.95;var S2 =0.85 ;var S3 =1.2 
 		document.getElementById("SaisonImg").src = "Image/ete.png";
 		
 	}
 	if (Saisai==2) {
 		document.getElementById('SaisonImg').src = 'Image/hiver.png';
-		var S1 =1.05;var S2 =0.95 ;var S3 =1.2
+		var S1 =1.05;var S2 =1.2 ;var S3 =0.95
 	}
 	if (Saisai==3) {
 		document.getElementById('SaisonImg').src = 'Image/autone.png';
@@ -110,10 +110,18 @@ function myFunction1() {
 	if (S1 > 1) 
 		{Cara ="+ "}
 	else {
-	Cara =""}
+		Cara =""}
 	document.getElementById('SS1').innerHTML = Cara + Math.round((1-S1)*100) +"% "
-	document.getElementById('SS2').innerHTML = Math.round((1-S2)*100) +"% "
-	document.getElementById('SS3').innerHTML = Math.round((1-S3)*100) +"% "
+		if (S2 > 1) 
+		{Cara ="+ "}
+	else {
+		Cara =""}
+	document.getElementById('SS2').innerHTML = Cara + Math.round((1-S2)*100) +"% "
+	if (S3 > 1) 
+		{Cara ="+ "}
+	else {
+		Cara =""}	
+	document.getElementById('SS3').innerHTML =Cara +  Math.round((1-S3)*100) +"% "
 	
 	
 	
