@@ -83,13 +83,15 @@ function Debut() {
 }
 function myFunction1() {
 	var Saisai = document.getElementById('Saison').value
-	alert(Saisai)
+	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
+	//alert(Saisai)
 	//document.getElementById('Temps1').innerHTML = document.getElementsById('Saison').value
 	//var MSaison = document.getElementById('Saison').value
 	
 	if (Saisai=0) {
-		document.getElementById('SaisonImg').src = 'Image/printemps.png';
 		var S1 =0;var S2 =0;var S3 =0
+		document.getElementById('SaisonImg').src = 'Image/printemps.png';
+		
 	}
 	//if (Saisai=1) {
 	//	document.getElementById('SaisonImg').src = 'Image/ete.png';
@@ -103,17 +105,21 @@ function myFunction1() {
 	//	document.getElementById('SaisonImg').src = 'Image/autone.png';
 	//	var S1 =1.20;var S2 =0.85 ;var S3 =0.95
 	//}
-	document.getElementById('SS1').innerHTML = Math.round((1-S1)*100) +"%"
-	//document.getElementById('SS2').innerHTML = Math.round((1-S2)*100) +"%"
-	//document.getElementById('SS3').innerHTML = Math.round((1-S3)*100) +"%"
+	document.getElementById('SS1').innerHTML = Math.round((1-S1)*100) +"% "
+	document.getElementById('SS2').innerHTML = Math.round((1-S2)*100) +"% "
+	document.getElementById('SS3').innerHTML = Math.round((1-S3)*100) +"% "
 	
 	var Ncarriere = document.getElementById('carriere').value
 	var Nobsidienne = document.getElementById('obsidienne').value
 	var Ncacao = document.getElementById('cacao').value
 	
-	var CouttribalC =Math.round(3662*Math.pow((1.10),(Ncarriere)))
-	var CouttribalC =Math.round(3462*Math.pow((1.08),(Nobsidienne)))
-	var CouttribalC =Math.round(2131*Math.pow((1.08),(Ncacao)))	
+	var Vcarriere =Math.round(3662*Math.pow((1.10),(Ncarriere)))
+	var Vobsidienne =Math.round(3462*Math.pow((1.08),(Nobsidienne)))
+	var Vcacao =Math.round(2131*Math.pow((1.08),(Ncacao)))
+	var Nbville = document.getElementById('ville').value
+	
+	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere)
+	document.getElementById('Prod141').innerHTML = Math.round(Vcarriere*Nbville)	
 }
 function myFunction2() {
 	//alert("ok")
