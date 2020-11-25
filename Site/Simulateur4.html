@@ -123,13 +123,9 @@ function myFunction1() {
 
 	document.getElementById('SS3').innerHTML =Cara +  Math.round((S3-1)*100) +"% "
 	
-	
-	
-}
-function myFunction2() {
-	//alert("ok")
-	var MAstro = (1-(document.getElementById("Astronomie").value/50))
-	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
+
+	//var MAstro = (1-(document.getElementById("Astronomie").value/50))
+
 	document.getElementById("Temps1").innerHTML = Math.round(100*MAstro)/10	
 	document.getElementById("Temps10").innerHTML = Math.round(100*MAstro)/10
 	document.getElementById("Temps2").innerHTML = Math.round(600*MAstro)/10
@@ -164,10 +160,10 @@ function myFunction2() {
 	document.getElementById('Prod44').innerHTML = Math.round(Vcarriere*Nbville*12*S1*0.93749)	
 
 	document.getElementById('Prod24').innerHTML = Vcarriere
-	document.getElementById('Prod25').innerHTML = Vcarriere*S1
-	document.getElementById('Prod26').innerHTML = 0
-
-	
+	document.getElementById('Prod25').innerHTML = Vcarriere*S1*2
+	document.getElementById('Prod26').innerHTML = Vcarriere*S1*0.93749*2
+}
+function myFunction2() {	
 	myFunction1()
 }	
 
