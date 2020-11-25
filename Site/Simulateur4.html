@@ -90,7 +90,7 @@ function myFunction1() {
 	//var MSaison = document.getElementById('Saison').value
 	
 	if (Saisai==0) {
-		var S1 =0;var S2 =0;var S3 =0
+		var S1 =1;var S2 =1;var S3 =1
 		document.getElementById("SaisonImg").src = "Image/printemps.png";
 		//src="Image/hiver.png"
 	}
@@ -107,7 +107,11 @@ function myFunction1() {
 		document.getElementById('SaisonImg').src = 'Image/autone.png';
 		var S1 =1.20;var S2 =0.85 ;var S3 =0.95
 	}
-	document.getElementById('SS1').innerHTML = Math.round((1-S1)*100) +"% "
+	if (S1 > 1) 
+		{Cara ="+ "}
+	else {
+	Cara =""}
+	document.getElementById('SS1').innerHTML = Cara + Math.round((1-S1)*100) +"% "
 	document.getElementById('SS2').innerHTML = Math.round((1-S2)*100) +"% "
 	document.getElementById('SS3').innerHTML = Math.round((1-S3)*100) +"% "
 	
@@ -150,10 +154,6 @@ myFunction1()
 }	
 
 
-	
-//49	1,10	3662	345 401
-//46	1,08	3462	128 188
-//45	1,08	2131	61 044
 
 
 </script>
