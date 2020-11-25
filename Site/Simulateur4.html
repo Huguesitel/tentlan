@@ -82,6 +82,7 @@ function Debut() {
 		myFunction2()	
 }
 function myFunction1() {
+	var MAstro = (1-(document.getElementById("Astronomie").value/50))
 	var Saisai = document.getElementById('Saison').value
 	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
 	//alert(Saisai)
@@ -120,13 +121,13 @@ function myFunction1() {
 	var Nbville = document.getElementById('ville').value
 	
 	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*2*S1)
-	document.getElementById('Prod41').innerHTML = Math.round(Vcarriere*Nbville)
+	document.getElementById('Prod41').innerHTML = Math.round(Vcarriere*Nbville*2*S1)
 	document.getElementById('Prod21').innerHTML = Math.round(Vobsidienne)
 	document.getElementById('Prod51').innerHTML = Math.round(Vobsidienne*Nbville)
 	document.getElementById('Prod31').innerHTML = Math.round(Vcacao)
 	document.getElementById('Prod61').innerHTML = Math.round(Vcacao*Nbville)
 	
-	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere)
+	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*2*S1*60*60/(MAstro*10))
 	
 }
 function myFunction2() {
