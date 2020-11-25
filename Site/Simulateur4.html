@@ -142,9 +142,9 @@ function myFunction1() {
 	var Nobsidienne = document.getElementById('obsidienne').value
 	var Ncacao = document.getElementById('cacao').value
 	
-	var Vcarriere =BaseCalc[Ncarriere]
-	var Vobsidienne =BaseObsi[Nobsidienne]
-	var Vcacao =BaseCacao[Ncacao]
+	var Vcarriere =2*S1*BaseCalc[Ncarriere]
+	var Vobsidienne =2*S2*BaseObsi[Nobsidienne]
+	var Vcacao =2*S3*BaseCacao[Ncacao]
 	var Nbville = document.getElementById('ville').value
 	
 	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*2*S1)
@@ -154,27 +154,28 @@ function myFunction1() {
 	document.getElementById('Prod31').innerHTML = Math.round(Vcacao)
 	document.getElementById('Prod61').innerHTML = Math.round(Vcacao*Nbville)
 	
-	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*S1*0.93749*2*(10*MAstro/60))
-	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*2*S1*60*60/(10*MAstro))
-	document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*0.6*2*S1*60*60/(MAstro*10))
-
-	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*S1*0.93749*2//*(60*MAstro/60))
-	document.getElementById('Prod15').innerHTML = Math.round(Vcarriere*12*S1*60*60*0.93749/(60*MAstro))
-	document.getElementById('Prod16').innerHTML = Math.round(Vcarriere*0.6*12*S1*60*60*0.93749/60*(MAstro))	
+	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*MAstro/60)							 *2*(10*MAstro/60))
+	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*24*60/60)
+	document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*24*0.6*60/60)
+	
+	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*0.9375*MAstro/60)
+	//document.getElementById('Prod15').innerHTML = Math.round(Vcarriere*12*S1*60*60*0.9375/(60*MAstro))
+	//document.getElementById('Prod16').innerHTML = Math.round(Vcarriere*0.6*12*S1*60*60*0.9375/60*(MAstro))	
 //document.getElementById('Prod44').innerHTML = Math.round(Vcarriere*S1*Nbville*0.93749*2*(60*MAstro))	
 
-	document.getElementById('Prod24').innerHTML = Math.round(Vcarriere*S1)
+	//document.getElementById('Prod24').innerHTML = Math.round(Vcarriere*S1)
 	//document.getElementById('Prod25').innerHTML = Math.round(Vcarriere*S1*0.93749*2*3600/(60*MAstro))
-	document.getElementById('Prod26').innerHTML = Math.round(Vcarriere*S1*0.93749*2)
-	document.getElementById('Prod25').innerHTML = Math.round(261275/(Vcarriere*S1*2))	
+	//document.getElementById('Prod26').innerHTML = Math.round(Vcarriere*S1*0.93749*2)
+	//document.getElementById('Prod25').innerHTML = Math.round(261275/(Vcarriere*S1*2))	
 }
 function myFunction2() {	
 	myFunction1()
 }	
 
-//0.93749       261275
-//0.81
-//0.63
+// 93,750%      261275
+//81,250%
+//62,500%
+
 
 //Calcaire
 //225 164
