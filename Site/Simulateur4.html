@@ -90,13 +90,14 @@ function myFunction1() {
 	
 	if (Saisai=0) {
 		var S1 =0;var S2 =0;var S3 =0
-		document.getElementById('SaisonImg').src = 'Image/printemps.png';
+		//document.getElementById("SaisonImg").src = "Image/printemps.png";
+		//src="Image/hiver.png"
+	}
+	if (Saisai=1) {
+		var S1 =0.95;var S2 =1.2 ;var S3 =0.85
+		document.getElementById("SaisonImg").src = "Image/ete.png";
 		
 	}
-	//if (Saisai=1) {
-	//	document.getElementById('SaisonImg').src = 'Image/ete.png';
-	//	var S1 =0.95;var S2 =1.2 ;var S3 =0.85
-	//}
 	//if (Saisai=2) {
 	//	document.getElementById('SaisonImg').src = 'Image/hiver.png';
 	//	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
@@ -119,7 +120,10 @@ function myFunction1() {
 	var Nbville = document.getElementById('ville').value
 	
 	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere)
-	document.getElementById('Prod141').innerHTML = Math.round(Vcarriere*Nbville)	
+	document.getElementById('Prod41').innerHTML = Math.round(Vcarriere*Nbville)
+	document.getElementById('Prod21').innerHTML = Math.round(Vobsidienne)
+	document.getElementById('Prod51').innerHTML = Math.round(Vobsidienne*Nbville)	
+	
 }
 function myFunction2() {
 	//alert("ok")
@@ -172,13 +176,13 @@ myFunction1()
   </select>
 	</td>
 
-<td style="width: 100.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps1">10<br></span> minutes</td>
+<td style="width: 100.4px; text-align: center;" colspan="3">Prod. de <strong><span style="color: #ff0000;" id="Temps1">10<br></span></strong> minutes</td>
 
-<td style="width: 10.4px;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps2">1<br></span> minutes</td>
+<td style="width: 10.4px;" colspan="3">Prod. de <strong><span style="color: #ff0000;" id="Temps2">1<br></span></strong> minutes</td>
 
-<td style="width: 70.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps3">4<br></span> heures<br></td>
+<td style="width: 70.4px; text-align: center;" colspan="3">Prod. de <strong><span style="color: #ff0000;" id="Temps3">4<br></span></strong> heures</td>
 
-<td style="width: 50.4px; text-align: center;" colspan="3">Prod. de <span style="color: #ff0000;" id="Temps4">8<br></span> heures<br></td>
+<td style="width: 50.4px; text-align: center;" colspan="3">Prod. de <strong><span style="color: #ff0000;" id="Temps4">8<br></span></strong> heures</td>
 	
 
 			
@@ -222,19 +226,19 @@ myFunction1()
 		
   </select>
 	</td>
-			<td>Prod. <span style="color: #ff0000;" id="Temps10">1<br></span> min</td>
+			<td>Prod. <strong><span style="color: #ff0000;" id="Temps10">1<br></span></strong> min</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>
 	
-			<td>Prod. <span style="color: #ff0000;" id="Temps20">1<br></span> min</td>
+			<td>Prod. <strong><span style="color: #ff0000;" id="Temps20">1<br></span></strong> min</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>
 
-			<td>Prod. <span style="color: #ff0000;" id="Temps30">1<br></span> hr</td>
+			<td>Prod. <strong><span style="color: #ff0000;" id="Temps30">1<br></span></strong> hr</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>	
 
-			<td>Prod. <span style="color: #ff0000;" id="Temps40">1<br></span> hr</td>
+			<td>Prod. <strong><span style="color: #ff0000;" id="Temps40">1<br></span></strong> hr</td>
 			<td>Prod. par jour</td>
 			<td>Prod. de CacaoEqui par jour</td>		
 		
