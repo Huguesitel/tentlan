@@ -107,20 +107,20 @@ function myFunction1() {
 		document.getElementById('SaisonImg').src = 'Image/autone.png';
 		var S1 =1.20;var S2 =0.85 ;var S3 =0.95
 	}
+	Cara =""
 	if (S1 > 1) 
 		{Cara ="+ "}
-	else {
-		Cara =""}
+
 	document.getElementById('SS1').innerHTML = Cara + Math.round((1-S1)*100) +"% "
-		if (S2 > 1) 
+	Cara =""
+	if (S2 > 1) 
 		{Cara ="+ "}
-	else {
-		Cara =""}
+
 	document.getElementById('SS2').innerHTML = Cara + Math.round((1-S2)*100) +"% "
+	Cara =""
 	if (S3 > 1) 
 		{Cara ="+ "}
-	else {
-		Cara =""}	
+
 	document.getElementById('SS3').innerHTML =Cara +  Math.round((1-S3)*100) +"% "
 	
 	
