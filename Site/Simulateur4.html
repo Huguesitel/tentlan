@@ -88,24 +88,24 @@ function myFunction1() {
 	//document.getElementById('Temps1').innerHTML = document.getElementsById('Saison').value
 	//var MSaison = document.getElementById('Saison').value
 	
-	if (Saisai==0) {
+	if (Saisai===0) {
 		var S1 =0;var S2 =0;var S3 =0
 		//document.getElementById("SaisonImg").src = "Image/printemps.png";
 		//src="Image/hiver.png"
 	}
-	if (Saisai==1) {
+	if (Saisai===1) {
 		var S1 =0.95;var S2 =1.2 ;var S3 =0.85
 		document.getElementById("SaisonImg").src = "Image/ete.png";
 		
 	}
-	//if (Saisai==2) {
-	//	document.getElementById('SaisonImg').src = 'Image/hiver.png';
-	//	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
-	//}
-	//if (Saisai==3) {
-	//	document.getElementById('SaisonImg').src = 'Image/autone.png';
-	//	var S1 =1.20;var S2 =0.85 ;var S3 =0.95
-	//}
+	if (Saisai===2) {
+		document.getElementById('SaisonImg').src = 'Image/hiver.png';
+		var S1 =1.05;var S2 =0.95 ;var S3 =1.2
+	}
+	if (Saisai===3) {
+		document.getElementById('SaisonImg').src = 'Image/autone.png';
+		var S1 =1.20;var S2 =0.85 ;var S3 =0.95
+	}
 	document.getElementById('SS1').innerHTML = "<strong>" + Math.round((1-S1)*100) +"% "</strong>""
 	document.getElementById('SS2').innerHTML = Math.round((1-S2)*100) +"% "
 	document.getElementById('SS3').innerHTML = Math.round((1-S3)*100) +"% "
@@ -119,13 +119,14 @@ function myFunction1() {
 	var Vcacao =Math.round(2131*Math.pow((1.08),(Ncacao)))
 	var Nbville = document.getElementById('ville').value
 	
-	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere)
+	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*2*S1)
 	document.getElementById('Prod41').innerHTML = Math.round(Vcarriere*Nbville)
 	document.getElementById('Prod21').innerHTML = Math.round(Vobsidienne)
 	document.getElementById('Prod51').innerHTML = Math.round(Vobsidienne*Nbville)
 	document.getElementById('Prod31').innerHTML = Math.round(Vcacao)
 	document.getElementById('Prod61').innerHTML = Math.round(Vcacao*Nbville)
 	
+	document.getElementById('Prod12').innerHTML = Math.round(Vcarriere)
 	
 }
 function myFunction2() {
