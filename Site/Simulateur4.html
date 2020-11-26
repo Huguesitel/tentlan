@@ -158,6 +158,7 @@ function myFunction1() {
 	
 	var Nbville = document.getElementById('ville').value
 	
+	
 	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*MAstro1/60)
 	//document.getElementById('Prod41').innerHTML = Math.round(Vcarriere*Nbville*2*S1)
 	//document.getElementById('Prod21').innerHTML = Math.round(Vobsidienne)
@@ -180,6 +181,8 @@ function myFunction1() {
 	//document.getElementById('Prod25').innerHTML = Math.round(Vcarriere*S1*0.93749*2*3600/(60*MAstro))
 	//document.getElementById('Prod26').innerHTML = Math.round(Vcarriere*S1*0.93749*2)
 	//document.getElementById('Prod25').innerHTML = Math.round(261275/(Vcarriere*S1*2))	
+
+document.getElementById('Nbville2').innerHTML=Nbville
 }
 function myFunction2() {	
 	myFunction1()
@@ -532,7 +535,7 @@ function myFunction2() {
 		
   </select>
 </td>
-<td colspan="12" > Récoltes estimées pour <strong><span style="color: #ff0000;" id="Temps30">10</span></strong> villes</td>	
+<td colspan="12" > Récoltes estimées pour <strong><span style="color: #ff0000;" id="Nbville2">10</span></strong> villes</td>	
 </tr>
 <tr>
 <td colspan="3"  style="width: 70.4px; text-align: right;">Calcaire  <img style="float:right align: center;" src="Image/calc.png" width="30" height="30" ></td>
