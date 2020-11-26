@@ -177,7 +177,7 @@ function myFunction1() {
 	document.getElementById('Prod17').innerHTML = Math.round(Vcarriere*0.8125*MAstro3/60)	
 	document.getElementById('Prod110').innerHTML = Math.round(Vcarriere*0.625*MAstro4/60)	
 	//document.getElementById('Prod44').innerHTML = Math.round(Vcarriere*S1*Nbville*0.93749*2*(60*MAstro))	
-
+document.getElementById('Prod111').innerHTML = Million(123456789)
 	//document.getElementById('Prod24').innerHTML = Math.round(Vcarriere*S1)
 	//document.getElementById('Prod25').innerHTML = Math.round(Vcarriere*S1*0.93749*2*3600/(60*MAstro))
 	//document.getElementById('Prod26').innerHTML = Math.round(Vcarriere*S1*0.93749*2)
@@ -188,6 +188,12 @@ document.getElementById('Nbville2').innerHTML=Nbville
 function myFunction2() {	
 	myFunction1()
 }	
+function Million(Arg) {	
+var Res = (Math.round(Arg/10000)/100) + "M"
+	
+	return Res
+}
+	
 // 93,750%  
 //81,250%
 //0.62500%
