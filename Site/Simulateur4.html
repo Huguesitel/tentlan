@@ -152,30 +152,39 @@ function myFunction1() {
 	var Vcarrier =BaseCalc[Ncarriere]
 	var Vobsidienn =BaseObsi[Nobsidienne]
 	var Vcaca =BaseCacao[Ncacao]
-	var Vcarriere = Vcarrier*2*S1
-	var Vobsidienne =Vobsidienn*2*S2
-	var Vcacao =Vcaca*2*S3
+	var Vcarriere = Vcarrier*S1*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vobsidienne =Vobsidienn*S2*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcacao =Vcaca*S3*1.645960807*Math.pow(1.02142592,MAstr)
 	
 	var Nbville = document.getElementById('ville').value
 	
 	
-	document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*MAstro1/60)
+	document.getElementById('Prod11').innerHTML = Million2(Vcarriere*MAstro1/60)
+	document.getElementById('Prod14').innerHTML = Million2(Vcarriere*0.9375*MAstro2/60)
+	document.getElementById('Prod17').innerHTML = Million2(Vcarriere*0.8125*MAstro3/60)	
+	document.getElementById('Prod110').innerHTML = Million2(Vcarriere*0.625*MAstro4/60)	
+	
+	document.getElementById('Prod12').innerHTML = Million(Vcarriere*24)	
+	document.getElementById('Prod15').innerHTML = Million(Vcarriere*0.9375*24)
+	
+	document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*24*0.6)
+	
+	
 	//document.getElementById('Prod41').innerHTML = Math.round(Vcarriere*Nbville*2*S1)
-	document.getElementById('Prod12').innerHTML = Million(Math.round(Vcarriere*24))
+)
 	//document.getElementById('Prod51').innerHTML = Math.round(Vobsidienne*Nbville)
 	//document.getElementById('Prod31').innerHTML = Math.round(Vcacao)
 	//document.getElementById('Prod61').innerHTML = Math.round(Vcacao*Nbville)
 	
 	//document.getElementById('Prod11').innerHTML = Math.round(Vcarriere*MAstro/60)							 *2*(10*MAstro/60))
 	//document.getElementById('Prod12').innerHTML = Math.round(Vcarriere*24*60/60)
-	//document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*24*0.6*60/60)
+	//
 	
 
-	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*0.9375*MAstro2/60)
-	document.getElementById('Prod15').innerHTML = Million(Math.round(Vcarriere*0.9375*24))
+	
+
 //	document.getElementById('Prod16').innerHTML = Math.round(Vcarriere*0.9375)
-	document.getElementById('Prod17').innerHTML = Math.round(Vcarriere*0.8125*MAstro3/60)	
-	document.getElementById('Prod110').innerHTML = Math.round(Vcarriere*0.625*MAstro4/60)	
+	
 	//document.getElementById('Prod44').innerHTML = Math.round(Vcarriere*S1*Nbville*0.93749*2*(60*MAstro))	
 document.getElementById('Prod111').innerHTML = Million(123456789)
 	//document.getElementById('Prod24').innerHTML = Math.round(Vcarriere*S1)
@@ -193,8 +202,12 @@ var Res = (Math.round(Arg/10000)/100) + "M"
 	
 	return Res
 }
+function Million2(Arg) {	
+var Res = (Math.round(Arg/1000)/1000) + "M"
 	
-// 93,750%  
+	return Res
+}
+// 93,750%  1,02142592	1,645960807
 //81,250%
 //0.62500%
 </script>
