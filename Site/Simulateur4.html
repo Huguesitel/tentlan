@@ -131,7 +131,7 @@ function myFunction1() {
 	var MAstro1 = 10*MAstro
 	var MAstro2 = 60*MAstro
 	var MAstro3 = 240*MAstro
-	var MAstro4 = 60*MAstro
+	var MAstro4 = 480*MAstro
 	
 	//var MAstro = (1-(document.getElementById("Astronomie").value/50))
 	
@@ -171,10 +171,11 @@ function myFunction1() {
 	//document.getElementById('Prod13').innerHTML = Math.round(Vcarriere*24*0.6*60/60)
 	
 
-	document.getElementById('Prod14').innerHTML = Math.round(Vcarrier)
-	document.getElementById('Prod15').innerHTML = Math.round(Vcarriere)
-	document.getElementById('Prod16').innerHTML = Math.round(Vcarriere*0.9375)
-	document.getElementById('Prod17').innerHTML = Math.round(Vcarriere*0.9375*MAstro2/60)	
+	document.getElementById('Prod14').innerHTML = Math.round(Vcarriere*0.9375*MAstro2/60)
+	document.getElementById('Prod15').innerHTML = Math.round(Vcarriere*0.9375*24)
+//	document.getElementById('Prod16').innerHTML = Math.round(Vcarriere*0.9375)
+	document.getElementById('Prod17').innerHTML = Math.round(Vcarriere*0.8125*MAstro3/60)	
+	document.getElementById('Prod110').innerHTML = Math.round(Vcarriere*0.625*MAstro4/60)	
 	//document.getElementById('Prod44').innerHTML = Math.round(Vcarriere*S1*Nbville*0.93749*2*(60*MAstro))	
 
 	//document.getElementById('Prod24').innerHTML = Math.round(Vcarriere*S1)
@@ -189,7 +190,7 @@ function myFunction2() {
 }	
 // 93,750%  
 //81,250%
-//62,500%
+//0.62500%
 </script>
 
 <body onload="Debut()">
