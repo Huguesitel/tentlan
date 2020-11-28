@@ -82,7 +82,7 @@ function Debut() {
 	myFunction1()	
 }
 function myFunction1() {
-alert("ok111111111111111")
+//alert("ok111111111111111")
 	var Saisai = document.getElementById('Saison').value
 	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
 	
@@ -117,29 +117,28 @@ alert("ok111111111111111")
 
 	document.getElementById('SS3').innerHTML =Cara +  Math.round((S3-1)*100) +"% "
 	
-	//document.getElementById('Temps1').innerHTML = document.getElementsById('Saison').value
+
 	var MSaison = document.getElementById('Saison').value
-	//var BaseCalc = [0,5331,5445,5605,5812,6069,6380,6749,7184,7691,8278,8958,9740,10640,11675,12862,14225,15787,17580,19636,21993,24570,27388,30465,33824,37489,41484,45836,50576,55735,61347,67449,74081,81285,89108,97600,106814,116807,127641,139384,152108,165889,180810,196963,214442,233352,253804,275918,299824,325658]
-	//var BaseObsi = [0,3821,3864,3942,4055,4206,4396,4629,4907,5237,5622,6072,6593,7196,7892,8692,9614,10673,11889,13202,14619,16149,17797,19574,21487,23546,25762,28144,30704,33454,36407,39577,42978,46626,50537,54729,59220,64030,69180,74692,80591,86901,93650,100866,108578,116820,125626,154021,166794,180687]
-	//var BaseCacao = [0,2756,2756,2756,2756,2756,2779,2845,2952,3101,3295,3535,3827,4174,4582,5059,5608,6238,6916,7643,8424,9261,10158,11119,12147,13248,14426,15685,17030,18467,20002,21640,23388,25253,27241,29360,31619,34024,36586,39314,42217,45307,48593,52088,55805,59755,65119,70932,77233,84062]
-	//var MAstr = document.getElementById("Astronomie").value
-	//var MAstro = (1-(MAstr*0.02))
-	//var MAstro1 = 10*MAstro
-	//var MAstro2 = 60*MAstro
-	//var MAstro3 = 240*MAstro
-	//var MAstro4 = 480*MAstro
-	
-	//var MAstro = (1-(document.getElementById("Astronomie").value/50))
+	var BaseCalc = [0,5331,5445,5605,5812,6069,6380,6749,7184,7691,8278,8958,9740,10640,11675,12862,14225,15787,17580,19636,21993,24570,27388,30465,33824,37489,41484,45836,50576,55735,61347,67449,74081,81285,89108,97600,106814,116807,127641,139384,152108,165889,180810,196963,214442,233352,253804,275918,299824,325658]
+	var BaseObsi = [0,3821,3864,3942,4055,4206,4396,4629,4907,5237,5622,6072,6593,7196,7892,8692,9614,10673,11889,13202,14619,16149,17797,19574,21487,23546,25762,28144,30704,33454,36407,39577,42978,46626,50537,54729,59220,64030,69180,74692,80591,86901,93650,100866,108578,116820,125626,154021,166794,180687]
+	var BaseCacao = [0,2756,2756,2756,2756,2756,2779,2845,2952,3101,3295,3535,3827,4174,4582,5059,5608,6238,6916,7643,8424,9261,10158,11119,12147,13248,14426,15685,17030,18467,20002,21640,23388,25253,27241,29360,31619,34024,36586,39314,42217,45307,48593,52088,55805,59755,65119,70932,77233,84062]
+	var MAstr = document.getElementById("Astronomie").value
+	var MAstro = (1-(MAstr*0.02))
+	var MAstro1 = 10*MAstro
+	var MAstro2 = 60*MAstro
+	var MAstro3 = 240*MAstro
+	var MAstro4 = 480*MAstro
 	
 
-	//document.getElementById("Temps1").innerHTML = Math.round(100*MAstro)/10	
-	//document.getElementById("Temps10").innerHTML = Math.round(100*MAstro)/10
-	//document.getElementById("Temps2").innerHTML = Math.round(600*MAstro)/10
-	//document.getElementById("Temps3").innerHTML = Math.round(24000*MAstro/60)/100
-	//document.getElementById("Temps4").innerHTML = Math.round(48000*MAstro/60)/100
-	//document.getElementById("Temps20").innerHTML = Math.round(600*MAstro)/10
-	//document.getElementById("Temps30").innerHTML = Math.round(24000*MAstro/60)/100
-	//document.getElementById("Temps40").innerHTML = Math.round(48000*MAstro/60)/100
+
+	document.getElementById("Temps1").innerHTML = Math.round(100*MAstro)/10	
+	document.getElementById("Temps10").innerHTML = Math.round(100*MAstro)/10
+	document.getElementById("Temps2").innerHTML = Math.round(600*MAstro)/10
+	document.getElementById("Temps3").innerHTML = Math.round(24000*MAstro/60)/100
+	document.getElementById("Temps4").innerHTML = Math.round(48000*MAstro/60)/100
+	document.getElementById("Temps20").innerHTML = Math.round(600*MAstro)/10
+	document.getElementById("Temps30").innerHTML = Math.round(24000*MAstro/60)/100
+	document.getElementById("Temps40").innerHTML = Math.round(48000*MAstro/60)/100
 	
 	//var Ncarriere = document.getElementById('carriere').value
 	//var Nobsidienne = document.getElementById('obsidienne').value
@@ -292,19 +291,19 @@ function myFunction2() {
 	</td>
 			<td>Prod. <strong><span style="color: #ff0000;" id="Temps10">1<br></span></strong> min</td>
 			<td>Prod. par jour</td>
-			<td>Prod. CacaoEqui par jour</td>
+			<td>Prod. KKOEqui par jour</td>
 	
 			<td>Prod. <strong><span style="color: #ff0000;" id="Temps20">1<br></span></strong> min</td>
 			<td>Prod. par jour</td>
-			<td>Prod. CacaoEqui par jour</td>
+			<td>Prod. KKOEqui par jour</td>
 
 			<td>Prod. <strong><span style="color: #ff0000;" id="Temps30">1<br></span></strong> hr</td>
 			<td>Prod. par jour</td>
-			<td>Prod. <span style="font-size: 12px;">CacaoEqui</span> par jour</td>	
+			<td>Prod. <span style="font-size: 14px;">KKOEqui</span> par jour</td>	
 
 			<td>Prod. <strong><span style="color: #ff0000;" id="Temps40">1<br></span></strong> hr</td>
 			<td>Prod. par jour</td>
-			<td>Prod. CacaoEqui par jour</td>		
+			<td>Prod. KKOEqui par jour</td>		
 		
 	</tr>
 <tr>
