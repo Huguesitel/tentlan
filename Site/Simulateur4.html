@@ -234,6 +234,7 @@ function myFunction1() {
 	document.getElementById('Prod96').innerHTML = Million(Vcacao*24*Nbville*0.9375*1.02273109849942)
 	document.getElementById('TT12').innerHTML = Million((Vcacao*24*0.9375)+(Vcarriere*24*0.4*0.9375)+(Vobsidienne*24*0.625*0.9375))
 	document.getElementById('TT22').innerHTML = Million((Vcacao*Nbville*24*0.9375)+(Vcarriere*Nbville*24*0.4*0.9375)+(Vobsidienne*Nbville*24*0.625*0.9375))
+	document.getElementById('TT32').innerHTML = Million((Vcacao*Nbville*24*0.9375*1.02273109849942)+(Vcarriere*Nbville*24*0.4*0.9375*1.02273109849942)+(Vobsidienne*Nbville*24*0.625*0.9375*1.02273109849942))
 
 	
 	
@@ -269,6 +270,8 @@ function myFunction1() {
 	document.getElementById('Prod89').innerHTML = Million(Vobsidienne*24*0.625*Nbville*0.8125*1.02273109849942)
 	document.getElementById('Prod99').innerHTML = Million(Vcacao*24*Nbville*0.8125*1.02273109849942)
 	document.getElementById('TT13').innerHTML = Million((Vcacao*24*0.8125)+(Vcarriere*24*0.4*0.8125)+(Vobsidienne*24*0.625*0.8125))
+	document.getElementById('TT23').innerHTML = Million((Vcacao*Nbville*24*0.8125)+(Vcarriere*Nbville*24*0.4*0.8125)+(Vobsidienne*Nbville*24*0.625*0.8125))
+	document.getElementById('TT33').innerHTML = Million((Vcacao*Nbville*24*0.8125*1.02273109849942)+(Vcarriere*Nbville*24*0.4*0.8125*1.02273109849942)+(Vobsidienne*Nbville*24*0.625*0.8125*1.02273109849942))
 	
 	
 	
@@ -310,12 +313,14 @@ function myFunction1() {
 	document.getElementById('Prod712').innerHTML = Million(Vcarriere*24*0.4*Nbville*0.625*1.02273109849942)
 	document.getElementById('Prod812').innerHTML = Million(Vobsidienne*24*0.625*Nbville*0.625*1.02273109849942)
 	document.getElementById('Prod912').innerHTML = Million(Vcacao*24*Nbville*0.625*1.02273109849942)
-	document.getElementById('TT14').innerHTML = Million((Vcacao*24*0.625*1.02273109849942)+(Vcarriere*24*0.4*0.625*1.02273109849942)+(Vobsidienne*24*0.625*0.625*1.02273109849942))
+	document.getElementById('TT14').innerHTML = Million((Vcacao*24*0.625)+(Vcarriere*24*0.4*0.625)+(Vobsidienne*24*0.625))
+	document.getElementById('TT24').innerHTML = Million((Vcacao*Nbville*24*0.625)+(Vcarriere*Nbville*24*0.4*0.625)+(Vobsidienne*Nbville*24*0.625*0.625))
+	document.getElementById('TT34').innerHTML = Million((Vcacao*Nbville*24*0.625*1.02273109849942)+(Vcarriere*Nbville*24*0.4*0.625*1.02273109849942)+(Vobsidienne*Nbville*24*0.625*0.625*1.02273109849942))
 	
 	
 
 	document.getElementById('Nbville3').innerHTML=Nbville
-	var toto = Math.round(MAstr+1)
+	var toto = parseInt(MAstr)+1
 	document.getElementById('Nbville4').innerHTML=Math.round(toto)
 	
 	
