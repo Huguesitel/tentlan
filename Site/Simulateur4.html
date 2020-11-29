@@ -152,9 +152,9 @@ function myFunction1() {
 	var Vobsidienne =Vobsidienn*S2*expo1*expo2      
 	var Vcacao =Vcaca*S3*expo1*expo2          
 	
-	var Vcarriere0 = Vcarriere*0.9375*MAstro1/60           
-	var Vobsidienne0 =Vobsidienne*0.9375*MAstro1/60     
-	var Vcacao0 =Vcacao*0.9375*MAstro1/60 
+	var Vcarriere0 = Vcarriere*MAstro1/60           
+	var Vobsidienne0 =Vobsidienne*MAstro1/60     
+	var Vcacao0 =Vcacao*MAstro1/60 
 	
 	//MAstro1
 	var Vcarriere1 = Vcarriere*0.9375*MAstro2/60            
@@ -178,6 +178,12 @@ function myFunction1() {
 	document.getElementById('Prod71').innerHTML = Million(Vcarriere0*Nbville*1.02273109849942)
 	document.getElementById('Prod81').innerHTML = Million(Vobsidienne0*Nbville*1.02273109849942)
 	document.getElementById('Prod91').innerHTML = Million(Vcacao0*Nbville*1.02273109849942)	
+	document.getElementById('Prod12').innerHTML = Million(Vcarriere*24)
+	document.getElementById('Prod22').innerHTML = Million(Vobsidienne*24)
+	document.getElementById('Prod32').innerHTML = Million(Vcacao*24)
+	document.getElementById('Prod13').innerHTML = Million(Vcarriere*24*0.4)
+	document.getElementById('Prod23').innerHTML = Million(Vobsidienne*24*0.625)
+	document.getElementById('Prod33').innerHTML = Million(Vcacao*24)	
 	
 	document.getElementById('Prod14').innerHTML = Million2(Vcarriere1)
 	document.getElementById('Prod24').innerHTML = Million2(Vobsidienne1)
