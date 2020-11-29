@@ -149,12 +149,13 @@ function myFunction1() {
 	var Vcarrier =BaseCalc[Ncarriere]
 	var Vobsidienn =BaseObsi[Nobsidienne]
 	var Vcaca =BaseCacao[Ncacao]
-	var Vcarriere = Vcarrier*S1*1.645960807*Math.pow(1.02142592,MAstr)
-	var Vobsidienne =Vobsidienn*S2*1.645960807*Math.pow(1.02142592,MAstr)
-	var Vcacao =Vcaca*S3*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcarriere = Vcarrier*S1//*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vobsidienne =Vobsidienn*S2//*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcacao =Vcaca*S3//*1.645960807*Math.pow(1.02142592,MAstr)
 	
-	
-	
+	document.getElementById('Prod11').innerHTML = Million2(Vcarriere)
+	document.getElementById('Prod21').innerHTML = Million2(Vobsidienne)
+	document.getElementById('Prod31').innerHTML = Million2(Vcacao)
 	
 	//document.getElementById('Prod11').innerHTML = Million2(Vcarriere*MAstro1/60)
 	//document.getElementById('Prod14').innerHTML = Million2(Vcarriere*0.9375*MAstro2/60)
@@ -200,11 +201,11 @@ function myFunction2() {
 	
 //	return Res
 //}
-//function Million2(Arg1) {	
-//var Res1 = (Math.round(Arg1/1000)/1000) + "M"
+function Million2(Arg1) {	
+var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 	
-//	return Res1
-//}
+	return Res1
+}
 // 93,750%  1,02142592	1,645960807
 //81,250%
 //0.62500%
