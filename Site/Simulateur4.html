@@ -149,9 +149,12 @@ function myFunction1() {
 	var Vcarrier =BaseCalc[Ncarriere]
 	var Vobsidienn =BaseObsi[Nobsidienne]
 	var Vcaca =BaseCacao[Ncacao]
-	var Vcarriere = Vcarrier*S1//*1.645960807*Math.pow(1.02142592,MAstr)
-	var Vobsidienne =Vobsidienn*S2//*1.645960807*Math.pow(1.02142592,MAstr)
-	var Vcacao =Vcaca*S3//*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcarriere = Vcarrier*S1           //*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vobsidienne =Vobsidienn*S2     //*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcacao =Vcaca*S3         //*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcarriere1 = Vcarrier*S1*0.9375           
+	var Vobsidienne1 =Vobsidienn*S2*0.9375    
+	var Vcacao1 =Vcaca*S3*0.9375 	
 	
 	document.getElementById('Prod11').innerHTML = Million2(Vcarriere)
 	document.getElementById('Prod21').innerHTML = Million2(Vobsidienne)
@@ -199,11 +202,10 @@ function myFunction2() {
 	//alert("ok22")
 	myFunction1()
 }	
-//function Million(Arg) {	
-//var Res = (Math.round(Arg/10000)/100) + "M"
-	
-//	return Res
-//}
+function Million(Arg) {	
+var Res = (Math.round(Arg/10000)/100) + "M"
+		return Res
+}
 function Million2(Arg1) {	
 var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 	
@@ -537,7 +539,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 </tr>
 <tr>
 <td>Nombre de ville</td>	
-<td style="text-align: center;"><img style="float:left" src="Image/ville.png" width="50" height="50" >
+<td style="text-align: center;"><img style="float:left" src="Image/ville.png" width="30" height="30" >
 <td>
 	<select name="ville" id="ville" onchange="myFunction1()">
     <option value="0">0</option>
@@ -573,7 +575,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td id="Prod41"></td>	<td id="Prod42"></td><td id="Prod43"></td>
 <td id="Prod44"></td>	<td id="Prod45"></td><td id="Prod46"></td>
 <td id="Prod47"></td>	<td id="Prod48"></td><td id="Prod49"></td>
-<td id="Prod1410"></td>	<td id="Prod411"></td><td id="Prod412"></td>
+<td id="Prod410"></td>	<td id="Prod411"></td><td id="Prod412"></td>
 </tr>
 <tr>
 
@@ -582,7 +584,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td id="Prod51"></td>	<td id="Prod52"></td><td id="Prod53"></td>
 <td id="Prod54"></td>	<td id="Prod55"></td><td id="Prod56"></td>
 <td id="Prod57"></td>	<td id="Prod58"></td><td id="Prod59"></td>
-<td id="Prod1510"></td>	<td id="Prod511"></td><td id="Prod512"></td>
+<td id="Pro510"></td>	<td id="Prod511"></td><td id="Prod512"></td>
 </tr>
 <tr>
 <td colspan="3" style="width: 70.4px; text-align: right;">Cacao  <img style="float:right align: center;" src="Image/xacai.png" width="30" height="30" ></td>
@@ -590,9 +592,45 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td id="Prod61"></td>	<td id="Prod62"></td><td id="Prod63"></td>
 <td id="Prod64"></td>	<td id="Prod65"></td><td id="Prod66"></td>
 <td id="Prod67"></td>	<td id="Prod68"></td><td id="Prod69"></td>
-<td id="Prod1610"></td>	<td id="Prod611"></td><td id="Prod612"></td>
+<td id="Prod610"></td>	<td id="Prod611"></td><td id="Prod612"></td>
 	
-</tr>	
+</tr>
+	<tr>
+<td  colspan="3"></td>	
+<td colspan="12" > Récoltes estimées pour 
+		<strong><span style="color: #ff0000;" id="Nbville3">10</span></strong>
+					villes et la recherche Astronomie à +1 (
+		<strong><span style="color: #ff0000;" id="Nbville34">11</span></strong>				   
+		)					   
+		</td>	
+
+											     </tr>
+<tr>
+<td colspan="3"  style="width: 70.4px; text-align: right;">Calcaire  <img style="float:right align: center;" src="Image/calc.png" width="30" height="30" ></td>
+					       
+<td id="Prod71"></td>	<td id="Prod72"></td><td id="Prod73"></td>
+<td id="Prod74"></td>	<td id="Prod75"></td><td id="Prod76"></td>
+<td id="Prod77"></td>	<td id="Prod78"></td><td id="Prod79"></td>
+<td id="Prod710"></td>	<td id="Prod711"></td><td id="Prod712"></td>
+</tr>
+<tr>
+
+<td  colspan="3" style="width: 70.4px; text-align: right;">Obsidienne  <img style="float:right align: center;" src="Image/obsi.png" width="30" height="30" ></td>
+						       
+<td id="Prod81"></td>	<td id="Prod82"></td><td id="Prod83"></td>
+<td id="Prod84"></td>	<td id="Prod85"></td><td id="Prod86"></td>
+<td id="Prod87"></td>	<td id="Prod88"></td><td id="Prod89"></td>
+<td id="Prod810"></td>	<td id="Prod811"></td><td id="Prod812"></td>
+</tr>
+<tr>
+<td colspan="3" style="width: 70.4px; text-align: right;">Cacao  <img style="float:right align: center;" src="Image/xacai.png" width="30" height="30" ></td>
+				
+<td id="Prod91"></td>	<td id="Prod92"></td><td id="Prod93"></td>
+<td id="Prod94"></td>	<td id="Prod95"></td><td id="Prod96"></td>
+<td id="Prod97"></td>	<td id="Prod98"></td><td id="Prod99"></td>
+<td id="Prod910"></td>	<td id="Prod911"></td><td id="Prod912"></td>
+	
+</tr>						      
 </table>
 	
 	
