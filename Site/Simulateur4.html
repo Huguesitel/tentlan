@@ -82,7 +82,7 @@ function Debut() {
 	myFunction1()	
 }
 function myFunction1() {
-//alert("ok111111111111111")
+alert("ok111111111111111")
 	var Saisai = document.getElementById('Saison').value
 	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
 	
@@ -158,8 +158,7 @@ function myFunction1() {
 	var Vobsidienne3 =Vobsidienne*0.625    
 	var Vcacao3 =Vcacao*0.625
 	
-	var expo1 = Math.pow(1,02273109849942,MAstr)
-	var expo2 =1,5217871864435 * Math.pow(1,00247103570617,MAstr)
+
 	
 	document.getElementById('Prod11').innerHTML = Million2(Vcarriere)
 	document.getElementById('Prod21').innerHTML = Million2(Vobsidienne)
@@ -239,8 +238,8 @@ function myFunction1() {
 	document.getElementById('Nbville4').innerHTML=Math.round(MAstr+1)
 	
 	
-	var expo1 = Math.pow(1,02273109849942,MAstr)
-	var expo2 =1,5217871864435 * Math.pow(1,00247103570617,MAstr)
+	var expo1 = Math.pow(1,02273109849942,Math.round(MAstr))
+	var expo2 =1,5217871864435 * Math.pow(1,00247103570617,Math.round(MAstr))
 	document.getElementById('Prod12').innerHTML = expo1
 	document.getElementById('Prod12').innerHTML = expo2
 	
