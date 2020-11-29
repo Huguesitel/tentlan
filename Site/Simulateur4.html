@@ -141,13 +141,22 @@ function myFunction1() {
 	
 	var Nbville = document.getElementById('ville').value
 	document.getElementById('Nbville2').innerHTML=Nbville
-
+	
+	var expo1 = Math.pow(1.02273109849942,Math.round(MAstr))
+	var expo2 =1.5217871864435 * Math.pow(1.00247103570617,Math.round(MAstr))
+	
 	var Vcarrier =BaseCalc[Ncarriere]
 	var Vobsidienn =BaseObsi[Nobsidienne]
 	var Vcaca =BaseCacao[Ncacao]
-	var Vcarriere = Vcarrier*S1           //*1.645960807*1,02273109849942^C7
-	var Vobsidienne =Vobsidienn*S2     //*1.645960807*Math.pow(1.02142592,MAstr)
-	var Vcacao =Vcaca*S3         //*1.645960807*Math.pow(1.02142592,MAstr)	0
+	var Vcarriere = Vcarrier*S1*expo1*expo2         
+	var Vobsidienne =Vobsidienn*S2*expo1*expo2      
+	var Vcacao =Vcaca*S3*expo1*expo2          
+	
+	var Vcarriere0 = Vcarriere*0.9375           
+	var Vobsidienne0 =Vobsidienne*0.9375    
+	var Vcacao0 =Vcacao*0.9375
+	
+	//MAstro1
 	var Vcarriere1 = Vcarriere*0.9375           
 	var Vobsidienne1 =Vobsidienne*0.9375    
 	var Vcacao1 =Vcacao*0.9375 
@@ -160,15 +169,15 @@ function myFunction1() {
 	
 
 	
-	document.getElementById('Prod11').innerHTML = Million2(Vcarriere)
-	document.getElementById('Prod21').innerHTML = Million2(Vobsidienne)
-	document.getElementById('Prod31').innerHTML = Million2(Vcacao)
-	document.getElementById('Prod41').innerHTML = Million(Vcarriere*Nbville)
-	document.getElementById('Prod51').innerHTML = Million(Vobsidienne*Nbville)
-	document.getElementById('Prod61').innerHTML = Million(Vcacao*Nbville)	
-	document.getElementById('Prod71').innerHTML = Million(Vcarriere*Nbville*1.02273109849942)
-	document.getElementById('Prod81').innerHTML = Million(Vobsidienne*Nbville*1.02273109849942)
-	document.getElementById('Prod91').innerHTML = Million(Vcacao*Nbville*1.02273109849942)	
+	document.getElementById('Prod11').innerHTML = Million2(Vcarriere0)
+	document.getElementById('Prod21').innerHTML = Million2(Vobsidienne0)
+	document.getElementById('Prod31').innerHTML = Million2(Vcacao0)
+	document.getElementById('Prod41').innerHTML = Million(Vcarriere0*Nbville)
+	document.getElementById('Prod51').innerHTML = Million(Vobsidienne0*Nbville)
+	document.getElementById('Prod61').innerHTML = Million(Vcacao0*Nbville)	
+	document.getElementById('Prod71').innerHTML = Million(Vcarriere0*Nbville*1.02273109849942)
+	document.getElementById('Prod81').innerHTML = Million(Vobsidienne0*Nbville*1.02273109849942)
+	document.getElementById('Prod91').innerHTML = Million(Vcacao0*Nbville*1.02273109849942)	
 	
 	document.getElementById('Prod14').innerHTML = Million2(Vcarriere1)
 	document.getElementById('Prod24').innerHTML = Million2(Vobsidienne1)
@@ -238,10 +247,9 @@ function myFunction1() {
 	document.getElementById('Nbville4').innerHTML=Math.round(MAstr+1)
 	
 	
-	var expo1 = Math.pow(1.02273109849942,Math.round(MAstr))
-	var expo2 =1.5217871864435 * Math.pow(1.00247103570617,Math.round(MAstr))
-	document.getElementById('Prod12').innerHTML = expo1
-	document.getElementById('Prod13').innerHTML = expo2
+
+	//document.getElementById('Prod12').innerHTML = expo1
+	//document.getElementById('Prod13').innerHTML = expo2
 	
 }
 function myFunction2() {	
