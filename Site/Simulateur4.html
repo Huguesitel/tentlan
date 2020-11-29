@@ -156,6 +156,9 @@ function myFunction1() {
 	document.getElementById('Prod11').innerHTML = Million2(Vcarriere)
 	document.getElementById('Prod21').innerHTML = Million2(Vobsidienne)
 	document.getElementById('Prod31').innerHTML = Million2(Vcacao)
+	document.getElementById('Prod41').innerHTML = Million2(Vcarriere*Nbville)
+	document.getElementById('Prod51').innerHTML = Million2(Vobsidienne*Nbville)
+	document.getElementById('Prod61').innerHTML = Million2(Vcacao*Nbville)	
 	
 	//document.getElementById('Prod11').innerHTML = Million2(Vcarriere*MAstro1/60)
 	//document.getElementById('Prod14').innerHTML = Million2(Vcarriere*0.9375*MAstro2/60)
@@ -193,7 +196,7 @@ function myFunction1() {
 
 }
 function myFunction2() {	
-	alert("ok22")
+	//alert("ok22")
 	myFunction1()
 }	
 //function Million(Arg) {	
@@ -202,7 +205,7 @@ function myFunction2() {
 //	return Res
 //}
 function Million2(Arg1) {	
-var Res1 = (Math.round(Arg1/1000)/1000) + "M"
+var Res1 = (Math.round(Arg1/1000)/1000) + "<span style="font-size: 12px; ">M</span>"
 	
 	return Res1
 }
@@ -300,7 +303,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 
 			<td>Prod. <strong><span style="color: #ff0000;" id="Temps30">1<br></span></strong> hr</td>
 			<td>Prod. par jour</td>
-			<td>Prod. <span style="font-size: 14px;">KKOEqui</span> par jour</td>	
+			<td>Prod. <span style="font-size: 14px; color: #ff0000;">KKOEqui</span> par jour</td>	
 
 			<td>Prod. <strong><span style="color: #ff0000;" id="Temps40">1<br></span></strong> hr</td>
 			<td>Prod. par jour</td>
