@@ -82,11 +82,9 @@ function Debut() {
 	myFunction1()	
 }
 function myFunction1() {
-//alert("ok111111111111111")
+alert("ok111111111111111")
 	var Saisai = document.getElementById('Saison').value
 	var S1 =1.05;var S2 =0.95 ;var S3 =1.2
-	
-
 	
 	if (Saisai==0) {
 		var S1 =1;var S2 =1;var S3 =1
@@ -116,7 +114,6 @@ function myFunction1() {
 	if (S3 > 1) 	{Cara ="+"}
 
 	document.getElementById('SS3').innerHTML =Cara +  Math.round((S3-1)*100) +"% "
-	
 
 	var MSaison = document.getElementById('Saison').value
 	var BaseCalc = [0,5331,5445,5605,5812,6069,6380,6749,7184,7691,8278,8958,9740,10640,11675,12862,14225,15787,17580,19636,21993,24570,27388,30465,33824,37489,41484,45836,50576,55735,61347,67449,74081,81285,89108,97600,106814,116807,127641,139384,152108,165889,180810,196963,214442,233352,253804,275918,299824,325658]
@@ -128,8 +125,6 @@ function myFunction1() {
 	var MAstro2 = 60*MAstro
 	var MAstro3 = 240*MAstro
 	var MAstro4 = 480*MAstro
-	
-
 
 	document.getElementById("Temps1").innerHTML = Math.round(100*MAstro)/10	
 	document.getElementById("Temps10").innerHTML = Math.round(100*MAstro)/10
@@ -147,13 +142,12 @@ function myFunction1() {
 	var Nbville = document.getElementById('ville').value
 	document.getElementById('Nbville2').innerHTML=Nbville
 
-	
 	var Vcarrier =BaseCalc[Ncarriere]
 	var Vobsidienn =BaseObsi[Nobsidienne]
 	var Vcaca =BaseCacao[Ncacao]
-	var Vcarriere = Vcarrier*S1           //*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcarriere = Vcarrier*S1           //*1.645960807*Math.pow(1.02142592,MAstr)1,02273109849942^C7
 	var Vobsidienne =Vobsidienn*S2     //*1.645960807*Math.pow(1.02142592,MAstr)
-	var Vcacao =Vcaca*S3         //*1.645960807*Math.pow(1.02142592,MAstr)
+	var Vcacao =Vcaca*S3         //*1.645960807*Math.pow(1.02142592,MAstr)1,00247103570617	1,52178718644350
 	var Vcarriere1 = Vcarriere*0.9375           
 	var Vobsidienne1 =Vobsidienne*0.9375    
 	var Vcacao1 =Vcacao*0.9375 
@@ -198,7 +192,7 @@ function myFunction1() {
 	document.getElementById('Prod210').innerHTML = Million2(Vobsidienne3)
 	document.getElementById('Prod310').innerHTML = Million2(Vcacao3)
 	document.getElementById('Prod410').innerHTML = Million(Vcarriere3*Nbville)
-	//document.getElementById('Prod510').innerHTML = Million(Vobsidienne3*Nbville)
+	document.getElementById('Prod510').innerHTML = Million(Vobsidienne3*Nbville)
 	//document.getElementById('Prod610').innerHTML = Million(Vcacao3*Nbville)
 	document.getElementById('Prod710').innerHTML = Million(Vcarriere3*Nbville*1.02)
 	document.getElementById('Prod810').innerHTML = Million(Vobsidienne3*Nbville*1.02)
@@ -238,8 +232,8 @@ function myFunction1() {
 	//document.getElementById('Prod26').innerHTML = Math.round(Vcarriere*S1*0.93749*2)
 	//document.getElementById('Prod25').innerHTML = Math.round(261275/(Vcarriere*S1*2))	
 
-	//document.getElementById('Nbville3').innerHTML=Nbville
-	//document.getElementById('Nbville4').innerHTML=MAstr+1
+	document.getElementById('Nbville3').innerHTML=Nbville
+	document.getElementById('Nbville4').innerHTML=MAstr+1
 }
 function myFunction2() {	
 	//alert("ok22")
@@ -645,7 +639,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td id="Prod41"></td>	<td id="Prod42"></td><td id="Prod43"></td>
 <td id="Prod44"></td>	<td id="Prod45"></td><td id="Prod46"></td>
 <td id="Prod47"></td>	<td id="Prod48"></td><td id="Prod49"></td>
-<td id="Prod410"></td>	<td id="Prod411"></td><td id="Prod412"></td>
+<td id="Prod410"></td><td id="Prod411"></td><td id="Prod412"></td>
 </tr>
 <tr>
 
@@ -654,7 +648,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td id="Prod51"></td>	<td id="Prod52"></td><td id="Prod53"></td>
 <td id="Prod54"></td>	<td id="Prod55"></td><td id="Prod56"></td>
 <td id="Prod57"></td>	<td id="Prod58"></td><td id="Prod59"></td>
-<td id="Pro510">510</td>	<td id="Prod511">511</td><td id="Prod512">512</td>
+<td id="Prod510"></td><td id="Prod511"></td><td id="Prod512"></td>
 </tr>
 <tr>
 <td colspan="3" style="width: 70.4px; text-align: right;">Cacao  <img style="float:right align: center;" src="Image/xacai.png" width="20" height="20" ></td>
@@ -662,7 +656,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td id="Prod61"></td>	<td id="Prod62"></td><td id="Prod63"></td>
 <td id="Prod64"></td>	<td id="Prod65"></td><td id="Prod66"></td>
 <td id="Prod67"></td>	<td id="Prod68"></td><td id="Prod69"></td>
-<td id="Prod610">61</td>	<td id="Prod611">611</td><td id="Prod612">612</td>
+<td id="Prod610"></td><td id="Prod611"></td><td id="Prod612"></td>
 	
 </tr>
 	<tr>
@@ -670,7 +664,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td colspan="12" > Récoltes estimées pour 
 		<strong><span style="color: #ff0000;" id="Nbville3">10</span></strong>
 					villes et la recherche Astronomie à +1 (
-		<strong><span style="color: #ff0000;" id="Nbville34">11</span></strong>				   
+		<strong><span style="color: #ff0000;" id="Nbville4">11</span></strong>				   
 		)					   
 		</td>	
 
