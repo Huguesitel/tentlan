@@ -152,23 +152,29 @@ function myFunction1() {
 	var Vcarriere = Vcarrier*S1           //*1.645960807*Math.pow(1.02142592,MAstr)
 	var Vobsidienne =Vobsidienn*S2     //*1.645960807*Math.pow(1.02142592,MAstr)
 	var Vcacao =Vcaca*S3         //*1.645960807*Math.pow(1.02142592,MAstr)
-	var Vcarriere1 = Vcarrier*S1*0.9375           
-	var Vobsidienne1 =Vobsidienn*S2*0.9375    
-	var Vcacao1 =Vcaca*S3*0.9375 	
+	var Vcarriere1 = Vcarriere*0.9375           
+	var Vobsidienne1 =Vobsidienne*0.9375    
+	var Vcacao1 =Vcacao*0.9375 
+	var Vcarriere2 = Vcarriere*0.8125          
+	var Vobsidienne2 =Vobsidienne*0.8125    
+	var Vcacao2 =Vcacao*0.8125	
+	var Vcarriere3 = Vcarriere*0.625           
+	var Vobsidienne3 =Vobsidienne*0.625    
+	var Vcacao3 =Vcacao*0.625
 	
 	document.getElementById('Prod11').innerHTML = Million2(Vcarriere)
 	document.getElementById('Prod21').innerHTML = Million2(Vobsidienne)
 	document.getElementById('Prod31').innerHTML = Million2(Vcacao)
-	document.getElementById('Prod41').innerHTML = Million2(Vcarriere*Nbville)
-	document.getElementById('Prod51').innerHTML = Million2(Vobsidienne*Nbville)
-	document.getElementById('Prod61').innerHTML = Million2(Vcacao*Nbville)	
+	document.getElementById('Prod41').innerHTML = Million(Vcarriere*Nbville)
+	document.getElementById('Prod51').innerHTML = Million(Vobsidienne*Nbville)
+	document.getElementById('Prod61').innerHTML = Million(Vcacao*Nbville)	
 	
 	document.getElementById('Prod14').innerHTML = Million2(Vcarriere1)
 	document.getElementById('Prod24').innerHTML = Million2(Vobsidienne1)
 	document.getElementById('Prod34').innerHTML = Million2(Vcacao1)
-	document.getElementById('Prod44').innerHTML = Million2(Vcarriere1*Nbville)
-	document.getElementById('Prod54').innerHTML = Million2(Vobsidienne1*Nbville)
-	document.getElementById('Prod64').innerHTML = Million2(Vcacao1*Nbville)		
+	document.getElementById('Prod44').innerHTML = Million(Vcarriere1*Nbville)
+	document.getElementById('Prod54').innerHTML = Million(Vobsidienne1*Nbville)
+	document.getElementById('Prod64').innerHTML = Million(Vcacao1*Nbville)		
 	
 	//document.getElementById('Prod11').innerHTML = Million2(Vcarriere*MAstro1/60)
 	//document.getElementById('Prod14').innerHTML = Million2(Vcarriere*0.9375*MAstro2/60)
