@@ -146,8 +146,7 @@ function myFunction1() {
 	
 	var Nbville = document.getElementById('ville').value
 	document.getElementById('Nbville2').innerHTML=Nbville
-	document.getElementById('Nbville3').innerHTML=Nbville
-	document.getElementById('Nbville4').innerHTML=MAstr+1
+
 	
 	var Vcarrier =BaseCalc[Ncarriere]
 	var Vobsidienn =BaseObsi[Nobsidienne]
@@ -239,7 +238,8 @@ function myFunction1() {
 	//document.getElementById('Prod26').innerHTML = Math.round(Vcarriere*S1*0.93749*2)
 	//document.getElementById('Prod25').innerHTML = Math.round(261275/(Vcarriere*S1*2))	
 
-
+	//document.getElementById('Nbville3').innerHTML=Nbville
+	//document.getElementById('Nbville4').innerHTML=MAstr+1
 }
 function myFunction2() {	
 	//alert("ok22")
@@ -464,7 +464,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 	
 <td id="Prod17"></td>	<td id="Prod18"></td><td id="Prod19"></td>
 
-<td id="Prod110">oo</td>	<td id="Prod111"></td><td id="Prod112"></td>
+<td id="Prod110"></td>	<td id="Prod111"></td><td id="Prod112"></td>
 
 </tr>
 <tr>
@@ -608,7 +608,7 @@ var Res1 = (Math.round(Arg1/1000)/1000) + "M"
 <td id="Prod310"></td>	<td id="Prod311"></td><td id="Prod312"></td>
 </tr>
 <tr>
-<td>Nombre de ville</td>	
+<td style="font-size: 14px;">Nombre de ville</td>	
 <td style="text-align: center;"><img  src="Image/ville.png" width="30" height="30" >
 <td>
 	<select name="ville" id="ville" onchange="myFunction1()">
