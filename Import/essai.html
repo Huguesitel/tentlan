@@ -1,54 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
-  function pushFile($username,$token,$repo,$branch,$path,$b64data){
-    $message = "Automated update";
-    $ch = curl_init("https://api.github.com/repos/$repo/branches/$branch");
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('User-Agent:Php/Automated'));
-    curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $token);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    $data = curl_exec($ch);
-    curl_close($ch);
-    $data=json_decode($data,1);
+$curl_url = 'https://api.github.com/repos/Huguesitel/tentlan/Import/contents/Load.txt'
+$curl_token_auth = 'Authorization: token ' . '0a0bf7cdbd87f414c1d1f00fca230246ac96ffd2';
+$ch = curl_init($curl_url);
 
-    $ch2 = curl_init($data['commit']['commit']['tree']['url']);
-    curl_setopt($ch2, CURLOPT_HTTPHEADER, array('User-Agent:Php/Ayan Dhara'));
-    curl_setopt($ch2, CURLOPT_USERPWD, $username . ":" . $token);
-    curl_setopt($ch2, CURLOPT_TIMEOUT, 30);
-    curl_setopt($ch2, CURLOPT_RETURNTRANSFER, TRUE);
-    $data2 = curl_exec($ch2);
-    curl_close($ch2);
-    $data2=json_decode($data2,1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'User-Agent: $username', $curl_token_auth ));
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+curl_setopt($ch, CURLOPT_POSTFIELDS,'oooooooooooooooooooooo');
 
-    $sha='';
-    foreach($data2["tree"] as $file)
-      if($file["path"]==$path)
-        $sha=$file["sha"];
-    
-    $inputdata =[];
-    $inputdata["path"]=$path;
-    $inputdata["branch"]=$branch;
-    $inputdata["message"]=$message;
-    $inputdata["content"]=$b64data;
-    $inputdata["sha"]=$sha;
+$response = curl_exec($ch);  
+curl_close($ch);
+$response = json_decode($response);
 
-    echo json_encode($inputdata);
-
-    $updateUrl="https://api.github.com/repos/$repo/contents/$path";
-    echo $updateUrl;
-    $ch3 = curl_init($updateUrl);
-    curl_setopt($ch3, CURLOPT_HTTPHEADER, array('Content-Type: application/xml', 'User-Agent:Php/Ayan Dhara'));
-    curl_setopt($ch3, CURLOPT_USERPWD, $username . ":" . $token);
-    curl_setopt($ch3, CURLOPT_TIMEOUT, 30);
-    curl_setopt($ch3, CURLOPT_CUSTOMREQUEST, "PUT");
-    curl_setopt($ch3, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($ch3, CURLOPT_POSTFIELDS, json_encode($inputdata));
-    $data3 = curl_exec($ch3);
-    curl_close($ch3);
-
-    echo $data3;
-  }
+return $response;
   //pushFile("your_username","your_personal_token","username/repository","repository_branch","path_of_targetfile_in_repository","base64_encoded_data");
 
-  pushFile("Huguesitel","0a0bf7cdbd87f414c1d1f00fca230246ac96ffd2","Huguesitel/tentlan","master","/Import/Load.txt","base64_encoded_data");
+ // pushFile("Huguesitel","0a0bf7cdbd87f414c1d1f00fca230246ac96ffd2","Huguesitel/tentlan","master","/Import/Load.txt","base64_encoded_data");
 
 ?>
+<?php
+$txt = "PHP";
+echo "I love $txt!";
+?>  
+  
+</body>
+</html>
