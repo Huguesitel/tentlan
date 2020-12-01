@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+  Hello
 <?php
-$curl_url = 'https://api.github.com/repos/Huguesitel/tentlan/Import/contents/Load.txt'
+$txt = "PHP";
+echo "I love $txt!";
+?> 
+<?php
+$curl_url = 'https://api.github.com/Huguesitel/tentlan/Import/contents/Load.txt'
 $curl_token_auth = 'Authorization: token ' . '0a0bf7cdbd87f414c1d1f00fca230246ac96ffd2';
 $ch = curl_init($curl_url);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'User-Agent: $username', $curl_token_auth ));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'User-Agent: Huguesitel', $curl_token_auth ));
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 curl_setopt($ch, CURLOPT_POSTFIELDS,'oooooooooooooooooooooo');
 
@@ -22,10 +26,7 @@ return $response;
  // pushFile("Huguesitel","0a0bf7cdbd87f414c1d1f00fca230246ac96ffd2","Huguesitel/tentlan","master","/Import/Load.txt","base64_encoded_data");
 
 ?>
-<?php
-$txt = "PHP";
-echo "I love $txt!";
-?>  
+ 
   
 </body>
 </html>
