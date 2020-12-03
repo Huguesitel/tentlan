@@ -1,0 +1,27 @@
+import useGoogleSpreadsheet from 'use-google-spreadsheet';
+
+const SomeComponent = ({}) => {
+	const API_KEY = 'AIzaSyAGqRS1wyYGUBs5ZWI2GbqbcNteRqvKWjk';
+	const shareUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRM2HlAsG7qP7tL63eD47o_0_iJFHJSCjkZVT1StBDIKvCn1X0Nf1BBu88W7ZU26pjMhUL91DfexWV2/pubhtml';
+	const { rows, isFetching } = useGoogleSpreadsheet(shareUrl, API_KEY);
+	return isFetching ? (
+		<Spinner />
+	) : rows ? (
+		<ul>
+			{rows.map((row, i) => {
+				return (
+					<li key={i}>
+						{Object.keys(row).map((key, i) => (
+							<span key={i}>
+								{key}: {row[key]}
+								<br />
+							</span>
+						))}
+					</li>
+				);
+			})}
+		</ul>
+	) : (
+		<span>No Data</span>
+	);
+};
