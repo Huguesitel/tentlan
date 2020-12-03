@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import useGoogleSpreadsheet from '../lib';
 
 const urls = [
-	'https://docs.google.com/spreadsheets/d/1W5D9WvlrXvndEc0b42OsdzJTT1M-MxKVYdPEtleqRQY/edit?usp=sharing',
+	'https://docs.google.com/spreadsheets/d/e/2PACX-1vRM2HlAsG7qP7tL63eD47o_0_iJFHJSCjkZVT1StBDIKvCn1X0Nf1BBu88W7ZU26pjMhUL91DfexWV2/pubhtml',
 	'https://docs.google.com/spreadsheets/d/1XqhOiYajpp7zzj3ncJ8EpCKZoNOJSjiQdLTXCiBqCWc/edit?usp=sharing',
 ];
 
-const API_KEY = 'AIzaSyCdQT2rJxKIzwikcg9accLGBhQhaxkhSPw';
+const API_KEY = 'AIzaSyAGqRS1wyYGUBs5ZWI2GbqbcNteRqvKWjk';
 
 const Example = ({}) => {
 	const [index, setIndex] = useState(0);
