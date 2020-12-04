@@ -38,7 +38,7 @@ const Example = ({}) => {
 			) : (
 				<span>No Data</span>
 			)}
-			<button onClick={handleChangeUrl}>change url</button>
+			<button onClick={handleChangeUrl}>change sheet url</button>
 		</>
 	);
 };
