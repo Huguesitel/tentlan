@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+
 <table >
 
 <td rowspan ="12">
@@ -16,20 +30,26 @@
         La Frame ne fonctione pas
         </iframe>
 </td>
-<td>
-        <tr>
+        
+       
             <td>  <input type="checkbox" id="cb1" name="cb1" onclick="BB1()"></td>
 
-        </tr>
+  
 
         <tr>
             <td>  <input type="checkbox" id="cb2" name="cb2"></td>
         </tr>
-</td>
+        <tr>
+            <td>  <input type="checkbox" id="cb3" name="cb3"></td>
+        </tr>
 </table>
 <script>
-        function BB1() {
+ function BB1() {
         alert ("ok")
-        }
- //document.getElementById('edit').contentWindow.document.body.innerHTML
+         alert(document.getElementById('Player').contentWindow.document.body.innerHTML)
+         
+  }
+ //document.getElementById('Player').contentWindow.document.body.innerHTML
 </script>      
+</body>
+</html>
