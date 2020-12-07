@@ -46,7 +46,8 @@
 //console.log(obj.majorDimension);
 //console.log(obj.values);        
         
-        document.getElementById("demo").innerHTML = obj.values
+        document.getElementById("demo2").innerHTML = response.result
+        document.getElementById("demo3").innerHTML = obj.range        
       }, function(reason) {
         document.getElementById("demo").innerHTML ='error: ' + reason.result.error.message
         //alert('error: ' + reason.result.error.message);
@@ -103,6 +104,9 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
     <Div id ="demo">Test 11</Div>
+     <Div id ="demo1">Test</Div>   
+    <Div id ="demo2">Test</Div>   
+    
     <button id="API call-button" onclick="makeApiCall()">API call-button</button>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
