@@ -14,13 +14,14 @@
     -->
     <script>
     function makeApiCall() {
+      alert("ok")
       var params = {
         // The ID of the spreadsheet to retrieve data from.
         spreadsheetId: '1tmDerHTS4aZWYBXZiLWQXBNPO0guNgQaKnT9Vtw5H9E',  // TODO: Update placeholder value.
 //https://docs.google.com/spreadsheets/d/1AfaFpkI4aE7gdwseQi5X84v6c0zmgV5ffOxG55XKlqQ/edit?usp=sharing
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vRM2HlAsG7qP7tL63eD47o_0_iJFHJSCjkZVT1StBDIKvCn1X0Nf1BBu88W7ZU26pjMhUL91DfexWV2/pubhtml     
         // The A1 notation of the values to retrieve.
-        range: 'A2:C6',  // TODO: Update placeholder value.
+        range: 'A2:C2',  // TODO: Update placeholder value.
 
         // How values should be represented in the output.
         // The default render option is ValueRenderOption.FORMATTED_VALUE.
@@ -30,7 +31,7 @@
         // This is ignored if value_render_option is
         // FORMATTED_VALUE.
         // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
-        dateTimeRenderOption: 'FORMATTED_VALUE',  // TODO: Update placeholder value.
+        dateTimeRenderOption: 'SERIAL_NUMBER',  // TODO: Update placeholder value.
       
 
       };
