@@ -11,6 +11,7 @@
        https://developers.google.com/api-client-library/javascript/start/start-js#get-access-keys-for-your-application
     3. For additional information on authentication, see
        https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
+https://drive.google.com/file/d/1P3NZEi71RWGFmgxj-qpzHr9SwEpnSaCY/view?usp=sharing
     -->
     <script>
     function makeApiCall() {
@@ -98,6 +99,15 @@
     function handleSignOutClick(event) {
       gapi.auth2.getAuthInstance().signOut();
     }
+    function CSV() {  
+      String fileId = "1P3NZEi71RWGFmgxj-qpzHr9SwEpnSaCY";
+OutputStream outputStream = new ByteArrayOutputStream();
+driveService.files().export(fileId, "application/pdf")
+    .executeMediaAndDownloadTo(outputStream);
+      alert(outputStream)
+    }
+      
+      
       //  handleSignInClick
     </script> 
     <script async defer src="https://apis.google.com/js/api.js"
@@ -109,6 +119,7 @@
     <Div id ="demo2">Test</Div>   
     
     <button id="API call-button" onclick="makeApiCall()">API call-button</button>
+     <button id="API call-button" onclick="CSV()">CSV call-button</button>   
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
   </body>
