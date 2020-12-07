@@ -39,7 +39,14 @@
       var request = gapi.client.sheets.spreadsheets.values.get(params);
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
-        document.getElementById("demo").innerHTML =response.result
+        const json = response.result
+          const obj = JSON.parse(json);
+
+//console.log(obj.range);
+//console.log(obj.majorDimension);
+//console.log(obj.values);        
+        
+        document.getElementById("demo").innerHTML =obj.range + obj.values
       }, function(reason) {
         document.getElementById("demo").innerHTML ='error: ' + reason.result.error.message
         //alert('error: ' + reason.result.error.message);
