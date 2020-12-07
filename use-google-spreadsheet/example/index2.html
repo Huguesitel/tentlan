@@ -47,7 +47,7 @@
 //console.log(obj.majorDimension);
 //console.log(obj.values);        
               document.getElementById("demo").innerHTML ="OK 2"
-        document.getElementById("demo2").innerHTML = parse(response.result)
+        document.getElementById("demo2").innerHTML = JSON.parse(response.result)
         document.getElementById("demo3").innerHTML = response.result        
       }, function(reason) {
         document.getElementById("demo").innerHTML ='error: ' + reason.result.error.message
