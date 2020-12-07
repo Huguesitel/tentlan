@@ -14,7 +14,7 @@
     -->
     <script>
     function makeApiCall() {
-      alert("ok")
+      document.getElementById("demo").innerHTML ="OK"
       var params = {
         // The ID of the spreadsheet to retrieve data from.
         spreadsheetId: '1tmDerHTS4aZWYBXZiLWQXBNPO0guNgQaKnT9Vtw5H9E',  // TODO: Update placeholder value.
@@ -39,9 +39,10 @@
       var request = gapi.client.sheets.spreadsheets.values.get(params);
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
-        alert(response.result);
+        document.getElementById("demo").innerHTML =response.result
       }, function(reason) {
-        alert('error: ' + reason.result.error.message);
+        document.getElementById("demo").innerHTML ='error: ' + reason.result.error.message
+        //alert('error: ' + reason.result.error.message);
       });
     }
 
@@ -94,7 +95,7 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-    Test 11
+    <Div id ="demo">Test 11</Div>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
   </body>
