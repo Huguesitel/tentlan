@@ -35,7 +35,7 @@ public class SheetsExample {
     // This is ignored if value_render_option is
     // FORMATTED_VALUE.
     // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
-    String dateTimeRenderOption = "FORMATTED_VALUE"; // TODO: Update placeholder value.
+    String dateTimeRenderOption = "SERIAL_NUMBER"; // TODO: Update placeholder value.
 
     Sheets sheetsService = createSheetsService();
     Sheets.Spreadsheets.Values.Get request =
