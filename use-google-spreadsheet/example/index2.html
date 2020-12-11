@@ -16,30 +16,64 @@ https://drive.google.com/file/d/1P3NZEi71RWGFmgxj-qpzHr9SwEpnSaCY/view?usp=shari
     <script>
     function makeApiCall() {
       document.getElementById("demo").innerHTML ="OK"
-      var params = {
+      
+         const url = 'https://www.googleapis.com/drive/v3/files/1dm0UwvieNroVWTH8rKmvtk0AWYkbWTvY?alt=media'
+    if(self.fetch){
+    var setHeaders = new Headers();
+    //setHeaders.append('Authorization', 'Bearer ' + authToken.access_token);
+    setHeaders.append('Content-Type', mime);
+
+    var setOptions = {
+        method: 'GET',
+        headers: setHeaders
+    };
+    fetch(url,setOptions)
+        .then(response => { if(response.ok){
+        var reader = response.body.getReader();
+        var decoder = new TextDecoder();
+        reader.read().then(function(result){
+            var data = {}
+            data = decoder.decode(result.value, {stream: !result.done});
+            alert(data);
+    });
+        }
+    else{
+        alert("Response wast not ok");
+    }
+  })  .catch(error => {
+        alert("There is an error " + error.message);
+        });
+    }
+      
+      
+      
+      
+      
+      
+ //     var params = {
         // The ID of the spreadsheet to retrieve data from.
-        spreadsheetId: '1tmDerHTS4aZWYBXZiLWQXBNPO0guNgQaKnT9Vtw5H9E',  // TODO: Update placeholder value.
+ //       spreadsheetId: '1tmDerHTS4aZWYBXZiLWQXBNPO0guNgQaKnT9Vtw5H9E',  // TODO: Update placeholder value.
 //https://docs.google.com/spreadsheets/d/1AfaFpkI4aE7gdwseQi5X84v6c0zmgV5ffOxG55XKlqQ/edit?usp=sharing
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vRM2HlAsG7qP7tL63eD47o_0_iJFHJSCjkZVT1StBDIKvCn1X0Nf1BBu88W7ZU26pjMhUL91DfexWV2/pubhtml     
         // The A1 notation of the values to retrieve.
-        range: 'A2:C2',  // TODO: Update placeholder value.
+ ////       range: 'A2:C2',  // TODO: Update placeholder value.
 
         // How values should be represented in the output.
         // The default render option is ValueRenderOption.FORMATTED_VALUE.
-        valueRenderOption: 'FORMATTED_VALUE',  // TODO: Update placeholder value.
-alert('ok')
+//        valueRenderOption: 'FORMATTED_VALUE',  // TODO: Update placeholder value.
+//alert('ok')
         // How dates, times, and durations should be represented in the output.
         // This is ignored if value_render_option is
         // FORMATTED_VALUE.
         // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
-        dateTimeRenderOption: 'SERIAL_NUMBER',  // TODO: Update placeholder value.
+//        dateTimeRenderOption: 'SERIAL_NUMBER',  // TODO: Update placeholder value.
       
 
-      };
+//      };
 
-      var request = gapi.client.sheets.spreadsheets.values.get(params);
-            document.getElementById("demo").innerHTML ="OK 1"
-      request.then(function(response) {
+  //    var request = gapi.client.sheets.spreadsheets.values.get(params);
+  //          document.getElementById("demo").innerHTML ="OK 1"
+  //    request.then(function(response) {
         // TODO: Change code below to process the `response` object:
        // const json = response.result
        //   const obj = JSON.parse(json);
@@ -50,11 +84,11 @@ alert('ok')
               document.getElementById("demo").innerHTML ="OK 2"
         document.getElementById("demo2").innerHTML = JSON.parse(response.result)
         document.getElementById("demo3").innerHTML = response.result        
-      }, function(reason) {
-        document.getElementById("demo").innerHTML ='error: ' + reason.result.error.message
+//      }, function(reason) {
+ //       document.getElementById("demo").innerHTML ='error: ' + reason.result.error.message
         //alert('error: ' + reason.result.error.message);
-      });
-    }
+ //     });
+//    }
 
     function initClient() {
       var API_KEY = 'AIzaSyCvKvYqIM_3KXaZgS99kUM7S2ITHTD4vgs';  // TODO: Update placeholder with desired API key.
@@ -119,7 +153,6 @@ alert('ok')
     <Div id ="demo2">Test</Div>   
     
     <button id="API call-button" onclick="makeApiCall()">API call-button</button>
-     <button id="API call-button" onclick="CSV()">CSV call-button</button>   
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
   </body>
